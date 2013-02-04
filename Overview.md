@@ -1,5 +1,5 @@
 ## We're building this 
-![High level summary](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFW-Platform-pic-300x170.png)
+![High level summary](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFW-Platform-pic.png)
 
 ## Like this
-![Overview](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFWF-Platform-Call-for-Volunteers.pdf)
+![Overview](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFWF-Platform-Call-for-Volunteers-1024x723.jpg)
