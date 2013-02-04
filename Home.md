@@ -2,11 +2,11 @@ Welcome to the openfoodweb wiki!
 
 This wiki will undergo rapid development over the next few weeks to provide a solid introduction to the Open Food Web project and make it much easier to get involved.
 
-# 1. THE PROJECT: BUILDING AN OPEN FOOD WEB
-## WHY	
-## HOW
-## WHAT
-## WHERE
+## # 1. THE PROJECT: BUILDING AN OPEN FOOD WEB
+### [Why](https://github.com/eaterprises/openfoodweb/wiki/Why)
+### [How](https://github.com/eaterprises/openfoodweb/wiki/How)
+### [What](https://github.com/eaterprises/openfoodweb/wiki/What)
+### [Where](https://github.com/eaterprises/openfoodweb/wiki/Where)
 
 # 2. WHO - ABOUT US	
 ## THE OPEN FOOD WEB FOUNDATION	
