@@ -12,4 +12,4 @@ This wiki will undergo rapid development over the next few weeks to provide a so
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces)
 
-To find out more about the Foundation, the project or to connect with other work programs, visit [Open Food Web Foundation](https://www.openfoodweb.org/Foundation)
+To find out more about the Foundation, the project or to connect with other work programs, visit 
