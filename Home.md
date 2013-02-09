@@ -3,7 +3,7 @@ The Open Food Web project is a community of people working together to build a f
 *  Farmers can set their own prices, tell their own stories and choose who they trade with.
 *  Ethical and diverse food enterprises rebuild local economies by supporting these farmers and eaters to distribute food.
   
-The system is premised on transparency of supply chain information and provides the integrated benefits of e-commerce, information sharing, and collaborative networking.    
+The system is premised on transparency of supply chain information - giving farmers and eaters real choices in food value chains.     
 
 This is the first project of the not-for-profit Open Food Web Foundation, which has been set up to accumulate and protect a commons of open source knowledge, code, applications and platforms to support the proliferation of fair and sustainable food systems.     
 
@@ -16,4 +16,7 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 ## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specifications)
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces)
+
+## [6. How Can I Help](https://github.com/eaterprises/openfoodweb/wiki/Help_Out)
+
 
