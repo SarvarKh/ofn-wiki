@@ -1,9 +1,12 @@
+[Why](~/Why)
+
+## How - Principles
+
+## What
+
+## Where
+
 ## Why
-
-Quick Links 
-===========
-
-'''What We're Building'''
 
 ## We're building this 
 ![High level summary](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFW-Platform-pic.png)
