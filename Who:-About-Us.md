@@ -1,4 +1,4 @@
-
+# The Open Food Web Foundation
 
 PART 3 – STATEMENT OF PURPOSES
 3.1 The purpose of the OFWF is to accumulate and protect a commons (“the open food web”) of open source knowledge, code, applications and platforms to support the proliferation of fair and sustainable food systems.  
@@ -11,3 +11,5 @@ PART 3 – STATEMENT OF PURPOSES
   3.3.3	Facilitating development of processes, standards and interfaces to ensure quality and interoperability 
   3.3.4	Provision and maintenance of technology infrastructure, including hosting
   3.3.5	Networking, training and skill development of food systems focused technical specialists
+
+# Founding Partners
