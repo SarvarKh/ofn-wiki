@@ -1,6 +1,7 @@
 ## Why
 
-== Quick Links ==
+Quick Links 
+===========
 
 '''What We're Building'''
 
