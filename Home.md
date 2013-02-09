@@ -9,7 +9,7 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 
 ## [1. Overview: Building an Open Food Web Platform](https://github.com/eaterprises/openfoodweb/wiki/Overview)
 
-## [2. Who: About Us (and You)](https://github.com/eaterprises/openfoodweb/wiki/Who)
+## [2. Who: About Us](https://github.com/eaterprises/openfoodweb/wiki/Who)
 
 ## [3. Orientation: What's Already Built](https://github.com/eaterprises/openfoodweb/wiki/Orientation)
 
@@ -17,6 +17,5 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces)
 
-## [6. How Can I Help](https://github.com/eaterprises/openfoodweb/wiki/Help_Out)
-
+## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help_Out)
 
