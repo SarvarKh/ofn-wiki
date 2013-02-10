@@ -19,7 +19,7 @@ PART 3 – STATEMENT OF PURPOSES
 *  3.3.4	Provision and maintenance of technology infrastructure, including hosting
 *  3.3.5	Networking, training and skill development of food systems focused technical specialists
 
-# Founding Partners
+# Founding Partners <a id="Partners">
 
 The Open Food Web Foundation has been instigated and supported in its establishment by a suite of local food enterprises, mostly in Victoria (but also in other states) in Australia. These include:
 * [Eaterprises Australia](www.eaterprises.com.au) - Melbourne
@@ -29,7 +29,7 @@ The Open Food Web Foundation has been instigated and supported in its establishm
 * [CERES Fair Food](http://www.ceresfairfood.org.au/)
 * [Local Harvest](http://www.localharvest.org.au/)
 
-# Developers
+# Developers <a id="Developers">
 
 Magical wonderful people these are! All credit so far goes to Rohan Mitchell, Rob Harrington and Andy Spinks . . we hope to see this honour role expanding now that we're explaining what we're doing . . 
 
