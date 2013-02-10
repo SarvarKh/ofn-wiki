@@ -26,7 +26,7 @@ There are (at least) four good reasons to focus on interoperability and plugin-a
 *  Legacy: people doing this kind of stuff (food enterprises) often have their own systems that they have good reasons for wanting to stick with - we want them to be able to connect with other enterprises through this kind of platform, whilst maintaining the systems they are familiar with using
 *  Non-Core: we spend all our time thinking about food systems, other people spend all their time thinking about other things . . and are much more likely to know how to do them better (e.g. accounting; ERP; logistics; social networking)
 
-### Lots of Help . . <a id="Volunteers"/>
+### A Community Effort . . <a id="Volunteers"/>
 
 We haven't had any funding for this project yet, except a bit kicked in by [Eaterprises Australia](http://www.eaterprises.com.au) to get the ball rolling. While we will be getting cracking on fundraising this year (2013), it is still largely a volunteer effort.
 
