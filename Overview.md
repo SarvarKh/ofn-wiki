@@ -48,3 +48,10 @@ If you want to have a play around with the software in action (with test data), 
 *  All feedback, feature extensions etc also appreciated!
 *  Feel free to do whatever you like (create accounts / orders etc) - we have removed the paypal payment option so that you can't accidentally pay . .
  
+# Where <a id="Where"/>
+
+The system has been designed and piloted in Melbourne, Australia. Testing and development is continuing with our network here.
+
+We are also building up a list of people and organisations interested in trialling the system when it's ready for roll-out - which we are planning to be July 2013 or before.
+
+If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at trials (@) openfoodweb.org 
