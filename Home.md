@@ -9,13 +9,13 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 ###[Why](https://github.com/eaterprises/openfoodweb/wiki/Overview/#Why)  |  [How](https://github.com/eaterprises/openfoodweb/wiki/Overview/#How)  |  [What Is It](https://github.com/eaterprises/openfoodweb/wiki/Overview/#What)  |  [Where](https://github.com/eaterprises/openfoodweb/wiki/Overview/#Where)
 
 ## [2. Who](https://github.com/eaterprises/openfoodweb/wiki/Who)
-###[About Us](https://github.com/eaterprises/openfoodweb/wiki/Who/#AboutUs)  |  [Partners](https://github.com/eaterprises/openfoodweb/wiki/Who/#Partners)  
+###[Open Food Web Foundation](https://github.com/eaterprises/openfoodweb/wiki/Who/#OFWF)  |  [Partners](https://github.com/eaterprises/openfoodweb/wiki/Who/#Partners)  |  [Developers](https://github.com/eaterprises/openfoodweb/wiki/Who/#Developers)
 
 ## [3. Orientation: What's Already Built](https://github.com/eaterprises/openfoodweb/wiki/Orientation)
 ###[Technology Stack](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#TechStack)  |  [Structure](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#Structure)  
 
 ## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specs)
-
+###[Technology Stack](https://github.com/eaterprises/openfoodweb/wiki/Specs/#)  |  [Structure](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#Structure)  
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces)
 
