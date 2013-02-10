@@ -17,7 +17,7 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 ## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specs)
 ###[Technology Stack](https://github.com/eaterprises/openfoodweb/wiki/Specs/#)  |  [Structure](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#Structure)  
 
-## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces)
+## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces-&-API)
 
 ## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help_Out)
 
