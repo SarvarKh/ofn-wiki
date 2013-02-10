@@ -1,3 +1,4 @@
+***
 # The Open Food Web Foundation <a id="OFWF">
 
 The [Open Food Foundation](www.openfoodweb.org/foundation) has been established to develop, accumulate and protect open source knowledge, code, applications and platforms for fair and sustainable food systems. 
@@ -27,3 +28,9 @@ The Open Food Web Foundation has been instigated and supported in its establishm
 * [Damper Creek Organic Collective](http://www.michaelbgreen.com.au/community-supported-agriculture)
 * [CERES Fair Food](http://www.ceresfairfood.org.au/)
 * [Local Harvest](http://www.localharvest.org.au/)
+
+# Developers
+
+Magical wonderful people these are! All credit so far goes to Rohan Mitchell, Rob Harrington and Andy Spinks . . we hope to see this honour role expanding now that we're explaining what we're doing . . 
+
+See [Get Involved] for more information if you'd like to help get this thing built. 
