@@ -11,11 +11,13 @@ We are supporting the establishment and operation of diverse and independent foo
 This is the first project of the not-for-profit Open Food Web Foundation, which has been set up to accumulate and protect a commons of open source knowledge, code, applications and platforms to support the proliferation of fair and sustainable food systems. We're serious about disruptive business models that change the dynamics of the global food system.    
 
 ## [1. Overview: Building an Open Food Web Platform](https://github.com/eaterprises/openfoodweb/wiki/Overview)
-###[Why](https://github.com/eaterprises/openfoodweb/wiki/Overview/#Why)  |  [How](https://github.com/eaterprises/openfoodweb/wiki/Overview/#How)
+###[Why](https://github.com/eaterprises/openfoodweb/wiki/Overview/#Why)  |  [How](https://github.com/eaterprises/openfoodweb/wiki/Overview/#How)  |  [What Is It](https://github.com/eaterprises/openfoodweb/wiki/Overview/#What)  |  [Where](https://github.com/eaterprises/openfoodweb/wiki/Overview/#Where)
 
-## [2. Who: About Us](https://github.com/eaterprises/openfoodweb/wiki/Who)
+## [2. Who](https://github.com/eaterprises/openfoodweb/wiki/Who)
+###[About Us](https://github.com/eaterprises/openfoodweb/wiki/Who/#AboutUs)  |  [Partners](https://github.com/eaterprises/openfoodweb/wiki/Who/#Partners)  
 
 ## [3. Orientation: What's Already Built](https://github.com/eaterprises/openfoodweb/wiki/Orientation)
+###[Technology Stack](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#TechStack)  |  [Structure](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#Structure)  
 
 ## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specifications)
 
