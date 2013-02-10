@@ -20,8 +20,18 @@ This code is made available under the [GNU Affero General Public License](http:/
 
 ### Interoperability <a id="Interop">
 
+There are (at least) four good reasons to focus on interoperability and plugin-ability as early as possible:
+*  Avoid Reinventing Wheel: There are lots of things that other people do really well and so we don't need to build them (or can leave until much later when we're really sure that it's needed)
+*  Flexibility: there are lots of new things being developed all the time and we want to be able to work with them and evolve our capability
+*  Legacy: people doing this kind of stuff (food enterprises) often have their own systems that they have good reasons for wanting to stick with - we want them to be able to connect with other enterprises through this kind of platform, whilst maintaining the systems they are familiar with using
+*  Non-Core: we spend all our time thinking about food systems, other people spend all their time thinking about other things . . and are much more likely to know how to do them better (e.g. accounting; ERP; logistics; social networking)
 
 ### Lots of Help . . <a id="Volunteers"/>
+
+We haven't had any funding for this project yet, except a bit kicked in by [Eaterprises Australia](http://www.eaterprises.com.au) to get the ball rolling. While we will be getting cracking on fundraising this year (2013), it is still largely a volunteer effort.
+
+We recently put out a call for volunteers and all sorts of amazing people have appeared. Keep an eye on [The Team](www.openfoodweb.org/platform) to see who's working on this project. If you want to get involved, but you're not a developer there's still a lot you can do - [go here].
+ 
 ![Overview](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFWF-Platform-Call-for-Volunteers-1024x723.jpg)
 
 For more detailed information on the Development process, look [here](#Development).
