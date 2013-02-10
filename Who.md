@@ -1,9 +1,13 @@
-
 # The Open Food Web Foundation <a id="OFWF">
 
 The [Open Food Foundation](www.openfoodweb.org/foundation) has been established to develop, accumulate and protect open source knowledge, code, applications and platforms for fair and sustainable food systems. 
 
 We are a non-profit organisation, created to separate the licensing and development of open source software (to support local food enterprises) from the enterprises themselves. This enables collaboration on systems that support many needs, and will hopefully help to reduce administrative and technical burden on individual enterprises. 
+
+We are supporting the establishment and operation of diverse and independent food businesses and distributors by building:
+*  Effective and transparent e-commerce marketplace for farmers, local businesses and eaters to connect and trade
+*  Infrastructure and systems for pricing transparency and efficient operations
+*  API and interoperability with other systems for mapping, business management, social networking etc.
 
 The Statement of Purposes from our Constitution is below.
 
