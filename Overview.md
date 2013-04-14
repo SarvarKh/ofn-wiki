@@ -42,7 +42,7 @@ For more detailed information on the Development process, look [here](#Developme
 
 ### Demo <a id="Demo"/>
 
-If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://ec2-54-241-104-172.us-west-1.compute.amazonaws.com/). 
+If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://ec2-54-241-203-225.us-west-1.compute.amazonaws.com/). 
 *  This demo contains de-identified data from real activity in November 2012 i.e. it works and we're using it to buy, sell and move food. 
 *  However, it is also the version that we use to do user testing on latest functions and upgrades, so please tell us (via UserVoice) if something doesn't work.
 *  All feedback, feature extensions etc also appreciated!
