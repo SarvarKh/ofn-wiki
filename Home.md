@@ -18,5 +18,5 @@ This is the first project of the not-for-profit Open Food Web Foundation, which 
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces-&-API)
 
-## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help_Out)
+## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help-Out)
 
