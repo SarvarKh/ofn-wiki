@@ -1,5 +1,5 @@
 ***
-# The Open Food Web Foundation <a id="OFWF">
+# The Open Food Foundation <a id="OFWF">
 
 The [Open Food Foundation](www.openfoodweb.org/foundation) has been established to develop, accumulate and protect open source knowledge, code, applications and platforms for fair and sustainable food systems. 
 
@@ -21,7 +21,7 @@ PART 3 – STATEMENT OF PURPOSES
 
 # Founding Partners <a id="Partners">
 
-The Open Food Web Foundation has been instigated and supported in its establishment by a suite of local food enterprises, mostly in Victoria (but also in other states) in Australia. These include:
+The Open Food Foundation has been instigated and supported in its establishment by a suite of local food enterprises, mostly in Victoria (but also in other states) in Australia. These include:
 * [Eaterprises Australia](www.eaterprises.com.au) - Melbourne
 * [Food Connect](www.foodconnect.com.au) - Brisbane and Sydney
 * [The Food Garden](http://www.foodgarden.com.au/) - Castlemaine and Central Victoria
@@ -31,6 +31,6 @@ The Open Food Web Foundation has been instigated and supported in its establishm
 
 # Developers <a id="Developers">
 
-Magical wonderful people these are! All credit so far goes to Rohan Mitchell, Rob Harrington and Andy Spinks . . we hope to see this honour role expanding now that we're explaining what we're doing . . 
+Magical wonderful people these are! All credit so far goes to Rohan Mitchell, Rob Harrington, Andy Spinks, David Cook . . we hope to see this honour role expanding soon
 
 See [Get Involved] for more information if you'd like to help get this thing built. 
