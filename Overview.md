@@ -6,7 +6,7 @@ Diverse and locally adapted food enterprises can improve access to healthy food,
 
 While food enterprises that prioritise fair, sustainable and healthy food are proliferating, many face significant barriers and transaction costs from administration and IT.
 
-The Open Food Web Foundation arose because there is a large amount of ‘reinventing the wheel’ in food projects that are often on very tight budgets to start with. We think this can do done better if we do it together. This first supported project aims to develop a very flexible system that can be used, adapted and connected to many other systems.
+The Open Food Foundation arose because there is a large amount of ‘reinventing the wheel’ in food projects that are often on very tight budgets to start with. We think this can do done better if we do it together. This first supported project aims to develop a very flexible system that can be used, adapted and connected to many other systems.
 
 ## How - Principles <a id="How"/>
 
@@ -42,7 +42,7 @@ For more detailed information on the Development process, look [here](#Developme
 
 ### Demo <a id="Demo"/>
 
-If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://ec2-54-241-203-225.us-west-1.compute.amazonaws.com/). 
+If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://staging1.openfood.com.au or http://staging2.openfood.com.au - sometimes testing different set of features). 
 *  This demo contains de-identified data from real activity in November 2012 i.e. it works and we're using it to buy, sell and move food. 
 *  However, it is also the version that we use to do user testing on latest functions and upgrades, so please tell us (via UserVoice) if something doesn't work.
 *  All feedback, feature extensions etc also appreciated!
@@ -52,6 +52,6 @@ If you want to have a play around with the software in action (with test data), 
 
 The system has been designed and piloted in Melbourne, Australia. Testing and development is continuing with our network here.
 
-We are also building up a list of people and organisations interested in trialling the system when it's ready for roll-out - which we are planning to be July 2013 or before.
+We are also building up a list of people and organisations interested in trialling the system when it's ready for roll-out - which we are planning to be October 2013 or thereabouts
 
-If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at trials (@) openfoodweb.org 
+If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at volunteer (@) openfoodweb.org 
