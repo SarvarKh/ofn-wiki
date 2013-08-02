@@ -44,7 +44,7 @@ An Enterprise can:
 ***
 ### Order Cycles <a id="ordercycles">
 
-Order Cycles are a key organising principle. Once the basic order cycle structure is in place (est. end February 2013), any Enterprise will be able to coordinate an Order Cycle, which means:
+Order Cycles are a key organising principle. Once the order cycle structure is in place (and basic multi-tenancy implemented), any Enterprise will be able to coordinate an Order Cycle, which means:
 *  Set date and time that orders will open and close
 *  Select suppliers and products to make available in that order cycle
 *  Select one or more outgoing Distributors (that determine the options customers have for collecting or getting their orders delivered)
@@ -53,16 +53,21 @@ Order Cycles are a key organising principle. Once the basic order cycle structur
 Usage Notes:
 *  A Hub / Distributor can have separate and concurrent order cycles e.g. for different collection and delivery dates or dealing with different classes of products (e.g. bulk dry goods, fresh produce etc)
 *  An order cycle can be available through one or more Hubs (e.g. buyers can choose their Hub for collection or delivery)
-
-For planned functionality, see [Spec-Order Cycles]
  
 ### Products and Variants <a id="Products">
 
-The product and variant system is mostly unchanged from the [Spree standard](http://guides.spreecommerce.com/products_and_variants.html). The only significant difference is that every product **must** be associated with a Supplier. We are also making some changes to the administration interface for more efficient management of products and variants e.g. summary screens and bulk actions. See [Specs](XX) for more information.
+The product and variant system is mostly unchanged from the [Spree standard](http://guides.spreecommerce.com/products_and_variants.html). The only significant difference is that every product **must** be associated with a Supplier. We are also making some changes to the administration interface for more efficient management of products and variants e.g. summary screens and bulk actions. 
 
 Variants enable the same product to be easily organised by size of package, quantity, quality, colour etc. This means that the same product (e.g. olive oil from Olivia Green) can be easily sold in different size bottles at different prices.
 
-Similar changes are being planned for the order administration interface, see [Specs].
-
 ### Reports <a id="Reports">
+
+General reports have been created that enable management of food enterprises within this model. They can be viewed on screen or exported as a csv file. These include:
+* Orders and Distributors - general read out of order information, including customer details, products and distributors. Can be filtered in excel to do almost anything you want
+* Order Cycle Reports - Totals for a given date range of
+  - Suppliers, Products
+  - Suppliers - Totals for each Product to each Distributor
+  - Distributors - Totals of Each Product from each Supplier
+  - Customers - Items in Order, sorted by Distributor
+ 
  
