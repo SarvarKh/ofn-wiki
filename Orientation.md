@@ -2,6 +2,10 @@ This page is written to explain the basic technology, design assumptions and fun
 
 The system is designed to create space for ultra-flexibility in how local farms and food enterprises might self-organise to connect, trade and move food. It is being designed and tested to work with our network of farmers, food coops, CSAs and others in Melbourne - however we have taken care to implement structures that will give others maximum flexibility to adapt to local context and relationships elsewhere.
 
+If you want to see where things are really up to, check out the staging servers
+staging1.openfood.com.au (order cycles turned off)
+staging2.openfood.com.au (order cycles turned on)
+
 ## Technology Stack <a id="TechStack">
 
 *  Rails 3.x
