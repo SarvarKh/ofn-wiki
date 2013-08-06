@@ -17,6 +17,6 @@ This is the first project of the not-for-profit Open Food Foundation, which has 
 ## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specs)
 
 ## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces-&-API)
+[Enterprise user access to admin functions](https://github.com/eaterprises/openfoodweb/wiki/Enterprises-login)
 
 ## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help-Out)
-
