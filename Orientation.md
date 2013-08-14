@@ -74,4 +74,4 @@ General reports have been created that enable management of food enterprises wit
   - Distributors - Totals of Each Product from each Supplier
   - Customers - Items in Order, sorted by Distributor
  
-
+[Multi cart]
