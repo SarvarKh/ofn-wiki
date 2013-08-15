@@ -30,6 +30,7 @@ Two ways this could be achieved:
 
 ### Current status
 The Cart model and filling it exist, as well as a controller for adding to it (not finished) cart_controller.rb. There is also some simple angular javascript pages for viewing the current cart contents.
+
 Todo:
 - Showing order totals, and giving a detailed breakdown
 - Selecting the order to checkout and instigating the checkout process.
