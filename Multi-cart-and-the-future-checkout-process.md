@@ -23,4 +23,9 @@ If they then subsequently add bannanas product to the cart for Northcote Bulk Fo
 ### Checking out an order from the cart
 Choosing an order from the cart to checkout / purchase.
 
+Two ways this could be achieved:
+1. Change the current order in the users session with the selected order, then redirect to the normal Spree checkout. See here for details Spree::Core::ControllerHelpers::Order.current_order
+
+2. Manually drive the order through the Spree order lifecycle (https://github.com/radar/spree-marionette/ might be a good basis for this). This may be required if the checkout flow deviates too far from the default Spree ones and the spree controllers cannot be used (It may also need to be done this way if we have a single page javascript front end for the checkout).
+
 ### Current status
