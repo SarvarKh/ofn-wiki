@@ -29,3 +29,8 @@ Two ways this could be achieved:
 2. Manually drive the order through the Spree order lifecycle (https://github.com/radar/spree-marionette/ might be a good basis for this). This may be required if the checkout flow deviates too far from the default Spree ones and the spree controllers cannot be used (It may also need to be done this way if we have a single page javascript front end for the checkout).
 
 ### Current status
+The Cart model and filling it exist, as well as a controller for adding to it (not finished) cart_controller.rb. There is also some simple angular javascript pages for viewing the current cart contents.
+Todo:
+- Showing order totals, and giving a detailed breakdown
+- Selecting the order to checkout and instigating the checkout process.
+- Integration into new front end
