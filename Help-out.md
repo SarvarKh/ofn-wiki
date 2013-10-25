@@ -10,4 +10,4 @@ If you're not yet a rails developer but would like to learn we're very happy to 
 
 ### Everyone Else
 
-There's plenty to do - we've got some fantastic people who could always do with more support with: comms and marketing; fundraising; supply chain operations; testing etc. Contact volunteer@openfoodweb.org if you're interested. 
+There's plenty to do - we've got some fantastic people who could always do with more support with: comms and marketing; fundraising; supply chain operations; testing etc. Contact hello @ openfoodnetwork.org if you're interested. 
