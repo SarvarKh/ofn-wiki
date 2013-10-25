@@ -24,16 +24,8 @@ There are (at least) four good reasons to focus on interoperability and plugin-a
 *  Avoid Reinventing Wheel: There are lots of things that other people do really well and so we don't need to build them (or can leave until much later when we're really sure that it's needed)
 *  Flexibility: there are lots of new things being developed all the time and we want to be able to work with them and evolve our capability
 *  Legacy: people doing this kind of stuff (food enterprises) often have their own systems that they have good reasons for wanting to stick with - we want them to be able to connect with other enterprises through this kind of platform, whilst maintaining the systems they are familiar with using
-*  Non-Core: we spend all our time thinking about food systems, other people spend all their time thinking about other things . . and are much more likely to know how to do them better (e.g. accounting; ERP; logistics; social networking)
-
-### A Community Effort . . <a id="Volunteers"/>
-
-We haven't had any funding for this project yet, except a bit kicked in by [Eaterprises Australia](http://www.eaterprises.com.au) to get the ball rolling. While we will be getting cracking on fundraising this year (2013), it is still largely a volunteer effort.
-
-We recently put out a call for volunteers and all sorts of amazing people have appeared. Keep an eye on [The Team](www.openfoodweb.org/platform) to see who's working on this project. If you want to get involved, but you're not a developer there's still a lot you can do - [go here].
+*  Non-Core: we spend all our time thinking about food systems, other people spend all their time thinking about other things . . and are much more likely to know how to do them better (e.g. accounting; ERP; logistics; social networking.
  
-![Overview](http://openfoodweb.org/foundation/wp-content/uploads/2012/12/OFWF-Platform-Call-for-Volunteers-1024x723.jpg)
-
 For more detailed information on the Development process, look [here](#Development).
 
 # What <a id="What"/>
@@ -42,11 +34,11 @@ For more detailed information on the Development process, look [here](#Developme
 
 ### Demo <a id="Demo"/>
 
-If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://staging1.openfood.com.au). 
+If you want to have a play around with the software in action (with test data), you can use the [demo server here](http://staging2.openfood.com.au). 
 *  This demo contains de-identified data from real activity in November 2012 i.e. it works and we're using it to buy, sell and move food. 
-*  However, it is also the version that we use to do user testing on latest functions and upgrades, so please tell us (via UserVoice) if something doesn't work.
+*  However, it is also the version that we use to do user testing on latest functions and upgrades, so please tell us if something doesn't work.
 *  All feedback, feature extensions etc also appreciated!
-*  Feel free to do whatever you like (create accounts / orders etc) - we have removed the paypal payment option so that you can't accidentally pay . .
+*  Feel free to do whatever you like (create accounts / orders etc) - just don't use paypal or you will pay! (needs to be active so we can test it's working before we push through to production)
  
 # Where <a id="Where"/>
 
@@ -54,4 +46,4 @@ The system has been designed and piloted in Melbourne, Australia. Testing and de
 
 We are also building up a list of people and organisations interested in trialling the system when it's ready for roll-out - which we are planning to be October 2013 or thereabouts
 
-If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at volunteer (@) openfoodweb.org 
+If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at hello (@) openfoodnetwork.org or join the ![mailing list](http://eepurl.com/HsB0P)
