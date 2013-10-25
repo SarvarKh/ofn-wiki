@@ -46,4 +46,4 @@ The system has been designed and piloted in Melbourne, Australia. Testing and de
 
 We are also building up a list of people and organisations interested in trialling the system when it's ready for roll-out - which we are planning to be October 2013 or thereabouts
 
-If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at hello (@) openfoodnetwork.org or join the ![mailing list](http://eepurl.com/HsB0P)
+If you are interested in being an early test case (trying out the system in your region) and would like to be part of a network of regions doing so, get in touch at hello (@) openfoodnetwork.org or join the [mailing list](http://eepurl.com/HsB0P)
