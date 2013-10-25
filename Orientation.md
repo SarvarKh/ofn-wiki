@@ -33,7 +33,7 @@ The latest summary of objects and their relationships is shown below.
 
 The simplest Enterprise has the role Producer - these supply products to the system and set the base price.
 
-The other current Enterprise type is a Distributor (or Hub) - an Enterprise that aggregates and disaggregates products between suppliers and buyers and/or is a collection or delivery point for customers.
+The other current Enterprise type is a Hub (diverse Distributors) - an Enterprise that aggregates and disaggregates products between suppliers and buyers and/or is a collection or delivery point for customers.
 
 An Enterprise can: 
 *  Provide an offer to buyers i.e. make products available under certain conditions
@@ -57,11 +57,11 @@ Order Cycles are a key organising principle. Any Enterprise can coordinate an Or
 Usage Notes:
 *  A Hub / Distributor can have separate and concurrent order cycles e.g. for different collection and delivery dates or dealing with different classes of products (e.g. bulk dry goods, fresh produce etc)
 *  An order cycle can be available through one or more Hubs (e.g. buyers can choose their Hub for collection or delivery)
-*  MULTI-TENANCY - each Distributor/Hub is running its own show. They have their own fees, payment methods and shipping methods so that they can customise what they are offering their customers.
+*  MULTI-TENANCY - each Hub (and Producer) is running its own show. They have their own fees, payment methods and shipping methods so that they can customise what they are offering their customers.
  
 ### Products and Variants <a id="Products">
 
-The product and variant system is mostly unchanged from the [Spree standard](http://guides.spreecommerce.com/products_and_variants.html). The only significant difference is that every product **must** be associated with a Supplier. We have also made some changes to the administration interface for more efficient management of products and variants e.g. bulk product edit. 
+The product and variant system is mostly unchanged from the [Spree standard](http://guides.spreecommerce.com/products_and_variants.html). The only significant difference is that every product **must** be associated with a Producer. We have also made some changes to the administration interface for more efficient management of products and variants e.g. Products / Bulk Product Edit. 
 
 Variants enable the same product to be easily organised by size of package, quantity, quality, colour etc. This means that the same product (e.g. olive oil from Olivia Green) can be easily sold in different size bottles at different prices.
 
@@ -69,7 +69,7 @@ Variants enable the same product to be easily organised by size of package, quan
 
 General reports have been created that enable management of food enterprises within this model. They can be viewed on screen or exported as a csv file. These include:
 * Orders and Distributors - general read out of order information, including customer details, products and distributors. Can be filtered in excel to do almost anything you want
-* Order Cycle Reports - Totals for a given date range of
+* Orders & Fulfillment Reports - Totals for a given date range of
   - Suppliers, Products
   - Suppliers - Totals for each Product to each Distributor
   - Distributors - Totals of Each Product from each Supplier
