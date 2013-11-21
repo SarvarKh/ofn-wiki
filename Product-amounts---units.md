@@ -21,11 +21,11 @@ As an admin user, I go to the bulk product edit page. For each variant, I see th
 
 "Amount" sets the amount for this variant (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen).
 
-"Units" sets the units, from Weight, Volume, Dozens or Items. When Items is chosen, a fourth field appears, where the user can select the type of items (eg. bunches, bags, loaves, packets, etc.). (_maybe dozens is an option under items_).
+"Units" sets the units, from Weight, Volume or Items. When Items is chosen, a fourth field appears, where the user can select the type of items (eg. dozens, bunches, bags, loaves, packets, etc.).
 
 When I set these fields for a variant and click Save, the option type and value for that amount/unit is looked up (or created if absent) and assigned to the variant.
 
-
+### TODO: Formula for converting amount/unit into an option type string
 
 ### Creating new variants from the bulk product edit page
 
