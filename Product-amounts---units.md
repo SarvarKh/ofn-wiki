@@ -21,9 +21,13 @@ As an admin user, I go to the bulk product edit page. For each **product**, I se
 "Units" sets the units from the following options:
 
 Weight: g; kg; t
+
 Volume: ml; L; ML
+
 Items: type of items (eg. dozens, bunches, bags, loaves, packets, etc.)
+
 Animals: (?)
+
 [Later: We could have a Unit option that is 'Custom', which lets the user name it, and put in values themselves?]
 
 Each **variant** then has two additional fields.
