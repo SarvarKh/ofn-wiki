@@ -19,7 +19,7 @@ As an admin user, I go to the bulk product edit page. For each variant, I see th
 
 "Single resource" controls whether the stock comes from a central pool (t) or if each variant has its own stock level (f). When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time, but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
 
-"Amount" sets the amount for this variant (ie. 5 kg).
+"Amount" sets the amount for this variant (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen).
 
 "Units" sets the units, from Weight, Volume, Dozens or Items. When Items is chosen, a fourth field appears, where the user can select the type of items (eg. bunches, bags, loaves, packets, etc.). (_maybe dozens is an option under items_).
 
@@ -29,5 +29,15 @@ When I set these fields for a variant and click Save, the option type and value 
 
 ### Creating new variants from the bulk product edit page
 
+The user can click an Add Variant link on a product row, which adds a row for the variant. The variant's options are set via the above interface.
+
+
 ### Editing option types outside of this interface
-### Interface is available on product edit page, also
+
+If the admin wishes to add additional option types to a product, they can do so using the traditional Spree interface.
+
+
+
+### The interface is available on product edit page, also
+
+The interface described above for setting variant amounts and units will also be available from the non-bulk product edit screen.
