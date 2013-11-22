@@ -16,28 +16,28 @@ As an admin user, I go to the bulk product edit page. For each **product**, I se
 - Single resource? (checkbox)
 - Units (select box)
 
-"Single resource" controls whether the stock comes from a central pool (when enabled) or if each variant has its own stock level (when disabled). When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time (based on amount avail in total on hand), but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
+"Single resource" controls whether the stock comes from a central pool (when enabled) or if each variant has its own stock level (when disabled). Single resource only appears as an option, and can only be selected when the product has variants. When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time (based on amount avail in total on hand), but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
 
 "Units" sets the units from the following options:
 * Weight: g; kg; t
-* Volume: ml; L; ML
+* Volume: mL; L; ML
 * Items: type of items (eg. dozens, bunches, bags, loaves, packets, etc.)
 * Animals: (?)
 * [Could we have a Unit option that is 'Custom', which lets the user name it?]
 
-NB. do this by type to filter search OR show all `Rohan: ???`
-
 and then I update "On Hand" or select "On Demand".
+
+At this stage the user picks a scale of unit (ie. mL vs L). This is used for entering amounts for all variants. They may need to enter values crossing several scales (ie. .25 L, 1 L, 10 L). On the front end, these will automatically be converted to human-friendly values (ie. 250 mL, 1 L, 10 L).
 
 ### Creating new variants from the bulk product edit page
 
 The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has two additional fields.
 - Variant (float - shared resource; text - if not shared resource)
-- On Hand (float) `Rohan: Really float? This means wrangling spree`
+- On Hand (int)
 
-"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. `Rohan: Really text?`
+"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility.
  
-"On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen). `Rohan: Is this implying fractional on-hand? Which are we talking about here?`
+"On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). If it is a shared resource, this field can only be set at the product level.
 
 When I set these fields for a variant and click Save, the option type and value for that unit/var is looked up (or created if absent) and assigned to the variant.
 
