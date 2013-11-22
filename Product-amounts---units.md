@@ -22,6 +22,7 @@ As an admin user, I go to the bulk product edit page. For each **product**, I se
 * Weight: g; kg; t
 * Volume: mL; L; ML
 * Items: type of items (eg. dozens, bunches, bags, loaves, packets, etc.)
+* Size
 * Animals: (?)
 * [Could we have a Unit option that is 'Custom', which lets the user name it?]
 
@@ -35,7 +36,7 @@ The user can click an Add Variants link on a product row, which adds a row for t
 - Variant (float - shared resource; text - if not shared resource)
 - On Hand (int)
 
-"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility.
+"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. For example, with the unit "Size" selected, the user can enter values such as "Small", "Medium" and "Large".
  
 "On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). If it is a shared resource, this field can only be set at the product level.
 
