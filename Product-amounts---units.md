@@ -23,7 +23,7 @@ As an admin user, I go to the bulk product edit page. For each **product**, I se
 * [We could have a Unit option that is 'Custom', which lets the user name it?]
 NB. do this by type to filter search OR show all
 
-and then I update "On Hand" as usual
+and then I update "On Hand" or select "On Demand"
 
 ### Creating new variants from the bulk product edit page
 
