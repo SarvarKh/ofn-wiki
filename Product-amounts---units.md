@@ -33,10 +33,10 @@ At this stage the user picks a scale of unit (ie. mL vs L). This is used for ent
 ### Creating new variants from the bulk product edit page
 
 The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has two additional fields.
-- Variant (float - shared resource; text - if not shared resource)
+- Value (float - shared resource; text - if not shared resource)
 - On Hand (int)
 
-"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. For example, with the unit "Size" selected, the user can enter values such as "Small", "Medium" and "Large".
+"Value" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", value is a text field enabling a high level of user flexibility. For example, with the unit "Size" selected, the user can enter values such as "Small", "Medium" and "Large".
  
 "On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). If it is a shared resource, this field can only be set at the product level.
 
@@ -52,7 +52,7 @@ If the admin wishes to add additional option types to a product, they can do so 
 
 ### The interface is available on product edit page, also
 
-The interface described above for setting variant amounts and units will also be available from the non-bulk product edit screen.
+The interface described above for setting variant units and values will also be available from the non-bulk product edit screen.
 
 
 ### Setting minimum supply quantity (MSQ, formerly known as group buy)
