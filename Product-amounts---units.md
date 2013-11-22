@@ -25,7 +25,7 @@ As an admin user, I go to the bulk product edit page. For each **product**, I se
 * Animals: (?)
 * [Could we have a Unit option that is 'Custom', which lets the user name it?]
 
-NB. do this by type to filter search OR show all [[Rohan: ???]]
+NB. do this by type to filter search OR show all `Rohan: ???`
 
 and then I update "On Hand" or select "On Demand".
 
@@ -33,11 +33,11 @@ and then I update "On Hand" or select "On Demand".
 
 The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has two additional fields.
 - Variant (float - shared resource; text - if not shared resource)
-- On Hand (float) [[Rohan: Really float? This means wrangling spree]]
+- On Hand (float) `Rohan: Really float? This means wrangling spree`
 
-"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. [[Rohan: Really text?]]
+"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. `Rohan: Really text?`
  
-"On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen). [[Rohan: Is this implying fractional on-hand? Which are we talking about here?]]
+"On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen). `Rohan: Is this implying fractional on-hand? Which are we talking about here?`
 
 When I set these fields for a variant and click Save, the option type and value for that unit/var is looked up (or created if absent) and assigned to the variant.
 
