@@ -11,32 +11,33 @@ Additionally, the way that Spree manages stock control does not always reflect r
 
 ### Setting units and amounts for a product
 
-As an admin user, I go to the bulk product edit page. For each **product**, I see a new field:
+As an admin user, I go to the bulk product edit page. For each **product**, I see two new fields:
 
+- Single resource? (checkbox)
 - Units (select box)
+
+"Single resource" controls whether the stock comes from a central pool (when enabled) or if each variant has its own stock level (when disabled). When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time (based on amount avail in total on hand), but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
 
 "Units" sets the units from the following options:
 * Weight: g; kg; t
 * Volume: ml; L; ML
 * Items: type of items (eg. dozens, bunches, bags, loaves, packets, etc.)
 * Animals: (?)
-* [We could have a Unit option that is 'Custom', which lets the user name it?]
-NB. do this by type to filter search OR show all
+* [Could we have a Unit option that is 'Custom', which lets the user name it?]
 
-and then I update "On Hand" or select "On Demand"
+NB. do this by type to filter search OR show all [[Rohan: ???]]
+
+and then I update "On Hand" or select "On Demand".
 
 ### Creating new variants from the bulk product edit page
 
-The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has three additional fields.
-- Single resource? (checkbox)
+The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has two additional fields.
 - Variant (float - shared resource; text - if not shared resource)
-- On Hand (float)
+- On Hand (float) [[Rohan: Really float? This means wrangling spree]]
 
-"Single resource" controls whether the stock comes from a central pool (t) or if each variant has its own stock level (f). When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time (based on amount avail in total on hand), but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
-
-"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility.
+"Variant" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. If the product is NOT a "shared resource", variants are text fields enabling a high level of user flexibility. [[Rohan: Really text?]]
  
-"On Hand" sets the amount available for this variant if !shared resource (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen). 
+"On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). Amount can be fractional (eg. 0.5 dozen). [[Rohan: Is this implying fractional on-hand? Which are we talking about here?]]
 
 When I set these fields for a variant and click Save, the option type and value for that unit/var is looked up (or created if absent) and assigned to the variant.
 
