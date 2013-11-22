@@ -52,3 +52,8 @@ If the admin wishes to add additional option types to a product, they can do so 
 ### The interface is available on product edit page, also
 
 The interface described above for setting variant amounts and units will also be available from the non-bulk product edit screen.
+
+
+## Setting minimum supply quantity (MSQ, formerly known as group buy)
+
+If a product is a shared resource, the user can only set its MSQ at the product level. Otherwise, each variant can have a MSQ.
