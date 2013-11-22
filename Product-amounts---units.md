@@ -57,3 +57,9 @@ The interface described above for setting variant amounts and units will also be
 ### Setting minimum supply quantity (MSQ, formerly known as group buy)
 
 If a product is a shared resource, the user can only set its MSQ at the product level. Otherwise, each variant can have a MSQ.
+
+
+### Data migration
+
+1. This might be a lot of work, since the existing products don't conform to this system.
+2. This amount of work will only grow as we get more products on the system.
