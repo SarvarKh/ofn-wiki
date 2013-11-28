@@ -14,7 +14,7 @@ Additionally, the way that Spree manages stock control does not always reflect r
 As an admin user, I go to the bulk product edit page. For each **product**, I see two new fields:
 
 - Single resource? (checkbox)
-- Units (select box)
+- Units (select field)
 
 "Single resource" controls whether the stock comes from a central pool (when enabled) or if each variant has its own stock level (when disabled). Single resource only appears as an option, and can only be selected when the product has variants. When single resource is selected, only the count on hand for the product is editable. The count on hand for its variants are calculated in real time (based on amount avail in total on hand), but uneditable. When single resource is not selected, only the count on hand for the variants are editable. The count on hand for the product is blank.
 
@@ -32,15 +32,14 @@ At this stage the user picks a scale of unit (ie. mL vs L). This is used for ent
 
 ### Creating new variants from the bulk product edit page
 
-The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has two additional fields.
-- Value (float - shared resource; text - if not shared resource)
-- On Hand (int)
+The user can click an Add Variants link on a product row, which adds a row for the variant. Each **variant** then has an additional field:
+- Value (float - shared resource or weight/volume units; text - if not shared resource or items resource)
 
-"Value" then describes or quantifies the variant. If the product is a "shared resource" this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource", value is a text field enabling a high level of user flexibility. For example, with the unit "Size" selected, the user can enter values such as "Small", "Medium" and "Large".
+"Value" then describes or quantifies the variant. If the product is a "shared resource" or if the product's unit is in weight or volume, then this field is a float field, enabling it to be used for calculations. In this case it can be fractional (eg. 0.5 dozen). If the product is NOT a "shared resource" and the product's unit is not weight or volume, value is a text field enabling a high level of user flexibility. For example, with the unit "Size" selected, the user can enter values such as "Small", "Medium" and "Large".
  
 "On Hand" sets the amount available for this variant if not a shared resource (ie. 5 kg). If it is a shared resource, this field can only be set at the product level.
 
-When I set these fields for a variant and click Save, the option type and value for that unit/var is looked up (or created if absent) and assigned to the variant.
+When the admin sets these fields for a variant and clicks Save, the option type and value for that unit/value is looked up (or created if absent) and assigned to the variant.
 
 ### TODO: Formula for converting amount/unit into an option type string
 
