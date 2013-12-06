@@ -15,21 +15,32 @@ If a User has permission to manage other Enterprises, when they are setting up n
 !SKU  Supplier    Product   Variant   Num.  @   Price   =   Total
 
 Subtotal: $xx.xx
+
 Distribution: $xx.xx
+
 Delivery: 
+
 Order Total:
 
 ### Collection / Delivery Details
 reads from:
 
+
 Distribution Info [NB. needs formatting]
+
 Delivery Instructions [from Order Cycle]
 
 ### Sign Off
 Thanks for your support
+
 Hub Contact:
+
 Name
+
 Enterprise Name
+
 Contact Phone
+
 Contact Email
+
 Website
