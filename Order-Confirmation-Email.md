@@ -11,7 +11,8 @@ If a User has permission to manage other Enterprises, when they are setting up n
 
 ### Order Summary:
 [can we use tabs so that it displays more as a table?]
-NOT SKU  Supplier    Product   Variant   Num.  @   Price   =   Total
+
+!SKU  Supplier    Product   Variant   Num.  @   Price   =   Total
 
 Subtotal: $xx.xx
 Distribution: $xx.xx
