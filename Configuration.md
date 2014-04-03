@@ -39,7 +39,7 @@ Sample data includes:
 * payment methods
 * products
 
-YAML files for this data are defined by country in:
+YAML files for this data are defined in sub-directories to group them. This could be by country but also might be other test configurations for different scenarios:
 ```
 /lib/seed_data
   /au
