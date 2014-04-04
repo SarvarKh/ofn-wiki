@@ -79,8 +79,8 @@ Because some data is dependent on others, some data definitely has to be read in
 
 
 Where should the data be kept?  What directory should be the standard/convention?
-* some gems and systems use "db/seed"  [TBD need reference [AE/wsd])
-* some use lib/ xxx (TBD - need reference [AE/wsd])
+* some gems and systems use folders under "db":  seed-fu uses db/fixtures, seedBank uses db/seeds
+* some use lib/seed_data: OFN landing page images are kept there; read in by db/seed.rb
 * we just need to make a decision to start with
   * perhaps the directory is passed in as an option, but having a convention for where it 'should' live will keep the system neat and clean(er)
 
