@@ -9,5 +9,13 @@ Managed on Trello:
 
 Staging server: https://staging2.openfood.com.au
 
+***
+The issue queue and wiki pages here on github are the place where questions are raised and discussed, and approaches and solutions are considered and solidified. Discussions about potential solutions, particular approaches, etc. are captured here and are available for others to read  -- perhaps as they join the project and come up to speed, or perhaps to recall why as particular feature was or was not implemented a particular way. Once things are worked out and decisions are made (about the approach to take, specific solution to use, etc.), they should be recorded on the Open Food Network website. Thus the OFN website will document how things are done and what solutions are used on the project, and the background technical discussions will still remain available here on github. 
+
+Initially, issues, problems, and ideas should be handled in the issue queue.  
+If the discussion blooms into a larger feature, it may be good to create a wiki page as part of this Developer Guide.
+***
+
+
 ## [Configuration](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Configuration)
 ### [Data initialization - bootstrapping, seeding, and importing data](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data)
