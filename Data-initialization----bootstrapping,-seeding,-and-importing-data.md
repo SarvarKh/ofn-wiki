@@ -115,9 +115,11 @@ Where are the lines drawn between "initial bootstrap data," "seed data," and "sa
   * does not do validation, but there is [a pull request that has implemented validation](https://github.com/mbleigh/seed-fu/pull/39) (We need to test it to see how well it does/doesn't work)
 * [SeedBank](https://github.com/james2m/seedbank)
   * does a nice job of handling the files and directories for importing. Perhaps part of this logic/code could be emulated
-  * just does an `eval` of a file (using its own DSL); this limits what can be done and has caused problems for some (see the issue queue for SeedBank).  Looks like this would not be a good approach
+  * just does an `eval` of a file (using its own DSL); this limits what can be done and has caused problems for some (see the issue queue for SeedBank).  Looks like using eval like this is not a good approach
 * [ActiveRecord-Import](https://github.com/zdennis/activerecord-import)
-  * 
+  * for bulk updating large numbers of records
+  * can do validations
+  * _AE/wsd is learning more about this gem to see what it could provide_
 * [ActiveImporter](https://github.com/continuum/active_importer)
   * really just reads info from a CSV file, but validation methods could be called for each `row` that's read in
   * would be good to look at if/when CSV importing is done
@@ -125,7 +127,9 @@ Where are the lines drawn between "initial bootstrap data," "seed data," and "sa
   * does not really apply; deals with pulling and pushing entire (remote) databases
   * has not been updated in 2 years
 * [data_miner](https://github.com/seamusabshere/data_miner)
-  * 
+  * WILL NOT RUN ON WINDOWS  This uses binaries and calls specific to Unix. 
+  * Here's the description of the gem: `Download, unpack from a ZIP/TAR/GZ/BZ2 archive, parse, correct, convert units and import Google Spreadsheets, XLS, ODS, XML, CSV, HTML, etc. into your ActiveRecord models. Uses RemoteTable gem internally.`
+  * It might have some logic to look at and emulate
 
 
 
