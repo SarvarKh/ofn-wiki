@@ -32,7 +32,13 @@ Data Initialization covers the functionality for:
 
 The core complexity is handling **referential integrity** of the database tables: ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table).
 
-ActiveRecord does this when it does validation. Referential integrity is checked as part of the relational
+[ActiveModel](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence) does this when it does validation. Specifically, referential integrity is checked as part of the [validates is used with :presence => true](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence). Here's an example:
+```
+class LineItem < ActiveRecord::Base
+  belongs_to :order
+  validates :order_id, :presence => true
+end
+```
 
 
 Advantages of ignoring referential integrity during data import:  
