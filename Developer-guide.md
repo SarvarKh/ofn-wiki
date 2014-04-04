@@ -10,3 +10,4 @@ Managed on Trello:
 Staging server: https://staging2.openfood.com.au
 
 ## [Configuration](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Configuration)
+### [Data initialization - bootstrapping, seeding, and importing data](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data)
