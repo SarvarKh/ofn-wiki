@@ -30,9 +30,10 @@ Data Initialization covers the functionality for:
       * for development and testing
 * initially, will be done via command-line or rake task; will assume the user has enough knowledge to do that (later versions might have a UI; see below)
 
+### Referential Integrity
 The core complexity is handling **referential integrity** of the database tables: ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table).
 
-[ActiveModel](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence) does this when it does validation. Specifically, referential integrity is checked as part of the [validates is used with :presence => true](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence). Here's an example:
+[ActiveModel](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence) does this when it does validation. Specifically, referential integrity is checked when an association has been declared with [validates ...  :presence => true](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence), and validation is called during some action. Here's an example of a declaration (assume there is some ActiveModel for Order that has an orderId:
 ```
 class LineItem < ActiveRecord::Base
   belongs_to :order
