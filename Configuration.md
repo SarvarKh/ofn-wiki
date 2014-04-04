@@ -45,11 +45,11 @@ YAML files for this data are defined in sub-directories to group them. This coul
   /au
   /uk
   /usa
+```
 
 ***
 
-
-[Data initialization  - bootstrapping, seeding, and importing data](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data)
+## [Data initialization  - bootstrapping, seeding, and importing data](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data)
 
 
 
