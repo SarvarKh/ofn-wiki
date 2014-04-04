@@ -11,7 +11,13 @@ Data Initialization covers the functionality for:
 * loading different sets of **sample data**
 
 
-Contents:
+### Contents:
+
+#### [Goals](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data#goals-for-importing-data)
+#### [Definitions](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data#definitions)
+#### [Open Questions](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data#open-questions)
+#### [Miscellaneous Notes (not yet organized)](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data#misc-notes-not-yet-organized-noted-here-so-the-thoughts-wont-be-lost)
+#### [Ideas for later versions](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data#ideas-for-later-versions)
 
 ***
 
