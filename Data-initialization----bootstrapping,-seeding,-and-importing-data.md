@@ -31,7 +31,9 @@ Data Initialization covers the functionality for:
 * initially, will be done via command-line or rake task; will assume the user has enough knowledge to do that (later versions might have a UI; see below)
 
 ### Referential Integrity
-The core complexity is handling **referential integrity** of the database tables: ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table).
+**The core complexity is handling *referential integrity* of the database tables:**  ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table).
+
+**DECIDING WHETHER OR NOT TO DO REFERENTIAL INTEGRITY VALIDATION is the key to developing this functionality.**
 
 [ActiveModel](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence) does this when it does validation. Specifically, referential integrity is checked when an association has been declared with [validates ...  :presence => true](http://guides.rubyonrails.org/v3.2.13/active_record_validations_callbacks.html#presence), and validation is called during some action. Here's an example of a declaration (assume there is some ActiveModel for Order that has an orderId:
 ```
@@ -41,6 +43,7 @@ class LineItem < ActiveRecord::Base
 end
 ```
 
+Doing the validation for referential integrity as data is loaded will definitely make the process slower, but the advantage is that we can be assured that the data read in will be valid.  (None, some, or all validations could be run on the data as it is read in.)
 
 Advantages of ignoring referential integrity during data import:  
 * much quicker to import; much simpler to develop
@@ -49,11 +52,14 @@ Disadvantages of ignoring referential integrity during import:
 * if invalid data is entered, it may not be apparent immediately -- it may cause some failure of the system that may not obviously be traced to invalid data
 
 
-Different gems handle it differently:
+#### Some gems **do** validation as data is read in (and saved), some do not.
 * Gems that do validation/referential integrity checking:
+  * [ActiveRecord Import](https://github.com/zdennis/activerecord-import)
 
-* Gems that do **not ** do validation/referential integrity checking:
-  * [Seed-fu](https://github.com/mbleigh/seed-fu)
+* Gems that do **not** do validation/referential integrity checking:
+  * [Seed-fu](https://github.com/mbleigh/seed-fu) -- but there is [a pull request that does it](https://github.com/mbleigh/seed-fu/pull/39) (see Seed-Fu notes below)
+  * [SeedBank](https://github.com/james2m/seedbank)
+  * [ActiveImporter](https://github.com/continuum/active_importer)
 
 
 
@@ -100,9 +106,28 @@ Where are the lines drawn between "initial bootstrap data," "seed data," and "sa
 * existing spree_country table includes the 3 letter ISO-3166-1 (alpha-3) abbrv. for the country (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 
 * Ashley will write up some notes about what she's learned so far about the different gems and classes that could be used, including the approaches and assumptions they use,  and other issues she's come across so far.
-  * Seed-Fu: no validation
 
-* Will lib/tasks/dev.rake be completely replaced by this?
+
+* Should lib/tasks/dev.rake be completely replaced by this?  Or should this be called by dev.rake?
+
+### Notes about Gems that do data importing:
+* [seed-fu](https://github.com/mbleigh/seed-fu)
+  * does not do validation, but there is [a pull request that has implemented validation](https://github.com/mbleigh/seed-fu/pull/39) (We need to test it to see how well it does/doesn't work)
+* [SeedBank](https://github.com/james2m/seedbank)
+  * does a nice job of handling the files and directories for importing. Perhaps part of this logic/code could be emulated
+  * just does an `eval` of a file (using its own DSL); this limits what can be done and has caused problems for some (see the issue queue for SeedBank).  Looks like this would not be a good approach
+* [ActiveRecord-Import](https://github.com/zdennis/activerecord-import)
+  * 
+* [ActiveImporter](https://github.com/continuum/active_importer)
+  * really just reads info from a CSV file, but validation methods could be called for each `row` that's read in
+  * would be good to look at if/when CSV importing is done
+* [taps](https://github.com/ricardochimal/taps)
+  * does not really apply; deals with pulling and pushing entire (remote) databases
+  * has not been updated in 2 years
+* [data_miner](https://github.com/seamusabshere/data_miner)
+  * 
+
+
 
 
 ## Ideas for later versions:
