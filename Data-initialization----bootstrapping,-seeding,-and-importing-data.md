@@ -1,9 +1,10 @@
-# Data Initialization - bootstrapping data, seeding data, and importing sample data
 
-This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization:  
-* the functionality for loading the initial data required to get the system to run (the **boostrapping data**),
-* the functionality for importing and creating **seed data**,
-* and the functionality for loading different sets of **sample data**
+This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.  It is part of the Development pages.
+
+Data Initialization covers the functionality for:
+* loading the initial data required to get the system to run (the **boostrapping data**),
+* importing and creating **seed data**,
+* loading different sets of **sample data**
 
 **THIS PAGE IS A WORK IN PROGRESS. EDIT AND ADD TO IT TO RECORD ISSUES, QUESTIONS, AND DECISIONS.**
 
