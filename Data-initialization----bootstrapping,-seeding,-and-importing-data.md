@@ -1,12 +1,15 @@
+This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.  It is part of the [Developer Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Developer-guide).
+**THIS PAGE IS A WORK IN PROGRESS.**
+Edit and add to it to record issues, questions, and decisions made. Be Bold!
 
-This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.  It is part of the Development pages.
+***
+
 
 Data Initialization covers the functionality for:
 * loading the initial data required to get the system to run (the **boostrapping data**),
 * importing and creating **seed data**,
 * loading different sets of **sample data**
 
-**THIS PAGE IS A WORK IN PROGRESS. EDIT AND ADD TO IT TO RECORD ISSUES, QUESTIONS, AND DECISIONS.**
 
 Contents:
 
