@@ -1,8 +1,6 @@
 This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.  It is part of the [Developer Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Developer-guide).
 
-**THIS PAGE IS A WORK IN PROGRESS.**
-
-Edit and add to it to record issues, questions, and decisions made. Be Bold!
+**THIS PAGE IS A WORK IN PROGRESS.**  Edit and add to it to record issues, questions, and decisions made. Be Bold!
 
 ***
 
@@ -32,15 +30,25 @@ Data Initialization covers the functionality for:
       * for development and testing
 * initially, will be done via command-line or rake task; will assume the user has enough knowledge to do that (later versions might have a UI; see below)
 
-The core complexity is handling referential integrity of the database tables (ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table)
+The core complexity is handling **referential integrity** of the database tables: ensuring that each entry that should refer to another does so with a valid id (e.g. a state always refers to a country, and the country it refers to exists in the country table).
 
-Different gems handle it differently:
-(TBD - list those that do referential integrity checks, those that don't)
+ActiveRecord does this when it does validation. Referential integrity is checked as part of the relational
+
 
 Advantages of ignoring referential integrity during data import:  
 * much quicker to import; much simpler to develop
+
 Disadvantages of ignoring referential integrity during import: 
 * if invalid data is entered, it may not be apparent immediately -- it may cause some failure of the system that may not obviously be traced to invalid data
+
+
+Different gems handle it differently:
+* Gems that do validation/referential integrity checking:
+
+* Gems that do **not ** do validation/referential integrity checking:
+  * [Seed-fu](https://github.com/mbleigh/seed-fu)
+
+
 
 ## Definitions:
 Bootstrapping:
