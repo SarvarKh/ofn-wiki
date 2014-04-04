@@ -105,6 +105,7 @@ Where are the lines drawn between "initial bootstrap data," "seed data," and "sa
 * existing spree_country table includes the 3 letter ISO-3166-1 (alpha-3) abbrv. for the country (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 
 * Ashley will write up some notes about what she's learned so far about the different gems and classes that could be used, including the approaches and assumptions they use,  and other issues she's come across so far.
+  * Seed-Fu: no validation
 
 * Will lib/tasks/dev.rake be completely replaced by this?
 
