@@ -2,6 +2,12 @@ This is detailed information about how the project is organised and how to contr
 
 ## Development process
 
+### Coding Standards
+* Please follow the [Ruby on Rails coding standards](http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#follow-the-coding-conventions).
+
+* Code tags:  Please put a colon (:) after a code tag.  Use <code>TODO:</code> instead of <code>TODO</code>
+
+***
 ### Issues
 Managed on Trello:
 - OFN Core Dev - https://trello.com/b/TXnZrrRL/ofn-core-dev
