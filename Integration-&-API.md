@@ -17,5 +17,6 @@ We would like to be able to connect with other services for many of the followin
  
 ### Transport and Distribution
 *  MeeMeep
+*  BringBee
 *  New OS Distribution system?
 
