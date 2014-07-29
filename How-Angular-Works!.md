@@ -32,11 +32,14 @@ We're making heavy use of a technique called Dereferencing. Javascript allows ci
     foo.bar.foo == foo # true
     bar.foo.bar == bar # true
 In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations to other objects are represented with IDs:
+
     enterprise:
       associated_enterprises:
         id: 1
         id: 2
+
 When such a service is loaded we _dereference_; replacing the IDs with pointers to appropriate objects. This generates a (circular) web of pointers between objects client-side. This technique avoids code duplication, only having a single object representing a given Enterprise:
+
     enterprise_1 =
       id: 1
       associated_enterprises:
@@ -45,7 +48,9 @@ When such a service is loaded we _dereference_; replacing the IDs with pointers 
       id: 2
       associated_enterprise:
         id: 1
+
 after ingestion, we get:
+
     enterprise_1.associated_enterprises[0] == enterprise_2 # true
     enterprise_2.associated_enterprises[0] == enterprise_1 # true
       
