@@ -1,7 +1,7 @@
 #How Angular works
 This is breakdown of our approach to Angular.js integration with Rails. Our particular case poses a handful of unique issues; we've made some non-standard design choices.
 
-## Some basic design decisions:
+## Big picture
 Here's a quick description of our design decisions, illustrating how to work with our Angular framework.
 
 ###Each page is a separate controller/view
