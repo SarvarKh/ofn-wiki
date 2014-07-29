@@ -17,8 +17,10 @@ Anything inside app/assets/javascripts/templates will automatically be compiled,
 ####Data can be injected on page load
 We're using the InjectionHelper to inject JSON data (via script tags) into pages onload. This is faster than triggering an Ajax request, and is useful in situations where data is required immediately.
 
-####Jasmine/Karma is being used for integration tests
-Services, controllers and some aspects of directives should be tested. For integration testing, we've elected to use Capybara with Rspec.
+####Jasmine/Karma is being used for unit tests
+Services, controllers and some aspects of directives should be tested. This is clunkier than using Rspec, but gets easier with practice!
+
+For integration testing, we've elected to use Capybara with Rspec.
 
 ####Everything is done in Coffeescript
 You can copy idioms and approaches from the existing code: e.g. I've worked out an efficient way to use Coffeescript when building services. Copy the idioms as much as possible; it'll help to read Coffeescript.org and master the nuances.
