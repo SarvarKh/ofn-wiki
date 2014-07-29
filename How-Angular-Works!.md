@@ -1,5 +1,5 @@
 #How Angular works
-This is breakdown of our approach to Angular.js integration with Rails. Our particular case poses a handful of unique issues, and so we've made some non-standard design choices.
+This is breakdown of our approach to Angular.js integration with Rails. Our particular case poses a handful of unique issues; we've made some non-standard design choices.
 
 ## Some basic design decisions:
 Here's a quick description of our design decisions, illustrating how to work with our Angular framework.
@@ -13,5 +13,11 @@ Anything inside app/assets/javascripts/templates will automatically be compiled,
 ###Data can be injected on page load
 We're using the InjectionHelper to inject JSON data (via script tags) into pages onload. This is faster than triggering an Ajax request, and is useful in situations where data is required immediately.
 
+###Jasmine/Karma is being used for integration tests
+
 ###Everything is done in Coffeescript
 You can copy idioms and approaches from the existing code: e.g. I've worked out an efficient way to use Coffeescript when building services. Copy the idioms as much as possible; it'll help to read Coffeescript.org and master the nuances.
+
+### Gotchas and minor notes
+* Karma configuration is in spec/javascripts/application_spec.js. Relevant files must **also** be included here.
+* Some functions in Karma must explicitly return null, e.g. " module ($provide)"
