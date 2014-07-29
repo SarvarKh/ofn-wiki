@@ -29,8 +29,10 @@ You can copy idioms and approaches from the existing code: e.g. I've worked out 
 
 #### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
+
     foo.bar.foo == foo # true
     bar.foo.bar == bar # true
+
 In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations to other objects are represented with IDs:
 
     enterprise:
