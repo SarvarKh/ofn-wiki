@@ -47,6 +47,7 @@ Currently [we're using a fork](github.com/willrjmarshall/angular-foundation) wit
 
 Since AF doesn't always precisely meet our needs, we've written our own directives that make use of and extend it. For example see the PriceBreakdown directive:
 
+```coffeescript
     Darkswarm.directive "priceBreakdown", ($tooltip)->
       tooltip = $tooltip 'priceBreakdown', 'priceBreakdown', 'click' 
       tooltip.scope = 
@@ -57,7 +58,7 @@ Since AF doesn't always precisely meet our needs, we've written our own directiv
       replace: true
       templateUrl: 'price_breakdown.html'
       scope: true
-
+```
 This directive uses AF's $tooltip service (which generates a directive object), then patches it (replacing the scope definition with an isolate scope). This allows us to use most of the logic inside $tooltip (show, hide, events, onscreen placement, etc) while using our own directive for the tooltip itself.
 
 The priceBreakdownPopup directive (which controls our tooltip) is named according to a convention established in the $tooltip service, allowing us to use [our own template](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/assets/javascripts/templates/price_breakdown.html.haml) and potentially our own behaviour.
