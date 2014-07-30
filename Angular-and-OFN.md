@@ -23,6 +23,7 @@ For simplicity we've elected to keep each page separate, rendered server-side. W
 Anything inside app/assets/javascripts/templates will automatically be compiled, and injected by name into Angular's templateCache. Haml is supported. Templates can be accessed via templateUrl, e.g. 
 ```coffeescript
 templateUrl: 'foo.html'
+```
 
 ####Data is injected on page load
 We're using helpers (in InjectionHelper) to inject JSON data (via script tags) into pages onload. This is faster than triggering an Ajax request, and is useful in situations where data is required immediately to render the page.
