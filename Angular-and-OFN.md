@@ -64,6 +64,24 @@ This directive uses AF's $tooltip service (which generates a directive object), 
 
 The priceBreakdownPopup directive (which controls our tooltip) is named according to a convention established in the $tooltip service, allowing us to use [our own template](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/assets/javascripts/templates/price_breakdown.html.haml) and potentially our own behaviour.
 
+#### Active Model Serializers (AMS)
+We use AMS to render JSON. Although some older injection is still being done with Rabl templates, everything should be done in AMS henceforth.
+
+All serializers are scoped to an "API" namespace, e.g. API::ProductSerializer. This is because AMS will automatically be associated with models by a naming convention, which causes problems in the Admin backend:
+```ruby
+class EnterpriseSerializer < ActiveModel::Serialize
+end
+Enterprise.new.to_json # automatically uses the above serializer
+```
+vs
+```ruby
+module Api
+ class EnterpriseSerializer
+  end
+end
+Enterprise.new.to_json # No change. The serializer must be invoked explicitly.
+```
+
 #### Global controllers and widgets
 Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. Some consideration must be given to dependencies, and data injection must be speedy: e.g. once-off controllers such as CheckoutCtrl can depend on CartCtrl, but not vice-versa.
 
@@ -109,12 +127,14 @@ enterprise_2.associated_enterprises[0] == enterprise_1 # true
 
 #### The Cart
 The cart is an elegant but counter-intuitive bit of code. The various components are:
+
 ```coffeescript
-# Represents the current Order object, pulled from the server. This is global, injected on page load, always-available and scoped to a single user.
 Darkswarm.factory 'CurrentOrder', (currentOrder) ->
   new class CurrentOrder
     order: currentOrder
 ```
+This represents the current order, pulled from the server (e.g. current_order). This is global, injected on page load, always-available and scoped to a single user.
+
 
 ## Gotchas
 
