@@ -3,6 +3,14 @@ OpenFoodNetwork.org uses Angular.js for the public-facing interface. Angular is 
 
 Our application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
+## Things you should read
+* [Understanding Scopes](https://github.com/angular/angular.js/wiki/Understanding-Scopes)
+* [Coffeescript Cookbook](http://coffeescriptcookbook.com/)
+* [Coffeescript.org](http://coffeescript.org)
+* [A Practical Guide to Angular.js Directives](http://www.sitepoint.com/practical-guide-angularjs-directives/)
+* [Angular Directives for Foundation](http://madmimi.github.io/angular-foundation/)
+* [Declaring Angular Services with Coffeescript](http://benhollis.net/blog/2014/01/17/cleanly-declaring-angularjs-services-with-coffeescript/)
+
 ## Big picture
 
 #### The pretty new layout is called 'Darkswarm'
