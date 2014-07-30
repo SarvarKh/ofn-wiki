@@ -4,11 +4,17 @@ Following is a breakdown of our approach to Angular.js integration with Rails. T
 Many of the design decisions were made by Will Marshall, who has moved to the US. If you've got questions about decisions he's made, contact him!
 
 ## Big picture
-Here's a quick description of our design decisions, outlining how we've configured Angular.
+Following is a quick outline of our big-picture design decisions.
 
 #### The new pretty layout is called 'Darkswarm'
 * All the relevant Coffeescript is inside app/assets/javascripts/darkswarm
+* The relevant layout is 'layouts/darkswarm'
 * Anything outside Darkswarm should (and must) be redundant
+
+#### We use Sass, Haml, Coffeescript, Guard and LiveReload
+All of these are fairly self-explanatory. We've got a really nice workflow with Guard and Livereload set up that'll auto-refresh your browser when doing client-side work. To get it working install LiveReload in your browser and run:
+
+    guard
 
 ####Each page is a separate controller/view
 For simplicity we've elected to keep each page separate, rendered server-side. We are **not** using Angular routes or views. The pages are:
