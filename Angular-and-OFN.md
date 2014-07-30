@@ -17,18 +17,12 @@ All of these are fairly self-explanatory. We've got a really nice workflow with 
     guard
 
 ####Each page is a separate controller/view
-For simplicity we've elected to keep each page separate, rendered server-side. We are **not** using Angular routes or views. The pages are:
-* _/_ - Hubs and homepage (HubsCtrl)
-* _/producers_ - Producers listing (ProducersCtrl)
-* _/groups_ - Groups page (GroupsCtrl)
-* _/shop_ - Products page (ProductsCtrl)
-* _/cart_ - Cart page (not currently in Angular)
-* _/checkout_ - Checkout, finalize order (CheckoutCtrl, AccordionCtrl)
+For simplicity we've elected to keep each page separate, rendered server-side. We are **not** using Angular routes or views.
 
 ####Angular templates are automatically compiled and injected
 Anything inside app/assets/javascripts/templates will automatically be compiled, and injected by name into Angular's templateCache. Haml is supported. Templates can be accessed via templateUrl, e.g. 
-
-    templateUrl: 'foo.html'
+```coffeescript
+templateUrl: 'foo.html'
 
 ####Data is injected on page load
 We're using helpers (in InjectionHelper) to inject JSON data (via script tags) into pages onload. This is faster than triggering an Ajax request, and is useful in situations where data is required immediately to render the page.
