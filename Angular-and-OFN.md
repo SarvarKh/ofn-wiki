@@ -8,7 +8,7 @@ Our application poses some uncommon issues and so contains some unusual design c
 * [Coffeescript Cookbook](http://coffeescriptcookbook.com/)
 * [Coffeescript.org](http://coffeescript.org)
 * [A Practical Guide to Angular.js Directives](http://www.sitepoint.com/practical-guide-angularjs-directives/)
-* [A Practice Guide to Angular.js Directives Part 2](http://www.sitepoint.com/practical-guide-angularjs-directives-part-two/)
+* [A Practice Guide to Angular.js Directives Part 2 (all the juicy bits)](http://www.sitepoint.com/practical-guide-angularjs-directives-part-two/)
 * [Angular Directives for Foundation](http://madmimi.github.io/angular-foundation/)
 * [Declaring Angular Services with Coffeescript](http://benhollis.net/blog/2014/01/17/cleanly-declaring-angularjs-services-with-coffeescript/)
 
