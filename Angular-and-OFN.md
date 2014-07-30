@@ -1,8 +1,6 @@
 #Angular and OFN
 Following is a breakdown of our approach to Angular.js integration with Rails. This application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
-Many of the design decisions were made by Will Marshall, who has moved to the US. If you've got questions about decisions he's made, contact him!
-
 ## Big picture
 Following is a quick outline of our big-picture design decisions.
 
