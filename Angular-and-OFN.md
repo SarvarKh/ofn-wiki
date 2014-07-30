@@ -1,4 +1,4 @@
-#How Angular works
+#Angular and OFN
 Following is a breakdown of our approach to Angular.js integration with Rails. This application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
 ## Big picture
