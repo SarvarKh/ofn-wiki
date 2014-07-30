@@ -11,6 +11,7 @@ Our application poses some uncommon issues and so contains some unusual design c
 * [A Practice Guide to Angular.js Directives Part 2 (all the juicy bits)](http://www.sitepoint.com/practical-guide-angularjs-directives-part-two/)
 * [Angular Directives for Foundation](http://madmimi.github.io/angular-foundation/)
 * [Declaring Angular Services with Coffeescript](http://benhollis.net/blog/2014/01/17/cleanly-declaring-angularjs-services-with-coffeescript/)
+* [80/20 Guide to Using Angular.JS filters](http://thecodebarbarian.wordpress.com/2014/01/17/the-8020-guide-to-writing-and-using-angularjs-filters/)
 
 ## Big picture
 
