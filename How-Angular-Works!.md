@@ -1,15 +1,22 @@
 #How Angular works
-This is breakdown of our approach to Angular.js integration with Rails. Our particular case poses a handful of unique issues; we've made some non-standard design choices.
+Following is a breakdown of our approach to Angular.js integration with Rails. Our application poses a handful of uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
 ## Big picture
-Here's a quick description of our design decisions, illustrating how to work with our Angular framework.
+Here's a quick description of our design decisions, outlining how we've configured Angular.
 
-#### The new layout is called 'Darkswarm'
+#### The new pretty layout is called 'Darkswarm'
 * All the relevant Coffeescript is inside app/assets/javascripts/darkswarm
 * Views are (predictably) inside app/views/darkswarm
+* Anything outside Darkswarm should (and must) be redundant
 
 ####Each page is a separate controller/view
-For simplicity we've elected to keep each page separate, rendered server-side. We are **not** using Angular routes or views.
+For simplicity we've elected to keep each page separate, rendered server-side. We are **not** using Angular routes or views. The pages are:
+* _/_ - Hubs and homepage (HubsCtrl)
+* _/producers_ - Producers listing (ProducersCtrl)
+* _/groups_ - Groups page (GroupsCtrl)
+* _/shop_ - Products page (ProductsCtrl)
+* /cart - Cart page (not currently in Angular)
+* /checkout - Checkout, finalize order (CheckoutCtrl, AccordionCtrl)
 
 ####Angular templates are automatically compiled and injected
 Anything inside app/assets/javascripts/templates will automatically be compiled, and injected by name into Angular's templateCache. Haml is supported. Templates can be accessed via templateUrl.
