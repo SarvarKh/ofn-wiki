@@ -171,7 +171,7 @@ registerVariants: ->
       product.variants = (Variants.register variant for variant in product.variants)
     product.master = Variants.register product.master if product.master
 ```
-Registers each every Variant with the Variants service, which is a clever little singleton that will either create new Variants or return existing Variants: enforcing uniqueness.
+Registers every variant with the Variants service; either creating or returning an existing variant.
 
 ```coffeescript
 registerVariantsWithCart: ->
@@ -182,7 +182,7 @@ registerVariantsWithCart: ->
     Cart.register_variant product.master if product.master
 ```
 
-Registers every Variant with the Cart service. This will create new LineItems for any Variant not currently in the Cart.
+Registers every variant with the Cart service. This will create a new LineItem for any variant without one.
 ```coffeescript
 register_variant: (variant)=>
   exists = @line_items.some (li)-> li.variant == variant
