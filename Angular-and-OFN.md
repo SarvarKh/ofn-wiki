@@ -76,18 +76,19 @@ When building an Angular page, Rails should be responsible for rendering basic H
 
 #### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
-
-    foo.bar.foo == foo # true
-    bar.foo.bar == bar # true
-
-In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations to other objects are represented with IDs:
+```coffeescript
+foo.bar.foo == foo # true
+bar.foo.bar == bar # true
+```
+In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations with other objects are represented with IDs:
 ```coffeescript
 enterprise:
   associated_enterprises:
     id: 1
     id: 2
 ```
-When such a service is loaded we _dereference_, replacing the IDs with pointers to appropriate objects. This generates a (circular) web of pointers between objects client-side. This avoids code duplication, only having a single object representing a given Enterprise:
+When such a service is loaded we _dereference_, replacing the IDs with pointers to appropriate objects. This generates a (circular) web of pointers between objects client-side. This avoids duplication, so there's only a single object of a given type/ID (e.g. for a given Enterprise).
+
 ```coffeescript
 enterprise_1 =
   id: 1
@@ -104,6 +105,15 @@ after ingestion, we get:
 ```coffeescript
 enterprise_1.associated_enterprises[0] == enterprise_2 # true
 enterprise_2.associated_enterprises[0] == enterprise_1 # true
+```
+
+#### The Cart
+The cart is an elegant but counter-intuitive bit of code. The various components are:
+```coffeescript
+# Represents the current Order object, pulled from the server. This is global, injected on page load, always-available and scoped to a single user.
+Darkswarm.factory 'CurrentOrder', (currentOrder) ->
+  new class CurrentOrder
+    order: currentOrder
 ```
 
 ## Gotchas
