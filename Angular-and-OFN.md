@@ -42,7 +42,7 @@ Services, controllers and some aspects of directives should be tested. This is c
 For integration testing, we've elected to use Capybara with Rspec rather than Protractor. Many discussions have been had about this: in the end, it's the only option we've found viable.
 
 #### Everything is done in Coffeescript
-To make full use of Coffeescript you'll need to learn the idioms. [coffeescriptcookbook.com](http://coffeescriptcookbook.com) and [coffeescript.org](http://coffeescript.org) are your resources of choice.
+To make full use of Coffeescript you'll need to learn the idioms. [coffeescriptcookbook.com](http://coffeescriptcookbook.com) and [coffeescript.org](http://coffeescript.org) are your weapons of choice.
 
 It's well-worth reading both these pages several times. Coffeescript has terse and elegant syntax; brain-bending but awesome. With practice you'll be able to avoid most of the ugly Javascript idioms.
 
