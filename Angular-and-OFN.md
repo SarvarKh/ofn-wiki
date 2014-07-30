@@ -4,7 +4,6 @@ OpenFoodNetwork.org uses Angular.js for the public-facing interface. Angular is 
 Our application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
 ## Big picture
-Following is a quick outline of our big-picture design decisions.
 
 #### The pretty new layout is called 'Darkswarm'
 * All the relevant Coffeescript is inside app/assets/javascripts/darkswarm
