@@ -39,9 +39,9 @@ You can copy idioms and approaches from the existing code: e.g. I've worked out 
 
 There are some idiomatic issues with Coffeescript and Angular; if you look to the code we've written for guidance, you should be fine!
 
-## Technical notes
+## Technical stuff
 
-#### Angular Foundation
+### Angular Foundation
 We're making heavy use of [Angular Foundation (AF)](http://madmimi.github.io/angular-foundation/). This provides us with various helpful directives and tools to build.
 
 Currently [we're using a fork](github.com/willrjmarshall/angular-foundation) with some minor modifications. _These changes are slated for removal_; we'll be reverting to vanilla AF ASAP [once the badly-written tabs](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/views/shopping_shared/_tabs.html.haml) are replaced with something more idiomatic
@@ -82,17 +82,17 @@ end
 Enterprise.new.to_json # No change. The serializer must be invoked explicitly.
 ```
 
-#### Global controllers and widgets
+### Global controllers and widgets
 Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. Some consideration must be given to dependencies, and data injection must be speedy: e.g. once-off controllers such as CheckoutCtrl can depend on CartCtrl, but not vice-versa.
 
 These one-off controllers (and their associated services) act as global singletons, and can be referenced by anything, anywehre.
 
-#### Always render in Angular
+### Always render in Angular
 It can be tempting to attempt to hybridize Rails and Angular, e.g. rendering with ERB, or injecting data using ng-init. **DON'T**.
 
 When building an Angular page, Rails should be responsible for rendering basic HTML, injecting appropriate initialization data using the appropriate helpers, and providing any necessary Ajax endpoints. Angular must be responsible for all view logic, rendering, data-manipulation etc.
 
-#### Dereferencing
+### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
 ```coffeescript
 foo.bar.foo == foo # true
@@ -125,7 +125,7 @@ enterprise_1.associated_enterprises[0] == enterprise_2 # true
 enterprise_2.associated_enterprises[0] == enterprise_1 # true
 ```
 
-#### The Cart
+### The Cart
 The cart is an elegant but counter-intuitive bit of code and requires some explanation. The various components are:
 
 ```coffeescript
