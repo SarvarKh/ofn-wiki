@@ -39,7 +39,7 @@ You can copy idioms and approaches from the existing code: e.g. I've worked out 
 
 There are some idiomatic issues with Coffeescript and Angular; if you look to the code we've written for guidance, you should be fine!
 
-## Technical stuff
+## Technical notes
 
 ### Angular Foundation
 We're making heavy use of [Angular Foundation (AF)](http://madmimi.github.io/angular-foundation/). This provides us with various helpful directives and tools to build.
@@ -87,10 +87,6 @@ Some Angular controllers (e.g. CartCtrl) are used globally and are available on 
 
 These one-off controllers (and their associated services) act as global singletons, and can be referenced by anything, anywehre.
 
-### Always render in Angular
-It can be tempting to attempt to hybridize Rails and Angular, e.g. rendering with ERB, or injecting data using ng-init. **DON'T**.
-
-When building an Angular page, Rails should be responsible for rendering basic HTML, injecting appropriate initialization data using the appropriate helpers, and providing any necessary Ajax endpoints. Angular must be responsible for all view logic, rendering, data-manipulation etc.
 
 ### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
@@ -201,6 +197,12 @@ create_line_item: (variant)->
 #### Karma configuration 
 There's a manifest file at spec/javascripts/application_spec.js. Relevant files must **also** be included here. Global stubs (e.g. disabling GMaps) should be put here as well.
 
-#### Minor technical things
+
+#### Always render in Angular
+It can be tempting to attempt to hybridize Rails and Angular, e.g. rendering with ERB, or injecting data using ng-init. **DON'T**.
+
+When building an Angular page, Rails should be responsible for rendering basic HTML, injecting appropriate initialization data using the appropriate helpers, and providing any necessary Ajax endpoints. Angular must be responsible for all view logic, rendering, data-manipulation etc.
+
+#### Minor things
 * Some functions must explicitly return null, e.g.
     module ($provide)
