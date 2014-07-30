@@ -6,10 +6,11 @@ Many of the design decisions were made by Will Marshall, who has moved to the US
 ## Big picture
 Following is a quick outline of our big-picture design decisions.
 
-#### The new pretty layout is called 'Darkswarm'
+#### The pretty new layout is called 'Darkswarm'
 * All the relevant Coffeescript is inside app/assets/javascripts/darkswarm
 * The relevant layout is 'layouts/darkswarm'
 * Anything outside Darkswarm should (and must) be redundant
+* The name is a joke between Rohan and Will. Don't ask.
 
 #### We use Sass, Haml, Coffeescript, Guard and LiveReload
 All of these are fairly self-explanatory. We've got a really nice workflow with Guard and Livereload set up that'll auto-refresh your browser when doing client-side work. To get it working install LiveReload in your browser and run:
@@ -66,6 +67,8 @@ The priceBreakdownPopup directive (which controls our tooltip) is named accordin
 #### Global controllers and widgets
 Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. Some consideration must be given to dependencies, and data injection must be speedy: e.g. once-off controllers such as CheckoutCtrl can depend on CartCtrl, but not vice-versa.
 
+These one-off controllers (and their associated services) act as global singletons, and can be referenced by anything, anywehre.
+
 #### Always render in Angular
 It can be tempting to attempt to hybridize Rails and Angular, e.g. rendering with ERB, or injecting data using ng-init. **DON'T**.
 
@@ -78,28 +81,30 @@ We're making heavy use of a technique called Dereferencing. Javascript allows ci
     bar.foo.bar == bar # true
 
 In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations to other objects are represented with IDs:
-
-    enterprise:
-      associated_enterprises:
-        id: 1
-        id: 2
-
+```coffeescript
+enterprise:
+  associated_enterprises:
+    id: 1
+    id: 2
+```
 When such a service is loaded we _dereference_, replacing the IDs with pointers to appropriate objects. This generates a (circular) web of pointers between objects client-side. This avoids code duplication, only having a single object representing a given Enterprise:
-
-    enterprise_1 =
-      id: 1
-      associated_enterprises:
-        id: 2
-    enterprise_2 = 
-      id: 2
-      associated_enterprise:
-        id: 1
+```coffeescript
+enterprise_1 =
+  id: 1
+  associated_enterprises:
+    id: 2
+enterprise_2 = 
+  id: 2
+  associated_enterprise:
+    id: 1
+```
 
 after ingestion, we get:
 
-    enterprise_1.associated_enterprises[0] == enterprise_2 # true
-    enterprise_2.associated_enterprises[0] == enterprise_1 # true
-      
+```coffeescript
+enterprise_1.associated_enterprises[0] == enterprise_2 # true
+enterprise_2.associated_enterprises[0] == enterprise_1 # true
+```
 
 ## Gotchas
 
