@@ -12,7 +12,7 @@ Our application poses some uncommon issues and so contains some unusual design c
 * The name is a joke between Rohan and Will. Don't ask.
 
 #### We use Sass, Haml, Coffeescript, Guard and LiveReload
-All of these are fairly self-explanatory. We've got a really nice workflow with Guard and Livereload set up that'll auto-refresh your browser; run:
+All of these are fairly self-explanatory. We've got a nice workflow with Guard and Livereload that'll auto-refresh your browser; run:
 
     guard
 
