@@ -65,7 +65,7 @@ This directive uses AF's $tooltip service (which generates a directive object), 
 The priceBreakdownPopup directive (which controls our tooltip) is named according to a convention established in the $tooltip service, allowing us to use [our own template](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/assets/javascripts/templates/price_breakdown.html.haml) and potentially our own behaviour.
 
 #### Active Model Serializers (AMS)
-We use AMS to render JSON. Although some older injection is still being done with Rabl templates, everything should be done in AMS henceforth.
+We use AMS to render JSON, although some older injection is still being done with Rabl templates. AMS supports key-cased caching, which we use with memcache to improve JSON rendering performance.
 
 All serializers are scoped to an "API" namespace, e.g. API::ProductSerializer. This is because AMS will automatically be associated with models by a naming convention, which causes problems in the Admin backend:
 ```ruby
@@ -126,7 +126,7 @@ enterprise_2.associated_enterprises[0] == enterprise_1 # true
 ```
 
 #### The Cart
-The cart is an elegant but counter-intuitive bit of code. The various components are:
+The cart is an elegant but counter-intuitive bit of code and requires some explanation. The various components are:
 
 ```coffeescript
 Darkswarm.factory 'CurrentOrder', (currentOrder) ->
@@ -134,6 +134,66 @@ Darkswarm.factory 'CurrentOrder', (currentOrder) ->
     order: currentOrder
 ```
 This represents the current order, pulled from the server (e.g. current_order). This is global, injected on page load, always-available and scoped to a single user.
+
+```coffeescript
+Darkswarm.factory 'Cart', (CurrentOrder, Variants, $timeout, $http)->
+  # Handles syncing of current cart/order state to server
+  new class Cart
+    order: CurrentOrder.order
+    # <snip>
+
+```
+This service wraps the CurrentOrder and adds some additional logic. It is responsible for the creation of LineItems and sending updates to the Cart to the server.
+
+LineItems are where the magic happens. Each LineItem looks like this:
+```coffeescript
+line_item:
+  variant: <pointer>
+  quantity: <integer>
+  max_quantity: <integer>
+```
+Pointers to variants are via dereferencing (see above). The initial set of LineItems in the Cart service is injected by the server.
+
+```coffeescript
+Darkswarm.factory 'Products', ($resource, Enterprises, Dereferencer, Taxons, Cart, Variants) ->
+  new class Products
+  # <snip>
+```
+The Products service represents all products available for purchase in the currently selected OrderCycle and Distributor. This logic is handled by the server; the service simply points to a JSON endpoint at /products.
+
+The magic is in these two methods:
+```coffeescript
+registerVariants: ->
+  for product in @products
+    if product.variants
+      product.variants = (Variants.register variant for variant in product.variants)
+    product.master = Variants.register product.master if product.master
+```
+Registers each every Variant with the Variants service, which is a clever little singleton that will either create new Variants or return existing Variants: enforcing uniqueness.
+
+```coffeescript
+registerVariantsWithCart: ->
+  for product in @products
+    if product.variants
+      for variant in product.variants
+        Cart.register_variant variant
+    Cart.register_variant product.master if product.master
+```
+
+Registers every Variant with the Cart service. This will create new LineItems for any Variant not currently in the Cart.
+```coffeescript
+register_variant: (variant)=>
+  exists = @line_items.some (li)-> li.variant == variant
+  @create_line_item(variant) unless exists 
+    
+create_line_item: (variant)->
+  variant.line_item =
+    variant: variant
+    quantity: 0
+    max_quantity: null
+  @line_items.push variant.line_item
+
+```
 
 
 ## Gotchas
