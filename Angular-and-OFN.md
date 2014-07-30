@@ -49,7 +49,7 @@ It's well-worth reading both these pages several times. Coffeescript has terse a
 ## Technical exposition
 
 ### Angular Foundation
-We're making heavy use of [Angular Foundation (AF)](http://madmimi.github.io/angular-foundation/). This provides us with various helpful directives and tools to build.
+We're making heavy use of [Angular Foundation (AF)](http://madmimi.github.io/angular-foundation/). This provides us with various directives and tools to use Foundation components.
 
 Currently [we're using a fork](github.com/willrjmarshall/angular-foundation) with some minor modifications. _These changes are slated for removal_; we'll be reverting to vanilla AF ASAP [once the badly-written tabs](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/views/shopping_shared/_tabs.html.haml) are replaced with something more idiomatic
 
