@@ -1,5 +1,7 @@
 #Angular and OFN
-Following is a breakdown of our approach to Angular.js integration with Rails. This application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
+OpenFoodNetwork.org uses Angular.js for the public-facing interface. Angular is a complex beast, so we've put together this article showing you how it all fits together.
+
+Our application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
 ## Big picture
 Following is a quick outline of our big-picture design decisions.
