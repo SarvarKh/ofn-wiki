@@ -48,16 +48,16 @@ Currently [we're using a fork](github.com/willrjmarshall/angular-foundation) wit
 Since AF doesn't always precisely meet our needs, we've written our own directives that make use of and extend it. For example see the PriceBreakdown directive:
 
 ```coffeescript
-    Darkswarm.directive "priceBreakdown", ($tooltip)->
-      tooltip = $tooltip 'priceBreakdown', 'priceBreakdown', 'click' 
-      tooltip.scope = 
-        variant: "="
-      tooltip
-    Darkswarm.directive 'priceBreakdownPopup', ->
-      restrict: 'EA'
-      replace: true
-      templateUrl: 'price_breakdown.html'
-      scope: true
+Darkswarm.directive "priceBreakdown", ($tooltip)->
+  tooltip = $tooltip 'priceBreakdown', 'priceBreakdown', 'click' 
+  tooltip.scope = 
+    variant: "="
+  tooltip
+Darkswarm.directive 'priceBreakdownPopup', ->
+  restrict: 'EA'
+  replace: true
+  templateUrl: 'price_breakdown.html'
+  scope: true
 ```
 This directive uses AF's $tooltip service (which generates a directive object), then patches it (replacing the scope definition with an isolate scope). This allows us to use most of the logic inside $tooltip (show, hide, events, onscreen placement, etc) while using our own directive for the tooltip itself.
 
