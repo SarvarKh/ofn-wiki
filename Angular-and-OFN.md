@@ -84,25 +84,28 @@ The priceBreakdownPopup directive (which controls our tooltip) is named accordin
 ### Active Model Serializers (AMS)
 We use AMS to render JSON, although some older injection is still being done with Rabl templates. AMS supports key-cased caching, which we use with memcache to improve JSON rendering performance.
 
-All serializers are scoped to an "API" namespace, e.g. API::ProductSerializer. This is because AMS will automatically be associated with models by a naming convention, which causes problems in the Admin backend:
+Serializers are scoped to the API namespace; serializers are automatically associated with models by name, causing changes to vanilla to_json serialization.
 ```ruby
-class EnterpriseSerializer < ActiveModel::Serialize
+class EnterpriseSerializer < ActiveModel::Serializer
 end
-Enterprise.new.to_json # automatically uses the above serializer
+Enterprise.new.to_json # automatically uses the serializer
 ```
 vs
 ```ruby
 module Api
- class EnterpriseSerializer
+ class EnterpriseSerializer < ActiveModel::Serializer
   end
 end
-Enterprise.new.to_json # No change. The serializer must be invoked explicitly.
+Enterprise.new.to_json # The serializer must be invoked explicitly, otherwise serializing behaves as expected.
 ```
 
 ### Global controllers and widgets
 Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. These controllers (and their associated services) act as global singletons, and can be referenced by anything, anywhere.
 
-Other controllers (e.g. CheckoutCtrl, ProducersCtrl) are only available on specific pages, and require special data to be injected.
+Other controllers (e.g. CheckoutCtrl, ProducersCtrl) are only available on specific pages, and require data to be injected. It's not uncommon to see exceptions indicating required data is not available:
+```
+Error: [$injector:unpr] Unknown provider: enterprisesProvider <- enterprises <- Enterprises <- Hubs
+```
 
 ### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
