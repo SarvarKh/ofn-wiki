@@ -98,11 +98,9 @@ module Api
 end
 Enterprise.new.to_json # The serializer must be invoked explicitly, otherwise serializing behaves as expected.
 ```
-
-### Global controllers and widgets
-Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. These controllers (and their associated services) act as global singletons, and can be referenced by anything, anywhere.
-
-Other controllers (e.g. CheckoutCtrl, ProducersCtrl) are only available on specific pages, and require data to be injected. It's common to see exceptions indicating required data is not available. For example:
+https://github.com/openfoodfoundation/openfoodnetwork/wiki/Angular-and-OFN/_edit#
+### Injecting data into services
+Many of our Angular services require data to be injected on page load. It's common to see exceptions indicating required data isn't available. For example:
 ```coffeescript
 Darkswarm.factory 'Enterprises', (enterprises, CurrentHub, Taxons, Dereferencer)->
   new class Enterprises
@@ -111,7 +109,7 @@ This service will sometimes throw:
 ```
 Error: [$injector:unpr] Unknown provider: enterprisesProvider <- enterprises <- Enterprises <- Hubs
 ```
-This indicates that the "enterprises" value has not been set and cannot be injected into the Enterprises service. This is resolved in the view using:
+Indicating that the "enterprises" value has not been set and cannot be injected into the Enterprises service. This can be resolved in the view:
 ```haml
 = inject_enterprises
 ```
