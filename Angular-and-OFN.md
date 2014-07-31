@@ -114,7 +114,7 @@ Error: [$injector:unpr] Unknown provider: enterprisesProvider <- enterprises <- 
 This indicates that the "enterprises" value has not been set and cannot be injected into the Enterprises service. This is resolved in the view using:
 ```haml
 = inject_enterprises
-``
+```
 
 ### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
