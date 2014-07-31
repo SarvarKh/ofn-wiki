@@ -115,19 +115,19 @@ Indicating that the "enterprises" value has not been set and cannot be injected 
 ```
 
 ### Dereferencing
-We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
+We're making heavy use of a technique called dereferencing. This is possible because Javascript supports pointers, allowing us to build circularly-referenced data structures.
 ```coffeescript
 foo.bar.foo == foo # true
 bar.foo.bar == bar # true
 ```
-In many situations (e.g. in the Enterprises service) we inject a flat set of objects. Associations with other objects are represented with IDs:
+In many situations we inject a flat set of objects. Associations with other objects are represented with IDs:
 ```coffeescript
 enterprise:
   associated_enterprises:
     id: 1
     id: 2
 ```
-When such a service is loaded we _dereference_, replacing the IDs with pointers to appropriate objects. This generates a (circular) web of pointers between objects client-side. This avoids duplication, so there's only a single object of a given type/ID (e.g. for a given Enterprise).
+When such a service is loaded we _dereference_, replacing the IDs with pointers to corresponding objects. This generates a web of pointers between objects client-side. Duplication is avoided, so there's only a single object of a given type/ID.
 
 ```coffeescript
 enterprise_1 =
