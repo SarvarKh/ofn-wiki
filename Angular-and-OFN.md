@@ -129,7 +129,7 @@ enterprise:
 ```
 Once this data is loaded we perform the dereferencing step, replacing the IDs with pointers to corresponding objects. This generates a web of pointers between objects client-side. Duplication is avoided, so there's only a single object of a given type/ID.
 
-For convenience, a service called Dereferencer is provided that will automatically dereference an array with provided with an ID-keyed hash of objects.
+For convenience we have service called Dereferencer that will automatically perform dereferencing when supplied with an array of objects to dereference, and an ID-keyed hash of objects to point to.
 
 ```coffeescript
 Darkswarm.factory 'Dereferencer', ->
