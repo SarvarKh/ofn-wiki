@@ -120,14 +120,27 @@ We're making heavy use of a technique called dereferencing. This is possible bec
 foo.bar.foo == foo # true
 bar.foo.bar == bar # true
 ```
-In many situations we inject a flat set of objects. Associations with other objects are represented with IDs:
+When dereferencing, we load our data in which associations between models are represented with IDs:
 ```coffeescript
 enterprise:
   associated_enterprises:
     id: 1
     id: 2
 ```
-When such a service is loaded we _dereference_, replacing the IDs with pointers to corresponding objects. This generates a web of pointers between objects client-side. Duplication is avoided, so there's only a single object of a given type/ID.
+Once this data is loaded we perform the dereferencing step, replacing the IDs with pointers to corresponding objects. This generates a web of pointers between objects client-side. Duplication is avoided, so there's only a single object of a given type/ID.
+
+For convenience, a service called Dereferencer is provided that will automatically dereference an array with provided with an ID-keyed hash of objects.
+
+```coffeescript
+Darkswarm.factory 'Dereferencer', ->
+  new class Dereferencer
+    dereference: (array, data)->
+      if array
+        for object, i in array
+          array[i] = data[object.id]
+```
+
+A practical example:
 
 ```coffeescript
 enterprise_1 =
@@ -140,7 +153,7 @@ enterprise_2 =
     id: 1
 ```
 
-after ingestion, we get:
+after dereferencing, we get:
 
 ```coffeescript
 enterprise_1.associated_enterprises[0] == enterprise_2 # true
