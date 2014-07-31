@@ -102,10 +102,19 @@ Enterprise.new.to_json # The serializer must be invoked explicitly, otherwise se
 ### Global controllers and widgets
 Some Angular controllers (e.g. CartCtrl) are used globally and are available on every page. These controllers (and their associated services) act as global singletons, and can be referenced by anything, anywhere.
 
-Other controllers (e.g. CheckoutCtrl, ProducersCtrl) are only available on specific pages, and require data to be injected. It's not uncommon to see exceptions indicating required data is not available:
+Other controllers (e.g. CheckoutCtrl, ProducersCtrl) are only available on specific pages, and require data to be injected. It's common to see exceptions indicating required data is not available. For example:
+```coffeescript
+Darkswarm.factory 'Enterprises', (enterprises, CurrentHub, Taxons, Dereferencer)->
+  new class Enterprises
+```
+This service will sometimes throw:
 ```
 Error: [$injector:unpr] Unknown provider: enterprisesProvider <- enterprises <- Enterprises <- Hubs
 ```
+This indicates that the "enterprises" value has not been set, and so cannot be injected into the Enterprises service. This is resolved in the view using:
+```haml
+= inject_enterprises
+``
 
 ### Dereferencing
 We're making heavy use of a technique called Dereferencing. Javascript allows circular references:
