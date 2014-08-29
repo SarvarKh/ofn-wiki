@@ -10,16 +10,18 @@
 
 ### Which enterprises can a user tag?
 
-As a hub, I can tag a variant with enterprises that I manage, which also have the "add tagged variant" permission from the producer of the variant's product.
+As a hub user, I can tag a variant with enterprises that I manage, which also have the "add tagged variant" permission from the producer of the variant's product.
 
-As a producer, I can tag a variant with hubs that have a trading relationship with the producer of the variant's product.
+As a producer user, I can tag a variant with hubs that have a trading relationship with the producer of the variant's product.
 
 
 ### Who can edit a tagged variant?
 
-When a manager of a hub creates a tagged variant, that variant is editable by anyone who manages that hub or has "manage products" permission for that hub.
+Any manager of a hub can edit variants tagged with that hub.
 
-When a manager of a producer creates a tagged variant, that variant is editable by everyone in the previous paragraph, and also by the producer who created the tagged variant for 1 hour after it is created. After that hour has elapsed, they will lose their ability to edit it. During the edit window, they will see text like "55 minutes left to edit".
+When a manager of a hub creates a tagged variant, that variant is editable by any user who manages that hub (as implied by the previous rule).
+
+When a manager of a producer creates a tagged variant, that variant is editable by any user who manages the tagged hub, and also by the producer who created the tagged variant for 1 hour after it is created. After that hour has elapsed, they will lose their ability to edit it. During the edit window, they will see text like "55 minutes left to edit".
 
 ### Who can see which tagged variants?
 
