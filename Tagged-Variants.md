@@ -18,3 +18,15 @@ As a hub, I can tag a variant with enterprises that I manage, which also have th
 As a producer, I can tag a variant with hubs that have a trading relationship with the producer of the variant's product.
 
 
+## What is possible at different permission levels?
+
+### User with only add to order cycle perms for an enterprise
+
+- [[**]] Can see products in BPE, but with all fields disabled. They cannot perform updates.
+
+
+### User with add tagged variants permission for an enterprise
+
+- Can see products from producer (ie. untagged variants), with disabled fields (so they don't create duplicates)
+- Can create a tagged variant
+- Can see their own tagged variants
