@@ -18,6 +18,9 @@ As a hub, I can tag a variant with enterprises that I manage, which also have th
 As a producer, I can tag a variant with hubs that have a trading relationship with the producer of the variant's product.
 
 
+### Who can edit a tagged variant?
+
+
 ## What is possible at different permission levels?
 
 ### User with only add to order cycle perms for an enterprise
@@ -30,3 +33,9 @@ As a producer, I can tag a variant with hubs that have a trading relationship wi
 - Can see products from producer (ie. untagged variants), with disabled fields (so they don't create duplicates)
 - Can create a tagged variant
 - Can see their own tagged variants
+
+
+### User with manage product permissions for an enterprise
+
+- Can list, create and edit untagged variants
+- Can create a tagged variant
