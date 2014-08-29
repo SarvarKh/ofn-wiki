@@ -50,3 +50,22 @@ When a manager of a producer creates a tagged variant, that variant is editable 
 - Can see everything
 - Can edit their untagged variants
 - When they create a tagged variant, they can edit it for 1 hour, and then only the tagged enterprise can edit that variant.
+
+
+## How do tagged variants appear in the system?
+
+The tag is displayed:
+- Next to variants when adding them to an order cycle
+- In the standard Spree product management pages (as well as BPE)
+
+### Who can see which tagged variants?
+
+- A producer can see all tagged variants for its products
+- A hub can see untagged variants and its own tagged variants
+
+Tag colour will be derived from the tagged enterprise's ID, to provide a consistent colour throughout the system.
+
+## Outstanding concerns
+
+What happens when we create a tagged variant from a product that has only a master variant. This will invalidate the master as a variant that can be purchased from the shop, and thus break any open order cycles. We'll need to work around this in some way.
+
