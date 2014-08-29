@@ -20,6 +20,10 @@ As a producer, I can tag a variant with hubs that have a trading relationship wi
 
 ### Who can edit a tagged variant?
 
+When a manager of a hub creates a tagged variant, that variant is editable by anyone who manages that hub or has "manage products" permission for that hub.
+
+When a manager of a producer creates a tagged variant, that variant is editable by everyone in the previous paragraph, and also by the producer who created the tagged variant for 1 hour after it is created. After that hour has elapsed, they will lose their ability to edit it. During the edit window, they will see text like "55 minutes left to edit".
+
 
 ## What is possible at different permission levels?
 
@@ -39,3 +43,10 @@ As a producer, I can tag a variant with hubs that have a trading relationship wi
 
 - Can list, create and edit untagged variants
 - Can create a tagged variant
+
+
+### User who manages a producer
+
+- Can see everything
+- Can edit their untagged variants
+- When they create a tagged variant, they can edit it for 1 hour, and then only the tagged enterprise can edit that variant.
