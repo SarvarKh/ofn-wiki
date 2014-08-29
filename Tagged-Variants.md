@@ -69,3 +69,4 @@ Tag colour will be derived from the tagged enterprise's ID, to provide a consist
 
 What happens when we create a tagged variant from a product that has only a master variant. This will invalidate the master as a variant that can be purchased from the shop, and thus break any open order cycles. We'll need to work around this in some way.
 
+- TODO: Issues around changing the producer of a product
