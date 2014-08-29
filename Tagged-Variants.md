@@ -33,14 +33,14 @@ When a manager of a producer creates a tagged variant, that variant is editable 
 
 ### User with only add to order cycle perms for an enterprise
 
-- Cannot access bulk product edit.
+- Cannot see products produced by this enterprise in BPE
 
 
 ### User with add tagged variants permission for an enterprise
 
 - Can see the producer's products (ie. untagged variants), but cannot edit them (disabled fields). This view is provided for reference so they don't create duplicates.
 - Can create a tagged variant
-- Can see their own tagged variants
+- Can see and edit their own tagged variants
 
 
 ### User with manage product permissions for an enterprise
@@ -65,9 +65,25 @@ Tag colour will be derived from the tagged enterprise's ID, to provide a consist
 
 ## Changing the producer of a product
 
-Normally, a hub can only have a tagged variant when it has "create tagged variants" permission from the producer of the variant. If the producer of that product can be changed, there is the possibility that another user could change it to a producer that the hub does not have "create tagged variants" permission from. Because this is an invalid state for the system to be in, users will not be permitted to change the producer of a product after it has been created.
+Normally, a hub can only have a tagged variant when it has a trading relationship with the producer of the variant. If the producer of that product can be changed, there is the possibility that another user could change it to a producer that the hub does not have a trading relationship with. Because this is an invalid state for the system to be in, users will not be permitted to change the producer of a product after it has been created.
 
 
 ## Outstanding concerns
 
-What happens when we create a tagged variant from a product that has only a master variant? This will invalidate the master as a variant that can be purchased from the shop, and thus break any open order cycles. We'll need to work around this in some way.
+### Creating a tagged variant from a product that has only a master variant
+
+This will invalidate the master as a variant that can be purchased from the shop, and thus break any open order cycles. We'll need to work around this in some way.
+
+We could:
+
+1. Make products with and without variants behave more consistently
+2. When the tagged variant is created, create an extra variant to replace master, and substitute it in order cycles.
+
+Approach 2 is strongly coupled. If we make a new feature that references variants, we would need to know to change out its references when tagged variants are created. Yuck. Therefore, go with approach 1.
+
+With approach 1, we would just need to change product creation, since a product with one variant is represented correctly on the system. In other words, when a product is created, it will be given both a master variant and a single initial variant with the same values as master was given.
+
+### Revoking tag access
+
+If an admin removes a trading relationship, are all the tagged variants dependent on it deleted.
+
