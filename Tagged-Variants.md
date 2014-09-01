@@ -22,10 +22,13 @@ Any manager of a hub can edit variants tagged with that hub.
 When a manager of a hub creates a tagged variant, that variant is editable by any user who manages that hub (as implied by the previous rule).
 
 When a manager of a producer creates a tagged variant, that variant is editable by any user who manages the tagged hub, and also by the producer who created the tagged variant for 1 hour after it is created. After that hour has elapsed, they will lose their ability to edit it. During the edit window, they will see text like "55 minutes left to edit".
+[I know you guys talked about this quite a bit and so I assume there are good reasons why you settled on this approach, but it doesn't seem quite right to me . .
+
+Seems like the case might be more that if created by the Producer, they retain 'ownership' of this variant, but the tagged Hub can use it, add to OCs etc. So if this is for the case where Producer is setting different prices etc, they maintain the ability to remove, adjust inventory etc?]
 
 ### Who can see which tagged variants?
 
-- A producer can see all tagged variants for its products
+- A producer can see all untagged and tagged variants for its products
 - A hub can see untagged variants and its own tagged variants
 
 
@@ -34,10 +37,10 @@ When a manager of a producer creates a tagged variant, that variant is editable 
 ### User with only add to order cycle perms for an enterprise
 
 - Cannot see products produced by this enterprise in BPE
-
+[I think this user should be able to see but not edit products in BPE - so that they can easily see what broccoli (for example) is available and decide what they want to use. So this permission effectively become 'view and use but not edit' products]
 
 ### User with add tagged variants permission for an enterprise
-
+[If above change is made, then this becomes incremental addition on Add to OCs permission]
 - Can see the producer's products (ie. untagged variants), but cannot edit them (disabled fields). This view is provided for reference so they don't create duplicates.
 - Can create a tagged variant
 - Can see and edit their own tagged variants
@@ -86,4 +89,3 @@ With approach 1, we would just need to change product creation, since a product 
 ### Revoking tag access
 
 If an admin removes a trading relationship, are all the tagged variants dependent on it deleted.
-
