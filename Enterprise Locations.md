@@ -23,6 +23,7 @@ Locations and Enterprises
 * Each enterprise must have at least one 'location', much the same way it currently must have an address
 * Enterprises may have multiple locations
 * The ONLY property or set of attributes that is shared between enterprises that share an address is the address itself. ie. Payment and Shipping methods, Products, Order Cycles are NOT shared.
+* Should we implement some mechanism by which the number of locations a hub is attached to is limited in some way? ie. add a location_limit to the enterprise?
 
 Shipping and Payment Methods
 * Are owned by a single enterprise (though permissions should exist for sharing payment and shipping methods with other enterprises)
