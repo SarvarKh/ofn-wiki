@@ -86,7 +86,7 @@ We could:
 1. Make products with and without variants behave more consistently
 2. When the tagged variant is created, create an extra variant to replace master, and substitute it in order cycles.
 
-Approach 2 is strongly coupled. If we make a new feature that references variants, we would need to know to change out its references when tagged variants are created. Yuck. Therefore, go with approach 1.
+Approach 2 is tightly coupled. If we make a new feature that references variants, we would need to know to change out its references when tagged variants are created. Yuck. Therefore, go with approach 1.
 
 With approach 1, we would just need to change product creation, since a product with one variant is represented correctly on the system. In other words, when a product is created, it will be given both a master variant and a single initial variant with the same values as master was given.
 
