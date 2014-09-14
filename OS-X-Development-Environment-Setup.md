@@ -149,7 +149,14 @@ We need to add the database user(s) defined in the config/database.yaml file in 
 
     $ createuser ofn --createdb --pwprompt
 
-Which will create a user named `ofn` and then prompt the user for the password when run. Once that is done, you can move on to cloning the OFN repository!
+
+Which will create a user named `ofn` and then prompt the user for the password when run.
+
+Next add the development database (open_food_network_dev at the time of writing):
+
+    $ createdb open_food_network_dev --owner=ofn
+
+Once that is done, you can move on to cloning the OFN repository!
 
 ## Step 11: Cloning the OFN GitHub Repository
 First you need to work out where on your hard drive the OFN project folder is going to live. I usually put all of mine in `~/projects`, but it really doesn't matter all much, as long as you know where it is.
