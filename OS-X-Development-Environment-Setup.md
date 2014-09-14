@@ -137,7 +137,7 @@ and
     $ lunchy stop postgres
 
 ## Step 10. Adding OFN users (roles) to postgres
-Postgres should have been set up with your current user as the default user, meaning that you should be able to set up new users directly in the command prompt. YOU MAY NEED TO RESTART YOUR BROWSER HERE. If: 
+Postgres should have been set up with your current user as the default user, meaning that you should be able to set up new users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. If: 
 
     $ which createuser
 
