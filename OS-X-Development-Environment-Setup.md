@@ -137,20 +137,18 @@ and
     $ lunchy stop postgres
 
 ## Step 10. Adding OFN users (roles) to postgres
-Postgres should have been set up with your current user as the default user, meaning that you should be able to set up new users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. If: 
+Postgres should have been set up with your current user as the default postgres admin user, meaning that you should be able to set up new postgres users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. You are good to go if: 
 
     $ which createuser
 
 gives you something like: `/usr/local/bin/createuser`
 
-you are good to go.
-
-We need to add the database user(s) defined in the config/database.yaml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using the following command:
+We need to add the database user(s) defined in the config/database.yaml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using:
 
     $ createuser ofn --createdb --pwprompt
 
 
-Which will create a user named `ofn` and then prompt the user for the password when run.
+Which will create a user named `ofn` and then prompt the user for the password when run. Make sure you enter the password exactly as it appears in the database.yaml file.
 
 Next add the development database (open_food_network_dev at the time of writing):
 
