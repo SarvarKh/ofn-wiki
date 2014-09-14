@@ -41,7 +41,7 @@ If successful you should get it should tell you to run `brew doctor`, so do that
 When that is done you should get: `Your system is ready to brew`, YAY!
 
 ## Step 3. Git
-To before installing anything with Homebrew you should update your package lists with:
+Git is the version control system used to manage all the independent code contributions made by awesome people like you! To before installing anything with Homebrew you should update your package lists with:
 
 `brew update`
 
@@ -49,7 +49,11 @@ Now we can install Git with:
 
 `brew install git`
 
-If you get an error (as I did) that says: `Warning: /usr/bin occurs before /usr/local/bin`, it means that you probably have installed the full XCode suite and the default version of Git that ships with XCode is stilling in /usr/bin, meaning out new version of Git that we are installing with Homebrew will not be used because as the error tells us: /usr/bin occurs before /usr/local/bin in the PATH. The following command will fix that by adding a line to ~/.bash_profile.
+And checked that everything is still ok with:
+
+`brew doctor`
+
+If you get an error (as I did) that says: `Warning: /usr/bin occurs before /usr/local/bin`, it means that you probably have installed the full XCode suite and the default version of Git that ships with XCode is stilling in /usr/bin, meaning our new version of Git that we are installing with Homebrew will not be used because as the error tells us: /usr/bin occurs before /usr/local/bin in the PATH. The following command will fix that by adding a line to ~/.bash_profile.
 
 `echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile`
 
@@ -63,6 +67,66 @@ So now when you check which version of git you are using:
 
 You should see: `/usr/local/bin/git`
 
+If that has all worked, you can now set up your git credentials with:
 
+`git config --global user.name "Name_Goes_Here"`
+`git config --global user.email "Email_Address_Goes_Here"`
 
+## Step 4 (Optional). Disabling documentation installation
+
+If you don't ever use docs for gems (I don't), you can disable installation of documentation with:
+
+`echo "gem: --no-document" >> ~/.gemrc`
+
+## Step 5. RVM
+Ruby Version Manager is a very useful tool which facilitates the management of ruby configuration on a per-project basis, allowing any number of setups using different versions of ruby, rails or gems to be used on the same machine relatively seamlessly. 
+
+To install RVM and the latest version of ruby and rails, which is probably a good idea, use the following command. NOTE. if you REALLY don't want RVM to install anything expect RVM, remove the --rails flag.
+
+`curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enable`
+
+When that is done you should be able to restart your terminal and run:
+
+`type rvm | head -1`
+
+Which should give you `rvm is a function` if everything went well.
+
+Step 6. Verify environment
+
+Run each of the following just to check that you get sensible numbers out of each of them:
+
+`git --version`
+`rvm -v`
+`ruby -v`
+`rails -v`
+
+## Step 7. Installing the version of ruby we require
+Our setup will probably require a specific version of Ruby which is unlikely to be the one installed automatically by RVM above, so we will need to install it. At the time of writing, the the ruby version required was stored in a file in the root folder of the Open Food Network project repository called .ruby-version. The version I needed was `1.9.3-p392`, so I installed it into RVM with:
+
+`rvm install 1.9.3-p392`
+
+Unfortunately I am not 100% across what happened next, but basically my system decided that it needed to compile that version of ruby for itself. I suspect that this was because that version is longer officially supported, and so no precompiled binary of that ruby version was available. Whatever the cause, the compilation process took about 5 hours to complete on my MacBook Air. My understanding is that we are looking into an upgrade of ruby in the near future, and so hopefully this will not be an issue for you.
+
+When that is done, you should be ready to actually get the repository and start using it!
+
+Step 8: Cloning the OFN GitHub Repository
+First you need to work out where on you hard drive the OFN project folder is going to live. I usually put all of mine in `~/projects`, but it really doesn't matter all much, as long as you know where it is.
+
+If you don't already have a project folder use: 
+
+`mkdir ~/projects`
+
+to create one and then navigate into it with:
+
+`cd ~/projects`
+
+Now we are ready to clone to OFN repository:
+
+`https://github.com/openfoodfoundation/openfoodnetwork.git`
+
+Enter your new cloned repository folder with:
+
+`cd openfoodnetwork`
+
+You will probably get a message about RVM setting up some new gemsets for the OFN project, that is fine.
 
