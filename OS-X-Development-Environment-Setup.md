@@ -141,9 +141,7 @@ Postgres should have been set up with your current user as the default user, mea
 
     $ which createuser
 
-gives you something like:
-
-    $ /usr/local/bin/createuser
+gives you something like: `/usr/local/bin/createuser`
 
 you are good to go.
 
