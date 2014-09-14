@@ -1,5 +1,5 @@
 ## Intro
-This is a rough guide to getting a development environment set up in OS X Mavericks. I make no claim whatsoever that this is the best or only way to go about this process, but I thought that I would document the strategy that worked for me in case it of use to others. While I have made an attempt to make this guide as beginner friendly as possible, users should be very comfortable with the use of command line before attempting to follow these steps.
+This is a rough guide to getting a development environment set up in OS X Mavericks. I make no claim whatsoever that this is the best or only way to go about this process, but I thought that I would document the strategy that worked for me in case it of use to others. While I have made an attempt to make this guide as beginner friendly as possible, users should be very comfortable with the use of command line before attempting to follow these steps, as every step requires use of the command line.
 
 ## Step 1. XCode / Command Line Tools
 XCode is Apple's suite of OS X and iOS development tools, and provides a whole IDE geared towards that purpose. My understanding is that the only component of XCode that is particularly pertinent to rails development on OS X is the GCC compiler system. It used to be the case that one had to download and install the entire XCode suite in order to get the useful bits, but now Apple provides a condensed 'useful bits' package in the form of Command Line Tools (CLT).
@@ -20,10 +20,21 @@ When that process has finished, you should get a sensible answer out of:
 
 My output for this is something like:
 
-`Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
-Target: x86_64-apple-darwin13.3.0
-Thread model: posix
-`
+`Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1`
+`Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)`
+`Target: x86_64-apple-darwin13.3.0`
+`Thread model: posix`
+
+Now we can move on to installing the interesting things!
+
+## Step 2. Installing Homebrew
+Homebrew is the 'missing package manager' for OS X. Some people don't like it because it encourages a lack of understanding about where and how packages are installed, which can lead to difficulties in debugging if something goes wrong. I tend to like it because it is quick and easy to use, and I generally have more confidence in someone else's ability to put together a Homebrew package in an intelligent way, than I do in my own ability to hack together a solution.
+
+At the time of writing, the produce to install Homebrew on your system is listed on the [Homebrew Homepage](http://brew.sh/). If what I have below doesn't work, it may be worth checking back there to see if the procedure has changed. Anyway, this worked for me:
+
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+
+
 
 
