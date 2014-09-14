@@ -137,37 +137,21 @@ and
     $ lunchy stop postgres
 
 ## Step 10. Adding OFN users (roles) to postgres
-Postgres should have been set up with your current user as the default user, meaning that you should be able to access the postgres console using:
+Postgres should have been set up with your current user as the default user, meaning that you should be able to set up new users directly in the command prompt. YOU MAY NEED TO RESTART YOUR BROWSER HERE. If: 
 
-    $ psql postgres
+    $ which createuser
 
-If that doesn't work you can try:
+gives you something like:
 
-    $ sudo -u your_user_name psql postgres
+    $ /usr/local/bin/createuser
 
-but I don't really see how that would work any better.
+you are good to go.
 
-If homebrew set up postgres with its own postgres user, something like this might work:
+We need to add the database user(s) defined in the config/database.yaml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using the following command:
 
-    $ psql -U postgres postgres
+    $ createuser ofn --createdb --pwprompt
 
-Whichever way, once you gain access to the console you can create the user (role) required for the Open Food Network to run properly. These are documented in the config/database.yaml file in the OFN project repository. Note that I am prefixing commands to be entered into the postgres console with '#', you do not need to enter this, I am just using it do distinguish those commands from regular bash commands ($):
-
-    # CREATE USER ofn WITH PASSWORD 'f00d';
-
-Now the databases:
-
-    # CREATE DATABASE open_food_network_dev;
-    # CREATE DATABASE open_food_network_test;
-
-Now grant access:
-
-    # GRANT ALL PRIVILEGES ON DATABASE open_food_network_dev TO ofn;
-    # GRANT ALL PRIVILEGES ON DATABASE open_food_network_test TO ofn;
-
-Exit the postgres console with: `cmd-d`
-
-That should be it for database setup!
+Which will create a user named `ofn` and then prompt the user for the password when run. Once that is done, you can move on to cloning the OFN repository!
 
 ## Step 11: Cloning the OFN GitHub Repository
 First you need to work out where on your hard drive the OFN project folder is going to live. I usually put all of mine in `~/projects`, but it really doesn't matter all much, as long as you know where it is.
