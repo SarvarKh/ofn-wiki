@@ -165,9 +165,7 @@ Now grant access:
     # GRANT ALL PRIVILEGES ON DATABASE open_food_network_dev TO ofn;
     # GRANT ALL PRIVILEGES ON DATABASE open_food_network_test TO ofn;
 
-Exit the postgres console:
-
-    $ exit
+Exit the postgres console with: `cmd-d`
 
 That should be it for database setup!
 
