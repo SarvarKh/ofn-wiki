@@ -198,7 +198,7 @@ Fire up your server:
 
 Go to [http://localhost:3000](http://localhost:3000) to play around!
 
-## Step 13. Other thing you could think about installing
+## Step 13. Other things you could think about installing
 
 ImageMagick, used by Spree to create and manipulate images:
 
