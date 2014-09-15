@@ -145,14 +145,15 @@ gives you something like: `/usr/local/bin/createuser`
 
 We need to add the database user(s) defined in the config/database.yaml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using:
 
-    $ createuser ofn --createdb --pwprompt
+    $ createuser --superuser --pwprompt ofn
 
 
-Which will create a user named `ofn` and then prompt the user for the password when run. Make sure you enter the password exactly as it appears in the database.yaml file.
+Which will create a user named `ofn` and then prompt the user for the password when run. Make sure you enter the password exactly as it appears in the database.yaml file. The reason that the --superuser is required is that we are using foreign keys which are registered in postgres as triggers, which in turn can only be added and removed by superusers.
 
-Next add the development database (open_food_network_dev at the time of writing):
+Next add the development and test databases (open_food_network_dev and open_food_network_test at the time of writing):
 
     $ createdb open_food_network_dev --owner=ofn
+    $ createdb open_food_network_test --owner=ofn
 
 Once that is done, you can move on to cloning the OFN repository!
 
