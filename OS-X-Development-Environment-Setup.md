@@ -209,6 +209,6 @@ ImageMagick, used by Spree to create and manipulate images:
 
     $ gem install zeus
 
-Karma, a test runner for pure javascript (which we use to test our AnugularJS):
+Karma, a test runner for pure javascript (which we use to test our AngularJS):
 
 [Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
