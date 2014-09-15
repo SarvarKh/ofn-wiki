@@ -197,3 +197,18 @@ Fire up your server:
     $ rails s
 
 Go to [http://localhost:3000](http://localhost:3000) to play around!
+
+## Step 13. Other thing you could think about installing
+
+ImageMagick, used by Spree to create and manipulate images:
+
+    $ brew update
+    $ brew install imagemagick
+
+[Zeus](https://github.com/burke/zeus), Rails preloader, so you don't have to reload the entire Rails stack all the time:
+
+    $ gem install zeus
+
+Karma, a test runner for pure javascript (which we use to test our AnugularJS):
+
+[Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
