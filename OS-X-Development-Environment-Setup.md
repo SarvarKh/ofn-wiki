@@ -186,7 +186,7 @@ Install the required gems using:
 
 Set up the database(s):
 
-    $ rake db:test:prepare
+    $ rake db:schema:load
 
 You will probably want to insert some seed data into the database so that the server has all the things it needs to start up:
 
