@@ -127,13 +127,11 @@ And then populate it with symbolic links back to the postgres config file(s) ins
 
     $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 
-You should now be able to start and stop the postgres server as you please with:
+You should now be able to start the postgres server with:
 
     $ lunchy start postgres
 
-and
-
-    $ lunchy stop postgres
+Postgres can be stopped with: `$ lunchy stop postgres` but don't do this now.
 
 ## Step 10. Adding OFN users (roles) to postgres
 Postgres should have been set up with your current user as the default postgres admin user, meaning that you should be able to set up new postgres users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. You are good to go if: 
