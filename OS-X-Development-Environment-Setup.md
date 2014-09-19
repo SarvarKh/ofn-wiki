@@ -117,8 +117,7 @@ We now have ruby and rails installed, but we still require a couple of extra pac
 ## Step 9: Setting up postgres
 PhantomJS should be fine to just be left alone after installing, but postgres needs a bit of love to get up and running. The internet recommended that I use [Lunchy](https://github.com/eddiezane/lunchy), to help manage postgres:
 
-    $ brew install lunchy
-    $ brew doctor`
+    $ gem install lunchy
 
 When that is done, make sure you have a LaunchAgents folder:
 
