@@ -1,6 +1,6 @@
 Summary of OFN UK dev team and outstanding issues.
 
-# 4 Nov
+## 4 Nov
 
 Input requested:
 
