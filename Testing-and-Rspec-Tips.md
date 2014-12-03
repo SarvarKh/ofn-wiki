@@ -4,8 +4,8 @@ Please add to this collection of tips and tutorials as you find them.
 The "let" statements here are a particular syntax for defining data in rspec. For a description of how "let" statements work, see the RSpec docs here: https://www.relishapp.com/rspec/rspec-core/v/2-11/docs/helper-methods/let-and-let
 
 <h3>Running Specs</h3>
-bundle exec rake db:test:prepare         to prepare the db
-rspec spec/path/to/spec.rb:#lineNum      will run the tests from a specific line
+bundle exec rake db:test:prepare..........to prepare the db<br>
+rspec spec/path/to/spec.rb:#lineNum.......will run the tests from a specific line<br>
 
 Finished in 4.55 seconds
 1 example, 0 failures
