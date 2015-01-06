@@ -1,3 +1,5 @@
+OBSOLETE - please remove. See updated info on Variant Overrides at http://openfoodfoundation.org/document/developers-testers/variant-overrides
+
 ## Creating tagged variants
 
 ### Interface
