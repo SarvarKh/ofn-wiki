@@ -18,19 +18,4 @@ PART 3 – STATEMENT OF PURPOSES
 *  3.3.3	Facilitating development of processes, standards and interfaces to ensure quality and interoperability 
 *  3.3.4	Provision and maintenance of technology infrastructure, including hosting
 *  3.3.5	Networking, training and skill development of food systems focused technical specialists
-
-# Founding Partners <a id="Partners">
-
-The Open Food Foundation has been instigated and supported in its establishment by a suite of local food enterprises, mostly in Victoria (but also in other states) in Australia. These include:
-* [Eaterprises Australia](www.eaterprises.com.au) - Melbourne
-* [Food Connect](www.foodconnect.com.au) - Brisbane and Sydney
-* [The Food Garden](http://www.foodgarden.com.au/) - Castlemaine and Central Victoria
-* [Damper Creek Organic Collective](http://www.michaelbgreen.com.au/community-supported-agriculture)
-* [CERES Fair Food](http://www.ceresfairfood.org.au/)
-* [Local Harvest](http://www.localharvest.org.au/)
-
-# Developers <a id="Developers">
-
-Magical wonderful people these are! All credit so far goes to Rohan Mitchell, Rob Harrington, Andy Spinks, David Cook . . we hope to see this honour role expanding soon
-
-See [Get Involved] for more information if you'd like to help get this thing built. 
+ 
