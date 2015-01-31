@@ -34,3 +34,7 @@ Additionally, the sales tax report should pull the shipping tax from this record
 Individual items and whole orders are charged a variety of fees, categorised as admin, sales, packing and transport fees.
 I think that we need to charge sales tax on some of these fees, particularly fees that apply to the whole order.
 I think we also need to charge tax on any fee on an item that itself attracts tax.
+
+Note from Nick @NickWeir63: Everything above looks good but this section 'Tax on fees' concerns me.  Stroudco is VAT registered and charges a 12% (or 30%) markup on all produce it sells.  We do not need to pay VAT on this markup.  If we start to call this markup a service fee then we might need to pay 20% VAT on this markup which would make a big hole in Stroudco's profitability.  I see two possible options:
+1) we don't call it a service fee - we change OFN UK to call this a markup instead.
+2) Stroudco de-registers from the VAT system (which we have been considering doing for a while anyway) which would temporarily avoid this problem until another VAT-registered hub wanted to use OFN.
