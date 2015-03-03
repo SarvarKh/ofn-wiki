@@ -31,5 +31,7 @@ A useful git tool is git-up (https://github.com/aanand/git-up) which will stash,
 In the UK the Dev team are working from individual forks of the OpenFoodNetwork repository. 
 Git-up is a useful tool in this case also (https://github.com/aanand/git-up), but git-up automatically pulls from origin, and when working from a fork you need to tell it to also fetch upstream. You can use the command: git config git-up.fetch.all true
 
+***
+
 ## [Configuration](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Configuration)
 ### [Data initialization - bootstrapping, seeding, and importing data](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Data-initialization----bootstrapping,-seeding,-and-importing-data)
