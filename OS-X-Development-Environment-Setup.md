@@ -197,9 +197,13 @@ Go to [http://localhost:3000](http://localhost:3000) to play around!
 
 ## Step 12.5 Resolving bundler problems
 
-With OSX Mavericks, you may encounter an error installing the libv8 gem. This can be solved by using the system v8 library rather than compiling from scratch, as happens by default. To do so, use this command, replacing the version below with the one displayed in the error message from bundler:
+With OSX Mavericks, you may encounter an error installing the libv8 gem. This can be solved by using the system v8 library rather than compiling from scratch, as happens by default. To do so, use these commands, replacing the version for libv8 below with the one displayed in the error message from bundler:
 
-    gem install libv8 -v 3.16.14.3 -- --with-system-v8
+    gem uninstall libv8
+    brew install v8
+    gem install therubyracer
+    gem install libv8 -v '3.16.14.3' -- --with-system-v8
+
 
 ## Step 13. Other things you could think about installing
 
