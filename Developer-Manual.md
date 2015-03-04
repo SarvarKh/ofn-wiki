@@ -25,10 +25,10 @@ If the discussion blooms into a larger feature, it may be good to create a wiki 
 ### Github
 You've obviously already found out we're using Github for version control and collaboration.
 
-In Australia the Dev team are working directly from the OpenFoodNetwork repository.
+Some of the Australian the Dev team are working directly from the OpenFoodNetwork repository.
 A useful git tool is git-up (https://github.com/aanand/git-up) which will stash, pull, rebase and unstash in one command.
 
-In the UK the Dev team are working from individual forks of the OpenFoodNetwork repository. 
+Most of us are working from individual forks of the OpenFoodNetwork repository. 
 Git-up is a useful tool in this case also (https://github.com/aanand/git-up), but git-up automatically pulls from origin, and when working from a fork you need to tell it to also fetch upstream. You can use the command: git config git-up.fetch.all true
 
 ***
