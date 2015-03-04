@@ -140,7 +140,7 @@ Postgres should have been set up with your current user as the default postgres 
 
 gives you something like: `/usr/local/bin/createuser`
 
-We need to add the database user(s) defined in the config/database.yaml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using:
+We need to add the database user(s) defined in the config/database.yml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using:
 
     $ createuser --superuser --pwprompt ofn
 
