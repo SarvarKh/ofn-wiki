@@ -8,7 +8,14 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 sudo apt-get install git postgresql-9.3 postgresql-common libpq-dev phantomjs
 ```
 
-## Step 2. Install Ruby (using rbenv)
+## Step 2. Configure git
+```bash
+git config --global color.ui true
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR@EMAIL.com"
+```
+
+## Step 3. Install Ruby (using rbenv)
 From https://gorails.com/setup/ubuntu/14.10
 
 ```bash
@@ -29,7 +36,15 @@ rbenv global 1.9.3-p392
 ruby -v
 ```
 
-## Step 3. Install gems
+## Step 4. Install gems
+If you don't ever use docs for gems, you can disable installation of documentation with:
+
+```bash
+echo "gem: --no-document" >> ~/.gemrc
+```
+
+Now we can install some supporting gems:
+
 ```bash
 gem install git-up
 gem install bundler
