@@ -1,11 +1,14 @@
-## Basic packages
+## Intro
+This guide will help you set up a development environment for OFN on Ubuntu (tested with 14.04 Precise Pangolin).
+
+## Step 1. Install supporting packages
 
 ```bash
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 sudo apt-get install git postgresql-9.3 postgresql-common libpq-dev phantomjs
 ```
 
-## Ruby
+## Step 2. Install Ruby (using rbenv)
 From https://gorails.com/setup/ubuntu/14.10
 
 ```bash
@@ -26,7 +29,7 @@ rbenv global 1.9.3-p392
 ruby -v
 ```
 
-## Gems
+## Step 3. Install gems
 ```bash
 gem install git-up
 gem install bundler
