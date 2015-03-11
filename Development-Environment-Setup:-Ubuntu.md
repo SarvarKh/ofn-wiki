@@ -1,5 +1,5 @@
 ## Intro
-This guide will help you set up a development environment for OFN on Ubuntu (tested with 14.04 Precise Pangolin).
+This guide will help you set up a development environment for OFN on Ubuntu (tested with 14.04 Trusty Tahr).
 
 ## Step 1. Install supporting packages
 
@@ -16,7 +16,7 @@ git config --global user.email "YOUR@EMAIL.com"
 ```
 
 ## Step 3. Install Ruby (using rbenv)
-From https://gorails.com/setup/ubuntu/14.10
+From https://gorails.com/setup/ubuntu/14.04
 
 ```bash
 cd
