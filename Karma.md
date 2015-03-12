@@ -24,6 +24,9 @@ You will likely need to install the karma command line packages as well:
 
     $ sudo npm install -g karma-cli
 
+Check that NodeJS is installed. If you install from a package manager you bin may be called nodejs so you just need to symlink it:
+    $ ln -s /usr/bin/nodejs /usr/bin/node
+
 And then you should be ready to go (see next section)....
 
 ## Usage of Karma
