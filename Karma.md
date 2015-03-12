@@ -22,7 +22,7 @@ Next we need a bunch of other packages (as they are now split up into separately
 
 You will likely need to install the karma command line packages as well:
 
-$ sudo npm install -g karma-cli
+    $ sudo npm install -g karma-cli
 
 And then you should be ready to go (see next section)....
 
