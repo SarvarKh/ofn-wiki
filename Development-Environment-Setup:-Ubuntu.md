@@ -50,3 +50,10 @@ gem install git-up
 gem install bundler
 gem install zeus
 ```
+
+## Step 5. Set up Postgresql
+Next we create a development user (with superuser privileges) for postgres. The password should be `f00d`, as referenced in `config/database.yml`.
+
+```bash
+sudo -u postgres createuser --superuser --pwprompt ofn
+```
