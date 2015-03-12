@@ -20,7 +20,11 @@ Next we need a bunch of other packages (as they are now split up into separately
     $ npm install karma-coffee-preprocessor
     $ npm install karma-chrome-launcher
 
-And then you should be ready to go (see next section).
+You will likely need to install the karma command line packages as well:
+
+$ sudo npm install -g karma-cli
+
+And then you should be ready to go (see next section)....
 
 ## Usage of Karma
 Running AngularJS specs with karma has been made pretty simple through use of a rake task which pulls together the karma configuration file (`config/ng-test.conf.js`), and a manifest file (`spec/javascripts/application_spec.js`) and then passes them on to karma to run:
