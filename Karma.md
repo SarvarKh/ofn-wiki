@@ -27,6 +27,9 @@ You will likely need to install the karma command line packages as well:
 Check that NodeJS is installed. If you install from a package manager you bin may be called nodejs so you just need to symlink it:
     $ ln -s /usr/bin/nodejs /usr/bin/node
 
+If you are using ubuntu, make sure you have Chromium installed. You might have to updated the env var $CHROME_BIN to point to Chromium:
+    $ export CHROME_BIN="/usr/bin/chromium-browser"
+
 And then you should be ready to go (see next section)....
 
 ## Usage of Karma
