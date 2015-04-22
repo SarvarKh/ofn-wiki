@@ -19,6 +19,7 @@ Next we need a bunch of other packages (as they are now split up into separately
     $ # karma-jasmine from 0.2.x onward uses jasmine 2.x, which has breaking changes
     $ npm install karma-jasmine@0.1.5
     $ npm install karma-coffee-preprocessor
+    $ npm install karma-phantomjs-launcher
     $ npm install karma-chrome-launcher
 
 You will likely need to install the karma command line packages as well:
