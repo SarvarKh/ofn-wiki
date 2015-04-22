@@ -31,6 +31,21 @@ Check that NodeJS is installed. If you install from a package manager you bin ma
 
 And then you should be ready to go (see next section)....
 
+
+### On Ubuntu 12.04
+The npm shipped with 12.04 is broken, giving errors like:
+    Error: failed to fetch from registry: karma
+    or
+    Error: No compatible version found: karma
+
+However, Chris Lea's PPA works. Here's how to install it:
+
+    $ sudo add-apt-repository ppa:chris-lea/node.js 
+    $ sudo apt-get update
+    $ sudo apt-get install nodejs
+
+From there, follow the instructions for OS X Mavericks.
+
 ## Usage of Karma
 Running AngularJS specs with karma has been made pretty simple through use of a rake task which pulls together the karma configuration file (`config/ng-test.conf.js`), and a manifest file (`spec/javascripts/application_spec.js`) and then passes them on to karma to run:
 
