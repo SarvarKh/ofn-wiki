@@ -1,6 +1,13 @@
-This page contains some initial thoughts on a New and Improved CI system.
+Continuous Integration testing (CI) ensures that all automated tests are run each time somebody pushes code to the GitHub repository. Currently, we support two different CI systems.
 
-- All work is done in feature branches.
-- Every branch push is tested.
-- A green branch can be pushed to staging with a single click.
-- A green branch can be merged and pushed to production with a single click.
+* Travis CI
+* Buildkite
+
+
+## Travis CI
+
+Travis offers a free testing infrastructure for free software projects. All forks of the Open Food Network can use Travis CI. The configuration `.travis` configuration files contains all commands to execute on a Travis server to run the tests.
+
+## Buildkite
+
+Buildkite provides a nice user interface to manage your own CI servers. The Australian team uses it to run tests and deploy to staging and production servers. But you have to pay for an account.
