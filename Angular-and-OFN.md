@@ -230,6 +230,24 @@ create_line_item: (variant)->
 
 ```
 
+### I18n - using translation features
+
+We load an object called `I18n` that contains all translations for certain keys. Ideally, all language text is contained in that object and no language text is in code/template files. Instead, you call a translate function with a key to translate.
+
+In Angular controllers, you can use the global function `t` to translate:
+```coffee
+# Example: app/assets/javascripts/darkswarm/controllers/authentication/login_controller.js.coffee
+# t('logging_in') will return "Hold on a moment, we're logging you in"
+Loading.message = t 'logging_in'
+```
+
+In Angular views, you should use the filter `t` to translate:
+```haml
+-# Example:  app/assets/javascripts/templates/registration/contact.html.haml
+-# The enterprise name is given as parameter to the translate function which produces:
+-# "Who is responsible for managing %{enterprise}?"
+%h5{ "ng-bind" => "'who_is_managing_enterprise' | t:{enterprise: enterprise.name}" }
+```
 
 ## Gotchas
 
