@@ -6,7 +6,7 @@ An important means of interacting with other services would be [[our API|API Doc
 
 ### Profiles, Social Networking & Relationships
 *  Login and 'info sharing' services: Facebook, Twitter, Google, Persona?, OpenID
-*  Food system mapping and directory sites: [Sustaination](www.sustaination.co); [Local Harvest](www.localharvest.org.au); [Dibble](www.dibble.com.au) etc NB. As far as we know, there is not yet a FOSS option for food business mapping – let us know if there is . .
+*  Food system mapping and directory sites: [Sustaination](http://www.sustaination.co); [Local Harvest](http://www.localharvest.org.au); [Dibble](http://www.dibble.com.au) etc NB. As far as we know, there is not yet a FOSS option for food business mapping – let us know if there is . .
 
 ### Business Management
 *  OpenERP*
