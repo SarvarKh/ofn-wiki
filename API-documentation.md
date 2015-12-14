@@ -32,13 +32,13 @@ are candidates for addition.
 
 #### Open Food Network
 
-* [Enterprises](#Enterprises)
-* [Order cycles](#Order_cycles)
-* The [_managed_ scope](#Additional_scopes) for
+* [Enterprises](#enterprises)
+* [Order cycles](#order-cycles)
+* The [_managed_ scope](#additional-scopes) for
   Products and Orders,
   Enterprises and
   Order cycles;
-* A [_soft\_delete_ action](#Soft_delete) on Products and Variants;
+* A [_soft\_delete_ action](#soft-delete) on Products and Variants;
 
 ## Authorization
 
