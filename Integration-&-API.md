@@ -19,7 +19,7 @@ An important means of interacting with other services would be [[our API|API Doc
 
 ### Food Cooperative Systems
 
-These systems focus on supporting a food cooperative. This is similar to a [buying group](http://openfoodnetwork.org/platform/user-guide/advanced-features/buying-groups/) in Open Food Network.
+These systems focus on supporting a food cooperative. This is similar to a [buying group](http://openfoodnetwork.org/platform/user-guide/advanced-features/buying-groups/) in Open Food Network. These systems could integrate by importing supplier and product information from OFN, as well as by being able to place orders with suppliers through OFN.
 
 * [Foodsoft](https://github.com/foodcoops/foodsoft), [Cagette](https://github.com/bablukid/cagette), [Aixada](https://github.com/jmueller17/Aixada) and [more](https://github.com/ouisharelabs/food-dashboard#open-source-software)
  
