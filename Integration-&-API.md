@@ -16,6 +16,12 @@ An important means of interacting with other services would be [[our API|API Doc
 *  Bello Box*, Bucky Box, Ooooby
 *  Food Connect, CERES Fair Food
 *  Food Hub Software: StroudCo; OpenFoodSource; Food Hub Pro etc?
+
+### Food Cooperative Systems
+
+These systems focus on supporting a food cooperative. This is similar to a [buying group](http://openfoodnetwork.org/platform/user-guide/advanced-features/buying-groups/) in Open Food Network.
+
+* [Foodsoft](https://github.com/foodcoops/foodsoft), [Cagette](https://github.com/bablukid/cagette), [Aixada](https://github.com/jmueller17/Aixada) and [more](https://github.com/ouisharelabs/food-dashboard#open-source-software)
  
 ### Transport and Distribution
 *  MeeMeep
