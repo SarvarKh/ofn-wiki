@@ -1,6 +1,3 @@
-OpenFoodNetwork API documentation
-=================================
-
 This page describes Open Food Network's API. It is based on Spree's API,
 which has [extensive documentation](https://guides.spreecommerce.com/api/)
 ([source](https://github.com/spree/api.spreecommerce.com)). See also
