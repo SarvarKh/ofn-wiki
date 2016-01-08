@@ -113,8 +113,7 @@ We now have ruby and rails installed, but we still require postgres, which can b
     $ brew update
     $ brew install postgres
 
-## Step 9: Setting up postgres
-PhantomJS should be fine to just be left alone after installing, but postgres needs a bit of love to get up and running. The internet recommended that I use [Lunchy](https://github.com/eddiezane/lunchy), to help manage postgres:
+The internet recommended that I use [Lunchy](https://github.com/eddiezane/lunchy), to help manage postgres:
 
     $ gem install lunchy
 
@@ -132,7 +131,7 @@ You should now be able to start the postgres server with:
 
 Postgres can be stopped with: `$ lunchy stop postgres` but don't do this now.
 
-## Step 10. Adding OFN users (roles) to postgres
+## Step 9. Adding OFN users (roles) to postgres
 Postgres should have been set up with your current user as the default postgres admin user, meaning that you should be able to set up new postgres users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. You are good to go if: 
 
     $ which createuser
@@ -153,7 +152,7 @@ Next add the development and test databases (open_food_network_dev and open_food
 
 Once that is done, you can move on to cloning the OFN repository!
 
-## Step 11: Cloning the OFN GitHub Repository
+## Step 10: Cloning the OFN GitHub Repository
 First you need to work out where on your hard drive the OFN project folder is going to live. I usually put all of mine in `~/projects`, but it really doesn't matter all much, as long as you know where it is.
 
 If you don't already have a project folder use: 
@@ -174,7 +173,7 @@ Enter your newly cloned repository folder with:
 
 You will probably get a message about RVM setting up some new gemsets for the OFN project, that is fine.
 
-## Step 12: Final steps
+## Step 11: Final steps
 
 Install the required gems using:
 
@@ -194,7 +193,7 @@ Fire up your server:
 
 Go to [http://localhost:3000](http://localhost:3000) to play around!
 
-## Step 13. Other things you should probably install
+## Step 12. Other things you should probably install
 
 PhantomJS: to support JS testing.
 NOTE: At the time of writing, a PhantomJS release supporting El Capitan is yet to be released (see [#42249](https://github.com/Homebrew/homebrew/issues/42249) and [#12970](https://github.com/ariya/phantomjs/issues/12970)), though one is expected in the near future. Until that time, I recommend the use of TravisCI (which the OFN repository comes configured to use) for testing purposes. When a PhantomJS release does become available, all that should be required is to:
