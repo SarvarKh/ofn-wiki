@@ -70,12 +70,12 @@ If you don't ever use docs for gems (I don't), you can disable installation of d
 ## Step 5. RVM
 Ruby Version Manager is a very useful tool which facilitates the management of ruby configuration on a per-project basis, allowing any number of setups using different versions of ruby, rails or gems to be used on the same machine relatively seamlessly.
 
-At the time of writing, you must now use [gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) to verify the integrity of the RVM installer. Might be worth checking [here](https://rvm.io/) to ensure this is still the correct process to follow. You can install gpg using Homebrew:
+At the time of writing, you must now use [gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) to verify the integrity of the RVM installer. Might be worth checking the [RVM homepage](https://rvm.io/) to ensure this is still the correct process to follow. You can install gpg using Homebrew:
 
     $ brew install gpg
     $ brew doctor
 
-Download the public key for the RVM installer:
+Download the public key for the RVM installer (again, probably worth checking the [RVM homepage](https://rvm.io/) for up to date instructions):
 
     $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
@@ -175,9 +175,17 @@ You will probably get a message about RVM setting up some new gemsets for the OF
 
 ## Step 11: Final steps
 
-Install the required gems using:
+Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be installed with Homebrew, seeing as we have a bunch of gems that need up-to-date openssl headers. Homebrew had already installed OpenSSL as a [keg-only dependency](http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies) on my system, and so all I needed to do was to add appropriate symlinks using:
+
+    $ brew link --force openssl
+
+Now you should be able to install all of the gems required for the openfoodnetwork project using:
 
     $ bundle install
+
+Make sure you have a valid application.yml file (you should edit locale, currency, etc this as required):
+
+    $ cp config/application.yml.example config/application.yml
 
 Set up the database(s):
 
