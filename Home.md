@@ -1,21 +1,13 @@
-The Open Food Network is a community of people working together to build a free and open source platform that provides an open marketplace and supply network for local food, so that:
-*  Eaters can “know their farmers” (where they are, how they farm, exactly what price they get) while still having wide choice and the ease and convenience of local pick-up and access.  
-*  Farmers can set their own prices, tell their own stories and choose who they trade with.
-*  Ethical and diverse food enterprises rebuild local economies by supporting these farmers and eaters to distribute food.
- 
-This is the first project of the not-for-profit Open Food Foundation, which has been set up to accumulate and protect a commons of open source knowledge, code, applications and platforms to support the proliferation of fair and sustainable food systems. We're serious about disruptive business models that change the dynamics of the global food system.    
+Welcome to the Developer documentation for [Open Food Network](https://openfoodnetwork.org/)!
 
-## [1. Overview: Building an Open Food Network](https://github.com/eaterprises/openfoodweb/wiki/Overview)
+Please read this for an overview of how the project works and dig into other pages on this wiki for more info.
 
-## [2. Who](https://github.com/eaterprises/openfoodweb/wiki/Who)
-###[Open Food Foundation](https://github.com/eaterprises/openfoodweb/wiki/Who/#OFWF)  |  [Partners](https://github.com/eaterprises/openfoodweb/wiki/Who/#Partners)  |  [Developers](https://github.com/eaterprises/openfoodweb/wiki/Who/#Developers)
+## Tools
 
-## [3. Orientation: What's Already Built](https://github.com/eaterprises/openfoodweb/wiki/Orientation)
-###[Technology Stack](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#TechStack)  |  [Structure](https://github.com/eaterprises/openfoodweb/wiki/Orientation/#Structure)  
+**Tool** | **Used for..**
+-----|---------
+[Discourse](http://community.openfoodnetwork.org/) | Features discussion, community updates, processes, international conversations.
+[GitHub](https://github.com/openfoodfoundation/openfoodnetwork) | Issues are used for bugs and features from the backlog that will be implemented.
+[ZenHub](https://www.zenhub.io/) | For agile kanban issue management.
 
-## [4. Specifications: What's Planned](https://github.com/eaterprises/openfoodweb/wiki/Specs)
-
-## [5. Interfaces and API](https://github.com/eaterprises/openfoodweb/wiki/Interfaces-&-API)
-[Enterprise user access to admin functions](https://github.com/eaterprises/openfoodweb/wiki/Enterprises-login)
-
-## [6. Can I Help Out?](https://github.com/eaterprises/openfoodweb/wiki/Help-Out)
+Note: Trello boards [OFN Core Dev](https://trello.com/b/TXnZrrRL/ofn-core-dev) and [OFN Big Picture](https://trello.com/b/cDDdFBV2/ofn-big-picture) are not actively updated currently.
