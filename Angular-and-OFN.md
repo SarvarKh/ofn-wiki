@@ -1,5 +1,4 @@
-#Angular and OFN
-OpenFoodNetwork.org uses Angular.js for the public-facing interface. Angular is a complex beast, so we've put together this article showing you how it all fits together.
+OpenFoodNetwork uses Angular.js for the public-facing interface. Angular is a complex beast, so we've put together this article showing you how it all fits together.
 
 Our application poses some uncommon issues and so contains some unusual design choices - deviating from the "Angular way" in specific cases.
 
