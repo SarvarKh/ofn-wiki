@@ -10,6 +10,8 @@ Please read this for an overview of how the project works and dig into other pag
 [GitHub](https://github.com/openfoodfoundation/openfoodnetwork) | Issues are used for bugs and features from the backlog that will be implemented.
 [ZenHub](https://www.zenhub.io/) | For agile kanban issue management.
 
+A full set of tools used can be seen on [StackShare](http://stackshare.io/open-food-network-uk/open-food-network-uk) (setup for UK but same for all installs).
+
 Note: Trello boards [OFN Core Dev](https://trello.com/b/TXnZrrRL/ofn-core-dev) and [OFN Big Picture](https://trello.com/b/cDDdFBV2/ofn-big-picture) are not actively updated currently.
 
 ## Deployment
