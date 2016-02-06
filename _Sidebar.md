@@ -8,6 +8,7 @@
 
 **General guidelines**
 
+* [[Spree Commerce customisation]]
 * [[Angular and OFN]]
 
 **Testing**
