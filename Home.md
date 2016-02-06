@@ -11,3 +11,7 @@ Please read this for an overview of how the project works and dig into other pag
 [ZenHub](https://www.zenhub.io/) | For agile kanban issue management.
 
 Note: Trello boards [OFN Core Dev](https://trello.com/b/TXnZrrRL/ofn-core-dev) and [OFN Big Picture](https://trello.com/b/cDDdFBV2/ofn-big-picture) are not actively updated currently.
+
+## Deployment
+
+See the [ofn_deployment wiki](https://github.com/openfoodfoundation/ofn_deployment/wiki).
