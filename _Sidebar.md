@@ -10,6 +10,7 @@
 
 * [[Spree Commerce customisation]]
 * [[Angular and OFN]]
+* [[Delayed job]]
 
 **Testing**
 
