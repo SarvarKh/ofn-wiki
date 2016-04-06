@@ -12,7 +12,7 @@ Annoyingly, we need to install the Node.js Package Manage (npm) to install karma
 Once that is complete, you should be able to jump straight to installing karma. NOTE: At present I would recommend using the global flag (-g) for installing karma packages with npm, as we have not yet set up a npm package.json file to manage versioning and dependencies within the ofn project.
 
     $ brew update
-    $ npm install -g karma
+    $ npm install -g karma@0.12.31
 
 Next we need a bunch of other packages (as they are now split up into separately rather than being contained in one all-inclusive package): the jasmine BDD testing framework, the coffee preprocessor and a chrome-launcher:
 
@@ -20,12 +20,12 @@ Next we need a bunch of other packages (as they are now split up into separately
     $ npm install karma-jasmine@0.1.5
     $ # karma-coffee-preprocessor will default to a newer version with breaking changes.
     $ npm install karma-coffee-preprocessor@0.1.0
-    $ npm install karma-phantomjs-launcher
+    $ npm install karma-phantomjs-launcher@0.1.4
     $ npm install karma-chrome-launcher
 
 You will likely need to install the karma command line packages as well:
 
-    $ sudo npm install -g karma-cli
+    $ sudo npm install -g karma-cli@0.0.4
 
 Check that NodeJS is installed. If you install from a package manager you bin may be called nodejs so you just need to symlink it:
 
