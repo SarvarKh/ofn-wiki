@@ -17,11 +17,11 @@ Once that is complete, you should be able to jump straight to installing karma. 
 Next we need a bunch of other packages (as they are now split up into separately rather than being contained in one all-inclusive package): the jasmine BDD testing framework, the coffee preprocessor and a chrome-launcher:
 
     $ # karma-jasmine from 0.2.x onward uses jasmine 2.x, which has breaking changes
-    $ npm install karma-jasmine@0.1.5
+    $ npm install -g karma-jasmine@0.1.5
     $ # karma-coffee-preprocessor will default to a newer version with breaking changes.
-    $ npm install karma-coffee-preprocessor@0.1.0
-    $ npm install karma-phantomjs-launcher@0.1.4
-    $ npm install karma-chrome-launcher
+    $ npm install -g karma-coffee-preprocessor@0.1.0
+    $ npm install -g karma-phantomjs-launcher@0.1.4
+    $ npm install -g karma-chrome-launcher
 
 You will likely need to install the karma command line packages as well:
 
