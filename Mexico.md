@@ -45,3 +45,6 @@ http://cooperativaconsumomilpa.org/
 
 Organic farm and Civil Accosiation near San Miguel de Allende
 http://viaorganica.org/
+
+Tianges TOSMO in SMA
+https://www.facebook.com/tianguis.organico
