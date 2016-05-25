@@ -4,34 +4,26 @@ Karma is used to run AngularJS specs.
 ## Getting set up
 
 ### On OS X Mavericks
-Annoyingly, we need to install the Node.js Package Manage (npm) to install karma. Amusingly, one can install npm with homebrew, and vice-versa. I chose to install npm with homebrew:
+We use an npm package.json to install karma and associated testing packages. Amusingly, one can install npm with homebrew, and vice-versa. I chose to install npm with homebrew:
 
     $ brew update
     $ brew install npm
 
-Once that is complete, you should be able to jump straight to installing karma. NOTE: At present I would recommend using the global flag (-g) for installing karma packages with npm, as we have not yet set up a npm package.json file to manage versioning and dependencies within the ofn project.
+Our Karma setup requires PhantomJS. The package.json file specifies a version of PhantomJS, but this will simply create a link to any existing version of PhantomJS in the path that matches the version requirements. If you want to use an existing PhnatomJS install, make sure the version matches the one specified in package.json and that the executable in is your path. I installed PhantomJS globally using:
 
-    $ brew update
-    $ npm install -g karma@0.12.31
+    $ npm install -g phantomjs-prebuilt
 
-Next we need a bunch of other packages (as they are now split up into separately rather than being contained in one all-inclusive package): the jasmine BDD testing framework, the coffee preprocessor and a chrome-launcher:
+Make sure to specify a version by appending '@x.x.x' if required
 
-    $ # karma-jasmine from 0.2.x onward uses jasmine 2.x, which has breaking changes
-    $ npm install -g karma-jasmine@0.1.5
-    $ # karma-coffee-preprocessor will default to a newer version with breaking changes.
-    $ npm install -g karma-coffee-preprocessor@0.1.0
-    $ npm install -g karma-phantomjs-launcher@0.1.4
-    $ npm install -g karma-chrome-launcher
+You should now be able to jump straight into installing the npm page. The package contains Karma, PhantomJS and Chrome launchers, CoffeeScript preprocessor and the Jasmine testing framework.
 
-You will likely need to install the karma command line packages as well:
-
-    $ sudo npm install -g karma-cli@0.0.4
+    $ npm install
 
 Check that NodeJS is installed. If you install from a package manager you bin may be called nodejs so you just need to symlink it:
 
     $ ln -s /usr/bin/nodejs /usr/bin/node
 
-And then you should be ready to go (see next section)....
+And then you should be ready to go (see 'Usage of Karma')....
 
 
 ### On Ubuntu 12.04
