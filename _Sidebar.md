@@ -29,3 +29,6 @@
 * [[API documentation]]
 * [[Integration & API]]
 * [[Data migration]]
+
+**Instance-specific configuration**
+* [[Locale and sample data]]
