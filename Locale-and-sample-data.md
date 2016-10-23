@@ -4,6 +4,7 @@ Following the defaults in this guide will result in an instance configured for A
 2. From a terminal, in the OFN repository root directory, run `script/restore.sh foo.sql.gz`
 3. Run `rails runner script/prepare_imported_db.rb` to disable some production payment settings.
 4. Run `rake db:migrate` to migrate any database changes since the dump.
+5. If you don't have admin credentials for the data you can set up your own super-admin user by running `rake spree_auth:admin:create` and following the prompts.
 
 Finally, if the data are from a non-Australia locale, change `config/application.yml` appropriately, e.g.:
 
