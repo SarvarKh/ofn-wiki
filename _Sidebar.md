@@ -32,3 +32,4 @@
 
 **Instance-specific configuration**
 * [[Locale and sample data]]
+* [[Troubleshooting your instance]]
