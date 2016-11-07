@@ -179,6 +179,10 @@ Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be 
 
     $ brew link --force openssl
 
+Homebrew complains very forcefully about this, so an alternative way is to configure bundler with the appropriate compiler flags (shown in the output of the brew link command above) for the gems that need it - for me this was only eventmachine (Steve, November 2016):
+
+    $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
+
 Now you should be able to install all of the gems required for the openfoodnetwork project using:
 
     $ bundle install
