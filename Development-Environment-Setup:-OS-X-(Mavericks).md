@@ -222,5 +222,6 @@ Karma, a test runner for pure javascript (which we use to test our AngularJS):
 
 [Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
 
+[Mail Setup]
 One of the key setup required is to setup the mail server, to get the confirmation mail, so that the enterprises become active, and we do the end to end setup.
 Any easy way of setting this up ? I tried using postfix, but having issues configuring gmail to send and receive mails.
