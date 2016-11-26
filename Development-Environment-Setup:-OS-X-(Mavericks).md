@@ -105,6 +105,8 @@ Our setup will probably require a specific version of Ruby which is unlikely to 
 
     $ rvm install 1.9.3-p392
 
+note : As of 26/11/2016 the current version is 2.1.5.
+
 Unfortunately I am not 100% across what happened next, but basically my system decided that it needed to compile that version of ruby for itself. I suspect that this was because that version is longer officially supported, and so no precompiled binary of that ruby version was available. Whatever the cause, the compilation process took about 4 hours to complete on my MacBook Air. My understanding is that we are looking into an upgrade of ruby in the near future, and so hopefully this will not be an issue for you.
 
 ## Step 8: Installing Dependencies
@@ -219,3 +221,6 @@ ImageMagick, used by Spree to create and manipulate images:
 Karma, a test runner for pure javascript (which we use to test our AngularJS):
 
 [Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
+
+One of the key setup required is to setup the mail server, to get the confirmation mail, so that the enterprises become active, and we do the end to end setup.
+Any easy way of setting this up ? I tried using postfix, but having issues configuring gmail to send and receive mails.
