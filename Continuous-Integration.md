@@ -6,7 +6,7 @@ Continuous Integration testing (CI) ensures that all automated tests are run eac
 
 ## Travis CI
 
-Travis offers a free testing infrastructure for free software projects. All forks of the Open Food Network can use Travis CI. The configuration `.travis` configuration files contains all commands to execute on a Travis server to run the tests.
+Travis offers a free testing infrastructure for free software projects. All forks of the Open Food Network can use Travis CI. The `.travis` configuration file contains all commands to execute on a Travis server to run the tests.
 
 ## Buildkite
 
