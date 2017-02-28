@@ -5,7 +5,7 @@
 * [[OS X (El Capitan)|Development Environment Setup: OS X (El Capitan)]]
 * [[OS X (Mavericks)|Development Environment Setup: OS X (Mavericks)]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
-* [[Heroku| Setup on Heroku]]
+* [[On Heroku | Set and Deploy on Heroku]]
 
 
 **General guidelines**
