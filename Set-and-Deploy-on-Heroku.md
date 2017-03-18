@@ -88,4 +88,78 @@ ActionMailer::Base.default :from => '"OpenFoodNetwork-Greece" <openfoodnetwork-g
   }
 
 
-Now I/You need to customize everything to be not only running but usable by my/your local producers. I will report back with instructions on this step upon completion.  
+Now I/You need to customize everything to be not only running but usable by my/your local producers.
+
+
+# Customization:
+
+The next step to do is to customize the app to my local needs. For the intellectual part of this customization, you may want to be aware, that there is these resources to run the platform properly, promote it, and support your users :
+1. Existing community forum : https://community.openfoodnetwork.org/t/welcome-to-the-open-food-network-community-forum/81
+2. User, hub and producer guides : https://openfoodnetwork.org/user-guide/
+3. Faq : https://openfoodnetwork.org/user-guide/faqs/customer-faqs/
+4.Case studies you may want to put forward : https://openfoodnetwork.org/user-guide/case-studies/
+5.Features list : https://openfoodnetwork.org/feature-list/
+6. Other OFN regional instances, more or less active and customized
+I also found that technical concepts are difficult to understand and possibly to translate, such as hub (a place/location where you sell permanently/temporarily) 
+
+For the technical part, I updated the text, the pictures, created taxons, change the filter size button. If you run into trouble, do not under-estime reproducing the problem locally (or on your virtual box linux), looking in the db (e.g. with jackdb) it helped me a lot.
+
+One day, I would like also to create a product search page through all shops (like in amazon, or any platform), a so much missing feature with maps results, but my RoR level is not yet there. Now, the user has to enter each shop/producer to see what products they have, they cannot see a list of “tomato” products of different shops.
+
+## Update the text
+To update the text, I created a en-GR.yml, not wanting to translate all to greek, but only partially, turn it to greeklish. 
+* Export Locale as env variable in heroku
+* Set locale in application.yml
+* Now, I can change en-GR.yml text, and see it updated but...
+* If you opted for precompiling assets locally like me, you may notice that some pages text do not update. You need to clean that and let heroku precompile each time you update
+* You may not want to miss translating ACN BCN (tax numbers)
+* Create your taxons, or tags
+* The first time I created the zones, I missed something that prevented the checkout with this message: “No shipping methods available for selected location, please change your address and try again.” You have to go back to your zones and check that all zones are country or state based, meaning a group of countries or a group of states. You also have to add in each zone which countries and states are part of it, in the zone edit panel. It is not sufficient to add the states to the country in the states panel, you have to add them in the zone panel too.
+## Pictures
+I also customized the logos and pictures, to create identity  :
+* First, I replaced the logo of spree in admin area by adding in spree.rb : config.admin_interface_logo = "http://res.cloudinary.com/hkzkjlyxw/image/upload/v1/public/images/content_configurations/logos/original/logo-ellada.png.png"
+* Main logos can be updated from the regular content admin panel but on heroku you cannot keep your files
+* To keep images you need a s3 account or a cloudinary heroku plugin, not on heroku itself. I already gave my card to heroku, and amazon wanted my credit card info also even for free account (limited to 1year 5go. I opted for cloudinary as part of heroku that had already my info, for only 500Mo but with no time limit. It gives less time pressure, and privacy intrusiveness that way. In Spree based openfoodnetwork platform, they use paperclip we can configure to use s3 account.
+* So here is how you configure cloudinary (see also heroku doc on cloudinary plugin) :
+* First, I added the plug in to heroku from web interface
+* I then added the env variables
+* I added gem paperclip-cloudinary in gem file
+* Get your cloundinary.yml from settings page in cloudinary website 
+* Add in production.rb cloudinary config :
+ ` config.paperclip_defaults = {`
+	  `storage: :cloudinary,`
+	  `path: 'public/images/:class/:attachment/:id/:style/:filename.:extension',`
+	  `url: '/images/:class/:attachment/:id/:style/:filename.:extension',`
+	  `cloudinary_credentials: Rails.root.join("config/cloudinary.yml"),`
+	  `secure: true, `
+  `}`
+* The logo and bg picture should work then. But for entrepise picture to work, you have as well to add to spree.rb cloudinary config. I later removed it, and it didn’t stop entreprise images from uploading and showing correctly : 
+`attachment_config={`
+  `storage:     :cloudinary,`
+  `url:         "/public/images/:class/:attachment/:id/:style/:filename.:extension",`
+  `path:        "public/images/:class/:attachment/:id/:style/:filename.:extension",`
+  `default_url: "/public/images/:class/:attachment/:id/:style/:filename.:extensionn",`
+  `secure: true`
+  `}`
+  `attachment_config.each do |key,value|`
+   `Spree::Image.attachment_definitions[:attachment][key.to_sym] = value`
+  `end`
+* For product pictures to show up in shop page, I also had to Change image_serializer.rb and replace “false” by “:timestamp => false”
+## Others
+If you have few producers, the filter button (with “organic” taxons, and so on) is more important than name/location search, so I decreased the size of the search label in _hubs.html.haml line 6. I also restored Dalli, now that I had to put my CB info. Faster working.
+* First add the plugin from web interface
+* Then export env variable to heroku (they should be already there)
+* Add this to your production.rb
+   config.cache_store = :dalli_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60
+                    }
+## Almost ready to go public
+That’s very exciting, It’s almost ready to go public with 0 euro cost (but with CB info identification). Now I have to setup the first shop and start inviting the small producers/shops/hubs. Although the process of managing product is still complex but highly refined, it is a unique opportunity for them to start an e-shop for free with little technical knowledge, as well as to stick together as producer community. Hope these instructions helps, don’t hesitate to improve them, this is a wiki after all.
+
+ I will report back with more tips on promoting, recruiting and helping the new users.
