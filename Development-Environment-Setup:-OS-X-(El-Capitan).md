@@ -85,7 +85,7 @@ To install RVM and the latest version of ruby and rails, which is probably a goo
 
 When that is done you should be able to restart your terminal OR load the rvm binary into your shell with:
 
-    $ source /Users/rob/.rvm/scripts/rvm
+    $ source ~/.rvm/scripts/rvm
 
 Then run:
 
