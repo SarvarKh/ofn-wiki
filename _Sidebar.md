@@ -13,6 +13,7 @@
 * [[Spree Commerce customisation]]
 * [[Angular and OFN]]
 * [[Delayed job]]
+* [[The process of review, test, merge and deploy]]
 
 **Testing**
 
