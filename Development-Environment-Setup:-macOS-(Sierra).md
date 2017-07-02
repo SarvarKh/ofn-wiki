@@ -99,7 +99,7 @@ Then run:
 Which should give you `rvm is a function` if everything went well.
 
 ## Step 6. Installing the required version of ruby
-The OFN will require a specific version of Ruby. At the time of writing, the the ruby version required was stored in a file in the root folder of the Open Food Network project repository called `.ruby-version`. The version I needed was `2.1.5`, so I installed it into RVM with:
+The OFN will require a specific version of Ruby. At the time of writing, the the ruby version required was stored in a file in the root folder of the Open Food Network project repository called [.ruby-version](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.ruby-version). The version I needed was `2.1.5`, so I installed it into RVM with:
 
     $ rvm install 2.1.5
 
