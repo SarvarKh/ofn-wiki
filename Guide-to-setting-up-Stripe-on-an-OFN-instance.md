@@ -46,8 +46,18 @@ You can check that the configuration settings you have just entered are valid fr
 If you see an error message instead, your configuration is not valid. You may not have restarted your server properly, or you may have entered invalid information into your `application.yml`.
 
 ### Step 7. Enable Stripe Connect
-Stripe is disabled by default, so you will need to enable it. You can do this from the same page used in Step 6. Simply check the box that says 'Enable shops to accept payments using Stripe Connect?' in the top section of the 'Stripe Connect' configuration interface.
+There is a feature toggle that enabled/disables Stripe across your whole OFN instance. Stripe is disabled by default, so you will need to enable it if you want to use it. You can do this from the same page used in Step 6. Simply check the box that says 'Enable shops to accept payments using Stripe Connect?' in the top section of the 'Stripe Connect' configuration interface. You can always disable Stripe again at any point in time, and Stripe will no longer be available as a payment method.
 
 ### Step 8. Connect an enterprise
-You should now be able to navigate to the edit page for an enterprise and find a button to 'Connect with Stripe' under the 'Payment Methods' section. Clicking on the button will redirect you to Stripe where you can connect an existing Stripe account to the enterprise, or create a new one. IMPORTANT: do not use the platform's Stripe account here (even if you are only testing). This would entail connecting the platform to itself, and results in unexpected behaviour. If you are using a development `client_id` with `test` API keys, you should see a option to 'Skip '
+You should now be able to navigate to the edit page for an enterprise and find a button to 'Connect with Stripe' under the 'Payment Methods' section. Clicking on the button will redirect you to Stripe where you can connect an existing Stripe account to the enterprise, or create a new one. IMPORTANT: do not use the platform's Stripe account here (even if you are only testing). This would entail connecting the platform to itself, and can result in unexpected behaviour. If you are just testing (ie. using a development `client_id` with `test` API keys), you should see a option to 'Skip this account form', which will allow you to complete the connection without actually requiring a Stripe account.
+
+Once you have completed this process, you should be able to create a new Stripe-based payment method for the enterprise you just connected.
+
+Step 9. Add a Stripe payment method
+Clicking the `CREATE NEW PAYMENT METHOD +` button will allow you to create a new payment method using Stripe. You will need to select 'Stripe' from the `Provider` dropdown, and then specify the enterprise you just connected from the `STRIPE ACCOUNT OWNER` dropdown. Once you have selected the stripe account owner, you should see a status message indicating whether the selected account is ready to use.
+
+Step 10. Place an order
+Open an order cycle and place an order. If you are in testing mode, you will need to use the test card numbers [provided by Stripe](https://stripe.com/docs/testing#cards), real card numbers will not work.
+
+That's it!
 
