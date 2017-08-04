@@ -37,3 +37,6 @@
 **Instance-specific configuration**
 * [[Locale and sample data]]
 * [[Troubleshooting your instance]]
+
+**Stripe**
+* [[Setting up Stripe on an OFN instance]]
