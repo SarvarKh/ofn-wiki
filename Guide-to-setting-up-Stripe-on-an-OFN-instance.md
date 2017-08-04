@@ -53,10 +53,10 @@ You should now be able to navigate to the edit page for an enterprise and find a
 
 Once you have completed this process, you should be able to create a new Stripe-based payment method for the enterprise you just connected.
 
-Step 9. Add a Stripe payment method
+### Step 9. Add a Stripe payment method
 Clicking the `CREATE NEW PAYMENT METHOD +` button will allow you to create a new payment method using Stripe. You will need to select 'Stripe' from the `Provider` dropdown, and then specify the enterprise you just connected from the `STRIPE ACCOUNT OWNER` dropdown. Once you have selected the stripe account owner, you should see a status message indicating whether the selected account is ready to use.
 
-Step 10. Place an order
+### Step 10. Place an order
 Open an order cycle and place an order. If you are in testing mode, you will need to use the test card numbers [provided by Stripe](https://stripe.com/docs/testing#cards), real card numbers will not work.
 
 That's it!
