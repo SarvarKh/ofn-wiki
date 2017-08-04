@@ -16,6 +16,10 @@
 * [[Delayed job]]
 * [[The process of review, test, merge and deploy]]
 
+**Contributing**
+* [[Making a great commit]]
+* [[Making a great pull request]]
+
 **Testing**
 
 * [[Testing and Rspec Tips]]
