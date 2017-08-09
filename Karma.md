@@ -9,7 +9,7 @@ We use an npm package.json to install karma and associated testing packages. Amu
     $ brew update
     $ brew install npm
 
-Our Karma setup requires PhantomJS. The package.json file specifies a version of PhantomJS, but this will simply create a link to any existing version of PhantomJS in the path that matches the version requirements. If you want to use an existing PhnatomJS install, make sure the version matches the one specified in package.json and that the executable in is your path. I installed PhantomJS globally using:
+Our Karma setup requires PhantomJS. The package.json file specifies a version of PhantomJS, but this will simply create a link to any existing version of PhantomJS in the path that matches the version requirements. If you want to use an existing PhantomJS install, make sure the version matches the one specified in package.json and that the executable in is your path. I installed PhantomJS globally using:
 
     $ npm install -g phantomjs-prebuilt
 
