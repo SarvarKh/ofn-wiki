@@ -19,7 +19,7 @@ You should now be able to jump straight into installing the npm page. The packag
 
     $ npm install
 
-Check that NodeJS is installed. If you install from a package manager you bin may be called nodejs so you just need to symlink it:
+Check that NodeJS is installed. If you install from a package manager your bin may be called nodejs so you just need to symlink it:
 
     $ ln -s /usr/bin/nodejs /usr/bin/node
 
