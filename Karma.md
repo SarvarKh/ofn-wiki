@@ -43,7 +43,7 @@ From there, follow the instructions for OS X Mavericks.
 ## Usage of Karma
 Running AngularJS specs with karma has been made pretty simple through use of a rake task which pulls together the karma configuration file (`config/ng-test.conf.js`), and a manifest file (`spec/javascripts/application_spec.js`) and then passes them on to karma to run:
 
-    $ rake karma:start
+    $ bundle exec rake karma:start
 
 or if you are using zeus:
 
