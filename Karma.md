@@ -48,11 +48,3 @@ Running AngularJS specs with karma has been made pretty simple through use of a 
 or if you are using zeus:
 
     $ zeus rake karma:start
-
-If you don't have karma installed globally (i.e. if following the instructions above), prepend the following to $PATH to allow these commands to find the karma binary when run in the root project directory:
-
-`./node_modules/karma/bin`
-
-e.g. in ~/.bash_profile:
-
-`export PATH=./node_modules/karma/bin:$PATH`
