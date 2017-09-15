@@ -4,7 +4,7 @@ The Australian team started the project and is currently supervising all contrib
 
 ### Create
 
-Anyone can create a pull request. It is helpful if the right people are notified to have a look at it.
+Anyone can create a pull request. It is helpful if the right people are notified to have a look at it. See [[Making a great pull request]].
 
 ### Review
 
