@@ -12,7 +12,7 @@ There is a fairly extensive discussion about the pros-and-cons of this approach 
 There is a more in-depth technical explanation of the process used to charge customers [here](SOME LINK) if you are interested
 
 ### Step 1. Create a Stripe Account
-Before you do anything, you will need to create a Stripe account that you will use to administer your 'platform'. It is a good idea to create a brand new dedicated account for this purpose. 
+Before you do anything, you will need to create a Stripe account (at [stripe.com](https://stripe.com)) that you will use to administer your 'platform'. It is a good idea to create a brand new dedicated account for this purpose. 
 
 ### Step 2. Register your platform
 To add Connect functionality to your account, you will need to register your platform with Stripe. This entails providing details about your OFN instance, which Stripe requires in order to verify the authenticity of the platform, and to authorise you to create charges on behalf of other Stripe accounts. Follow the links to 'register your platform' [here](https://stripe.com/docs/connect/quickstart#register-platform).
