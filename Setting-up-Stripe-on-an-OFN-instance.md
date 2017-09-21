@@ -17,7 +17,7 @@ Before you do anything, you will need to create a Stripe account (at [stripe.com
 ### Step 2. Register your platform
 To add Connect functionality to your account, you will need to register your platform with Stripe. This entails providing details about your OFN instance, which Stripe requires in order to verify the authenticity of the platform, and to authorise you to create charges on behalf of other Stripe accounts. Follow the links to 'register your platform' [here](https://stripe.com/docs/connect/quickstart#register-platform).
 
-### Step 3. Set up your connect callbacks
+### Step 3. Set up your Connect callbacks
 When users of your OFN instance want to connect their Stripe accounts, they will be redirected from the OFN to Stripe and back again. You will need to tell Stripe where you would like users to be redirected to after they have finished creating and connecting their accounts. There are very specific URIs that should be used here. To enter them, go to your Stripe Dashboard, then select `Connect` from the side menu, followed by `Settings` from the top menu that appears. If you scroll to the bottom, you should be able to enter `Redirect URIs` for your Development and Production environments. The URI you need to enter for each needs to follow this format:
 
 ````
@@ -27,7 +27,7 @@ https://[YOUR OFN DOMAIN]/admin/stripe_accounts/connect_callback
 You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure you OFN instance (Step 6).
 
 ### Step 4. Set up your Connect webhooks
-Stripe can communicate important information connected accounts via webhooks. The the moment, the OFN codebase has been configured to respond only to the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
+Stripe can communicate important information about events that happen to connected accounts outside of the OFN via webhooks. At the moment, the OFN codebase has been configured to only listen for the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
 
 To set up this webhook, head to your Stripe Dashboard, click `API` from the side menu, and then click `Webhooks` from menu that appears near the top of the page. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
 
@@ -35,7 +35,7 @@ To set up this webhook, head to your Stripe Dashboard, click `API` from the side
 https://[YOUR OFN DOMAIN]/admin/stripe_accounts/deauthorize
 ````
 
-Then select `Select types to send` and choose `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save. That's it for webhooks!
+Then select `Select types to send` and check `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save. That's it for webhooks!
 
 ### Step 5. Configure your OFN instance
 Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (found on the interface in Step 3), a public API key, and a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
