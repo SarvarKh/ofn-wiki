@@ -24,9 +24,20 @@ When users of your OFN instance want to connect their Stripe accounts, they will
 https://[YOUR OFN DOMAIN]/admin/stripe_accounts/connect_callback
 ````
 
-You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure you OFN instance (Step 4).
+You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure you OFN instance (Step 6).
 
-### Step 4. Configure your OFN instance
+### Step. Set up your Connect webhooks
+Stripe can communicate important information connected accounts via webhooks. The the moment, the OFN codebase has been configured to respond only to the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
+
+To set up this webhook, head to your Stripe Dashboard, click `API` from the side menu, and then click `Webhooks` from menu that appears near the top of the page. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
+
+````
+https://[YOUR OFN DOMAIN]/admin/stripe_accounts/deauthorize
+````
+
+Then select `Select types to send` and choose `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save. That's it for webhooks!
+
+### Step 5. Configure your OFN instance
 Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (found on the interface in Step 3), a public API key, and a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
 
 You can then use the values you have just looked up to set the following values in the `config/application.yml` file on your OFN server. Please note that if you are using a development `client_id`, then you must use `test` API keys. If you are using a production `client_id` you must use `live` API keys.
@@ -37,26 +48,26 @@ STRIPE_INSTANCE_SECRET_KEY: "sk_test_xxx" # This can be a test key or a live key
 STRIPE_INSTANCE_PUBLISHABLE_KEY: "pk_test_xxx" # This can be a test key or a live key
 ````
 
-### Step 5. Restart your server
+### Step 6. Restart your server
 How this is done may vary depending on the server, but it will be necessary to ensure your OFN instance is running with the new configuration you have just set up.
 
-### Step 6. Verify your Stripe configuration
+### Step 7. Verify your Stripe configuration
 You can check that the configuration settings you have just entered are valid from the super-admin configuration section. Log in as a super admin user, navigate to 'Configuration' and select 'Stripe Connect' (probably somewhere down near the bottom). If your settings are valid, you should see a green box that says your Stripe Connect status is 'OK'.
 
 If you see an error message instead, your configuration is not valid. You may not have restarted your server properly, or you may have entered invalid information into your `application.yml`.
 
-### Step 7. Enable Stripe Connect
+### Step 8. Enable Stripe Connect
 There is a feature toggle that enabled/disables Stripe across your whole OFN instance. Stripe is disabled by default, so you will need to enable it if you want to use it. You can do this from the same page used in Step 6. Simply check the box that says 'Enable shops to accept payments using Stripe Connect?' in the top section of the 'Stripe Connect' configuration interface. You can always disable Stripe again at any point in time, and Stripe will no longer be available as a payment method.
 
-### Step 8. Connect an enterprise
+### Step 9. Connect an enterprise
 You should now be able to navigate to the edit page for an enterprise and find a button to 'Connect with Stripe' under the 'Payment Methods' section. Clicking on the button will redirect you to Stripe where you can connect an existing Stripe account to the enterprise, or create a new one. IMPORTANT: do not use the platform's Stripe account here (even if you are only testing). This would entail connecting the platform to itself, and can result in unexpected behaviour. If you are just testing (ie. using a development `client_id` with `test` API keys), you should see a option to 'Skip this account form', which will allow you to complete the connection without actually requiring a Stripe account.
 
 Once you have completed this process, you should be able to create a new Stripe-based payment method for the enterprise you just connected.
 
-### Step 9. Add a Stripe payment method
+### Step 10. Add a Stripe payment method
 Clicking the `CREATE NEW PAYMENT METHOD +` button will allow you to create a new payment method using Stripe. You will need to select 'Stripe' from the `Provider` dropdown, and then specify the enterprise you just connected from the `STRIPE ACCOUNT OWNER` dropdown. Once you have selected the stripe account owner, you should see a status message indicating whether the selected account is ready to use.
 
-### Step 10. Place an order
+### Step 11. Place an order
 Open an order cycle and place an order. If you are in testing mode, you will need to use the test card numbers [provided by Stripe](https://stripe.com/docs/testing#cards), real card numbers will not work.
 
 That's it!
