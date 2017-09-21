@@ -26,7 +26,7 @@ https://[YOUR OFN DOMAIN]/admin/stripe_accounts/connect_callback
 
 You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure you OFN instance (Step 6).
 
-### Step. Set up your Connect webhooks
+### Step 4. Set up your Connect webhooks
 Stripe can communicate important information connected accounts via webhooks. The the moment, the OFN codebase has been configured to respond only to the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
 
 To set up this webhook, head to your Stripe Dashboard, click `API` from the side menu, and then click `Webhooks` from menu that appears near the top of the page. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
