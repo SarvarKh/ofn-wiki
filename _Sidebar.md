@@ -1,6 +1,6 @@
 ### [[Home]]
 
-**Environment setup**
+**Development environment setup**
 
 * [[macOS (Sierra)|Development Environment Setup: macOS (Sierra)]]
 * [[OS X (El Capitan)|Development Environment Setup: OS X (El Capitan)]]
