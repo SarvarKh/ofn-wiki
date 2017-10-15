@@ -21,10 +21,10 @@ To add Connect functionality to your account, you will need to register your pla
 When users of your OFN instance want to connect their Stripe accounts, they will be redirected from the OFN to Stripe and back again. You will need to tell Stripe where you would like users to be redirected to after they have finished creating and connecting their accounts. There are very specific URIs that should be used here. To enter them, go to your Stripe Dashboard, then select `Connect` from the side menu, followed by `Settings` from the top menu that appears. If you scroll to the bottom, you should be able to enter `Redirect URIs` for your Development and Production environments. The URI you need to enter for each needs to follow this format:
 
 ````
-https://[YOUR OFN DOMAIN]/admin/stripe_accounts/connect_callback
+https://[YOUR OFN DOMAIN]/stripe/callbacks
 ````
 
-You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure you OFN instance (Step 6).
+You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure your OFN instance (Step 5).
 
 ### Step 4. Set up your Connect webhooks
 Stripe can communicate important information about events that happen to connected accounts outside of the OFN via webhooks. At the moment, the OFN codebase has been configured to only listen for the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
@@ -32,13 +32,15 @@ Stripe can communicate important information about events that happen to connect
 To set up this webhook, head to your Stripe Dashboard, click `API` from the side menu, and then click `Webhooks` from menu that appears near the top of the page. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
 
 ````
-https://[YOUR OFN DOMAIN]/admin/stripe_accounts/deauthorize
+https://[YOUR OFN DOMAIN]/stripe/webhooks
 ````
 
-Then select `Select types to send` and check `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save. That's it for webhooks!
+Then select `Select types to send` and check `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save.
+
+You should also take note of the `Signing secret` shown at the bottom of this section. You will need to use it to configure your OFN instance (Step 5).
 
 ### Step 5. Configure your OFN instance
-Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (found on the interface in Step 3), a public API key, and a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
+Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (from Step 3), a webhook Signing Secret (from step 4), a public API key, a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
 
 You can then use the values you have just looked up to set the following values in the `config/application.yml` file on your OFN server. Please note that if you are using a development `client_id`, then you must use `test` API keys. If you are using a production `client_id` you must use `live` API keys.
 
@@ -46,6 +48,7 @@ You can then use the values you have just looked up to set the following values 
 STRIPE_CLIENT_ID: "ca_xxx" # This can be a development ID or a production ID
 STRIPE_INSTANCE_SECRET_KEY: "sk_test_xxx" # This can be a test key or a live key
 STRIPE_INSTANCE_PUBLISHABLE_KEY: "pk_test_xxx" # This can be a test key or a live key
+STRIPE_ENDPOINT_SECRET: "whsec_xxx"
 ````
 
 ### Step 6. Restart your server
@@ -71,4 +74,3 @@ Clicking the `CREATE NEW PAYMENT METHOD +` button will allow you to create a new
 Open an order cycle and place an order. If you are in testing mode, you will need to use the test card numbers [provided by Stripe](https://stripe.com/docs/testing#cards), real card numbers will not work.
 
 That's it!
-
