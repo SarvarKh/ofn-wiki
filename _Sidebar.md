@@ -26,6 +26,9 @@
 * [[Karma]]
 * [[Continuous Integration]]
 
+**Releasing**
+* [[Releasing]]
+
 **Specific features**
 
 * [[i18n]]
