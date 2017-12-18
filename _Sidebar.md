@@ -19,6 +19,7 @@
 **Contributing**
 * [[Making a great commit]]
 * [[Making a great pull request]]
+* [[Dependency upgrades manifesto]]
 
 **Testing**
 
