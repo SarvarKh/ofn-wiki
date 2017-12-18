@@ -21,4 +21,4 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## Who has the release power :zap: :muscle: 
 
-[@oeoeaio](https://github.com/oeoeaio) (AUS), [@mkllnk](https://github.com/mkllnk) (AUS), [@enricostano](https://github.com/enricostano) (EU) and [@sauloperez](https://github.com/sauloperez) (EU)
+[@oeoeaio](https://github.com/oeoeaio) (Australia/Melbourne), [@mkllnk](https://github.com/mkllnk) (Australia/Melbourne), [@enricostano](https://github.com/enricostano) (Europe/Madrid) and [@sauloperez](https://github.com/sauloperez) (Europe/Madrid)
