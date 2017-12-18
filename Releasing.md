@@ -24,4 +24,4 @@ decide so in the #dev Slack channel.
 
 ## Who has the release power :zap: :muscle: 
 
-@oeoeaio, @mkllnk, @enricostano and @sauloperez
+[@oeoeaio](https://github.com/oeoeaio), [@mkllnk](https://github.com/mkllnk), [@enricostano](https://github.com/enricostano) and [@sauloperez](https://github.com/sauloperez)
