@@ -36,7 +36,7 @@ what's the purpose of said feature/model including all it's hidden #dragons.
 
 ## Document all the customizations
 
-Take the time to time to document all the customizations built on top of Spree
+Take the time to document all the customizations built on top of Spree
 that you encounter.
 
 ## Reconsider why things were implemented this way in the first place
