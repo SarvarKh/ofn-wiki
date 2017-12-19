@@ -10,7 +10,7 @@ When reporting a bug, you need to set up a severity level so that the issue can 
 - checkout crashes, not possible to make an order
 
 ## Severity 2
-**Description**: the bug is affecting any of the non-critical features described in [Severity 1] and there is no workaround. Most users are impacted.
+**Description**: the bug is affecting any of the non-critical features described in [Severity 1](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Bug-severity#severity-1) and there is no workaround. Most users are impacted.
 
 **Timeframe**: as soon as possible
 
