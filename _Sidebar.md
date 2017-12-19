@@ -17,6 +17,7 @@
 * [[The process of review, test, merge and deploy]]
 
 **Contributing**
+* [[Bug severity]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
 * [[Dependency upgrades manifesto]]
