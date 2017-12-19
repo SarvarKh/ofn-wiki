@@ -80,6 +80,6 @@ A picture says 1000 words. You can capture what's on your screen with the Prt Sc
 
 See example below:
 
-![https://community.openfoodnetwork.org/uploads/default/original/1X/a95dd4e0e2851d8a720d564fa582e9d35451f6ab.jpg]
+[https://community.openfoodnetwork.org/uploads/default/original/1X/a95dd4e0e2851d8a720d564fa582e9d35451f6ab.jpg]
 
 If you have any questions let @sstead know.
