@@ -25,6 +25,7 @@
 
 **Testing**
 
+* [[Feature Testing Handbook]]
 * [[Testing and Rspec Tips]]
 * [[Karma]]
 * [[Continuous Integration]]
