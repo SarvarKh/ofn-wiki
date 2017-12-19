@@ -39,4 +39,4 @@ Description: we can live with it... Few users are impacted.
 Timeframe: NOT LIKELY EVER
 
 Examples:
-- [Australian staging 1 refers to images of staging 2] (https://github.com/openfoodfoundation/openfoodnetwork/issues/394)
+- [Australian staging 1 refers to images of staging 2](https://github.com/openfoodfoundation/openfoodnetwork/issues/394)
