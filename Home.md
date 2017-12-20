@@ -12,8 +12,6 @@ Please read this for an overview of how the project works and dig into other pag
 
 A full set of tools used can be seen on [StackShare](http://stackshare.io/open-food-network-uk/open-food-network-uk) (setup for UK but similar for most instances).
 
-Note: Trello boards [OFN Core Dev](https://trello.com/b/TXnZrrRL/ofn-core-dev) and [OFN Big Picture](https://trello.com/b/cDDdFBV2/ofn-big-picture) are not actively updated currently.
-
 ## Deployment
 
-See the [ofn_deployment wiki](https://github.com/openfoodfoundation/ofn_deployment/wiki).
+See the [ofn-install wiki](https://github.com/openfoodfoundation/ofn-install/wiki).
