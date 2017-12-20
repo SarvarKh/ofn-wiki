@@ -1,4 +1,4 @@
-OFN is built on [Spree Commerce Engine](http://spreecommerce.com/) (currently being upgraded to v1.3.0), with significant modifications as outlined below. Advantages of building on top of this include:
+OFN is built on [Spree Commerce Engine](http://spreecommerce.com/) (currently being upgraded to v2.0.0), with significant modifications as outlined below. Advantages of building on top of this include:
 
 * Strong basic functionality taken care of: orders; product displays; payments; checkout etc
 * Active community maintaining and improving the underlying code base and documentation
