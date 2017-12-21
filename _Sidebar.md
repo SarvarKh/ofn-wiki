@@ -18,6 +18,7 @@
 
 **Contributing**
 * [[Bug severity]]
+* [[Feature template (epic)]]
 * [[Feature template]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
