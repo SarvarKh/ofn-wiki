@@ -1,5 +1,7 @@
-When a icebox item (Discourse) has been prioritized and moved to product development backlog (Discourse), it then goes through a brainstorming session where feature candidates are listed and mapped on a value matrix. As a result, a feature candidate is selected.
-When that is done, a PO will create an epic in GitHub for that selected feature and list it into the project ["Product Feature Backlog"](https://github.com/openfoodfoundation/openfoodnetwork/projects/19), first column ("Selected feature backlog").
+When a icebox item (Discourse) has been prioritized and moved to product development backlog (Discourse), it then goes through a brainstorming session where feature candidates are listed and mapped on a value matrix. As a result, **a feature candidate is selected**.
+
+When that is done, a PO will **create an epic in GitHub for that selected feature** and list it into the project ["Product Feature Backlog"](https://github.com/openfoodfoundation/openfoodnetwork/projects/19), first column ("Selected feature backlog").
+
 This template describes what should be in this epic.
 
 ````
