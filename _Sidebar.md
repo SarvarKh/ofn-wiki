@@ -19,7 +19,7 @@
 **Contributing**
 * [[Bug severity]]
 * [[Feature template (epic)]]
-* [[Feature template]]
+* [[Story template]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
 * [[Dependency upgrades manifesto]]
