@@ -1,28 +1,29 @@
-The Open Food Network has many contributors around the world. Everybody is working on different code and still we want to merge it all together into the master branch at [Github](https://github.com/openfoodfoundation/openfoodnetwork/).
+The Open Food Network has many contributors around the world. Everybody is working on different code and still we want to merge it all together into the `master` branch at [Github](https://github.com/openfoodfoundation/openfoodnetwork/).
 
-The Australian team started the project and is currently supervising all contributions to the master branch. But we want to enable more people to share this responsibility. A pull request goes through the following stages:
+A core development team currently oversees all contributions to the master branch. A pull request goes through the following stages:
 
-### Create
+### Make a change
+Have a look at our [CONTRIBUTING.md](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md) for more information about picking up an issue and making changes to the codebase.
 
-Anyone can create a pull request. It is helpful if the right people are notified to have a look at it. See [[Making a great pull request]].
+### Submit
+Once you have some code that you would like to contribute, it’s time to submit a new pull request. To increase the chance that your pull request is swiftly accepted please have a look at our guide to [[making a great pull request]] 
 
 ### Review
-
-Most pull requests are reviewed by peer developers first. Changes are added in separate commits, one for each issue pointed out during the review. Once the reviewed commits are all good, some of the added commits may be squashed to remove dev detours from the history (see [[Making a great commit]]). That will make it easier for following reviews.
-The last review is performed by the person who merges the code, currently Rohan, Rob or Maikel from the Australian team. Let's call them merger.
+Pull requests need to be reviewed and approved by at least one member of the core development team before progressing. Reviews from other contributors are very welcome. Reviewers may request that changes be made to the pull request. Changes should be added in separate commits, one for each issue pointed out during the review. Some of the added commits may be squashed to remove dev detours from the history (see [[Making a great commit]]). Once a pull request has been approved it can progress to the test stage.
 
 ### Test
+Most pull requests will require some user testing. Very small or non-functional changes may move to the merge stage directly, at the discretion of the core dev reviewer.
 
-The merger may test the code locally. That can be part of the review process. Once the merger is happy, they deploy it on a staging server. We use [Buildkite](https://community.openfoodnetwork.org/t/build-pipelines/540) at the moment. It should then be tested by a person who is not the developer and not the last reviewer. The pull request should contain enough information what to look for and what should be tested.
+If user testing is required, this should occur in a context that resembles a production environment as closely as possible. Generally this will mean a staging server that is configured similarly to production and that contains production-like data. Once deployed, the changes made by the pull request should be tested by a person who is neither the developer nor the last reviewer. The pull request should contain enough information to determine what to look for and what should be tested.
 
-### Merge
+The person responsible for testing should provide a clear pass/fail with a very brief summary as a comment on the pull request. A link to more detailed testing notes should also be provided. These notes should ideally be created in a public Google Doc or similar shared document in the public domain.
 
-If everybody is happy with the pull request, it can be merged into the master branch. We use our Buildkite pipeline for it. It ensures that all tests pass and it deploys to the Australian production server as well.
+### Merge & Deploy
+If everybody is happy with the pull request, it can be merged into the master branch and deployed to a production server.
 
-### Deploy
+It is important that each new addition to the `master` branch is deployed to a production server immediately. This helps to ensure that the `master` branch is production ready at all times.
 
-The Australian team deploys to the production server straight away. It makes sure that the master branch is production ready. If other teams merge in the future, they should deploy to their production server. If they don't feel confident doing that, the code should not be merged.
+If the team responsible for testing and merging doesn't feel confident doing in deploying the code to a production server, then the code should not be merged and they should delegate responsibility for merging to another team.
 
 ### Release
-
-Once or twice a month, we create a release from the current master branch. It lists the important changes since the last release and is a trigger for other groups to consider updating their local instance.
+There is no set schedule for releasing. We just create new releases on demand when we decide to do so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel. The process is documented in its own wiki page. See [[Releasing]].
