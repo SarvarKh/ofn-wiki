@@ -218,3 +218,15 @@ ImageMagick: used by Spree to create and manipulate images
 Karma: a test runner for pure javascript (which we use to test our AngularJS)
 
 [Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
+
+## Troubleshooting
+
+If you run into an issue with the libv8 gem after running the bundle command:
+
+```
+$ gem install libv8 -v ‘3.16.14.11’ -- --with-system-v8
+```
+or
+```
+$ gem install libv8 -v 3.16.14.11 -- --with-system-v8
+```
