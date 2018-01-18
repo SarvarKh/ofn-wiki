@@ -7,7 +7,7 @@ This guide will help you set up a development environment for OFN on Ubuntu (tes
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 sudo apt-get install git postgresql-9.3 postgresql-common libpq-dev phantomjs
 ```
-Jan 2018: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) requires postgres-9.5.  See [Postgres Linux download](https://www.postgresql.org/download/linux/ubuntu/) for details of how to install that version.
+**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) requires postgres-9.5.  See [Postgres Linux download](https://www.postgresql.org/download/linux/ubuntu/) for details of how to install that version.
 
 ## Step 2. Configure git
 ```bash
@@ -58,7 +58,7 @@ gem install zeus
 ```
 
 ## Step 5. Set up Postgresql
-Jan 2018: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) now performs this step for you.
+**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) now performs this step for you.
 
 Next we create a development user (with superuser privileges) for postgres. The password should be `f00d`, as referenced in `config/database.yml`.
 
