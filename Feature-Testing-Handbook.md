@@ -52,15 +52,10 @@ Does the new code interact accurately with other features, like private shopfron
 
 Testing notes are recorded in google documents. Use this as a template - https://docs.google.com/document/d/16UZXJdemEI3EmcpFzJeuLchzkWKaaLoiJThr4cROig0/edit?usp=sharing
 
-Your notes should include:
-Tester: Put your name and github handle.
-Environment: e.g Staging1
-Browser: e.g Chrome, PC
-Devise: e.g. PC
-
-Use cases
+*Use cases*
 Give a description of what scenario you tested the code in. For each use case, indicate whether it passed (everything was good), or if it failed (did not meet the spec).
 
 Give a description of what didn't work. Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. This helps the developer when they try to replicate the problem. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
 
-Screenshots- A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
+*Screenshots*
+A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
