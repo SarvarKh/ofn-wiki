@@ -52,8 +52,8 @@ Does the new code interact accurately with other features, like private shopfron
 
 Testing notes are recorded in google documents. Use this as a template - https://docs.google.com/document/d/16UZXJdemEI3EmcpFzJeuLchzkWKaaLoiJThr4cROig0/edit?usp=sharing
 
-Your notes should include
-Tester: Put your name and github handle e.g. Sally (@sstead)
+Your notes should include:
+Tester: Put your name and github handle.
 Environment: e.g Staging1
 Browser: e.g Chrome, PC
 Devise: e.g. PC
