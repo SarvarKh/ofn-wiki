@@ -6,21 +6,21 @@ Testing is a process of ensuring that new code is working correctly before it ge
 
 When developers finish developing a feature (or a fix to a bug) they'll put their new code into a staging server. This is a website that looks just like the OFN, but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on staging, so you can test the software while doing usual tasks that enterprises commonly do on the site.
 
-When a developer asks you to test something, they'll give you a description of what they've done, usually on a github issue. Make sure they give you a detailed description of the following:
+When a developer asks you to test something, they'll give you a link to the Pull Request (PR). This PR should contain a description of 'what to test'. In this section developers should have detailed:
 
-* What is the new feature or bug fix?
-* How does the developer expect that it will behave?
-* Could any elements of the site have been inadvertently impacted by their work, that they know of?
+- A description of the desired new behaviour
+- A description of what the 'acceptability criteria' are
+- A description of any areas of the site that may have been inadvertently impacted by their work, and should therefore also be tested.
 
-Once you have this information, you can start playing with the software to check that it's behaving as expected and to check that all unrelated features are behaving as normal. If you spot anything that's not working as you would expect, or is broken, record these testing notes on the relevant github issue. The developer will look at your feedback and resolve any important problems, and give it back to you for more testing.
+Once you have this information, you can start experimenting with the software to check that it's behaving as intended and to check that all unrelated features are behaving as normal. If you spot anything that's not working as you would expect, or is broken, record these testing notes on the relevant github issue. The developer will look at your feedback and resolve any important problems, and possibly give it back to you for more testing.
 
-When a piece of code is deemed to be working correctly, it can be 'pushed to production'. This means it will become part of the main software and will be implemented on all instances.
+When a piece of code is deemed to be working correctly, it can be 'pushed to production'. This means it will become part of the live, publicly used software and will be implemented on all instances.
 
 Before you start testing, it's good to become familiar with the OFN software. This makes it much easier to spot things which are not quite right. A good way to get familiarised is to setup a producer shop and a hub shop, using the instructions in the user guide, and also try using the advanced features.
 
 ## Testing approach
 
-Testing involved using a new/updated feature as if you are an enterprise, and making sure it's working correctly. So essentially just think of different ways that users might use a feature and check that it's doing what you would expect.
+Testing involved using a new/updated feature as if you are an enterprise, and making sure it's working correctly. So essentially just think of different ways that users might interact with a feature and check that it's performing the way the developer intended.
 
 ### Think about different user types
 
@@ -34,15 +34,15 @@ Some features only apply to certain users on the OFN. Think about whether the fe
 
 ### Comparing the new code to the old.
 
-If you're not sure how the existing code functions, and how the new code is different, you can always play with the feature on production to see it's 'pre-developed' state.
+If you're not sure how the existing code functions, and how the new code is different, you can always play with the feature on production to see its 'pre-developed' state.
 
 ### Is it logical?
 
-Is there any way the new feature could be made more logical or easier to use? Ideally features should be self explanatory and intuitive. If you're finding new code confusing, users might as well.
+If there's something about the new code that you find unpleasant (visually, the wording of text, navigation) or confusing, make a note. 
 
 ### Check all the places
 
-New features will often impact on multiple places, such as in the shopfront, admin interface, orders listing, reports and in the order confirmation emails.
+New features will often impact on multiple places, such as in the shopfront, admin interface, orders listing, reports and in the order confirmation emails. Think about how the changes to the code could have impacts 'downstream' in other areas and test those as well.
 
 ### Check how new features interact with existing features
 
@@ -50,36 +50,17 @@ Does the new code interact accurately with other features, like private shopfron
 
 ## Recording your testing notes
 
-Testing notes are written on the github issue related to the new code. Developers will read your testing notes and do further development if needed, or they'll push the code to production.
+Testing notes are recorded in google documents. Use this as a template - https://docs.google.com/document/d/16UZXJdemEI3EmcpFzJeuLchzkWKaaLoiJThr4cROig0/edit?usp=sharing
 
-Things to record in testing notes:
+Your notes should include
+Tester: Put your name and github handle e.g. Sally (@sstead)
+Environment: e.g Staging1
+Browser: e.g Chrome, PC
+Devise: e.g. PC
 
-* Record a brief list of functions that were behaving correctly, like a checklist.
-* Record detailed information about anything that was not working correctly
-* Record details of any features that don't need urgent attention, but could be improved, or would be 'nice to have'. You can even create a new issue for these thing.
+Use cases
+Give a description of what scenario you tested the code in. For each use case, indicate whether it passed (everything was good), or if it failed (did not meet the spec).
 
-## Format of detailed testing notes
+Give a description of what didn't work. Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. This helps the developer when they try to replicate the problem. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
 
-**Background**
-
-What devise are you on?
-Which browser?
-
-**Expected behaviour**
-
-Write a description of how you expected the feature/fix to behave. Sometimes the developer will have a description of how the feature should function. Other times this is based on your intuition of how you'd expect the feature to behave, which also represents what an average user might expect.
-
-**Actual behaviour**
-
-Describe what actually occurred. How was the feature's actual behaviour different from what you expected and why is this a problem?
-Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
-
-**Screenshots**
-
-A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
-
-See example below:
-
-![](https://community.openfoodnetwork.org/uploads/default/original/1X/a95dd4e0e2851d8a720d564fa582e9d35451f6ab.jpg)
-
-If you have any questions let @sstead know.
+Screenshots- A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
