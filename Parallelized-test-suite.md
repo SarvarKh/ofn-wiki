@@ -22,7 +22,7 @@ Edit the [.travis.yml](https://github.com/openfoodfoundation/openfoodnetwork/blo
 
 Please, double check [Knapsack's docs](https://github.com/ArturT/knapsack#common-step) as this might have changed since this wiki was written.
 
-Once CI executes this, you'll see something like:
+Once CI executes this, you'll see something like this in the tests output:
 
 ```
 Knapsack report was generated. Preview:
@@ -35,7 +35,7 @@ Knapsack report was generated. Preview:
 (...)
 ```
 
-In the tests output. Just copy the whole JSON and replace the whole [knapsack_rspec_report.json](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/knapsack_rspec_report.json) with it.
+Just copy the whole JSON and replace the whole [knapsack_rspec_report.json](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/knapsack_rspec_report.json) with it.
 
 Once you commit and push this change, Travis should have parallel builds more evenly balanced.
 
