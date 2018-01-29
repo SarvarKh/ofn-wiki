@@ -50,6 +50,7 @@ Does the new code interact accurately with other features, like private shopfron
 
 ## Recording your testing notes
 
+### Step 1
 Testing notes are recorded in google documents. Use this as a template - https://docs.google.com/document/d/16UZXJdemEI3EmcpFzJeuLchzkWKaaLoiJThr4cROig0/edit?usp=sharing
 
 *Use cases*
@@ -59,3 +60,6 @@ Give a description of what didn't work. Include as much detail as you can such a
 
 *Screenshots*
 A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
+
+### Step 2
+Put a comment on the PR with a link to your google doc. In this comment, also give a summary. E.g. list the major outstanding issues that should be addressed, or say 'no issue found'. If the developer needs more detail they will go to the google doc, but they may not need to.
