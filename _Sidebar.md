@@ -7,6 +7,7 @@
 * [[OS X (Mavericks)|Development Environment Setup: OS X (Mavericks)]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
 * [[On Heroku | Set and Deploy on Heroku]]
+* [[Rubocop]]
 
 
 **General guidelines**
