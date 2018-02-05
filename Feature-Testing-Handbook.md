@@ -59,7 +59,7 @@ Give a description of what scenario you tested the code in. For each use case, i
 Give a description of what didn't work. Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. This helps the developer when they try to replicate the problem. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
 
 *Screenshots*
-A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it.
+A picture says 1000 words. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it. Even better if you can capture a GIF or moving image showing the bug.
 
 ### Step 2
 Put a comment on the PR with a link to your google doc. In this comment, also give a summary. E.g. list the major outstanding issues that should be addressed, or say 'no issue found'. If the developer needs more detail they will go to the google doc, but they may not need to.
