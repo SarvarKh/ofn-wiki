@@ -55,6 +55,13 @@ New features will often impact on multiple places, such as in the shopfront, adm
 #### Check how new features interact with existing features
 Does the new code interact accurately with other features, like private shopfronts, multiple order cycles, inventory, E2Es and customer tags?
 
+#### Think about browsers and devices discrepencies
+- Sometimes browsers behave differently when reading the same code. As we don't have an extended dev team we can't test on all browsers type and versions, so as a minimum we recommend to regularly change browsers when you do testing. Switch between Chrome or Firefox for instance. 
+- Also if the PR you are testing involves front end User Interface (what end customer sees on their screen) you should test on a mobile device to check if it looks ok. The code is supposed to be "responsive" so the visual website is supposed to adapt to the screen size of a mobile in a nice way.
+
+#### Languages dicrepencies
+Depending on the staging server the PR were deployed on, the language you test in may vary. If it's not English, and translations are involved in the PR, you might see "translations missing" while testing. This is normal and you should ignore it as we can't translate new strings before the PR is merged. We recommend as much as possible to test in an English environment.
+
 ## 3- Reporting feedback
 Once you have tested all the cases you could think of related to the PR, report your conclusions by commenting on the PR:
 (a)- If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work (+link your google doc url).
