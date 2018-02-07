@@ -3,7 +3,7 @@ Once you have submitted a PR and it has been reviewed and approved, it is ready 
 
 ### 1- Staging a PR
 In our distributed team, we are using various staging servers. For now in Australia, France, Iberica and UK.
-<br/>The next available developer who have access to a staging server takes the top priority PR and stages it, then moves the PR into the "Testing "column and adds as a comment the URL of the staging server he deployed on.
+<br/>The next available developer who has access to a staging server takes the top priority PR and stages it, then moves the PR into the "Testing "column and adds as a comment the URL of the staging server he deployed on.
 <br/>This should be done regularly for the delivery pipeline to be fluid. At least developers able to stage should check once a day and stage one PR if there are some. If a developer can pair and work synchrone with a tester, the process will be even more efficient.
 <br/>[Pau do we need to add something on single password thing here?]
 
