@@ -12,9 +12,10 @@ Pull requests need to be reviewed and approved by at least one member of the cor
 Most pull requests will require some user testing. Very small or non-functional changes may move to the merge stage directly, at the discretion of the core dev reviewer.
 
 If user testing is required, this should occur in a context that resembles a production environment as closely as possible. Generally this will mean a staging server that is configured similarly to production and that contains production-like data. Once deployed, the changes made by the pull request should be tested by a person who is neither the developer nor the last reviewer. The pull request should contain enough information to determine what to look for and what should be tested.
-See more detailed testing process [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Testing-process).
 
 The person responsible for testing should provide a clear pass/fail with a very brief summary as a comment on the pull request. A link to more detailed testing notes should also be provided. These notes should ideally be created in a public Google Doc or similar shared document in the public domain.
+
+See more detailed testing process [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Testing-process).
 
 ### 4. Merge & Deploy
 If everybody is happy with the pull request, it can be merged into the master branch and deployed to a production server.
