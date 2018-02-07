@@ -27,6 +27,7 @@
 
 **Testing**
 
+* [[Testing process]]
 * [[Feature Testing Handbook]]
 * [[Testing and Rspec Tips]]
 * [[Karma]]
