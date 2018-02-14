@@ -64,8 +64,8 @@ Depending on the staging server the PR were deployed on, the language you test i
 
 ## 3- Reporting feedback
 Once you have tested all the cases you could think of related to the PR, report your conclusions by commenting on the PR:
-(a)- If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work (+link your google doc url).
-(b)- If you spot anything that's not working as you would expect, or is broken, tell the developers by listing the major outstanding issues that should be addressed and link your google doc url. If the developer needs more detail they will go to the google doc, but they may not need to.
+- (a) If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work (+link your google doc url).
+- (b) If you spot anything that's not working as you would expect, or is broken, tell the developers by listing the major outstanding issues that should be addressed and link your google doc url. If the developer needs more detail they will go to the google doc, but they may not need to.
 
 ## 4- Launching the next action
 - If (a) it means the piece of code is deemed to be working correctly, and it can be 'pushed to production'. This means it will become part of the live, publicly used software and will be implemented on all instances. To tell the developers that accredited to merge that your tests are good and they can merge, just move the card to the "Ready to go" column or change the pipeline in the PR to "Ready to go".
