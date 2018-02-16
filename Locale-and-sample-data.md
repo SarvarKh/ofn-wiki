@@ -1,3 +1,5 @@
+Feb 2018: If you just need to have loaded some sample data, run _bundle exec rake dev:load_sample_data_ and it will do the trick, otherwise continue reading, please.
+
 Following the defaults in this guide will result in an instance configured for Australia. While this is sufficient for most development work, it is often useful to have a development environment set up for another locale. Managers of other OFN instances may be able to provide dumps of sample data that can be used. These can be set up as follows:
 
 1. Obtain a database dump e.g. `foo.sql.gz`.
@@ -19,5 +21,3 @@ CHECKOUT_ZONE: UK
 # Find currency codes at http://en.wikipedia.org/wiki/ISO_4217.
 CURRENCY: GBP
 ```
-
-To have some sample data loaded just run bundle exec rake dev:load_sample_data and it will do the trick!
