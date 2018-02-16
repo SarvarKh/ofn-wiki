@@ -19,3 +19,5 @@ CHECKOUT_ZONE: UK
 # Find currency codes at http://en.wikipedia.org/wiki/ISO_4217.
 CURRENCY: GBP
 ```
+
+To have some sample data loaded just run bundle exec rake dev:load_sample_data and it will do the trick!
