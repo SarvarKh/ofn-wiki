@@ -7,7 +7,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
-* Identify all pull requests that got merged since the last release. (The `merged:>YYYY-MM-DD` issue filter is useful)
+* Identify all pull requests that got merged since the last release. You can look at the [date of the last release](https://github.com/openfoodfoundation/openfoodnetwork/releases) and use it to [filter pull requests](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+merged%3A%3E2018-02-08) putting the date into the filter box like this: `is:pr merged:>=2018-02-08`
 * Get the release notes from each of these pull requests. If no release notes are specified you can just copy the pull request title.
 * Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. Make sure the notes can be understood by humans.
 * Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version.
