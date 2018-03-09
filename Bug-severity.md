@@ -1,6 +1,6 @@
 When reporting a bug, you need to set up a severity level so that the issue can be prioritized in the backlog.
 
-Note: a triage session is done each week by @myriamboure and @enricostan to confirm severity level and add any severity 1s and 2s to the delivery train backlog for action.
+Note: a triage session is done each week by @myriamboure and @enricostano to confirm severity level and add any severity 1s and 2s to the delivery train backlog for action.
 
 ## Severity 1 🔥 🔥 🔥 
 **Description**: the bug is stopping the platform from working, and there is no workaround. Lots of users are impacted and the affected feature is one of the critical ones: checkout, payments, signup, login.
