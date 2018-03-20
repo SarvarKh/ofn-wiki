@@ -16,7 +16,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 * Announce in [#deployment](https://openfoodnetwork.slack.com/messages/C0DNLAZC7) you just published a new release. Use the template below :point_down: :
 
     ```
-    Hi all, just letting you know that we just released [version number].
+    Hi all, just letting you know that we just released [version number] :tada:.
     You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
     ```
 * Create the `transifex` branch again to allow new translations to be published there: `git fetch origin master && git push origin FETCH_HEAD:refs/heads/transifex`
