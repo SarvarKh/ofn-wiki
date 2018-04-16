@@ -41,8 +41,20 @@ New linux package versions for OpenSSL can cause conflicts with the build proces
 ```bash
 curl -fsSL https://gist.github.com/mislav/055441129184a1512bb5.txt | rbenv install --patch 2.1.5
 ```
+## Step 4. Install node (using nodenv)
 
-## Step 4. Install gems
+```sh
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv --depth 1
+(cd ~/.nodenv && src/configure && make -C src)
+echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> .bashrc
+echo 'eval "$(nodenv init -)"' >> .bashrc
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-build" --depth 1
+nodenv install 5.12.0
+```
+
+## Step 5. Install gems
 If you don't ever use docs for gems, you can disable installation of documentation with:
 
 ```bash
@@ -57,7 +69,7 @@ gem install bundler
 gem install zeus
 ```
 
-## Step 5. Set up Postgresql
+## Step 6. Set up Postgresql
 **Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) now performs this step for you.
 
 Next we create a development user (with superuser privileges) for postgres. The password should be `f00d`, as referenced in `config/database.yml`.
