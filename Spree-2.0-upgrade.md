@@ -42,6 +42,6 @@ Once the developer is assigned to the issue from the Github UI a new branch from
 
 Once approved, the changes will be merged into `2-0-stable`.
 
-### Questions
+### Questions?
 
 Got questions? do not hesitate to raise a hand on the #spree-upgrade Slack channel. While this documentation is kept up to date it may not reflect all the details we gathered so far or any other considerations about the upgrade.
