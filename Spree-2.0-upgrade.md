@@ -15,3 +15,13 @@ This leaves our current Spree version somewhere close to that commit, which is 6
 v2.0.13, the latest 2.0 series release, lays more or less 1656 commits ahead of our Spree fork and 894 ahead of v2.0.0. Given the already big jump to v2.0.0 and without knowing how deep the changes these 894 commits introduce, it's safer to stick to 2.0.0 and get to 2.0.13 on an upcoming iteration.
 
 At the time the 2.0 series releases were made they didn't seem to use neither Github releases consistently nor pull requests. As a result, the version 2.0.13 is present in Rubygems but not on Spree repo's releases section. Apparently, [801f3d423](https://github.com/spree/spree/commit/801f3d423) is the commit that version points to.
+
+## Methodology
+
+### 2-0-stable branch
+
+The further we go with the upgrade the more issues we find that can't be solved by being compatible with the `master` branch. We need to continue the development in a different branch so that we can work on both, OFN's development and the Spree upgrade, independently.
+
+We already created said branch as https://github.com/openfoodfoundation/openfoodnetwork/tree/2-0-stable and so all PRs related to the upgrade must be merged into it. Some day, when we're finally done will merge `2-0-stable` into `master`.
+
+This requires frequent merges of `master` into `2-0-stable` so that the latter keeps in sync with the fixes and improvements we keep developing. Otherwise, we risk diverging too much from `master`. This would lead us to a troublesome final merge where we would have to deal with all the conflicts and adapt the fixes to Spree 2.0 in one single big step, rather than dealing with these in smaller and iterative steps.
