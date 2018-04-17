@@ -32,7 +32,7 @@ Tasks are managed by means of Github issues as we normally do. These are grouped
 
 Its child epics address each of the topics Spree changes in 2.0.0 and affect the customization OFN made on top. We're currently focusing our efforts on [being able to boot the app](https://github.com/openfoodfoundation/openfoodnetwork/issues/2217) already using Spree v2.0.0. This will then unblock other epics and hopefully the work could be parallelized. Take a look at the attached ZenHub's epics on [[Placeholder] Spree Upgrade to version 2.0.0](https://github.com/openfoodfoundation/openfoodnetwork/issues/2109) to see the full list.
 
-
+![Spree upgrade epics](https://github.com/coopdevs/openfoodnetwork/blob/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_epics.jpg)
 
 In turn, the actual action items will be issues attached to these epics. They will be small and discrete tasks that together will solve the epic at hand.
 
@@ -43,6 +43,8 @@ The approach we follow to work on these issues mentioned above mimics the branch
 Once the developer is assigned to the issue from the Github UI a new branch from [2-0-stable](https://github.com/openfoodfoundation/openfoodnetwork/tree/2-0-stable) needs to be created. Then, when opening the pull request notice the base branch has to be `2-0-stable` instead of `master`, as we're used to.
 
 Once approved, the changes will be merged into `2-0-stable`.
+
+![Spree upgrade branches](https://raw.githubusercontent.com/coopdevs/openfoodnetwork/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_branches.jpg)
 
 ### Questions?
 
