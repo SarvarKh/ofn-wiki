@@ -1,6 +1,6 @@
-# Spree 2.0 upgrade
+Theses are the notes about the approach and status followed to upgrade OFN to Spree 2.0.13. The latest published release of the 2.0 branch.
 
-This are the notes about the approach and status followed to upgrade OFN to Spree 2.0.13. The latest published release of the 2.0 branch.
+Expect them to be updated very frequently as we move along on the process.
 
 ## OFN's Spree fork
 
