@@ -10,11 +10,13 @@ Currently, the latest commit from upstream that doesn't diverge from Spree's git
 
 This leaves our current Spree version somewhere close to that commit, which is 651 commits above [2.0.0.beta](https://github.com/spree/spree/commit/c2345855b) and 762 below [v2.0.0](https://github.com/spree/spree/commit/deed1b65f995c36ea7d565da0257a920a8a1a62b).
 
-## Getting to version 2.0.0 ⛰ 
+## Getting to version 2.0.4 ⛰ 
 
 v2.0.13, the latest 2.0 series release, lays more or less 1656 commits ahead of our Spree fork and 894 ahead of v2.0.0. Given the already big jump to v2.0.0 and without knowing how deep the changes these 894 commits introduce, it's safer to stick to 2.0.0 and get to 2.0.13 on an upcoming iteration.
 
-At the time the 2.0 series releases were made they didn't seem to use neither Github releases consistently nor pull requests. As a result, the version 2.0.13 is present in Rubygems but not on Spree repo's releases section. Apparently, [801f3d423](https://github.com/spree/spree/commit/801f3d423) is the commit that version points to.
+v2.0.0 however, as reported in [Spree fail to install](https://github.com/spree/spree/issues/3203), Spree's engines specify conflicting versions of `jquery-rails` making Bundler fail on trying to a find a version that fits both. As a result, the lowest working version we can point to is v2.0.4, where this was [fixed](https://github.com/cloudbring/spree/pull/1). That moves us 66 commits ahead of v2.0.0.
+
+At the time the 2.0 series releases were published they didn't seem to use either Github releases consistently nor pull requests. That's why you will find the version 2.0.13 in Rubygems but not on Spree repo's releases section. Apparently, [801f3d423](https://github.com/spree/spree/commit/801f3d423) is the commit that version points to.
 
 ## Methodology ⛑ 
 
