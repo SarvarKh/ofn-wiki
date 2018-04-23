@@ -50,7 +50,7 @@ Once approved, the changes will be merged into `2-0-stable`.
 
 ## How to extend this doc
 
-Updates to this documentation are encouraged but make sure everyone on the team agrees to them. Ask the team on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel their take on the topic.
+Updates to this documentation are encouraged but make sure everyone on the team agrees to them. Ask the team on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel their take on the topic. Then, update it to reflect the shared consensus.
 
 ## Questions?
 
