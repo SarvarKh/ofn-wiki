@@ -48,6 +48,10 @@ Once approved, the changes will be merged into `2-0-stable`.
 
 ![Spree upgrade branches](https://raw.githubusercontent.com/coopdevs/openfoodnetwork/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_branches.jpg)
 
+## How to extend this doc
+
+Updates to this documentation are encouraged but make sure everyone on the team agrees to them. Ask the team on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel their take on the topic.
+
 ## Questions?
 
 Got questions? do not hesitate to raise a hand on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel. While this documentation is kept up to date it may not reflect all the details we gathered so far or any other considerations about the upgrade.
