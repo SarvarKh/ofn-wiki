@@ -14,7 +14,7 @@ This leaves our current Spree version somewhere close to that commit, which is 6
 
 The balance between aiming for a small upgrade and the need for a fix made us keep our fork of Spree. You can read more about it in https://github.com/openfoodfoundation/openfoodnetwork/issues/2236#issuecomment-384332024.
 
-So, we keep the upgrade as small as possible to Spree 2.0.4 (read the reason below) but including a fix made in 2.0.8 without which the app does not boot. These patches will be carefully documented in [our fork's README](https://github.com/coopdevs/spree/blob/2-0-4-stable/README.md).
+So, we keep the upgrade as small as possible to Spree 2.0.4 (read the reason below) but including a fix made in 2.0.8 without which the app does not boot. These patches will be carefully documented in [our fork's README](https://github.com/coopdevs/spree/blob/2-0-4-stable/README.md) and added to the branch [2-0-4-stable](https://github.com/openfoodfoundation/coopdevs/tree/2-0-4-stable) of the Coopdevs fork, which is the one we're working on.
 
 ## Getting to version 2.0.4 ⛰ 
 
@@ -26,13 +26,18 @@ At the time the 2.0 series releases were published they didn't seem to use eithe
 
 ## Methodology ⛑ 
 
-### 2-0-stable branch
+### Development
+#### OFN's 2-0-stable branch
 
 The further we go with the upgrade the more issues we find that can't be solved by being compatible with the `master` branch. We need to continue the development in a different branch so that we can work on both, OFN's development and the Spree upgrade, independently.
 
 We already created said branch as [2-0-stable](https://github.com/openfoodfoundation/openfoodnetwork/tree/2-0-stable) and so all PRs related to the upgrade must be merged into it. Someday, when we're finally done will merge `2-0-stable` into `master`.
 
 This requires frequent merges of `master` into `2-0-stable` so that the latter keeps in sync with the fixes and improvements that are shipped to production. Otherwise, we risk diverging too much from `master`. This would lead us to a troublesome final merge where we would have to deal with all the conflicts and adapt the fixes to Spree 2.0 in one single big step, rather than dealing with these in smaller and iterative steps.
+
+#### Spree fork's 2-0-4-stable branch
+
+As briefly mentioned in the *newer patches* section we'll keep using a fork of Spree and apply changes to it in the branch [2-0-4-stable](https://github.com/openfoodfoundation/coopdevs/tree/2-0-4-stable) under the Coopdevs Github organization. Ideally, it should be under OFN's organization instead.
 
 ### Task management
 
