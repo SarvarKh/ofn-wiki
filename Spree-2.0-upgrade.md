@@ -2,7 +2,7 @@ Theses are the notes about the approach and status followed to upgrade OFN to Sp
 
 Expect them to be updated very frequently as we move along on the process.
 
-## OFN's Spree fork 🍴 
+## OFN's Spree fork before the upgrade🍴 
 
 We use our own fork of Spree where we brought fixes from later versions of Spree and made some of our own.
 
