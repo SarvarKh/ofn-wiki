@@ -14,7 +14,7 @@ This leaves our current Spree version somewhere close to that commit, which is 6
 
 The balance between aiming for a small upgrade and the need for a fix made us keep our fork of Spree. You can read more about it in https://github.com/openfoodfoundation/openfoodnetwork/issues/2236#issuecomment-384332024.
 
-So, we keep the upgrade as small as possible to Spree 2.0.4 (read below) but including a fix made in 2.0.8 without which the app does not boot. These patches will be carefully documented in our fork's README.
+So, we keep the upgrade as small as possible to Spree 2.0.4 (read the reason below) but including a fix made in 2.0.8 without which the app does not boot. These patches will be carefully documented in [our fork's README](https://github.com/coopdevs/spree/blob/2-0-4-stable/README.md).
 
 ## Getting to version 2.0.4 ⛰ 
 
