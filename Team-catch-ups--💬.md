@@ -7,6 +7,8 @@ Rob (OFN Australia), Maikel (OFN Australia), Hugo (Open Food France), Pau (Katum
 
 ### Slides
 
+[OFN's Spree upgrade catch up](https://speakerdeck.com/coopdevs/ofns-spree-upgrade-catch-up)
+
 ### Notes & Agreement
 
 There's consensus on this approach. Everyone likes it.
