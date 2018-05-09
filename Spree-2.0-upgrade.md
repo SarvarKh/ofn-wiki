@@ -4,7 +4,7 @@ Expect them to be updated very frequently as we move along in the process.
 
 ## Table of Contents
 
-* [OFN's Spreefork 🍴 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/OFN's-Spree-fork%F0%9F%8D%B4)
+* [OFN's Spree fork 🍴 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/OFN's-Spree-fork%F0%9F%8D%B4)
 * [Getting to version 2.0.4 ⛰ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Getting-to-version-2.0.4-%E2%9B%B0)
 * [Development ⛑ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-%E2%9B%91)
 
