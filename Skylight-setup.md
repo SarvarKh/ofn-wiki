@@ -2,9 +2,7 @@ What follows is a brief documenting on how to setup [Skylight](skylight.io) to m
 
 ## Create a Skylight OSS account
 
-First, create an Skylight account for open source at
-https://www.skylight.io/oss. In the signup form mention that we already have an
-Open Food Network account for Barcelona and that we need one for your instance.
+First, create a Skylight account for open source at https://www.skylight.io/oss. In the signup form mention that we already have an Open Food Network account for Barcelona and that we need one for your instance.
 
 ## Provision SKYLIGHT_AUTHENTICATE var
 
@@ -21,8 +19,7 @@ Then, you can provision your instance's server running
 $ ansible-playbook playbooks/provision.yml --limit=staging -e <path_to_your_secrets_yml> --ask-vault-pass
 ```
 
-You can check out the details about the provision process in
-https://github.com/openfoodfoundation/ofn-install/wiki/Provisioning.
+You can check out the details about the provision process in https://github.com/openfoodfoundation/ofn-install/wiki/Provisioning.
 
 ## Reboot the app server
 
@@ -53,10 +50,7 @@ messages are logged there.
 
 ## Troubleshooting
 
-All this steps have proved working in Katuma but if you happen to experience any
-problem make sure you run the latest version of OFN and that the
-`SKYLIGHT_AUTHENTICATION` and `RAILS_ENV` env vars are present and accessible by
+All these steps have proved to work in Katuma but if you happen to experience any problem make sure you run the latest version of OFN and that the `SKYLIGHT_AUTHENTICATION` and `RAILS_ENV` env vars are present and accessible by
 the unicorn process.
 
-Keep in mind that a Unicorn reload is not enough for the process to pick up new
-env vars so a full restart is mandatory.
+Keep in mind that a Unicorn reload is not enough for the process to pick up new env vars so a full restart is mandatory.
