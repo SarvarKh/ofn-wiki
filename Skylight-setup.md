@@ -11,9 +11,7 @@ Open Food Network account for Barcelona and that we need one for your instance.
 All configuration required in the app has already been introduced in https://github.com/openfoodfoundation/openfoodnetwork/pull/2070 and https://github.com/openfoodfoundation/openfoodnetwork/pull/2080. Furthermore, [ofn-install](https://github.com/openfoodfoundation/ofn-install) has also support for it, added in https://github.com/openfoodfoundation/ofn-install/pull/137 and https://github.com/openfoodfoundation/ofn-install/pull/153.
 
 ### Using ofn-install
-All you need to do is to specify the `skylight_authentication` var containing the authentication token you will find in your Skylight settings in your secrets file. 
-
-
+All you need to do is to specify the `skylight_authentication` var containing the authentication token you will find in your Skylight settings in your secrets file.
 
 Take a look at [inventory/host_vars/_example.com/secrets.example.yml](https://github.com/openfoodfoundation/ofn-install/blob/f5213473a628769141184716481e59c93914698d/inventory/host_vars/_example.com/secrets.example.yml#L25).
 
