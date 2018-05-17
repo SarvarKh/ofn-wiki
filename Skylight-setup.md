@@ -18,8 +18,7 @@ Take a look at [inventory/host_vars/_example.com/secrets.example.yml](https://gi
 Then, you can provision your instance's server running
 
 ```
-$ ansible-playbook playbooks/provision.yml --limit=staging -e
-<path_to_your_secrets_yml> --ask-vault-pass
+$ ansible-playbook playbooks/provision.yml --limit=staging -e <path_to_your_secrets_yml> --ask-vault-pass
 ```
 
 You can check out the details about the provision process in
