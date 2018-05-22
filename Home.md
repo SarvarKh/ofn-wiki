@@ -6,7 +6,8 @@ Please read this for an overview of how the project works and dig into other pag
 
 **Tool** | **Used for..**
 -----|---------
-[Discourse](http://community.openfoodnetwork.org/) | Features discussion, community updates, processes, international conversations.
+[Discourse](http://community.openfoodnetwork.org/) | Forum for in-depth feature discussion, community updates, processes, international conversations.
+[Slack](https://join.slack.com/t/openfoodnetwork/shared_invite/enQtMzU2Mjk5MDc2MjA5LTM4ZTAzZjIwNzIxMmU5ODFiNWY1MTU2ZWUyNzQwNjdjNTY0N2VhY2UwOGU4ZmVjNzYyZDU2NjY3NzZkZmQwYjk) | Real-time conversations on development, deployment, feature discussion, and other community issues needing synchronous conversations.
 [GitHub](https://github.com/openfoodfoundation/openfoodnetwork) | Issues are used for bugs and features from the backlog that will be implemented.
 [ZenHub](https://www.zenhub.io/) | For agile kanban issue management.
 
