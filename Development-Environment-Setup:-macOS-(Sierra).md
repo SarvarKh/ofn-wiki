@@ -175,6 +175,8 @@ The version of bundler that rvm installed for me was quite old, so when I ran `b
 
 And now, `bundle -v` gives me: `Bundler version 1.15.1`. 👍 
 
+You may need to run `gem install bundler` to install the bundler in the first place.
+
 You should now me able to install the required gems with: 
 
     $ bundle install
