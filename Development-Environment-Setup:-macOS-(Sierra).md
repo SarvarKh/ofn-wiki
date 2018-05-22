@@ -181,6 +181,12 @@ You should now me able to install the required gems with:
 
     $ bundle install
 
+If you get an error related to libv8, you may have to run these commands (with libv8 3.16.14.11 and therubyracer 0.12.0):
+
+    $ gem uninstall libv8
+    $ gem install therubyracer -v YOUR_RUBY_RACER_VERSION
+    $ gem install libv8 -v YOUR_VERSION -- --with-system-v8
+
 Once all gems have been installed, check that rails is ready to go:
 
     $ rails -v
