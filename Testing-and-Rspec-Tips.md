@@ -11,3 +11,25 @@ Finished in 4.55 seconds
 1 example, 0 failures
 
 This is a good start, but we don't know whether our test is actually telling us anything yet. For example, an empty test also passes. We want to know that when our code is broken, the test will fail, otherwise it's not an informative test. To gain that confidence, we deliberately break our code, then re-run the test, and it should fail.
+
+<h3>Run some Specs with Selenium webdriver</h3>
+For beginners, it may be useful to run specs with selenium and see the tests execute on a normal browser. You can also Debug things directly on the browser with this. This is how you can do it:
+- add to GemFile:
+  gem 'selenium-webdriver'
+- run command to fetch the new gem:
+  bundle
+- install Firefox
+- install geckodriver - https://github.com/mozilla/geckodriver/releases (make it available on your PATH)
+- edit spec_helper.rb
+  replace Capybara.javascript_driver = :poltergeist
+  with Capybara.javascript_driver = :selenium
+- You may have to replace some unavailable instructions for example:
+  replace --  find("button", text: "Checkout as guest").trigger "click"
+  with    --  find("button", text: "Checkout as guest").click  
+- done!
+
+
+
+
+
+
