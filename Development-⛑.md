@@ -23,6 +23,8 @@ In turn, the actual action items will be issues attached to these epics. They wi
 
 ## Pull requests
 
+> :warning: Since now it's @HugsDaniel and @sauloperez working on the upgrade, all PRs must be approved by the other person on the team before merging, no matter who else gives his.
+
 The approach we follow to work on these issues mentioned above mimics the branching model we follow for the regular development of OFN.
 
 Once the developer is assigned to the issue from the Github UI a new branch from [2-0-stable](https://github.com/openfoodfoundation/openfoodnetwork/tree/2-0-stable) needs to be created. Then, when opening the pull request notice the base branch has to be `2-0-stable` instead of `master`, as we're used to.
@@ -30,3 +32,4 @@ Once the developer is assigned to the issue from the Github UI a new branch from
 Once approved, the changes will be merged into `2-0-stable`.
 
 ![Spree upgrade branches](https://raw.githubusercontent.com/coopdevs/openfoodnetwork/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_branches.jpg)
+
