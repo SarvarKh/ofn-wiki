@@ -54,5 +54,6 @@
 * [[Locale and sample data]]
 * [[Troubleshooting your instance]]
 
-**Stripe**
+**External services**
 * [[Setting up Stripe on an OFN instance]]
+* [[Skylight setup]]
