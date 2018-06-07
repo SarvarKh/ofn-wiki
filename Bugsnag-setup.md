@@ -7,8 +7,12 @@ Please follow there [guide](https://docs.bugsnag.com/product/getting-started/) t
 
 ## Integrate Bugsnag on your instance
 
-You can follow their [guide for Rails integration] (https://docs.bugsnag.com/platforms/ruby/rails).
+You can follow their [guide for Rails integration](https://docs.bugsnag.com/platforms/ruby/rails).
 
 ### Using ofn-install
 
 In case you are deploying with [ofn-install](https://github.com/openfoodfoundation/ofn-install), you will just have to setup the `bugsnag_key` on your secrets.yml file defining the host vars for your specific instance.
+
+## Troobleshooting
+
+Not so far but don't hesitate to tell us if you are having any issue setting it up.
