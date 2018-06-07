@@ -1,4 +1,4 @@
-What follows is a brief documenting on how to setup [Skylight](skylight.io) to monitor a particular OFN instance's performance.
+What follows is a brief documenting on how to setup [Skylight](https://www.skylight.io) to monitor a particular OFN instance's performance.
 
 ## Create a Skylight OSS account
 
