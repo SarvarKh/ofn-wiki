@@ -18,14 +18,21 @@ For beginners, it may be useful to run specs with selenium and see the tests exe
   gem 'selenium-webdriver'
 - run command to fetch the new gem:
   bundle
+
 - install Firefox
+
 - install geckodriver - https://github.com/mozilla/geckodriver/releases (make it available on your PATH)
+
 - edit spec_helper.rb
-  replace Capybara.javascript_driver = :poltergeist
-  with Capybara.javascript_driver = :selenium
+  replace
+  Capybara.javascript_driver = :poltergeist
+  with
+  Capybara.javascript_driver = :selenium
+
 - You may have to replace some unavailable instructions for example:
   replace --  find("button", text: "Checkout as guest").trigger "click"
   with    --  find("button", text: "Checkout as guest").click  
+
 - done!
 
 
