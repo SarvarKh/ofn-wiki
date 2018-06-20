@@ -15,6 +15,6 @@ Updates to this documentation are encouraged but make sure everyone on the team 
 
 ## Questions?
 
-Got questions? do not hesitate to raise a hand on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel. While this documentation is kept up to date it may not reflect all the details we gathered so far or any other considerations about the upgrade.
+Got questions? Do not hesitate to raise a hand on the [#spree-upgrade](https://openfoodnetwork.slack.com/messages/C4NDJT3FY/) Slack channel. While this documentation is kept up to date it may not reflect all the details we gathered so far or any other considerations about the upgrade.
 
 ![](https://media.giphy.com/media/aqYZmnZwfvTmo/giphy.gif)
