@@ -1,4 +1,4 @@
-This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.  It is part of the Developer Guide.
+This page is for collecting thoughts, questions, possibilities, and links for implementing data initialization.
 
 **THIS PAGE IS A WORK IN PROGRESS.**  Edit and add to it to record issues, questions, and decisions made. Be Bold!
 
