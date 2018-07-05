@@ -1,3 +1,9 @@
+*This page is WIP from the 201807 gathering. These still need to be discussed/decided with everyone*
+*
+* .
+
+
+
 As in all code bases with some years we have different approaches to solve similar problems. Usually developers find better ways of doing things and go for it as they are implementing new features. This page lists and clarifies, for some topics, what are the existing ways of doing something in OFN and what is the recommended way of doing it.
 
 # API First
