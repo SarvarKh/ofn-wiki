@@ -8,6 +8,7 @@ Expect them to be updated very frequently as we move along in the process.
 * [Getting to version 2.0.4 ⛰ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Getting-to-version-2.0.4-%E2%9B%B0)
 * [Development ⛑ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-%E2%9B%91)
 * [Team catch ups 💬 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Team-catch-ups--%F0%9F%92%AC)
+* [[Spree Upgrade Themes]]
 
 ## How to extend this doc
 
