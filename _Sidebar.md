@@ -19,11 +19,13 @@
 * [[Spree 2.0 upgrade]]
 
 **Contributing**
+
 * [[Bug severity]]
 * [[Feature template (epic)]]
 * [[Story template]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
+* [[Internationalisation (i18n) | i18n]]
 * [[Dependency upgrades manifesto]]
 
 **Testing**
@@ -40,7 +42,6 @@
 
 **Specific features**
 
-* [[i18n]]
 * [[Sales Tax]]
 * [[Product amounts units]]
 
