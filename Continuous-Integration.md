@@ -1,4 +1,6 @@
-Continuous Integration testing (CI) ensures that all automated tests are run each time somebody pushes code to the GitHub repository. We are currently using [Semaphore CI](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/), because it seems to be faster and more reliable than its competitors. We used to run tests with [Travis](https://travis-ci.org/openfoodfoundation/openfoodnetwork/) and you can still use it on your own forks.
+Continuous Integration testing (CI) ensures that all automated tests are run each time somebody pushes code to the GitHub repository. We are currently using [Semaphore CI](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/), because it seems to be faster and more reliable than its competitors.
+
+We used to run tests with [Travis](https://travis-ci.org/openfoodfoundation/openfoodnetwork/) and you can still use it on your own forks. It needs less manual configuration than Semaphore.
 
 ## Semaphore CI
 
@@ -45,13 +47,10 @@ bundle exec rake 'knapsack:rspec[--tag ~performance --format progress -p]'
 
 Semaphore sets some environment variables automatically so that Knapsack executes a quarter of all tests in each job.
 
-
 ## Travis CI
 
-Travis offers a free testing infrastructure for free software projects. All forks of the Open Food Network can use Travis CI. The `.travis` configuration file contains all commands to execute on a Travis server to run the tests.
-
-https://travis-ci.org/openfoodfoundation/openfoodnetwork
+The `.travis` configuration file within our repository contains all commands needed to execute on Travis. You can just activate it for your branches to get feedback while developing.
 
 ## Buildkite
 
-Buildkite provides a nice user interface to manage your own CI servers. The Australian team uses it to run tests and deploy to staging and production servers. But you have to pay for an account. See [Deployment with Buildkite](https://github.com/openfoodfoundation/ofn_deployment/wiki/Deployment-with-Buildkite) for more information.
+Buildkite provides a nice user interface to manage your own CI servers. The Australian team uses it a bit differently. We use the user interface to trigger deployments to staging and production servers. It uses the Github API to check if other CI runs were successful. It is a paid service. See [Deployment with Buildkite](https://github.com/openfoodfoundation/ofn_deployment/wiki/Deployment-with-Buildkite) for more information.
