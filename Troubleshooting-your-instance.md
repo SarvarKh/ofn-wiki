@@ -16,3 +16,5 @@ This recreates it and runs the `db:seed` task as well.
 When it succeeds you can load some sample data with:
 `bundle exec rake dev:load_sample_data`
 
+If you still having problems with your database state you can always delete it and re-create it.
+Make sure that the psql user has the superuser role and then run `bundle exec rake db:setup db:test:prepare`. That should create the database and load the current schema.
