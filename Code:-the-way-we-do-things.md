@@ -1,4 +1,4 @@
-*This page is WIP from the 201807 gathering. These still need to be discussed/decided with everyone*
+*This page is WIP, these still need to be discussed/decided with everyone*
 *
 * .
 
@@ -31,6 +31,9 @@ Folders with RABL files in the OFN code base:
 
 # Integration with Spree
 ### Spree model decorators - class_eval vs spree class extension vs using SimpleDelegator
+Spree Class extension is better than using class eval as with it we end up with an OFN class that extends the Spree class: we can test this OFN class and our code doesn't directly depend on a spree class.
 
+### (re)-building Spree views
+When we want to change a Spree view, we used [Deface](https://github.com/spree/deface) to get our custom behaviour in the view. This has been painful to maintain and we now decided that all Spree views that are changed should be copied into our repository and changed as necessary without using Deface. This way we have a OFN view that depends on Spree code but does not depend on the Spree view.
 
 
