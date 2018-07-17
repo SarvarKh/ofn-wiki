@@ -10,6 +10,7 @@ As in all code bases with some years we have different approaches to solve simil
 ### How to build web pages - rails views vs angular templates
 If we want to get closer to having an API based application, we need to stop building screens using rails views accessing the rails models. We need to move into making mandatory the use of the API for every part of the app. Either by having frontend code (like angular) accessing the API (or by having the rails views depending only on the API but not the OFN data models).
 Spree screen are not built in this way BUT this logic can be used for all the spree screens that we replace/rebuild to adapt to our needs.
+This topic is being discussed here: https://community.openfoodnetwork.org/t/how-we-build-web-pages-rails-views-vs-angular-templates/1378
 
 ### JSON data on the browser - injection into the DOM (AMS) vs Angular MODEL accessing the API
 Also to support the development of an API, we need to stop using AMS to inject json into the dom and start using the API through a (currently non-exiting) Angular model layer. Also applicable to spree screens that are rebuilt.
