@@ -25,7 +25,7 @@
 * [[Story template]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
-* [[Internationalisation (i18n) | i18n]]
+* [[Internationalisation (i18n)]]
 * [[Dependency upgrades manifesto]]
 
 **Testing**
