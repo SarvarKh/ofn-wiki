@@ -32,6 +32,7 @@ Folders with RABL files in the OFN code base:
 ./app/views/json
 ./app/views/admin/json
 ./app/views/spree/api (spree API overrides)
+This topic is being discussed here: https://community.openfoodnetwork.org/t/road-map-for-ofns-api/931/5
 
 # Integration with Spree
 ### Spree model decorators - class_eval vs spree class extension vs using SimpleDelegator
