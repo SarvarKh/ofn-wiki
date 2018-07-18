@@ -5,4 +5,4 @@ Things you should verify as you code review a PR:
 * Make sure [the build](Continuous-Integration) for the PR is green
 * Make sure the changes are tested at appropriate level (see [rspec tips](Testing-and-Rspec-Tips) and [karma tips](Karma) for help)
 * Make sure tech [best practices](Code,-the-way-we-do-things) are being followed
- 
+* Focus on the implications, design, readability and complexity of the change rather than only its syntax. The latter is what machines are meant to do and that's why we use [Rubocop](http://batsov.com/rubocop/).
