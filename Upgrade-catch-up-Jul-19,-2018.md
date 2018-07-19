@@ -1,5 +1,3 @@
-## Jul 9, 2018
-
 ### Attendees
 
 Maikel (OFN Australia), Matt (OFN UK), Hugo (Open Food France), Luis, Pau (Katuma).
