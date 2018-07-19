@@ -1,8 +1,8 @@
 [Delayed job](https://github.com/collectiveidea/delayed_job) is used for sending emails asynchronously.
 
-* It is monitored by the [monit](https://mmonit.com/) daemon.
-* The [monit configuration](https://github.com/openfoodfoundation/ofn_deployment/blob/master/roles/common/templates/monit.j2) is setup by `ofn_deployment`.
-* It starts delayed job by running `script/delayed_job`.
+* It is monitored and controlled by the delayed_job_openfoodnetwork systemd service.
+* The service starts and stops delayed job via `script/delayed_job`.
+* The service can be restarted with: `sudo systemctl restart delayed_job_openfoodnetwork.service` or you can check it's status with: `systemctl status delayed_job_openfoodnetwork.service`
 
 Delayed job can be tested by running:
 
