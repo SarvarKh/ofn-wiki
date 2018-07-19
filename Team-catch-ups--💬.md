@@ -2,5 +2,5 @@ Given our the absolute distribution nature of the dev team we run a series of re
 
 These catch-ups have been held regularly since May but not all were worth a write up, as they were mostly a sync between [@HugsDaniel](https://github.com/HugsDaniel) and [@sauloperez](https://github.com/sauloperez).
 
-* [[Upgrade-catch-up-May-9,-2018]]
-* [[Upgrade-catch-up-Jul-19,-2018]]
+* [[Upgrade catch up May 9, 2018]]
+* [[Upgrade catch up Jul 19, 2018]]
