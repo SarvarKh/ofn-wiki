@@ -1,5 +1,3 @@
-## Variant's count_on_hand migration
-
 Spree data migration https://github.com/spree/spree/commit/2c48bfbaad98b8af35a5e95ba268a057c6973b47 by default would create only one Stock Location for all the Enterprises and create a Stock Item for each Variant.
 
 In this way, we end up with all the stock information for all the Enterprises in one place.
