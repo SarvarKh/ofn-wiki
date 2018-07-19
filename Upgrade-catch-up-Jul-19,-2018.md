@@ -17,11 +17,11 @@ We have still two themes: data model issues (epics) and fixes that sit across th
 
 We can use the main epic Zenhub's progress bar as a metric.
 
-* What's the status of #2225. It's still in dev.
-* Decide what we do with #2286 and #2206.
-* Discuss about https://github.com/openfoodfoundation/spree/pull/9. Either Travis or Semaphore and consider skipping the current failing specs.
+* What's the status of [#2225](https://github.com/openfoodfoundation/openfoodnetwork/issues/2225). It's still in dev.
+* Decide what we do with [#2286](https://github.com/openfoodfoundation/openfoodnetwork/issues/2286) and [#2206](https://github.com/openfoodfoundation/openfoodnetwork/issues/2206).
+* Discuss about [spree/pull/9](https://github.com/openfoodfoundation/spree/pull/9). Either Travis or Semaphore and consider skipping the current failing specs.
 
-What about doing an inception for #2216 with the insights of #2218?
+What about doing an inception for [#2216](https://github.com/openfoodfoundation/openfoodnetwork/issues/2216) with the insights of [#2218](https://github.com/openfoodfoundation/openfoodnetwork/issues/2218)?
 
 #### Agreements
 
@@ -45,9 +45,9 @@ In OFN:
 
 The benefit: no broken windows. Having the test suite broken we can't know if a particular change broke some more tests or they were just the ones that were already failing. This has leads to dev team not caring about the test suite.
 
-[@mkllnk](mkllnk) agreed on taking https://github.com/openfoodfoundation/spree/pull/8, to move it forward and close it.
+[@mkllnk](https://github.com/mkllnk) agreed on taking https://github.com/openfoodfoundation/spree/pull/8, to move it forward and close it.
 
-Finally, it was agreed to have an inception session for https://github.com/openfoodfoundation/openfoodnetwork/issues/2216 that [@mkllnk](mkllnk) will drive as he's the one that the investigation in https://github.com/openfoodfoundation/openfoodnetwork/issues/2218. This one will be free for every dev to attend.
+Finally, it was agreed to have an inception session for https://github.com/openfoodfoundation/openfoodnetwork/issues/2216 that [@mkllnk](https://github.com/mkllnk) will drive as he's the one that the investigation in https://github.com/openfoodfoundation/openfoodnetwork/issues/2218. This one will be free for every dev to attend.
 
 ### Priorities
 
@@ -87,7 +87,7 @@ We keep supporting the old API so that we don't need to change all its callers a
 
 We will do that while taking logic out of the decorators, as the resulting decoupling will make future upgrades easier.
 
-Tomorrow [@luisramos0](luisramos0) and [@sauloperez](sauloperez) will do one hour pair programming session to see if the extension hooks and the approach suggested in https://github.com/openfoodfoundation/openfoodnetwork/pull/2417 by [@mkllnk](mkllnk) can live together. If not, [@mkllnk](mkllnk) can continue with that approach of adding logic into the decorator.
+Tomorrow [@luisramos0](https://github.com/luisramos0) and [@sauloperez](https://github.com/sauloperez) will do one hour pair programming session to see if the extension hooks and the approach suggested in https://github.com/openfoodfoundation/openfoodnetwork/pull/2417 by [@mkllnk](https://github.com/mkllnk) can live together. If not, [@mkllnk](https://github.com/mkllnk) can continue with that approach of adding logic into the decorator.
 
 ### Doc spikes
 
@@ -112,7 +112,7 @@ This task and dedication of each dev for the upcoming months:
 * Hugo, full time on the upgrade. 2 days a week.
 * Luis, full time on the upgrade. 2 or 3 days per week.
 
-[@HugsDaniel](HugsDaniel) pointed out that it's hard for him sometimes to decide what to work on next. [@sauloperez](sauloperez) will arrange the ZenHub's Dev Ready column so that devs can pick them up.
+[@HugsDaniel](https://github.com/HugsDaniel) pointed out that it's hard for him sometimes to decide what to work on next. [@sauloperez](https://github.com/sauloperez) will arrange the ZenHub's Dev Ready column so that devs can pick them up.
 
 ### Vacations
 
@@ -124,9 +124,4 @@ Pau: on vacations from July 29th until August 29th.
 Maikel: 1 week in September.
 Hugo: 10 days by the end of September.
 
-[@sauloperez](sauloperez) will focus on dumping all agreements and insights about the upgrade for other devs to work on it until he goes on vacations.
-
-[mkllnk]: https://github.com/mkllnk
-[HugsDaniel]: https://github.com/HugsDaniel
-[sauloperez]: https://github.com/sauloperez
-[luisramos0]: https://github.com/luisramos0
+[@sauloperez](https://github.com/sauloperez) will focus on dumping all agreements and insights about the upgrade for other devs to work on it until he goes on vacations.
