@@ -6,7 +6,7 @@ Maikel (OFN Australia), Matt (OFN UK), Hugo (Open Food France), Luis, Pau (Katum
 
 * Discussion about the open issues
 * Priorities
-* Discuss Maikell's idea (#2417)
+* Discuss Maikell's idea ([#2417](https://github.com/openfoodfoundation/openfoodnetwork/pull/2417))
 * Doc spikes
 * Who's in the team?
 * Vacations
@@ -87,7 +87,7 @@ We keep supporting the old API so that we don't need to change all its callers a
 
 We will do that while taking logic out of the decorators, as the resulting decoupling will make future upgrades easier.
 
-Tomorrow [@luisramos0](https://github.com/luisramos0) and [@sauloperez](https://github.com/sauloperez) will do one hour pair programming session to see if the extension hooks and the approach suggested in https://github.com/openfoodfoundation/openfoodnetwork/pull/2417 by [@mkllnk](https://github.com/mkllnk) can live together. If not, [@mkllnk](https://github.com/mkllnk) can continue with that approach of adding logic into the decorator.
+Tomorrow [@luisramos0](https://github.com/luisramos0) and [@sauloperez](https://github.com/sauloperez) will do one hour pair programming session to see if the extension hooks and the approach suggested in [#2417](https://github.com/openfoodfoundation/openfoodnetwork/pull/2417) by [@mkllnk](https://github.com/mkllnk) can live together. If not, [@mkllnk](https://github.com/mkllnk) can continue with that approach of adding logic into the decorator.
 
 ### Doc spikes
 
