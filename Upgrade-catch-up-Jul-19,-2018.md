@@ -76,7 +76,7 @@ Note that although some devs we'll work on 2 and 3 while some others will spend 
 
 ### Discuss Maikel's idea
 
-See [[Notes-about-Maikel's-suggested-approach]] for some notes about its pros and cons that were issued to drive the discussion.
+See [[Notes-about-Maikel's-suggested-approach]] for some notes about its pros and cons that were used to drive the discussion.
 
 We can plan the ideal approach for decades; we need to move forward and polish
 along the way. We still need a 3rd attempt on the extension hooks.
