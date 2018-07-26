@@ -108,13 +108,6 @@ Good:
 
 In some cases we had problems with the global `t` function not working when called directly. I think it depends on the scope in which the code is running. Using the `t` filter is the safer option and we should try to be consistently using only that one in JavaScript.
 
-### Clear cache after translation changes
-
-When making changes to `config/locales/en.yml` or other locals, ensure you reload I18n js translations to see the changes in the application.
-```
-rake tmp:cache:clear
-```
-
 ## Further reading
 
 * [Transifex Maintainers and Governance](https://community.openfoodnetwork.org/t/transifex-maintainers-and-governance/867)
