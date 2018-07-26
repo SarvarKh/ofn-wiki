@@ -3,7 +3,7 @@ We are using [Bugsnag](https://www.bugsnag.com/) to track bugs and errors on par
 ## Create a Bugsnag OSS account
 
 First, create a Bugsnag account for open source at https://www.bugsnag.com. They are proposing a Community plan for free.
-Please follow there [guide](https://docs.bugsnag.com/product/getting-started/) to setup your app on their side.
+Please follow the [guide](https://docs.bugsnag.com/product/getting-started/) to setup your app on their side.
 
 ## Integrate Bugsnag on your instance
 
