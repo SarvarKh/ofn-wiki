@@ -1,5 +1,3 @@
-# Pipeline Development Process
-
 What follows is a description of the practices implemented to develop OFN's software. It details processes to be taken care of by the dev team to fuel what we call the Pipeline. This process is deeply connected to the [general contributors onboarding process](https://ofn-user-guide.gitbook.io/ofn-contributor-guide/working-on-the-ofn-governance/team-organization) described in the contributor guide, but more specific to developers.
 
 ## Occasional Contributors
