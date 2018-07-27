@@ -20,6 +20,7 @@
 
 **Contributing**
 
+* [[Pipeline development process]]
 * [[Bug severity]]
 * [[Feature template (epic)]]
 * [[Story template]]
