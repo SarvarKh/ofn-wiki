@@ -4,3 +4,4 @@ Some info about some not so easy themes.
 - [[Variant's count_on_hand migration]]
 - [[Checkout customisations]]
 - [[Migration to multiple shipments]]
+- [[Stock locations]]
