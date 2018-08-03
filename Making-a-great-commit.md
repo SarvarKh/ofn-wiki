@@ -15,7 +15,7 @@ Functional changes and specs should not be split across multiple commits. The co
 The ability to run the test suite at any point is very useful when bisecting and rebasing, but this is an aspirational goal rather than a requirement. Of course we all make commits on the run without running the entire test suite every time, and of course tests break in unforeseen ways. Sometimes it takes more time and energy to fix rectify broken specs in the original context than it is worth, but it is absolutely worth attempting where possible. `git commit --amend` and `git rebase -i` are extremely useful tools, and can be used to fix up any commits you have already made that may have broken the test suite.
 
 ## Commit messages should...
-* be as short as possible, while providing sufficient detail to understand what is happening and, if necessary, why the change is being made
+* be as short as possible, while providing sufficient detail to understand what is happening and why the change is being made
 * begin with a capital letter, and should not contain a full stop
 * be split across multiple messages where more detailed information is required. eg. `git commit -m 'msg' -m 'details'`
 * ideally begin with an imperative verb "Add...", "Update...", "Fix...", "Remove..."
