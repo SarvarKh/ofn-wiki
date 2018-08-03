@@ -3,7 +3,7 @@
 ## When do releases happen :steam_locomotive: :train: :train:
 
 There's no set schedule for releasing. We just create them on demand when we
-decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel.
+decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel, but once every 2 weeks is a good guideline.
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
