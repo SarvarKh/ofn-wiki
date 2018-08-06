@@ -12,6 +12,29 @@ should be a last resort when there is a good reason why we can't make the test d
 <h5>Sleep</h5>
 We should avoid using <code>sleep</code> whenever possible. The RSpec <code>expect</code> syntax should wait until a condition is met by default.
 
+<h5>Clearing app config changes from cache</h5>
+This changes the state of the app configuration. While the database should be reset, Spree is caching the configuration.
+
+     scenario "privacy policy link should..." do
+       Spree::Config[:privacy_policy_url] = nil
+
+The best solution so far for this is re-setting the value to it's original value: https://github.com/openfoodfoundation/openfoodnetwork/blob/c8397024e4a7f6e626983dc45d7f336441fd2f66/spec/features/consumer/shopping/cart_spec.rb#L106-L111
+
+Or clear the cached value as in: https://github.com/openfoodfoundation/openfoodnetwork/blob/c8397024e4a7f6e626983dc45d7f336441fd2f66/spec/support/performance_helper.rb#L26-L30
+
+In the example above we could do:
+    original_setting = Spree::Config[:privacy_policy_url]
+    Spree::Config[:privacy_policy_url] = test_setting
+    do_the_test
+    Spree::Config[:privacy_policy_url] = original_setting
+
+OR
+
+    Spree::Config[:privacy_policy_url] = test_setting
+    do_the_test
+    Rails.cache.delete_matched("spree/app_configuration/privacy_policy_url")
+
+
 <h3>Running Specs</h3>
 bundle exec rake db:test:prepare..........to prepare the db<br>
 rspec spec/path/to/spec.rb:#lineNum.......will run the tests from a specific line<br>
