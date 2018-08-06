@@ -53,7 +53,7 @@ For beginners, it may be useful to run specs with selenium and see the tests exe
 
 - install Firefox
 
-- install geckodriver - https://github.com/mozilla/geckodriver/releases (make it available on your PATH)
+- install geckodriver (https://github.com/mozilla/geckodriver/releases) & make it available on your PATH or use https://github.com/titusfortner/webdrivers which will download and require the useful drivers for Selenium.
 
 - edit spec_helper.rb
   replace
