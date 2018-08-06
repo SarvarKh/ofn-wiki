@@ -7,7 +7,7 @@ What changed in Spree::Order:
 - The checkout flow state machine: we need to update our copy! :heavy_check_mark: https://github.com/openfoodfoundation/openfoodnetwork/pull/2431
 - `attr_accessible` changed: no `shipping_method_id`, but additional `shipments_attributes`.  Orders now have Shipments instead of ShippingMethods.https://github.com/openfoodfoundation/openfoodnetwork/issues/2009 https://github.com/openfoodfoundation/openfoodnetwork/issues/2432
 - `payment_required?` does not trigger `update_totals` any more. Only subscriptions are using this method, but they don't need to update totals.
-- Adding and removing line items is now handled by `Spree::OrderContents`.
+- Adding and removing line items is now handled by `Spree::OrderContents`. The API stays the same so that we don't have to change our code. Only in a later Spree upgrade to 2.1, `order.add_variant` and `order.remove_variant` will be depricated.
 
 What we customised in our decorator:
 
