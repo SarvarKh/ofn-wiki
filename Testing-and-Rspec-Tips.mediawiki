@@ -10,7 +10,7 @@ Retries like here:
 should be a last resort when there is a good reason why we can't make the test deterministic. You should either remove the retry or add a comment explaining which part is failing (and why).
 
 <h5>Sleep</h5>
-We should avoid using <code>sleep</code> whenever possible. The RSpec <code>expect</code> syntax should until a condition is met by default.
+We should avoid using <code>sleep</code> whenever possible. The RSpec <code>expect</code> syntax should wait until a condition is met by default.
 
 <h3>Running Specs</h3>
 bundle exec rake db:test:prepare..........to prepare the db<br>
