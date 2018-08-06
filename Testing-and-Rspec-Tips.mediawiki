@@ -13,7 +13,7 @@ should be a last resort when there is a good reason why we can't make the test d
 We should avoid using <code>sleep</code> whenever possible. The RSpec <code>expect</code> syntax should wait until a condition is met by default.
 
 <h5>Clearing app config changes from cache</h5>
-This changes the state of the app configuration. While the database should be reset, Spree is caching the configuration.
+When you change the App Config for your test, you need to reset the config or clear the cached values. Because while the database is reset, the cache is not.
 
      scenario "privacy policy link should..." do
        Spree::Config[:privacy_policy_url] = nil
