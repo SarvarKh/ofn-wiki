@@ -1,7 +1,17 @@
 Please add to this collection of tips and tutorials as you find them.
 
-<h3>Online Tutorials</h3>
+<h3>Conventions and Tips</h3>
+<h5>Let</h5>
 The "let" statements here are a particular syntax for defining data in rspec. For a description of how "let" statements work, see the RSpec docs here: https://www.relishapp.com/rspec/rspec-core/v/2-11/docs/helper-methods/let-and-let
+
+<h5>Retry</h5>
+Retries like here:
+   feature "Cookies", js: true, retry: 3 do
+should be a last resort when there is a good reason why we can't make the test deterministic. You should either remove the retry or add a comment explaining which part is failing (and why).
+
+<h5>Sleep</h5>
+We should avoid sleep whenever possible.
+
 
 <h3>Running Specs</h3>
 bundle exec rake db:test:prepare..........to prepare the db<br>
