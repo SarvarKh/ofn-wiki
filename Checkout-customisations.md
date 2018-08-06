@@ -1,13 +1,12 @@
 The following lists are a summary of customisations to consider in the Spree Upgrade. It doesn't contain all customisation. Otherwise I could just paste the content of the decorator classes here.
 
-#### Order decorator
+##### Order decorator
 
 What changed in Spree::Order:
 
-- The checkout flow state machine: we need to update our copy!
-- `attr_accessible` changed: no `payments_attributes`, no `shipping_method_id`, but additional `shipments_attributes`. Does it affect our views?
-- Orders now have Shipments instead of ShippingMethods.
-- `payment_required?` does not trigger `update_totals` any more. We may need to trigger it ourselves.
+- The checkout flow state machine: we need to update our copy! :heavy_check_mark: https://github.com/openfoodfoundation/openfoodnetwork/pull/2431
+- `attr_accessible` changed: no `shipping_method_id`, but additional `shipments_attributes`.  Orders now have Shipments instead of ShippingMethods.https://github.com/openfoodfoundation/openfoodnetwork/issues/2009 https://github.com/openfoodfoundation/openfoodnetwork/issues/2432
+- `payment_required?` does not trigger `update_totals` any more. Only subscriptions are using this method, but they don't need to update totals.
 - Adding and removing line items is now handled by `Spree::OrderContents`.
 
 What we customised in our decorator:
@@ -31,7 +30,7 @@ What we customised in our decorator:
   - We overrode `process_payments!` which we don't need any more (is a copy of Spree 2)
 
 
-#### CheckoutController
+##### CheckoutController
 
 `Spree::CheckoutController` has one action: `update`. We override it and do a few things differently:
 
@@ -49,11 +48,11 @@ Spree has updated the following:
 - `apply_coupon_code`
 - display other errors, similar to OFN, but not exactly
 
-#### Other customisations
+##### Other customisations
 
 We added enterprise fees and payment method fees. We have to make sure that they get updated properly, but this logic is independent of the checkout process.
 
-### Review of the checkout process
+#### Review of the checkout process
 
 We don't use most of the state machine. When people check out, it's updating the order attributes, processing a payment if required and then redirecting to the order confirmation when complete. We don't use the address and delivery state and even the payment form is on the same page. But with the Spree logic in place, I don't see an easy way to simplify this. I have some ideas, but they would probably end up being quite laboursome:
 
