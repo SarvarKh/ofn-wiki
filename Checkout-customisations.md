@@ -27,7 +27,7 @@ What we customised in our decorator:
   - **part of our copy of the state machine has changed in Spree, we need to update that**
   - We added `remove_variant` which got added and depricated in Spree. We need to use the OrderContents now.
   - We overrode `add_variant` which needs updating to use OrderContents.
-  - We overrode `process_payments!` which we don't need any more (is a copy of Spree 2)
+  - We overrode `process_payments!` which we don't need any more (is a copy of Spree 2): https://github.com/openfoodfoundation/openfoodnetwork/issues/2520
 
 
 ##### CheckoutController
