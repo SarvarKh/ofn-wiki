@@ -45,8 +45,8 @@ What we customised in our decorator:
 
 Spree has updated the following:
 
-- `apply_coupon_code`
-- display other errors, similar to OFN, but not exactly
+- `apply_coupon_code`: This doesn't require any change in our code.
+- display other errors, similar to OFN, but not exactly: This doesn't require any change in our code.
 
 ##### Other customisations
 
