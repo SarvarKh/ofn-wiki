@@ -24,4 +24,4 @@ So this part of the data model will then look like:
 
 ![Split shipments OFN diagram](https://github.com/openfoodfoundation/openfoodnetwork/wiki/split_shipments_ofn_diagram.jpg)
 
-Note, highlighted in green, how from OFN we'll only allow a shipment per order. To know more about the changes related to `StockLocation` check [Variant's count_on_hand migration](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Variant%27s-count_on_hand-migration).
+Note, highlighted in green, how from OFN we'll only allow a shipment per order. To know more about the changes related to `StockLocation` check [Variant's count_on_hand migration](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Spree-Upgrade:-Variant%27s-count_on_hand-migration).
