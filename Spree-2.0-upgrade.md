@@ -4,9 +4,9 @@ Expect them to be updated very frequently as we move along in the process.
 
 ## Table of Contents
 
-* [OFN's Spree fork 🍴 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/OFN's-Spree-fork%F0%9F%8D%B4)
+* [OFN's Spree fork 🍴 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Spree-Upgrade:-OFN's-Spree-fork%F0%9F%8D%B4)
 * [Getting to version 2.0.4 ⛰ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Getting-to-version-2.0.4-%E2%9B%B0)
-* [Development ⛑ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-%E2%9B%91)
+* [Development ⛑ ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Spree-Upgrade:-Development-%E2%9B%91)
 * [Team catch ups 💬 ](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Team-catch-ups--%F0%9F%92%AC)
 * [[Spree Upgrade Themes]]
 
