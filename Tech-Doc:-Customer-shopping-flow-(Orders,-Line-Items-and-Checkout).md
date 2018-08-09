@@ -33,7 +33,7 @@ Other possible usages of Order and Checkout are:
 - backoffice pages
 - embedded_shopfront
 
-# Controllers structutre
+# Controllers structure
 OFN
 - /controllers/
     - LineItemsController < BaseController
