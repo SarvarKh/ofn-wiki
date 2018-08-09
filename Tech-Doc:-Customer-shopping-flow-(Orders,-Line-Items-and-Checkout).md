@@ -7,7 +7,9 @@ In this page the user can see a list of products/variants and edit the quantity 
 Route '/:id/shop', to: 'enterprises#shop', as: 'enterprise_shop'
 View views/enterprises/shops
 
-TODO: explain what controllers/views are involved in rendering the product/variant list and how the empty order is created in this process.
+The list of products is rendered in views/shop/products/form and the list of products is fetched through ajax call to /shop/products implemented in ShopController.products rendered by ProductsRenderer with Api::ProductSerializer.
+
+TODO: how is the empty order created in this process?
 
 In the first visit to this page, a new empty order (without line_items) is created and stored in DB.
 On the client, a session cookie holds the order_id and, on the server side, the session holds the order details with variants up to date that are stored in the DB.
