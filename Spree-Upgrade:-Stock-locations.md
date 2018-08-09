@@ -6,7 +6,7 @@ We explain how OFN will adapt to this new entity of Spree's data model.
 
 ![Split shipments diagram](https://github.com/openfoodfoundation/openfoodnetwork/wiki/split_shipments_diagram.jpg)
 
-This is the Spree's 2.0 data model area related to stock locations, tightly related to [shipments](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Migration-to-multiple-shipments) as well. Now Spree adds the notion of location related to stock into the data model.
+This is the Spree's 2.0 data model area related to stock locations, tightly related to [shipments](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Spree-Upgrade:-Migration-to-multiple-shipments) as well. Now Spree adds the notion of location related to stock into the data model.
 
 ### Single 'default' stock location per instance
 
@@ -23,4 +23,4 @@ So this part of the data model will then look like:
 
 ![Split shipments OFN diagram](https://github.com/openfoodfoundation/openfoodnetwork/wiki/split_shipments_ofn_diagram.jpg)
 
-Note, highlighted in green, how from OFN we'll only have a single stock location which will be shared by all shipments in the instance. To know more about the changes related to `Shipment` check [Migration to multiple shipments](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Migration-to-multiple-shipments).
+Note, highlighted in green, how from OFN we'll only have a single stock location which will be shared by all shipments in the instance. To know more about the changes related to `Shipment` check [Migration to multiple shipments](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Spree-Upgrade:-Migration-to-multiple-shipments).
