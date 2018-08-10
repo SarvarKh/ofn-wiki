@@ -1,3 +1,5 @@
+This page is WIP for Luis - during the next week at least.
+
 This page describes the flow of pages and the implementation details of the buying process in the frontoffice. The pages described include everything that touches Orders and Checkout in the frontoffice.
 The pages described so far are: enterprise shop with list of products of a given shop, edit cart page cart and checkout.
 
