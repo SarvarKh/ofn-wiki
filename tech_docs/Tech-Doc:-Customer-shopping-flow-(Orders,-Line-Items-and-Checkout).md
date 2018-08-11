@@ -78,4 +78,5 @@ SPREE
 
 # Database structure
 
-TODO: upload diagram to wiki
+This is a simplified version of the data model:
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/checkout_order_data_model.jpg)
