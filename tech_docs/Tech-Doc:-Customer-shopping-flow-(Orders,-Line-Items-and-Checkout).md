@@ -27,7 +27,22 @@ TODO: explain difference between line_items and finalised_line_items in currentO
 ### Edit Cart
 In the Edit cart page the user can change quantities of the orders line items and also remove line items.
 
-TODO: add tech description
+Route get '/cart', :to => 'orders#edit', :as => :cart
+
+Controller Spree::OrdersController.class_eval.edit
+
+View views/spree/orders/edit (each item rendered in _bought.html.haml)
+
+No ajax calls are made if user changes quantities. If quantities are changed and user clicks on update button, the form is submitted (the form url is the cart endpoint) with form-data containing the new quantities.
+A PUT is issued to /cart with something like this:
+   order[line_items_attributes][0][quantity]: 2
+   order[line_items_attributes][0][id]: 5
+
+Route put '/cart', :to => 'orders#update', :as => :update_cart
+
+Controller Spree::OrdersController.class_eval.update (this renders the html cart)
+
+A click on the delete line item icon issues the same call to cart update with line item quantity set to zero.
 
 ### Checkout
 In this page, the user is able to add different order details like shipment, payment, etc. The user can no longer change the line items of the order.
@@ -67,16 +82,16 @@ SPREE
 - /api/app/controllers
     - /spree/api
         - Spree::Api::CheckoutsController
-        - Spree::Api::LineItemsController
-        - Spree::Api::OrdersController
+        - Spree::Api::LineItemsController (class_eval in OFN)
+        - Spree::Api::OrdersController (class_eval in OFN)
 - /frontend/app/controllers
     - /spree
-        - Spree::CheckoutController
-        - Spree::OrdersController
+        - Spree::CheckoutController (extended and class_eval in OFN)
+        - Spree::OrdersController (class_eval in OFN)
 - /backend/app/controllers
     - /spree/admin
-        - Spree::Admin::LineItemsController
-        - Spree::Admin::OrdersController
+        - Spree::Admin::LineItemsController (class_eval in OFN)
+        - Spree::Admin::OrdersController (class_eval in OFN)
 
 # Database structure
 
