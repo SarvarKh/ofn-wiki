@@ -1,5 +1,3 @@
-This page is WIP for Luis - during the next week at least.
-
 This page describes the flow of pages and the implementation details of the buying process in the frontoffice. The pages described include everything that touches Orders and Checkout in the frontoffice.
 The pages described so far are: enterprise shop with list of products of a given shop, edit cart page cart and checkout.
 
@@ -90,6 +88,9 @@ OFN
         - cart — rabl
         - line_items — rabl
         - orders — rabl
+
+Also, there's the controller Spree::StoreController defined in controllers/spree/store_controller_decorator.rb.
+This is not a class_eval or extension and (I believe), it overrides the Spree:StoreController defined in spree frontend.
 
 SPREE
 - /api/app/controllers
