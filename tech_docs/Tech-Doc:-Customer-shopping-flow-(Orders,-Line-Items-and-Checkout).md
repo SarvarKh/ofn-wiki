@@ -6,7 +6,9 @@ The pages described so far are: enterprise shop with list of products of a given
 ### Enterprise shop with list of products
 In this page the user can see a list of products/variants and edit the quantity of a given variant. If the quantity is != zero, the variant is included in the order as a line_item.
 
-Route '/:id/shop', to: 'enterprises#shop', as: 'enterprise_shop'
+OFN Route '/:id/shop', to: 'enterprises#shop', as: 'enterprise_shop'
+
+Controller EnterprisesController
 
 View views/enterprises/shops
 
@@ -22,12 +24,10 @@ This [Spree Product article](https://guides.spreecommerce.org/developer/products
 
 Note: abandoned baskets do not affect stock fields in the DB, stock is not subtracted until the order is finalised.
 
-TODO: explain difference between line_items and finalised_line_items in currentOrder.
-
 ### Edit Cart
 In the Edit cart page the user can change quantities of the orders line items and also remove line items.
 
-Route get '/cart', :to => 'orders#edit', :as => :cart
+Spree Frontend Route get '/cart', :to => 'orders#edit', :as => :cart
 
 Controller Spree::OrdersController.class_eval.edit
 
@@ -47,7 +47,13 @@ A click on the delete line item icon issues the same call to cart update with li
 ### Checkout
 In this page, the user is able to add different order details like shipment, payment, etc. The user can no longer change the line items of the order.
 
-TODO: add tech description
+OFN Route get '/checkout', :to => 'checkout#edit' , :as => :checkout
+
+Controller CheckoutController (extends Spree::CheckoutController)
+
+View /checkout/edit
+
+Form submit issues a PUT request with the order to CheckoutController#update
 
 ### Other pages
 Other possible usages of Order and Checkout are:
