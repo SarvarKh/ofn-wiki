@@ -7,23 +7,25 @@ The pages described so far are: enterprise shop with list of products of a given
 In this page the user can see a list of products/variants and edit the quantity of a given variant. If the quantity is != zero, the variant is included in the order as a line_item.
 
 Route '/:id/shop', to: 'enterprises#shop', as: 'enterprise_shop'
+
 View views/enterprises/shops
 
 The list of products is rendered in views/shop/products/form and the list of products is fetched through ajax call to /shop/products implemented in ShopController.products rendered by ProductsRenderer with Api::ProductSerializer.
 
-TODO: how is the empty order created in this process?
-
-In the first visit to this page, a new empty order (without line_items) is created and stored in DB.
-On the client, a session cookie holds the order_id and, on the server side, the session holds the order details with variants up to date that are stored in the DB.
+In the first visit to this page, a new empty order (without line_items) is created and stored in DB. This happens with current_order(true) this happens in EnterprisesController filter check_stock_levels and in ShopController filter set_order_cycle.
+On the client, a session id cookie identifies the server side session that holds the order id and details with variants up to date that are stored in the DB.
 
 Each time the user changes a quantity on this page, it's triggered a call to /orders/populate with the variants and respective quantities. This triggers the update of the order in the DB.
 Example payload sent to /orders/populate {"variants":{"8":{"quantity":1,"max_quantity":null},"10":{"quantity":3,"max_quantity":null}}}
 
+This [Spree Product article](https://guides.spreecommerce.org/developer/products.html) is important to read to undertand how products and variants work in Spree. In OFN, we have [inventory and variant_overrides](https://community.openfoodnetwork.org/t/variant-overrides-hub-can-override-stock-level-and-price-on-a-variant/31) on top.
+
+Note: abandoned baskets do not affect stock fields in the DB, stock is not subtracted until the order is finalised.
+
 TODO: explain difference between line_items and finalised_line_items in currentOrder.
-TODO: explain how on_hand works and how, for example, an abandoned basket affects the stock fields in the DB.
 
 ### Edit Cart
-In the Edir cart page the user can change quantities of the orders line items and also remove line items.
+In the Edit cart page the user can change quantities of the orders line items and also remove line items.
 
 TODO: add tech description
 
