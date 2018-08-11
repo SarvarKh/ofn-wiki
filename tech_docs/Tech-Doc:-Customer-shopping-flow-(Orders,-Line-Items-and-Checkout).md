@@ -20,6 +20,13 @@ On the client, a session id cookie identifies the server side session that holds
 Each time the user changes a quantity on this page, it's triggered a call to /orders/populate with the variants and respective quantities. This triggers the update of the order in the DB.
 Example payload sent to /orders/populate {"variants":{"8":{"quantity":1,"max_quantity":null},"10":{"quantity":3,"max_quantity":null}}}
 
+Spree Frontend Route resources :orders do
+    post :populate, :on => :collection
+
+Controller Spree::OrdersController.class_eval.populate
+
+This controller depends on Spree::OrderPopulator.class_eval to populate the order with a call to @order.add_variant
+
 This [Spree Product article](https://guides.spreecommerce.org/developer/products.html) is important to read to undertand how products and variants work in Spree. In OFN, we have [inventory and variant_overrides](https://community.openfoodnetwork.org/t/variant-overrides-hub-can-override-stock-level-and-price-on-a-variant/31) on top.
 
 Note: abandoned baskets do not affect stock fields in the DB, stock is not subtracted until the order is finalised.
