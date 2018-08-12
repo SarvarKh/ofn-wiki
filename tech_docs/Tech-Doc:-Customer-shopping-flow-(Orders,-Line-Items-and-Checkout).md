@@ -107,6 +107,12 @@ SPREE
         - Spree::Admin::LineItemsController (class_eval in OFN)
         - Spree::Admin::OrdersController (class_eval in OFN)
 
+AND in spree_auth_devise
+- /app/controller
+     - /spree
+          - Spree::CheckoutController.class_eval
+          - Spree::OrdersController.class_eval (this one contains an interesting Spree::Order.new)
+
 # Database structure
 
 This is a simplified version of the data model:
