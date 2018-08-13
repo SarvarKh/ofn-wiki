@@ -1,6 +1,6 @@
 Please add to this collection of tips and tutorials as you find them.
 
-<h3>Conventions and Tips</h3>
+<h2>Conventions and Tips</h2>
 <h5>Let</h5>
 The "let" statements here are a particular syntax for defining data in rspec. For a description of how "let" statements work, see the RSpec docs here: https://www.relishapp.com/rspec/rspec-core/v/2-11/docs/helper-methods/let-and-let
 
@@ -44,7 +44,10 @@ Finished in 4.55 seconds
 
 This is a good start, but we don't know whether our test is actually telling us anything yet. For example, an empty test also passes. We want to know that when our code is broken, the test will fail, otherwise it's not an informative test. To gain that confidence, we deliberately break our code, then re-run the test, and it should fail.
 
-<h3>Run some Specs with Selenium webdriver</h3>
+<h2>Convert specs to Rspec3</h2>
+As you make changes to the test code base, you are encouraged to convert the syntax to the rspec 3 syntax. You can do that by using the transpec tool: https://github.com/yujinakayama/transpec
+
+<h2>Run some Specs with Selenium webdriver</h2>
 For beginners, it may be useful to run specs with selenium and see the tests execute on a normal browser. You can also Debug things directly on the browser with this. This is how you can do it:
 - add to GemFile:
   gem 'selenium-webdriver'
