@@ -6,4 +6,5 @@ Things you should verify as you code review a PR:
 * Make sure the changes are tested at appropriate level (see [rspec tips](Testing-and-Rspec-Tips) and [karma tips](Karma) for help)
 * Make sure tech [best practices](Code,-the-way-we-do-things) are being followed
 * Focus on the implications, design, readability and complexity of the change rather than only its syntax. The latter is what machines are meant to do and that's why we use [Rubocop](http://batsov.com/rubocop/).
+* Make sure [code conventions](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Code-Conventions) are followed (things [Rubocop](http://batsov.com/rubocop/) doesn't check)
 * Make sure the boy scout rule is applied: when changing code, it's important to respect the existing structure, but it's even better when we refactor on the way and improve the code we are changing.
