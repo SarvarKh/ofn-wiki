@@ -4,3 +4,8 @@ This pages lists conventions that are not verified by [Rubocop](http://batsov.co
 
 ### Prefer % to vh
 For positioning use % values, not viewport-units (vh, etc) (viewport-units are not supported by all the browsers we want to support, see [here](https://caniuse.com/#feat=viewport-units))
+
+# Tests
+
+### Prefer `to have_not` as a feature matcher style (instead of `to_not have`)
+Reference: Capybara finders section of [this blog post](https://blog.codeship.com/faster-rails-tests/) for more details.
