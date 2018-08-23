@@ -1,4 +1,4 @@
-OBSOLETE - please remove. See updated info on Variant Overrides at http://openfoodfoundation.org/document/developers-testers/variant-overrides
+OBSOLETE - see this [Spree Product article](https://guides.spreecommerce.org/developer/products.html) to understand how products and variants work in Spree and this [one](https://community.openfoodnetwork.org/t/variant-overrides-hub-can-override-stock-level-and-price-on-a-variant/31) to see how OFN implements inventory and variant_overrides on top.
 
 ## Creating tagged variants
 
