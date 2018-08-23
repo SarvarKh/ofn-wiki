@@ -5,3 +5,4 @@ Some info about some not so easy themes.
 - [[Spree Upgrade: Checkout customisations]]
 - [[Spree Upgrade: Migration to multiple shipments]]
 - [[Spree Upgrade: Stock locations]]
+- [[Spree Upgrade: Scoping Variants/Products to Hubs and VariantOverrides]]
