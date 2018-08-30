@@ -1,5 +1,15 @@
 This pages lists conventions that are not verified by [Rubocop](http://batsov.com/rubocop/) but we agree to follow.
 
+# Ruby
+
+### Prefer `public_send` over `send`
+
+As stated in the Ruby Style Guide:
+
+> Prefer public_send over send so as not to circumvent private/protected visibility.
+
+See https://github.com/rubocop-hq/ruby-style-guide#prefer-public-send
+
 # CSS
 
 ### Prefer % to vh
