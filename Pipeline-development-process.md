@@ -57,9 +57,7 @@ See [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/How-to-do-
 
 ### Stage
 
-**All Core Dev team members, regardless of their level, are expected to stage a PR's**
-
-**branch to any of the staging servers of all OFN instances.**
+**All Core Dev team members, regardless of their level, are expected to stage a PR's branch to any of the staging servers of all OFN instances.**
 
 This is important to let testers, who tend to have rather limited time for testing, focus on their task. We want them to take the most out of their testing sessions.
 
