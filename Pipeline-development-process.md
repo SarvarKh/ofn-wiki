@@ -19,6 +19,7 @@ This team is currently composed by:
 * Hugo
 * Maikel
 * Pau
+* Kristina
 
 In its turn, the Core team has three levels depending on the experience of the developer.
 
