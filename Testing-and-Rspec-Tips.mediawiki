@@ -47,6 +47,10 @@ This is a good start, but we don't know whether our test is actually telling us 
 <h2>Convert specs to Rspec3</h2>
 As you make changes to the test code base, you are encouraged to convert the syntax to the rspec 3 syntax. You can do that by using the transpec tool: https://github.com/yujinakayama/transpec
 
+<h1>Debug tests</h1>
+<h2>save_and_open_screenshot</h2>
+For debugging issues locally you can add the line save_and_open_screenshot temporarily to a spec at the point where the issue is, and it will give you a screenshot of what capybara is seeing.
+
 <h2>Run some Specs with Selenium webdriver</h2>
 For beginners, it may be useful to run specs with selenium and see the tests execute on a normal browser. You can also Debug things directly on the browser with this. This is how you can do it:
 - add to GemFile:
