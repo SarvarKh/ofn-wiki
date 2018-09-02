@@ -4,7 +4,7 @@ This page describes how to configure the integration between OFN and Matomo and 
 See https://matomo.org/docs/manage-websites/#add-a-website
 
 #### Configure OFN
-See #2492 and See http://<your_ofn_domain>/admin/matomo_settings/edit
+See [#2492](https://github.com/openfoodfoundation/openfoodnetwork/pull/2492) and See http://<your_ofn_domain>/admin/matomo_settings/edit
 
 #### How it works
-See #2404.
+See [#2404](https://github.com/openfoodfoundation/openfoodnetwork/pull/2404).
