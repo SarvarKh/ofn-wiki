@@ -22,4 +22,4 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## Who has the release power :zap: :muscle: 
 
-All Ha-Ri certified/core devs will now do releases on a rotating basis.
+All Ha-Ri certified/core devs will now do [releases](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Pipeline-development-process#release) on a rotating basis.
