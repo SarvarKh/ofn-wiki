@@ -10,6 +10,24 @@ As stated in the Ruby Style Guide:
 
 See https://github.com/rubocop-hq/ruby-style-guide#prefer-public-send
 
+# HTML Templates
+
+### Use `j` when inserting an arbitrary Ruby string in a JS or Angular expression
+
+`j` is an alias for [`escape_javascript`](https://api.rubyonrails.org/classes/ActionView/Helpers/JavaScriptHelper.html#method-i-escape_javascript).
+
+When you have to insert an arbitrary Ruby string to a Javascript or Angular expression, this will ensure that characters are properly escaped and will not cause parsing issues or syntax errors.
+
+```ruby
+# Bad
+# JS syntax error when description contains a single-quote
+"{description: '#{enterprise.description}'}"
+
+# Good
+# Single-quote is escaped
+"{description: '#{j enterprise.description}'}"
+```
+
 # CSS
 
 ### Prefer % to vh
