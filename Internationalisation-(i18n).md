@@ -108,6 +108,12 @@ Good:
 
 In some cases we had problems with the global `t` function not working when called directly. I think it depends on the scope in which the code is running. Using the `t` filter is the safer option and we should try to be consistently using only that one in JavaScript.
 
+### Javascript translations: Put translation key under the "js." namespace
+
+All translation keys used by the Javascript should be put under the "js." namespace. If the same text will be used elsewhere, add another translation key for this outside the "js." namespace.
+
+See [#2721](https://github.com/openfoodfoundation/openfoodnetwork/issues/2721) and [#2722](https://github.com/openfoodfoundation/openfoodnetwork/issues/2722) for context.
+
 ## Further reading
 
 * [Transifex Maintainers and Governance](https://community.openfoodnetwork.org/t/transifex-maintainers-and-governance/867)
