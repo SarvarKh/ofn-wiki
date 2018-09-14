@@ -6,7 +6,7 @@ You can stage pull requests to https://staging.openfoodnetwork.org.au/ yourself.
 - Check that the pull request is approved, in the *Test Ready* column and has no test failures or merge conflicts. It needs Three big green ticks at the bottom of the pull request (nothing red).
 - Let others know that you are staging it by commenting on the pull request and putting a label on.
 
-TODO: insert animation here
+![stage-with-Semaphore.gif](animation of staging with Semaphore)
 
 What happens technically:
 
