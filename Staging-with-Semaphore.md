@@ -8,6 +8,8 @@ You can stage pull requests to https://staging.openfoodnetwork.org.au/ yourself.
 
 ![animation of staging with Semaphore](stage-with-Semaphore.gif)
 
+A deployment usually takes between 3 and 10 minutes. But sometimes the page doesn't update itself properly. Reload the page after five minutes to see if it's already green and deployed.
+
 What happens technically:
 
 - The pull request and master are merged so that the result is staged and tested.
