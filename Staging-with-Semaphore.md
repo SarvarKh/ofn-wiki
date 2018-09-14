@@ -1,6 +1,6 @@
 > **This is an experimental feature with the Australian staging server. Please report to Maikel on Slack if you encounter any problems.**
 
-You can stage pull requests to https://staging.openfoodnetwork.org.au/ yourself. A developer has to give you access to Semaphore CI. Then you can navigate to the staging process from any pull request. But before you stage, follow the checklist to prevent conflicts:
+You can stage pull requests to https://staging.openfoodnetwork.org.au/ yourself. You need to signup with Semaphore, then a developer has to give you access to Semaphore CI. Then you can navigate to the staging process from any pull request. But before you stage, follow the checklist to prevent conflicts:
 
 - Check that nobody else is using the staging server.
 - Check that the pull request is approved, in the *Test Ready* column and has no test failures or merge conflicts. It needs Three big green ticks at the bottom of the pull request (nothing red).
