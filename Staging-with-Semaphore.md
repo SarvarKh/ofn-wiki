@@ -16,3 +16,7 @@ What happens technically:
 - The merge commit is pushed to the staging server.
 - The server resets the database to its baseline data.
 - A deploy script is run.
+
+What to do when you've finished testing?
+- You can put your testing notes on the PR like usual.
+- Then you can stage the next PR, without needing to wait for the previous PR to be pushed. Just remember to switch the staged label over.
