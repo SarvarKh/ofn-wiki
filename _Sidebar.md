@@ -32,6 +32,7 @@
 **Testing**
 
 * [[Testing process]]
+* [[Staging with Semaphore]]
 * [[Feature Testing Handbook]]
 * [[Testing and Rspec Tips]]
 * [[Karma]]
