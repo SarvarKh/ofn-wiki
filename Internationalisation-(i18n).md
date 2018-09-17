@@ -106,6 +106,8 @@ Scopes/keys must be unique at all levels.  If duplicated, they may work in the b
 %input.ofn-select2.fullwidth{ blank: "{id: 0, name: '#{j t(".any_enterprise")}'}", data: 'enterprises' }
 ```
 
+Also note that, as in this example, you should escape JS with the j function when inserting an arbitrary Ruby string in a JS or Angular expression. See [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Code-Conventions#use-j-when-inserting-an-arbitrary-ruby-string-in-a-js-or-angular-expression) for more details.
+
 ### JavaScript translations: Prefer Angular Filter over global `t` function
 
 In JavaScript it's better to use our Angular filter for translations:
