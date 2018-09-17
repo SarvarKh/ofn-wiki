@@ -60,10 +60,6 @@ with every change we do.
   but another language could use different words. So don't try to re-use
   translations between files.
 
-  Don't move big parts around or rename scopes with a lot of entries without
-  a really good reason. In some cases that causes a lot of translations in
-  other languages to be lost. That causes more work for translators.
-
 * Remove translations: Be careful. If you are sure that a translation is not used anywhere,
   please remove them. But be aware that some translations are looked up with
   variables. For example https://github.com/openfoodfoundation/openfoodnetwork/blob/deb04c3075e35a1d839b58206a5363dd99e1403d/app/views/admin/contents/_fieldset.html.haml#L6 looks
