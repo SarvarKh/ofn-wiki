@@ -50,7 +50,7 @@
 **Data and APIs**
 
 * [[API documentation]]
-* [[Integration & API]]
+* [[Integration & API|https://github.com/openfoodfoundation/openfoodnetwork/wiki/Integration-&-API]]
 * [[Data migration]]
 
 **Instance-specific configuration**
