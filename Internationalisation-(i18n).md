@@ -96,6 +96,20 @@ Scopes/keys must be unique at all levels.  If duplicated, they may work in the b
       apple: 'apple'...
 ```
 
+### Rails view translations: Prefer Ruby `t` method
+
+**Bad**
+
+```
+%input.ofn-select2.fullwidth{ blank: "{id: 0, name: ( 'js.admin.order_cycles.filters.any_enterprise' | t )}", data: 'enterprises' }
+```
+
+**Good**
+
+```
+%input.ofn-select2.fullwidth{ blank: "{id: 0, name: '#{j t(".any_enterprise")}'}", data: 'enterprises' }
+```
+
 ### JavaScript translations: Prefer Angular Filter over global `t` function
 
 In JavaScript it's better to use our Angular filter for translations:
