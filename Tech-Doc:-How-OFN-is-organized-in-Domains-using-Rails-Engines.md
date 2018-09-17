@@ -2,9 +2,9 @@ In OFN we use Rails Engines to organize our application in separate Business dom
 The discussion originated in the 2018 Global Gathering in Barcelona and continued [here](https://community.openfoodnetwork.org/t/breaking-ofn-down-into-domains/1377) in discourse.
 
 ### Business Domains
-For now, we started by extracting the Cookies feature into the new Content domain ([see the PR here](https://github.com/openfoodfoundation/openfoodnetwork/pull/2521)). The vision in terms of domains is the following (although we will adapt and change as we go):
+For now, we started by extracting the Cookies feature into the new Web domain ([see the PR here](https://github.com/openfoodfoundation/openfoodnetwork/pull/2521)). The vision in terms of domains is the following (although we will adapt and change as we go):
 
-* FrontOffice _ **Content** ___ Content CMS for the ecommerce website
+* FrontOffice _ **Web** ___ Content CMS for the ecommerce website
 * FrontOffice _ **Shop** ______ Product Search and Display features on the ecommerce website
 * FrontOffice _ **Checkout** _ Cart and Checkout flow features (includes User account and User registration)
 * BackOffice _ **Catalog** ___ Product/Inventory management
