@@ -38,11 +38,12 @@ For positioning use % values, not viewport-units (vh, etc) (viewport-units are n
 ### Prefer `to have_not` as a feature matcher style (instead of `to_not have`)
 Reference: Capybara finders section of [this blog post](https://blog.codeship.com/faster-rails-tests/) for more details.
 
-### Never use I18n.t in assertions
-When asserting text that is translatable, always assert against the translated string, not the call to I18n.t.
-
-Good
-`expect(json_response['errors']).to eq "Hm, something went wrong. No order cycle data found."`
+### Always use I18n.t in spec assertions
+In specs, when asserting text that is translatable, always assert with a call to I18n.t, never use the translated string in english.
 
 Bad
+`expect(json_response['errors']).to eq "Hm, something went wrong. No order cycle data found."`
+
+Good
 `expect(json_response['errors']).to eq I18n.t('admin.order_cycles.bulk_update.no_data')`
+
