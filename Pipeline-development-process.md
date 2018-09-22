@@ -16,10 +16,10 @@ This team is currently composed by:
 
 * Matt
 * Luis
-* Hugo
-* Maikel
+* Hugo (Shu)
+* Maikel (Ri)
 * Pau
-* Kristina
+* Kristina (Ha)
 
 In its turn, the Core team has three levels depending on the experience of the developer.
 
