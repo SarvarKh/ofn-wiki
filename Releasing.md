@@ -19,6 +19,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
     Hi all, just letting you know that we just released [version number] :tada:.
     You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
     ```
+* Nudge the next person to release. You can set a reminder in Slack: `/remind @matt-yorkley release in 2 weeks`
 
 ## Who has the release power :zap: :muscle: 
 
