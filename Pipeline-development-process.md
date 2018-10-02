@@ -86,5 +86,5 @@ So, Luis will make sure Maikel takes over as soon as the release is published. N
 
 ### Meetings
 
-Is a responsibility of all Core team members, including developers, to attend to the Delivery Train catchup, which is held every 4 weeks. This is the way we have to review the process, get the status of the current roadmap priorities, updates on how major things are going and anything else related to the pipe.
+Is a responsibility of all Core team members, including developers, to attend to the Delivery Train catchup, which is held every 4 weeks. This is the way we have to review the process, get the status of the current roadmap priorities, receive updates on how major things are going and everything else related to the pipe.
 
