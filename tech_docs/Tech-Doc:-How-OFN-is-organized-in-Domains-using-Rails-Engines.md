@@ -87,3 +87,4 @@ Each engine and the main app will have different ways of accessing/depending on 
 Each domain structure will mimic the existing structure on the main app. each domain will have it's on controllers, services, models, views, assets and serializers.
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_structure.png)
+
