@@ -16,7 +16,7 @@ For now, we started by extracting the Cookies feature into the new Web domain ([
 #### FrontOffice _ **Web**
 Content CMS for the ecommerce website (including homepage, landing pages, map, menu and footer)
 
--- insert web screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_web.png)
 
 Example API endpoints:
 - /home - homepage
@@ -28,7 +28,7 @@ Example API endpoints:
 #### FrontOffice _ **Shop**
 Product Search and Display features on the ecommerce website
 
--- insert shop screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_shop.png)
 
 Example API endpoints:
 - /shops - list of shops
@@ -39,7 +39,7 @@ Example API endpoints:
 #### FrontOffice _ **Checkout**
 Cart and Checkout flow features (includes User account and User registration)
 
--- insert checkout screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_checkout.png)
 
 Example API endpoints:
 - /cart - add, display and change the cart
@@ -50,7 +50,7 @@ Example API endpoints:
 #### BackOffice _ **Catalog**
 Product/Inventory management (including Order Cycle management)
 
--- insert catalog screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_catalog.png)
 
 Example API endpoints:
 - /product - similar to /shop but with more management capabilities, for example, bulk update actions
@@ -58,7 +58,7 @@ Example API endpoints:
 #### BackOffice _ **Orders**
 Order Management System: Orders, packing and delivery management (including Invoicing and Accounting)
 
--- insert order screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_orders.png)
 
 Example API endpoints:
 - /orders - list orders and bulk actions
@@ -67,7 +67,7 @@ Example API endpoints:
 #### BackOffice _ **Entities**
 Entity Management: Enterprises and Customers management (CRM)
 
--- insert entities screenshot --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_entities.png)
 
 Example API endpoints:
 - /users
@@ -88,4 +88,4 @@ Each engine and the main app will have different ways of accessing/depending on 
 ## Technical structure
 Each domain structure will mimic the existing structure on the main app. each domain will have it's on controllers, services, models, views, assets and serializers.
 
--- insert structure image --
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_structure.png)
