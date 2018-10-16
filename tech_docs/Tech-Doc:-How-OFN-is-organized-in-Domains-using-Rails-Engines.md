@@ -73,6 +73,12 @@ Example API endpoints:
 - /customers
 - /groups
 
+## Technical structure
+Each domain structure will mimic the existing structure on the main app. Each domain has it's own controllers, services, models, views, assets and serialisers.
+
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_structure.jpg)
+
+
 ## Rails Engines
 Rails Engines can be considered miniature applications, for more info see the [Rails Guides entry for Rails Engines](https://guides.rubyonrails.org/engines.html).
 
@@ -82,9 +88,3 @@ The migration to engines will consist basically of moving files from /app/<relat
 Each engine and the main app will have different ways of accessing/depending on (other) domains code:
 * requiring another domain's modules and classes directly, for example, the main app FooterLinksHelper requires the Web domain CookiesConsent service simply by using `require 'web/cookies_consent'`
 * the best way to depend on another engine is through its routes (ideally the API routes) - like in Spree, each domain's routes are mounted on the base url with `mount Web::Engine, :at => '/'`
-
-## Technical structure
-Each domain structure will mimic the existing structure on the main app. Each domain has it's own controllers, services, models, views, assets and serialisers.
-
-![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_structure.jpg)
-
