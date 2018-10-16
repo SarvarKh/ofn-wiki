@@ -11,9 +11,7 @@ For now, we started by extracting the Cookies feature into the new Web domain ([
 * BackOffice _ **Orders** ____ Order Management System: Orders, packing and delivery management (including Invoicing and Accounting)
 * BackOffice _ **Entities** ___ Entity Management: Enterprises and Customers management (CRM)
 
-### Domains description and examples
-
-#### FrontOffice _ **Web**
+### FrontOffice _ **Web**
 Content CMS for the ecommerce website (including homepage, landing pages, map, menu and footer)
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_web.png)
@@ -25,7 +23,7 @@ Example API endpoints:
 - /menu - app menu
 - /map - map
 
-#### FrontOffice _ **Shop**
+### FrontOffice _ **Shop**
 Product Search and Display features on the ecommerce website
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_shop.png)
@@ -36,7 +34,7 @@ Example API endpoints:
 - /shops/enterprise/1/product/10 - product 10 details
 - /shops/enterprise/1/product?description=carrot - search for carrots in enterprise 1
 
-#### FrontOffice _ **Checkout**
+### FrontOffice _ **Checkout**
 Cart and Checkout flow features (includes User account and User registration)
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_checkout.png)
@@ -47,7 +45,7 @@ Example API endpoints:
 - /user - user account and associated endpoints
 - /user/registration - user registration process and data
 
-#### BackOffice _ **Catalog**
+### BackOffice _ **Catalog**
 Product/Inventory management (including Order Cycle management)
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_catalog.png)
@@ -55,7 +53,7 @@ Product/Inventory management (including Order Cycle management)
 Example API endpoints:
 - /product - similar to /shop but with more management capabilities, for example, bulk update actions
 
-#### BackOffice _ **Orders**
+### BackOffice _ **Orders**
 Order Management System: Orders, packing and delivery management (including Invoicing and Accounting)
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_orders.png)
@@ -64,7 +62,7 @@ Example API endpoints:
 - /orders - list orders and bulk actions
 - /orders/1 - view and change order details
 
-#### BackOffice _ **Entities**
+### BackOffice _ **Entities**
 Entity Management: Enterprises and Customers management (CRM)
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_entities.png)
