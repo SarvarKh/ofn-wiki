@@ -84,7 +84,7 @@ Each engine and the main app will have different ways of accessing/depending on 
 * the best way to depend on another engine is through its routes (ideally the API routes) - like in Spree, each domain's routes are mounted on the base url with `mount Web::Engine, :at => '/'`
 
 ## Technical structure
-Each domain structure will mimic the existing structure on the main app. each domain will have it's on controllers, services, models, views, assets and serializers.
+Each domain structure will mimic the existing structure on the main app. Each domain has it's own controllers, services, models, views, assets and serialisers.
 
 ![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_structure.jpg)
 
