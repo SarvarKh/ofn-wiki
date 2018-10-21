@@ -177,7 +177,7 @@ And now, `bundle -v` gives me: `Bundler version 1.15.1`. 👍
 
 You may need to run `gem install bundler` to install the bundler in the first place.
 
-You should now me able to install the required gems with: 
+You should now be able to install the required gems with: 
 
     $ bundle install
 
