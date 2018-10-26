@@ -8,7 +8,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
 * Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
-* Download all current translations from Transifex with the [Transifex client](https://github.com/transifex/transifex-client) and add them to the master branch.
+* Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
   ```sh
   git checkout master
   git pull upstream master
