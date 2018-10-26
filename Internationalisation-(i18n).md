@@ -19,7 +19,18 @@ Our CI server is running [txgh](https://github.com/openfoodfoundation/txgh/blob/
 
 Please note that once a translation reached 100%, Transifex doesn't notify our CI server about any further changes. You can trigger another notification by reviewing the translation to 100%. Any updates after the review have to be downloaded and committed manually.
 
-The [Transifex client](https://github.com/transifex/transifex-client) is a command line tool that helps with manually downloading translations. After installing, you can replace all locales with the latest Transifex version:
+## Transifex client
+
+The [Transifex client](https://github.com/transifex/transifex-client) is a command line tool that helps with manually downloading translations. Follow the readme file to install it. It then needs a configuration file to authenticate to the API. Obtain your [Transifex API key](https://www.transifex.com/user/settings/api/) and place the following in `$HOME/.transifexrc`:
+
+```
+[https://www.transifex.com]
+hostname = https://www.transifex.com
+password = 1/5e840xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxf54ca9
+username = api
+```
+
+You can then download all translations with one command:
 
 ```sh
 # cd openfoodnetwork
