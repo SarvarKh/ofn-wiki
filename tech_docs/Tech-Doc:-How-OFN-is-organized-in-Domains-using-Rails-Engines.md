@@ -52,6 +52,7 @@ Product/Inventory management (including Order Cycle management)
 
 Example API endpoints:
 - /product - similar to /shop but with more management capabilities, for example, bulk update actions
+- /order_cycles/12 - manage Order Cycles details
 
 ### BackOffice _ **Orders**
 Order Management System: Orders, packing and delivery management (including Invoicing and Accounting)
