@@ -73,6 +73,11 @@ Example API endpoints:
 - /customers
 - /groups
 
+## Dependencies between Domains
+This is a simple diagram showing very simple examples of dependencies between the domains.
+
+![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/domains_dependencies.png)
+
 ## Technical structure
 Each domain structure will mimic the existing structure on the main app. Each domain has it's own controllers, services, models, views, assets and serialisers.
 
