@@ -70,7 +70,7 @@ gem install zeus
 ```
 
 ## Step 6. Set up Postgresql
-**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork#get-it-running) now performs this step for you.
+**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/script/setup) now performs this step for you.
 
 Next we create a development user (with superuser privileges) for postgres. The password should be `f00d`, as referenced in `config/database.yml`.
 
