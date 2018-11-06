@@ -78,6 +78,8 @@ with every change we do.
 
   It's also possible that the look up is in a gem. We still use a lot of Spree's views. So just because you can't find a translation key in the OFN code, it doesn't mean that the translation is not needed.
 
+* Add missing Spree translations: you may find that a spree view or controller complains about missing translations. The fix to these problems is to look up the translation in one of the en.yml files in Spree and copy the translation entry to OFN's en.yml file.
+
 There are also some common problems people run into described in the next sections.
 
 ### Scopes must be unique
