@@ -1,5 +1,5 @@
 ## Intro
-This is a rough guide to getting a development environment set up on a clean macOS Sierra install. The process has only altered slightly from that which works for [OS X El Capitan](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup:-OS-X-(El-Capitan)).
+This is a rough guide to getting a development environment set up on a clean macOS Sierra install. The process has only altered slightly from that which works for [OS X El Capitan](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup:-OS-X-(El-Capitan)). This process was tested in High Sierra and should work in Mojave as well.
 
 ## Step 1. XCode / Command Line Tools
 XCode is Apple's suite of OS X and iOS development tools, and provides a whole IDE geared for that purpose. My understanding is that the only component of XCode that is particularly pertinent to rails development on OSX is the GCC compiler system. It used to be the case that one had to download and install the entire XCode suite in order to get the useful bits, but now Apple provides a condensed 'useful bits' package in the form of Command Line Tools (CLT).
