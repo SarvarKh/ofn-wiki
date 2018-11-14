@@ -1,4 +1,4 @@
-At OFN we run our long-running test suite in parallel in our CI, Travis.
+At OFN we run our long-running test suite in parallel in our CI, Semaphore (used to be Travis).
 
 To do that parallelization we use https://github.com/ArturT/knapsack. 
 
@@ -14,11 +14,17 @@ In any case, Knapsack prints a time offset warning at the end of the rspec resul
 
 ## How to regenerate the report
 
-Edit the [.travis.yml](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.travis.yml) file replacing the line that executes the test suite with:
+In Travis you had to edit the [.travis.yml](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.travis.yml) file replacing the line that executes the test suite with:
 
 ```
 "KNAPSACK_GENERATE_REPORT=true bundle exec rspec spec"
 ```
+
+In semaphore this configuration is done on your project settings. Additionally, to generate a new Knapsack report in semaphore, if you have multiple build jobs (as of Nov2018 we have 4), you need to configure the build to be a single job build so that a report for all specs is generated.
+* Go to https://semaphoreci.com project settings, build settings and remove Job #2, Job #3 and Job #4
+* Edit Job #1 and pre append "KNAPSACK_GENERATE_REPORT=true" to the command, currently it becomes "KNAPSACK_GENERATE_REPORT=true bundle exec rake 'knapsack:rspec[--tag ~performance --format progress -p]'"
+* Run the build and follow the steps below to fetch the new knapsack report and commit it
+* Go back to project settings/build settings and remove KNAPSACK_GENERATE_REPORT flag from Job #1 and re-add Job #1, Job #2 and Job #3 without the knapsack flag to generate report
 
 Please, double check [Knapsack's docs](https://github.com/ArturT/knapsack#common-step) as this might have changed since this wiki was written.
 
