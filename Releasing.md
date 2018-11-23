@@ -20,7 +20,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 * Get the release notes from each of these pull requests. If no release notes are specified you can just copy the pull request title. We only include PRs that have been merged into `master`, so we are not currently adding release notes for Spree Upgrade PRs that are merged into the `2-0-stable` branch.
 * Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. Make sure the notes can be understood by humans using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least a PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
 * Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
-* Publish the release when all is OK; that will create a git tag for you.
+* Wait for testers to give the ok to publish the release; that will create a git tag for you. Check the `Testing the relese` section below for details.
 * Announce in [#global-community](https://openfoodnetwork.slack.com/archives/C59ADD8F2) you just published a new release. Use the template below :point_down: :
 
     ```
@@ -28,6 +28,12 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
     You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
     ```
 * Nudge the next person to release. You can set a reminder in Slack: `/remind @matt-yorkley release in 2 weeks`
+
+## Testing the release
+
+Releases require some testing to ensure critical paths of the application keep working. Talk to one of the testers available to coordinate this. Once the release's draft is finished and she is aware, stage `master` to a server with PayPal and Stripe integrations set up. These need to be tested.
+
+Keep in mind that any merges done to `master` while the release is in draft won't get tested unless we stage again. We don't have a specific release branch; we just have `master` and tag release version in it.
 
 ## Who has the release power :zap: :muscle: 
 
