@@ -1,5 +1,9 @@
 This pages lists conventions that are not verified by [Rubocop](http://batsov.com/rubocop/) but we agree to follow.
 
+# Database Migrations
+
+See this guide: [[Database-migrations]]
+
 # Ruby
 
 ### Prefer `public_send` over `send`
