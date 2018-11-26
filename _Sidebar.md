@@ -27,6 +27,7 @@
 * [[Making a great commit]]
 * [[Making a great pull request]]
 * [[Internationalisation (i18n)]]
+* [[Database migrations]]
 * [[Dependency upgrades manifesto]]
 
 **Testing**
