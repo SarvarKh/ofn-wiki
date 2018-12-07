@@ -64,7 +64,6 @@ echo "gem: --no-document" >> ~/.gemrc
 Now we can install some supporting gems:
 
 ```bash
-gem install git-up
 gem install bundler
 gem install zeus
 ```
