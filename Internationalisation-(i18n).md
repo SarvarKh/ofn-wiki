@@ -3,7 +3,7 @@
 The OFN is available in [several languages](http://community.openfoodnetwork.org/t/localisation-ofn-in-your-language/397). You can help translating at [Transifex](https://www.transifex.com/open-food-foundation/open-food-network/). You can just sign up and start translating in your language. If your language doesn't exist yet, one of the Transifex admins has to add it. Also ask the Transifex admins if you would like to be a reviewer or maintainer of a certain language. You find the Transifex admins in the `#multilingual` channel on [Slack](https://openfoodnetwork.org/slack-invite):
 
 - maikel
-- sigmundpeterson
+- sigmundpetersen
 
 The next section explains in more details how the translations in Transifex make it back to the OFN code.
 
