@@ -38,7 +38,7 @@
 * [[Testing and Rspec Tips]]
 * [[Karma]]
 * [[Continuous Integration]]
-* [[Parallelized test suite]]
+* [[Parallelized test suite with knapsack]]
 
 **Releasing**
 * [[Releasing]]
