@@ -14,7 +14,7 @@ This page lists all emails sent by the platform:
 9. order invoice email (I was not able to test this one)
 10. 1. enterprise manager invite - new account - invitation email
     2. **BROKEN** - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
-11. **BROKEN** - order cycle producers notification (not working in multi-language) 
+11. order cycle producers notification (not working in multi-language) 
 
 
 Additionally, there are 6 emails related to subscriptions (**NOT TESTED**):
