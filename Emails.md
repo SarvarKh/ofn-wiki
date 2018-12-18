@@ -11,7 +11,7 @@ This page lists all emails sent by the platform:
 6. order confirmation for shop
 7. **NOT TESTED** order shipped (I was not able to test this one)
 8. order cancelation email
-9. **NOT TESTED** - order invoice email (I was not able to test this one)
+9. order invoice email (I was not able to test this one)
 10. 1. enterprise manager invite - new account - invitation email
     2. **BROKEN** - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
     3. **BROKEN** - enterprise manager invite - new account - user welcome after following signup email above (not working in multi-language)
