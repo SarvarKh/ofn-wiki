@@ -1,4 +1,4 @@
-Note: the X and "broken" here mean "Email is sent in the instances default language instead of the users language".
+Note: BROKEN here means "Email is sent in the instances default language instead of the users language".
 
 This page lists all emails sent by the platform:
 1. user signup with confirmation link
