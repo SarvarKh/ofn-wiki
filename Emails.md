@@ -1,30 +1,31 @@
 Note: the X and "broken" here mean "Email is sent in the instances default language instead of the users language".
 
 This page lists all emails sent by the platform:
-- user signup with confirmation link
-- user welcome (after following confirmation link)
-- X - forgotten password (not working in multi-language)
-- enterprise welcome email (triggered after creation on admin/enterprises and also after self-registration)
-- X - order confirmation for customer as GUEST (not working in multi-language)
-- order confirmation for customer as logged in user
-- order confirmation for shop
-- X - resend order confirmation (not working in multi-language) 
-- ? - order shipped (I was not able to test this one)
-- X - order cancelation email (not working in multi-language)
-- ? - order invoice email (I was not able to test this one)
-- enterprise manager invite - new account - invitation email
-- X - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
-- X - enterprise manager invite - new account - user welcome after following signup email above (not working in multi-language)
-- ? - enterprise manager invite - existing account - invitation email (I was not able to test this one)
-- X - order cycle producers notification (not working in multi-language) 
+1. user signup with confirmation link
+2. user welcome (after following confirmation link)
+3. X - forgotten password (not working in multi-language)
+4. enterprise welcome email (triggered after creation on admin/enterprises and also after self-registration)
+5. 1. X - order confirmation for customer as GUEST (not working in multi-language)
+   2. order confirmation for customer as logged in user
+   3. X - resend order confirmation from backoffice (not working in multi-language) 
+6. order confirmation for shop
+7. ? - order shipped (I was not able to test this one)
+8. X - order cancelation email (not working in multi-language)
+9. ? - order invoice email (I was not able to test this one)
+10. 1. enterprise manager invite - new account - invitation email
+    2. X - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
+    3. X - enterprise manager invite - new account - user welcome after following signup email above (not working in multi-language)
+    4. ? - enterprise manager invite - existing account - invitation email (I was not able to test this one)
+11. X - order cycle producers notification (not working in multi-language) 
 
 
 Additionally, there are 6 emails related to subscriptions (not tested):
-- subscription confirmation email
-- order placement email
-- empty order placement email
-- failed payment email
-- order placement summary email (to the shop owner)
-- confirmation summary email (to the shop owner)
 
-[Delayed job] is used to send emails in OFN.
+12. subscription confirmation email
+13. order placement email
+14. empty order placement email
+15. failed payment email
+16. order placement summary email (to the shop owner)
+17. confirmation summary email (to the shop owner)
+
+[[Delayed job]] is used to send emails in OFN.
