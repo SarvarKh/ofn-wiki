@@ -14,8 +14,6 @@ This page lists all emails sent by the platform:
 9. order invoice email (I was not able to test this one)
 10. 1. enterprise manager invite - new account - invitation email
     2. **BROKEN** - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
-    3. **BROKEN** - enterprise manager invite - new account - user welcome after following signup email above (not working in multi-language)
-    4. **NOT TESTED** - enterprise manager invite - existing account - invitation email (I was not able to test this one)
 11. **BROKEN** - order cycle producers notification (not working in multi-language) 
 
 
@@ -30,5 +28,7 @@ Additionally, there are 6 emails related to subscriptions (**NOT TESTED**):
 
 
 NOTE: currently #5.1 #5.2 and #8 will not work in multi-language for orders placed by a GUEST user or by a customer created in the backoffice because it's difficult to persist guest user locale and there's no way to know what's the customer locale
+
+NOTE: no email is sent when existing user is added as enterprise manager
 
 [[Delayed job]] is used to send emails in OFN.
