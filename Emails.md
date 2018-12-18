@@ -4,9 +4,10 @@ This page lists all emails sent by the platform:
 1. user signup with confirmation link
 2. user welcome (after following confirmation link)
 3. **BROKEN** forgotten password (not working in multi-language)
-4. enterprise welcome email (triggered after creation on admin/enterprises and also after self-registration)
+4. 1. enterprise welcome email - triggered after enterprise creation on admin/enterprises
+   2. enterprise welcome email - triggered during self-registration in the frontoffice
 5. 1. order confirmation
-   2. resend order confirmation from backoffice
+   2. order confirmation - triggered as resend in the backoffice
 6. order confirmation for shop
 7. **NOT TESTED** order shipped (I was not able to test this one)
 8. order cancelation email
