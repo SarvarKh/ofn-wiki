@@ -3,21 +3,20 @@ Note: BROKEN here means "Email is sent in the instances default language instead
 This page lists all emails sent by the platform:
 1. user signup with confirmation link
 2. user welcome (after following confirmation link)
-3. **BROKEN** forgotten password (not working in multi-language)
+3. forgotten password (**BROKEN** not working in multi-language)
 4. 1. enterprise welcome email - triggered after enterprise creation on admin/enterprises
    2. enterprise welcome email - triggered during self-registration in the frontoffice
 5. 1. order confirmation - triggered during checkout
    2. order confirmation - triggered as resend in the backoffice
 6. order confirmation for shop
-7. **NOT TESTED** order shipped (I was not able to test this one)
+7. order shipped
 8. order cancelation email
-9. order invoice email (I was not able to test this one)
+9. order invoice email
 10. 1. enterprise manager invite - new account - invitation email
-    2. **BROKEN** - enterprise manager invite - new account - user signup with confirmation link (not working in multi-language)
-11. order cycle producers notification (not working in multi-language) 
+    2. enterprise manager invite - new account - user signup with confirmation link (**BROKEN** not working in multi-language)
+11. order cycle producers notification (**BROKEN** not working in multi-language) 
 
-
-Additionally, there are 6 emails related to subscriptions (**NOT TESTED**):
+Additionally, there are 6 emails related to subscriptions :
 
 12. subscription confirmation email
 13. order placement email
