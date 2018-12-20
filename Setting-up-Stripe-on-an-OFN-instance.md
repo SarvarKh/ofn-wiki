@@ -52,7 +52,7 @@ STRIPE_ENDPOINT_SECRET: "whsec_xxx"
 ````
 
 ### Step 6. Restart your server
-How this is done may vary depending on the server, but it will be necessary to ensure your OFN instance is running with the new configuration you have just set up.
+How this is done may vary depending on the server, but it will be necessary to ensure your OFN instance is running with the new configuration you have just set up. Note this might mean restarting the unicorn after the provisioning.
 
 ### Step 7. Verify your Stripe configuration
 You can check that the configuration settings you have just entered are valid from the super-admin configuration section. Log in as a super admin user, navigate to 'Configuration' and select 'Stripe Connect' (probably somewhere down near the bottom). If your settings are valid, you should see a green box that says your Stripe Connect status is 'OK'.
