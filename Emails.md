@@ -9,14 +9,14 @@ This page lists all emails sent by the platform:
 5. 1. order confirmation - triggered during checkout
    2. order confirmation - triggered as resend in the backoffice
 6. order confirmation for shop
-7. order shipped
+7. order shipped (BROKEN not working in multi-language)
 8. order cancelation email
 9. order invoice email
-10. 1. enterprise manager invite - new account - invitation email
+10. 1. enterprise manager invite - new account - invitation email (**BROKEN** not working in multi-language)
     2. enterprise manager invite - new account - user signup with confirmation link (**BROKEN** not working in multi-language)
-11. order cycle producers notification (**BROKEN** not working in multi-language) 
+11. order cycle producers notification
 
-Additionally, there are 6 emails related to subscriptions :
+Additionally, there are 6 emails related to subscriptions (**BROKEN** not working in multi-language):
 
 12. subscription confirmation email
 13. order placement email
