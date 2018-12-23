@@ -9,7 +9,7 @@ This page lists all emails sent by the platform:
 5. 1. order confirmation - triggered during checkout
    2. order confirmation - triggered as resend in the backoffice
 6. order confirmation for shop
-7. order shipped (BROKEN not working in multi-language)
+7. order shipped (**BROKEN** not working in multi-language)
 8. order cancelation email
 9. order invoice email
 10. 1. enterprise manager invite - new account - invitation email (**BROKEN** not working in multi-language)
