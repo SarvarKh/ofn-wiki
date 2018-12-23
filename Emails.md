@@ -1,4 +1,4 @@
-Note: BROKEN here means "Email is sent in the instances default language instead of the users language".
+Note: BROKEN here means "Email is sent in the instances default language instead of the users language". Epic representing the broken cases https://github.com/openfoodfoundation/openfoodnetwork/issues/3243
 
 This page lists all emails sent by the platform:
 1. user signup with confirmation link
