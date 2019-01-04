@@ -17,7 +17,7 @@ To make OFN work with this new part of the database schema we will **create a si
 * Have only a `default` stock location per instance.
 * Remove any added UI that may allow users to create/read/update/delete stock locations.
 * Stick to our current UI as much as possible.
-* Provide the rquired customization on top of Spree so that all shipments use the same stock location.
+* Provide the required customization on top of Spree so that all shipments use the same stock location.
 
 So this part of the data model will then look like:
 
