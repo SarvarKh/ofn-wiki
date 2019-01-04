@@ -10,7 +10,7 @@ This is the Spree's 2.0 data model area related to stock locations, tightly rela
 
 ### Single 'default' stock location per instance
 
-Although Spree allows creating stock locations we are not ready yet to make us of it as that would mean fitting all the new UI and logic into our existing codebase. We only want to do the minimum it takes to a supported version of Spree while choosing ourselves our feature set rather than Spree imposing those.
+Although Spree allows creating stock locations we are not ready yet to make us of it as that would mean fitting all the new UI and logic into our existing codebase. We only want to do the minimum it takes to use a supported version of Spree while choosing ourselves our feature set rather than Spree imposing those.
 
 To make OFN work with this new part of the database schema we will *create a single 'default' stock location' per OFN instance*, meaning that each OFN database we only have one location called `default`, with which all shipments will be associated automatically. So to do that we need to:
 
