@@ -9,7 +9,7 @@ This requires frequent merges of `master` into `2-0-stable` so that the latter k
 
 ### Spree fork's 2-0-4-stable branch
 
-As briefly mentioned in the *newer patches* section we'll keep using a fork of Spree and apply changes to it in the branch [2-0-4-stable](https://github.com/openfoodfoundation/coopdevs/tree/2-0-4-stable) under the Coopdevs Github organization. Ideally, it should be under OFN's organization instead.
+As briefly mentioned in the *newer patches* section we'll keep using a fork of Spree and apply changes to it in the branch [2-0-4-stable](https://github.com/openfoodfoundation/spree/tree/2-0-4-stable) under the Coopdevs Github organization. Ideally, it should be under OFN's organization instead.
 
 ## Task management
 
@@ -17,7 +17,7 @@ Tasks are managed by means of Github issues as we normally do. These are grouped
 
 Its child epics address each of the topics Spree changes in 2.0.0 and affect the customization OFN made on top. We're currently focusing our efforts on [being able to boot the app](https://github.com/openfoodfoundation/openfoodnetwork/issues/2217) already using Spree v2.0.0. This will then unblock other epics and hopefully the work could be parallelized. Take a look at the attached ZenHub's epics on [[Placeholder] Spree Upgrade to version 2.0.0](https://github.com/openfoodfoundation/openfoodnetwork/issues/2109) to see the full list.
 
-![Spree upgrade epics](https://github.com/coopdevs/openfoodnetwork/blob/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_epics.jpg)
+![Spree upgrade epics](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/doc/img/spree_upgrade_epics.jpg)
 
 In turn, the actual action items will be issues attached to these epics. They will be small and discrete tasks that together will solve the epic at hand.
 
@@ -31,5 +31,5 @@ Once the developer is assigned to the issue from the Github UI a new branch from
 
 Once approved, the changes will be merged into `2-0-stable`.
 
-![Spree upgrade branches](https://raw.githubusercontent.com/coopdevs/openfoodnetwork/1b235a8cf6f619b458c0112dac6156f539b88ff9/doc/img/spree_upgrade_branches.jpg)
+![Spree upgrade branches](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/doc/img/spree_upgrade_branches.jpg)
 
