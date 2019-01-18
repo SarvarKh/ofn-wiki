@@ -1,6 +1,6 @@
 For anyone who is interested in doing feature testing on the OFN here are some guidelines you can use to help you plan your approach to testing. Please feel free to add to this.
 
-## Background
+## 1- Background
 Where does testing fit in the overall software development process?
 
 1. Github ‘issues’ detail the desired improvements we want to make to the software. These are created in two situations a) the global community has decided that there’s a new feature that will be added (e.g. a new report) and b) there’s a bug which has been prioritised to be fixed.
@@ -10,7 +10,7 @@ Where does testing fit in the overall software development process?
 5. All of the merged pull requests are collected together into a ‘release’. This contains many pull requests. Before we launch a release we also test the release itself- to check that all of the PRs are interacting together ok.
 6. The release is eventually adopted by all of the OFN instances.
 
-## Testing
+## 2- Testing
 Testing is a process of ensuring that new code is working correctly before it gets added to the master code. If the new code isn't thoroughly tested, it's likely that little or large errors will get into the software and cause malfunctions and problems for users. The testers job is to prevent any bugs or errors from getting through.
 
 When developers finish developing a feature (or a fix to a bug) they'll put their new code into a staging server. This is a website that looks just like the OFN, but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on the staging server, so you can test the software while doing usual tasks that enterprises commonly do on the site. We call those data "seeds data". If when testing you feel like there are some basic fake data missing, you can create an issue in Github to ask a developer to add them.
@@ -77,7 +77,7 @@ Is this bug occurring on production? If it’s not occurring on production, the 
 #### Need more email addresses?
 When testing you'll often find that you need more user accounts than you have email addresses. In this case you can user this little trick. OFN will see these two email addresses as different users, but all emails will go to the same inbox. sally@openfoodnetwork.org.au and sally+testing@openfoodnetwork.org.au . By adding +testing or +demo or +sunshine etc after your normal email you can create more accounts (there's no limit). This lets you create additional user accounts in OFN without needing lots of inboxes.
 
-## Reporting feedback
+## 3- Reporting feedback
 Reporting your feedback is a 2 step process:
 
 ### 1) Recording your testing notes
