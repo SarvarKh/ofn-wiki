@@ -43,5 +43,5 @@ Knapsack report was generated. Preview:
 
 Just copy the whole JSON and replace the whole [knapsack_rspec_report.json](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/knapsack_rspec_report.json) with it.
 
-Once you commit and push this change, Travis should have parallel builds more evenly balanced.
+Once you commit and push this change, the parallel builds will be more evenly balanced.
 
