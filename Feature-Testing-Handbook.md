@@ -1,7 +1,17 @@
 For anyone who is interested in doing feature testing on the OFN here are some guidelines you can use to help you plan your approach to testing. Please feel free to add to this.
 
-## 1- Introduction
+## Background
+Where does testing fit in the overall software development process?
 
+1. Github ‘issues’ detail the desired improvements we want to make to the software. These are created in two situations a) the global community has decided that there’s a new feature that will be added (e.g. a new report) and b) there’s a bug which has been prioritised to be fixed.
+2. A developer will create a Pull Request. This is the code that makes the changes that solves the issue- either by building a new feature, or by fixing the bug.
+3. This Pull Request code needs to be ‘staged’ and tested. This is the process of putting the code into one of the testing websites (called ‘staging websites) and checking that the code works as intended, before the code gets added to the ‘master’ code.
+4. If the Pull Request is having the desired effect and solving the issue then we can ‘merge’ this Pull Request. If not, it will need to go back to step 2, where the developer improves their pull request before it gets tested again.
+5. All of the merged pull requests are collected together into a ‘release’. This contains many pull requests. Before we launch a release we also test the release itself- to check that all of the PRs are interacting together ok.
+6. The release is eventually adopted by all of the OFN instances.
+
+
+## 1- Introduction
 Testing is a process of ensuring that new code is working correctly before it gets added to the master code. If the new code isn't thoroughly tested, it's likely that little or large errors will get into the software and cause malfunctions and problems for users.
 
 When developers finish developing a feature (or a fix to a bug) they'll put their new code into a staging server. This is a website that looks just like the OFN, but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on staging, so you can test the software while doing usual tasks that enterprises commonly do on the site. We call those data "seeds data". If when testing you feel like there are some basic fake data missing, you can create an issue in Github to ask to add them.
