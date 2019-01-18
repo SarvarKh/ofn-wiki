@@ -10,14 +10,18 @@ Where does testing fit in the overall software development process?
 5. All of the merged pull requests are collected together into a ‘release’. This contains many pull requests. Before we launch a release we also test the release itself- to check that all of the PRs are interacting together ok.
 6. The release is eventually adopted by all of the OFN instances.
 
-
 ## 1- Introduction
 Testing is a process of ensuring that new code is working correctly before it gets added to the master code. If the new code isn't thoroughly tested, it's likely that little or large errors will get into the software and cause malfunctions and problems for users.
 
 When developers finish developing a feature (or a fix to a bug) they'll put their new code into a staging server. This is a website that looks just like the OFN, but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on staging, so you can test the software while doing usual tasks that enterprises commonly do on the site. We call those data "seeds data". If when testing you feel like there are some basic fake data missing, you can create an issue in Github to ask to add them.
 
-When a developer asks you to test something, they'll give you a link to the Pull Request (PR) and "assign" yourself to that PR. You can also yourself check the "Testing" column in the [Zenhub delivery pipeline board](https://github.com/openfoodfoundation/openfoodnetwork/#boards?repos=6257856) and assign yourself to the next PR available. You will find in the PR last comments the link to the staging server where the PR have been deployed.
+## Get setup to test
+You'll need to have login details for the staging server that you'll be testing on. It's good to have both a Super Admin login and regular user logins. 
 
+## Stage a PR on a staging server
+When a developer asks you to test something, they'll give you a link to the Pull Request (PR) and "assign" yourself to that PR. You can also yourself check the "Testing" column in the [Zenhub delivery pipeline board](https://github.com/openfoodfoundation/openfoodnetwork/#boards?repos=6257856) and assign yourself to the next PR available. You will find in the PR's last comments the link to the staging server where the PR have been deployed (for example http://staging.openfoodnetwork.org.au)
+
+## What to test
 This PR should contain a description of 'what to test'. In this section developers should have detailed:
 - A description of the desired new behaviour (you can also find it in the connected issue)
 - A description of what the 'acceptability criteria' are (also in the connected issue)
@@ -54,28 +58,40 @@ Some features only apply to certain users on the OFN. Think about whether the fe
 * Customer
 
 #### Comparing the new code to the old.
-If you're not sure how the existing code functions, and how the new code is different, you can always play with the feature on production to see its 'pre-developed' state.
+If you’re not totally sure how the system behaved before the PR, you can have a look at any of the production sites. If the PR fixes a bug, the bug will still be occuring on production, but not on staging. By comparing the staging and production sites you can see what effect the PR is having.
+
+#### Not sure how a feature should work?
+Not sure how an existing feature is supposed to operate? There should be a description of how a feature is intended to work in the [User Guide](https://guide.openfoodnetwork.org/). If it's something more fine grained or details, and it's not described in the user guide, the best way to get familiar with how OFN works is to play around. Sometimes no one else will know how a feature behaves in a certain scenario, so the only way to find out is to test different scenarios and see how the system behaves. That's the good thing about the staging servers - you can play around without impacting anything.
 
 #### Is it logical?
-If there's something about the new code that you find unpleasant (visually, the wording of text, navigation) or confusing, make a note. 
+If there's something about the new code that you find unpleasant (visually, the wording of text, navigation) or confusing, make a note. The scope of the PR might mean that the improvement can't be incorporated, but it's good to record it anyway.
 
 #### Check all the places
-New features will often impact on multiple places, such as in the shopfront, admin interface, orders listing, reports and in the order confirmation emails. Think about how the changes to the code could have impacts 'downstream' in other areas and test those as well.
+New features will often impact on multiple places, such as in the shopfront, admin interface, orders listing, reports and in the order confirmation emails. Think about how the changes to the code could have impacts 'downstream' in other areas and test those as well. The developers should list all the places that could be impacted, but as a tester you might also thing of somewhere else.
 
 #### Check how new features interact with existing features
-Does the new code interact accurately with other features, like private shopfronts, multiple order cycles, inventory, E2Es and customer tags?
+Does the new code interact accurately with other features, like private shopfronts, multiple order cycles, inventory, E2Es and customer tags? Sometimes bugs can hide in unusual layers of features/settings, so try to test some complex shop setups.
 
-#### Think about browsers and devices discrepencies
+#### Think about browsers and devices discrepancies
 - Sometimes browsers behave differently when reading the same code. As we don't have an extended dev team we can't test on all browsers type and versions, so as a minimum we recommend to regularly change browsers when you do testing. Switch between Chrome or Firefox for instance. 
 - Also if the PR you are testing involves front end User Interface (what end customer sees on their screen) you should test on a mobile device to check if it looks ok. The code is supposed to be "responsive" so the visual website is supposed to adapt to the screen size of a mobile in a nice way.
 
 #### Languages dicrepencies
 Depending on the staging server the PR were deployed on, the language you test in may vary. If it's not English, and translations are involved in the PR, you might see "translations missing" while testing. This is normal and you should ignore it as we can't translate new strings before the PR is merged. We recommend as much as possible to test in an English environment.
 
+#### Super Admin settings
+Sometimes you'll need to test some Instance settings, which are controlled by Super Admin logins. When you login as a Super Admin you can see all the settings for the instance- things that users can't see. There's a guide which describes the Super Admin Configuration settings here - https://ofn-user-guide.gitbook.io/ofn-super-admin-guide/
+
+#### Need more email addresses?
+When testing you'll often find that you need more user accounts than you have email addresses. In this case you can user this little trick. OFN will see these two email addresses as different users, but all emails will go to the same inbox. sally@openfoodnetwork.org.au and sally+testing@openfoodnetwork.org.au . By adding +testing or +demo or +sunshine etc after your normal email you can create more accounts (there's no limit). This lets you create additional user accounts in OFN without needing lots of inboxes.
+
 ## 3- Reporting feedback
 Once you have tested all the cases you could think of related to the PR, report your conclusions by commenting on the PR:
 - (a) If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work (+link your google doc url).
 - (b) If you spot anything that's not working as you would expect, or is broken, tell the developers by listing the major outstanding issues that should be addressed and link your google doc url. If the developer needs more detail they will go to the google doc, but they may not need to.
+
+**I’ve found another bug while testing – great!**
+Is this bug occurring on production? If it’s not occurring on production, the bug was likely caused by the PR. In this case you should just describe the bug in your testing notes. If the bug is occurring on production it wasn’t caused by this PR. In this case you should check whether the bug is already captured by an issue in github. If it’s not, create a new issue. When you go to create a new issue you’ll see there’s a template to fill in- pretty straightfoward.
 
 ## 4- Launching the next action
 - If (a) it means the piece of code is deemed to be working correctly, and it can be 'pushed to production'. This means it will become part of the live, publicly used software and will be implemented on all instances. To tell the developers that accredited to merge that your tests are good and they can merge, just move the card to the "Ready to go" column or change the pipeline in the PR to "Ready to go".
