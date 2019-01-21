@@ -139,8 +139,11 @@ A picture says 1000 words, so use screenshots to show features that are working,
 
 ## 3.2	Step 2) Comment on the PR
 Once you have tested all the cases you could think of related to the PR and you've created a testing notes doc, report your conclusions by commenting on the PR in Github.
-•	(a) If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work. You can also list the things that were working in quick dot points
-•	(b) If you spot anything that's not working as you would expect, or is broken, tell the developers by listing the major outstanding issues that should be addressed in shortform. If the developer needs more detail they will go to the google doc, but they may not need to.
+
+(a) If it's all good, just say something like 'no issue found' and give a high five to the awesome developer who did a good work. You can also list the things that were working in quick dot poin
+
+(b) If you spot anything that's not working as you would expect, or is broken, tell the developers by listing the major outstanding issues that should be addressed in shortform. If the developer needs more detail they will go to the google doc, but they may not need to.
+
 Lastly, include the link to your google doc in the comment, so the developer can see the record of your detailed test notes.
 
 # 4	Launching the next action
