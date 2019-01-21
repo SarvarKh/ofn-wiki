@@ -115,21 +115,22 @@ Before you report that you’ve found a bug in the PR, ask first whether the bug
 ## 2.15	Need more email addresses?
 When testing you'll often find that you need more user accounts than you have email addresses. In this case you can user this little trick. OFN will see these two email addresses as different users, but all emails will go to the same inbox. sally@openfoodnetwork.org.au and sally+testing@openfoodnetwork.org.au . By adding +testing or +demo or +sunshine etc after your normal email you can create more accounts (there's no limit). This lets you create additional user accounts in OFN without needing lots of inboxes.
 
-### 3	Reporting feedback
+# 3	Reporting Feedback
 Reporting your feedback is a 2 step process:
 
 ## 3.1	Step 1) Recording your testing notes in a Google Doc
 Testers should record their detailed "Testing notes" in a Google doc in the global OFN drive (it's in edit mode so you should have access) so that we have all testing notes in the same place. Please duplicate the Testing Notes template and rename your new version with the PR number and description.
 
-The testing template is designed to be broken down into all the user cases which were tested, and the tester should describe what they tested and what the result was.
+The testing template is designed to be broken down into all the user cases which were tested, and the tester should describe what they tested and what the result was. The more detail the better.
 
-If the test passed colour the box green. 
+**If the test passed colour the box green. **
+Describe what worked, and perhaps put a screenshot if you think it's a good record.
 
-If it failed colour the box red. 
-
+**If it failed colour the box red. **
 Give a description of what didn't work. Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. This helps the developer when they try to replicate the problem. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
 
-If you’re unsure, colour the box orange.
+**If you’re unsure, colour the box orange.**
+Describe your uncertainty, and flag this uncertainty in your comment on the github issue (see 3.2 below). An example of an uncertainty is 'I don't know what the desired functionality is', 'did the developer intend for this?'.
 
 Screenshots
 A picture says 1000 words, so use screenshots to show features that are working, and more importantly not working. You can capture what's on your screen with the Prt Scr button on your keyboard. If it's possible to show a bug in action, get a screenshot and illustrate it. Even better if you can capture a GIF or moving image showing the bug –Loom is a good plugin for this.
