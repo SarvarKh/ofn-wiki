@@ -125,10 +125,10 @@ Testers should record their detailed "Testing notes" in a Google doc in the glob
 
 The testing template is designed to be broken down into all the user cases which were tested, and the tester should describe what they tested and what the result was. The more detail the better.
 
-**If the test passed colour the box green. **
+**If the test passed colour the box green.**
 Describe what worked, and perhaps put a screenshot if you think it's a good record.
 
-**If it failed colour the box red. **
+**If it failed colour the box red.**
 Give a description of what didn't work. Include as much detail as you can such as what kind of user was involved and what actions led up to the error occurring. This helps the developer when they try to replicate the problem. Are there some situations where the error occurs, and others where it doesn't? If the errors is hard to replicate include this in the notes.
 
 **If you’re unsure, colour the box orange.**
