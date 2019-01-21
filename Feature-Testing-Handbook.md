@@ -19,7 +19,7 @@ Things you’ll need before you can test:
 -	Advanced testers will need access to Semaphore so they can stage their own PRs without the assistance of a developer.
 -	You may wish to install the Loom plugin which lets you capture video screenshots. This is helpful in reporting any bugs/issues you see.
 
-Get familiar with OFN
+**Get familiar with OFN**
 For any new tester, a helpful first step to testing is to become familiar with the OFN software. This makes it much easier to spot things which are not quite right when you start testing. A good way to get familiarised is to setup a producer shop and a hub shop, using the instructions in the user guide, and also try using the advanced features. A tester who is familiar with all the functionalities of OFN will find testing much easier.
 
 ## 2.2	‘Staging Servers’
