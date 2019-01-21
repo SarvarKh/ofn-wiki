@@ -36,10 +36,12 @@ When a developer asks you to test something, they'll follow the following proces
 -	They’ll send you the link to the PR. 
 -	They’ll assign you to the PR (or if the PR was available for anyone to test, when you claim the PR, assign yourself)
 ## 2.4	What to test
+
 When the developer sends you a PR to test, you should see that the PR contains a description of 'what to test'. In this section developers should have detailed:
-•	A description of the desired new behaviour (you can also find it in the connected issue which also describes the desired change). This description will usually relate to a certain part of the website, or a certain flow of behaviour.
-•	A description of what the 'acceptability criteria' are (also in the connected issue)
-•	A description of any areas of the site that may have been inadvertently impacted by their work, and should therefore also be tested.
+
+* A description of the desired new behaviour (you can also find it in the connected issue which also describes the desired change). This description will usually relate to a certain part of the website, or a certain flow of behaviour.
+* A description of what the 'acceptability criteria' are (also in the connected issue)
+* A description of any areas of the site that may have been inadvertently impacted by their work, and should therefore also be tested.
 
 It's a tester's job to make sure that anything which should be changed/fixed is, and anything that shouldn't be changed isn't. It's also your task to spot any bugs or glitches that might be there.
 
