@@ -65,11 +65,11 @@ Places that might be impacted:
 
 ### 2.6.2	Think about different user types
 Some features only apply to certain users on the OFN, and others will impact all users. Think about whether the feature you're testing should impact on some or all users and test for all users. The user types are below:
-•	Producer - selling None - profile only
-•	Producer - selling Own
-•	Producer - selling Any
-•	Hub - selling None - profile only
-•	Hub - selling Any
+•	Producer, selling None, profile only
+•	Producer, selling Own
+•	Producer, selling Any
+•	Hub, selling None, profile only
+•	Hub, selling Any
 •	Customer
 •	Super Admin users
 
@@ -115,7 +115,7 @@ Before you report that you’ve found a bug in the PR, ask first whether the bug
 ## 2.15	Need more email addresses?
 When testing you'll often find that you need more user accounts than you have email addresses. In this case you can user this little trick. OFN will see these two email addresses as different users, but all emails will go to the same inbox. sally@openfoodnetwork.org.au and sally+testing@openfoodnetwork.org.au . By adding +testing or +demo or +sunshine etc after your normal email you can create more accounts (there's no limit). This lets you create additional user accounts in OFN without needing lots of inboxes.
 
-# ## 3	Reporting feedback
+### 3	Reporting feedback
 Reporting your feedback is a 2 step process:
 
 ## 3.1	Step 1) Recording your testing notes in a Google Doc
@@ -144,4 +144,3 @@ Lastly, include the link to your google doc in the comment, so the developer can
 •	If (a) it means the piece of code is deemed to be working correctly, and it can be 'pushed to production'. This means it will become part of the live, publicly used software and will be implemented on all instances. To tell the developers that accredited to merge that your tests are good and they can merge, just move the card to the "Ready to go" column or change the pipeline in the PR to "Ready to go".
 •	If (b) it means the developer needs to do some more work to fix the remaining issues. Then move the card back to the "In dev" column or change the pipeline in the PR to "In dev". When he/she will have re-worked on it, he will submit modifications that will need again to be reviewed by other developers before they can be "ready to test" again.
 •	If (c) you're not sure, ping the developer and ask them to take a look at the testing notes to determine whether it's ready to go or not.
-
