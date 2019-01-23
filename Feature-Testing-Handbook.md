@@ -118,6 +118,8 @@ Before you report that you’ve found a bug in the PR, ask first whether the bug
 ## 2.15	Need more email addresses?
 When testing you'll often find that you need more user accounts than you have email addresses. In this case you can user this little trick. OFN will see these two email addresses as different users, but all emails will go to the same inbox. sally@openfoodnetwork.org.au and sally+testing@openfoodnetwork.org.au . By adding +testing or +demo or +sunshine etc after your normal email you can create more accounts (there's no limit). This lets you create additional user accounts in OFN without needing lots of inboxes. Warning: it will only work with google accounts.
 
+You can also use a public email inbox / "disposable email" tool like [mailinator](https://www.mailinator.com/).
+
 # 3	Reporting Feedback
 Reporting your feedback is a 2 step process:
 
