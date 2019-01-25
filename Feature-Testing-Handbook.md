@@ -23,8 +23,7 @@ Things you’ll need before you can test:
 For any new tester, a helpful first step to testing is to become familiar with the OFN software. This makes it much easier to spot things which are not quite right when you start testing. A good way to get familiarised is to setup a producer shop and a hub shop, using the instructions in the user guide, and also try using the advanced features. A tester who is familiar with all the functionalities of OFN will find testing much easier.
 
 ## 2.2	‘Staging Servers’
-When developers finish creating a PR they'll put their new code into a staging server. This is a website that looks just like your local OFN website (what we call the Production Server), but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on the staging server, so you can test the software while doing usual tasks that enterprises commonly do on the site. We call the fake enterprises, products etc that are setup on the Staging server "seeds data". 
-If you test regularly you can also ask to be added to the project on Semaphore in order [test PR yourself](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Staging-with-Semaphore).
+When developers finish creating a PR they'll put their new code into a staging server. This is a website that looks just like your local OFN website (what we call the Production Server), but it's full of fake data that you can play around with, without any repercussions. The staging server is where you do testing. To assist in your testing, it's good to have some enterprises setup on the staging server, so you can test the software while doing usual tasks that enterprises commonly do on the site. 
 
 OFN currently has 3 staging servers. You can generally only test one PR at a time on a Staging server, so we have a couple.
 
@@ -36,6 +35,9 @@ When a developer asks you to test something, they'll follow the following proces
 -	They’ll put a label on the PR showing which server the PR is staged on
 -	They’ll send you the link to the PR. 
 -	They’ll assign you to the PR (or if the PR was available for anyone to test, when you claim the PR, assign yourself)
+
+If you test regularly you can also ask to be added to the project on Semaphore in order to [stage PRs yourself](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Staging-with-Semaphore). This saves you waiting for a dev to do it for you and means you can do more than one in a day (without needing to wait for timezone delays with devs).
+
 ## 2.4	What to test
 
 When the developer sends you a PR to test, you should see that the PR contains a description of 'what to test'. In this section developers should have detailed:
