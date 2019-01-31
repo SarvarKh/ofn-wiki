@@ -12,7 +12,7 @@ The developer gives you access to Semaphore by adding you to the [testers team](
 
 You can navigate to the staging process from any pull request. But before you stage, follow the checklist to prevent conflicts:
 
-- Check that nobody else is using the staging server.
+- Check that nobody else is using the staging server. For example, make sure that no other [pull request is staged](https://github.com/openfoodfoundation/openfoodnetwork/pulls?q=is%3Aopen+is%3Apr+label%3Apr-staged-au).
 - Check that the pull request is approved, in the *Test Ready* column and has no test failures or merge conflicts. It needs Three big green ticks at the bottom of the pull request (nothing red).
 - Let others know that you are staging it by commenting on the pull request and putting a label on.
 
