@@ -7,6 +7,8 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
+* It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please notify translators in #translations that a new release will be prepared. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
+
 * Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
 * Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
   ```sh
@@ -27,7 +29,9 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
     Hi all, just letting you know that we just released [version number] :tada:.
     You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
     ```
-* Nudge the next person to release. You can set a reminder in Slack: `/remind @matt-yorkley release in 2 weeks`
+* Nudge the next person to release. You can set reminders in Slack for the dev and the translators:
+    * `/remind @maikel “Probably time for a new release this week, it’s your turn :wink: Translators have just been notified to get the translations ready” in two weeks`
+    * `/remind #translations “A new release will be prepared soon, it's a good time to review transifex ;-)” in two weeks`
 
 ## Testing the release
 
