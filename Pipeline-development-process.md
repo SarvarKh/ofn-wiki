@@ -53,7 +53,10 @@ Finally, but not less important is that it helps all developers get familiar wit
 
 **A pull request needs to be approved by at least 2 Ha or Ri Core Dev team members to be moved to "Test Ready"**. It's a responsibility of the second approver to move the PR to said column unless there are any questions left unanswered or some action pending. At the same time, **Shu Core Dev team members are also expected to review regularly. **It is a condition for them to pass to the "Ha" level.
 
-See [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/How-to-do-Code-Reviews) how to do code reviews.
+See the following for more information:
+
+* [Code Review Process](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Code-review-process)
+* [How to do Code Reviews](https://github.com/openfoodfoundation/openfoodnetwork/wiki/How-to-do-Code-Reviews)
 
 ### Stage
 
