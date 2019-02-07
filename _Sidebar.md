@@ -24,18 +24,23 @@
 * [[Bug severity]]
 * [[Feature template (epic)]]
 * [[Story template]]
+* [[Internationalisation (i18n)]]
+* [[Dependency upgrades manifesto]]
+
+**Development**
+
 * [[Making a great commit]]
 * [[Making a great pull request]]
-* [[Internationalisation (i18n)]]
+* [[Code Conventions]]
 * [[Database migrations]]
-* [[Dependency upgrades manifesto]]
+* [[Testing and Rspec Tips]]
+* [[Automated Testing Gotchas]]
 
 **Testing**
 
 * [[Testing process]]
 * [[Staging with Semaphore]]
 * [[Feature Testing Handbook]]
-* [[Testing and Rspec Tips]]
 * [[Karma]]
 * [[Continuous Integration]]
 * [[Parallelized test suite with knapsack]]
