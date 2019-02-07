@@ -51,3 +51,20 @@ Bad
 Good
 `expect(json_response['errors']).to eq I18n.t('admin.order_cycles.bulk_update.no_data')`
 
+## Gotchas
+
+### Multiple consecutive spaces in HTML
+
+Multiple consecutive spaces in HTML are rendered as a single space in the browser, and consequently also processed that way by `has_text?` and `has_content?` methods in Capybara. But they retain the original number of spaces when using `contains()` in CSS selectors and when inspecting strings in Javascript and Ruby.
+
+This can cause format-related intermittent spec failures, such as when dealing with space-padded strings. An example is the day of month when `Date` is in `:long` format:
+
+```ruby
+# Two spaces before day of month
+Date.new(2019, 1, 2).to_formatted_s(:long)
+# => "January  2, 2019"
+
+# One space before day of month
+Date.new(2019, 1, 20).to_formatted_s(:long)
+# => "January 20, 2019"
+```
