@@ -19,6 +19,8 @@ And all the spree routes files:
 - [spree - backend/config/routes.rb](https://github.com/openfoodfoundation/spree/blob/step-6a/backend/config/routes.rb) 
 - [spree - frontend/config/routes.rb](https://github.com/openfoodfoundation/spree/blob/step-6a/frontend/config/routes.rb) 
 
+Additionally, devise also gets included with its routes (authentication related routes) - [devise -- config/routes.rb](https://github.com/openfoodfoundation/spree_auth_devise/blob/master/config/routes.rb)
+
 To understand how rails routes work you can read this guide:
 https://guides.rubyonrails.org/v3.2.8/routing.html
 A very important point is "2.2 CRUD, Verbs, and Actions" where you can see how one entry in routes can generate 7 different routes.
