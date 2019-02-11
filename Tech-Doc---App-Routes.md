@@ -1,8 +1,8 @@
-This page lists all teh sources of routes in the OFN app.
+This page lists all the sources of routes in the OFN app.
 
 You can see the full list by running ´rake routes´
 
-These are the routes files that generate this list.
+### Routes
 In OFN:
 - the main routes file [config/routes.rb](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/config/routes.rb)
 - the admin routes file [config/routes/admin.rb](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/config/routes/admin.rb) 
@@ -15,9 +15,9 @@ https://github.com/openfoodfoundation/openfoodnetwork/blob/8ff5f9055b70de7ae229f
 That includes the web engine routes [engines/web/config/routes.rb](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/engines/web/config/routes.rb) 
 
 And all the spree routes files:
-- [spree - api/config/routes.rb](https://github.com/spree/spree/blob/master/api/config/routes.rb) 
-- [spree - backend/config/routes.rb](https://github.com/spree/spree/blob/master/backend/config/routes.rb) 
-- [spree - frontend/config/routes.rb](https://github.com/spree/spree/blob/master/frontend/config/routes.rb) 
+- [spree - api/config/routes.rb](https://github.com/openfoodfoundation/spree/blob/step-6a/api/config/routes.rb) 
+- [spree - backend/config/routes.rb](https://github.com/openfoodfoundation/spree/blob/step-6a/backend/config/routes.rb) 
+- [spree - frontend/config/routes.rb](https://github.com/openfoodfoundation/spree/blob/step-6a/frontend/config/routes.rb) 
 
 To understand how rails routes work you can read this guide:
 https://guides.rubyonrails.org/v3.2.8/routing.html
