@@ -48,34 +48,10 @@ This is a good start, but we don't know whether our test is actually telling us 
 As you make changes to the test code base, you are encouraged to convert the syntax to the rspec 3 syntax. You can do that by using the transpec tool: https://github.com/yujinakayama/transpec
 
 <h1>Debug tests</h1>
-<h2>save_and_open_screenshot</h2>
-For debugging issues locally you can add the line save_and_open_screenshot temporarily to a spec at the point where the issue is, and it will give you a screenshot of what capybara is seeing.
+It may be useful to see a real browser running the specs. You can also Debug things directly on the browser with this. This is how you can do it:
 
-<h2>Run some Specs with Selenium webdriver</h2>
-For beginners, it may be useful to run specs with selenium and see the tests execute on a normal browser. You can also Debug things directly on the browser with this. This is how you can do it:
-- add to GemFile:
-  gem 'selenium-webdriver'
-- run command to fetch the new gem:
-  bundle
+- open spec/spec_helper.rb
 
-- install Firefox
+- remove the word headless
 
-- install geckodriver (https://github.com/mozilla/geckodriver/releases) & make it available on your PATH or use https://github.com/titusfortner/webdrivers which will download and require the useful drivers for Selenium.
-
-- edit spec_helper.rb
-  replace
-  Capybara.javascript_driver = :poltergeist
-  with
-  Capybara.javascript_driver = :selenium
-
-- You may have to replace some unavailable instructions for example:
-  replace --  find("button", text: "Checkout as guest").trigger "click"
-  with    --  find("button", text: "Checkout as guest").click  
-
-- done!
-
-
-
-
-
-
+- done! you can add a "byebug" entry in your spec to get the test execution to stop at some point
