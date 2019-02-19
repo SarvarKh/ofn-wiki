@@ -7,7 +7,7 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
-* It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please notify translators in #translations that a new release will be prepared. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
+* It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please notify translators in [#translations](https://openfoodnetwork.slack.com/messages/CFU9N7TGB/) that a new release will be prepared. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
 
 * Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
 * Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
