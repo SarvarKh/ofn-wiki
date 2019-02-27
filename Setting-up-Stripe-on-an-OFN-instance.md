@@ -18,13 +18,17 @@ Before you do anything, you will need to create a Stripe account (at [stripe.com
 To add Connect functionality to your account, you will need to register your platform with Stripe. This entails providing details about your OFN instance, which Stripe requires in order to verify the authenticity of the platform, and to authorise you to create charges on behalf of other Stripe accounts. Follow the links to 'register your platform' [here](https://stripe.com/docs/connect/quickstart#register-platform).
 
 ### Step 3. Set up your Connect callbacks
-When users of your OFN instance want to connect their Stripe accounts, they will be redirected from the OFN to Stripe and back again. You will need to tell Stripe where you would like users to be redirected to after they have finished creating and connecting their accounts. There are very specific URIs that should be used here. To enter them, go to your Stripe Dashboard, then select `Connect` from the side menu, followed by `Settings` from the top menu that appears. If you scroll to the bottom, you should be able to enter `Redirect URIs` for your Development and Production environments. The URI you need to enter for each needs to follow this format:
+When users of your OFN instance want to connect their Stripe accounts, they will be redirected from the OFN to Stripe and back again. You will need to tell Stripe where you would like users to be redirected to after they have finished creating and connecting their accounts. There are very specific URIs that should be used here.
+
+To enter them, go to your Stripe Dashboard, then select `Settings` from the side menu. Then, if you scroll you will find the `Stripe apps` section. Click on `Connect settings`. If you scroll to the bottom, you should be able to enter `Redirect URIs` for your Development and Production environments. Check the video below for details.
+
+The URI you need to enter for each needs to follow this format:
 
 ````
 https://[YOUR OFN DOMAIN]/stripe/callbacks
 ````
 
-You should also take note of the `client_id`s that are provided in this section. You will need to use them to configure your OFN instance (Step 5).
+**You should also take note of the `client_id` provided in this section. You will need to use it to configure your OFN instance (Step 5).**
 
 ### Step 4. Set up your Connect webhooks
 Stripe can communicate important information about events that happen to connected accounts outside of the OFN via webhooks. At the moment, the OFN codebase has been configured to only listen for the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
