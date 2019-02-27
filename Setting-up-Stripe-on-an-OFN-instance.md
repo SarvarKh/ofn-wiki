@@ -30,7 +30,7 @@ https://[YOUR OFN DOMAIN]/stripe/callbacks
 
 **You should also take note of the `client_id` provided in this section. You will need to use it to configure your OFN instance (Step 5).**
 
-![]((https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_client_id_and_redirects.gif)
+![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_client_id_and_redirects.gif)
 
 ### Step 4. Set up your Connect webhooks
 Stripe can communicate important information about events that happen to connected accounts outside of the OFN via webhooks. At the moment, the OFN codebase has been configured to only listen for the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
