@@ -1,5 +1,17 @@
 # Releasing
 
+## Table of contents
+
+* [When do releases happen](#when-do-releases-happen)
+* [How to make a release](#how-to-make-a-release)
+  * [Notify translators](#notify-translators)
+  * [Pull translations in](#pull-translations-in)
+  * [Collect included changes](#collect-included-changes)
+  * [Draft the release](#draft-the-release)
+  * [Publish the release](#publish-the-release)
+* [Testing the release](#testing-the-release)
+* [Who has the release power](#who-has-the-release-power)
+
 ## When do releases happen :steam_locomotive: :train: :train:
 
 There's no set schedule for releasing. We just create them on demand when we
