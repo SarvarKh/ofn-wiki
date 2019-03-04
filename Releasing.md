@@ -49,7 +49,9 @@ Identify all pull requests that got merged since the last release.
 
 ### Draft the release
 
-Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent. **Make sure the notes can be understood by humans** using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
+Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent.
+
+**Make sure the notes can be understood by humans** using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
 
 Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
 
