@@ -7,10 +7,13 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
-* It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please notify translators in [#translations](https://openfoodnetwork.slack.com/messages/CFU9N7TGB/) that a new release will be prepared. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
+### Notify translators
+It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please **notify translators in [#translations](https://openfoodnetwork.slack.com/messages/CFU9N7TGB/) that a new release will be prepared**. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
 
-* Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
-* Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
+### Pull translations in
+Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
+
+Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
   ```sh
   git checkout master
   git pull upstream master
@@ -18,7 +21,10 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
   git commit -a -m "Update all locales with the latest Transifex translations"
   git push upstream master
   ```
-* Identify all pull requests that got merged since the last release.
+
+### Collect included changes
+
+Identify all pull requests that got merged since the last release.
   - Option 1: You can look at the [date of the last release](https://github.com/openfoodfoundation/openfoodnetwork/releases/latest) and use it to [filter pull requests](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+merged%3A%3E2018-05-23T20%3A20%3A00%2B02%3A00+sort%3Aupdated-desc+base%3Amaster) putting the date and time into the filter box like this: `is:pr merged:>2018-07-11T21:37:00+01:00 sort:updated-desc base:master`
   - Option 2: You can list all pull requests with git and open them in your browser:
     ```
@@ -27,19 +33,33 @@ decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Sl
     latest="$(git tag --sort="v:refname" | tail -1)"
     git log "$latest.." --merges --oneline | cut -d ' ' -f 5 | tr -d '#' | while read n; do echo "https://github.com/openfoodfoundation/openfoodnetwork/pull/$n"; done | xargs firefox
     ```
-* Get the release notes from each of these pull requests. If no release notes are specified you can just copy the pull request title. We only include PRs that have been merged into `master`, so we are not currently adding release notes for Spree Upgrade PRs that are merged into the `2-0-stable` branch.
-* Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. Base the release on the commit with the last merged PR you want to include ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent. Make sure the notes can be understood by humans using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
-* Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
-* Wait for testers to give the ok to publish the release; that will create a git tag for you. Check the `Testing the relese` section below for details.
-* Announce in [#global-community](https://openfoodnetwork.slack.com/archives/C59ADD8F2) you just published a new release. Use the template below :point_down: :
+Get the release notes from each of these pull requests. If no release notes are specified you can just copy the pull request title. We only include PRs that have been merged into `master`, so we are not currently adding release notes for Spree Upgrade PRs that are merged into the `2-0-stable` branch.
+
+### Draft the release
+
+Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent. **Make sure the notes can be understood by humans** using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
+
+Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
+
+### Publish the release
+
+**Wait for testers to give the ok** to publish the release; that will create a git tag for you. Check the `Testing the relese` section below for details.
+
+**Announce** in [#global-community](https://openfoodnetwork.slack.com/archives/C59ADD8F2) you just published a new release. Use the template below :point_down: :
 
     ```
     Hi all, just letting you know that we just released [version number] :tada:.
     You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
     ```
-* Nudge the next person to release. You can set reminders in Slack for the dev and the translators:
-    * `/remind @maikel “Probably time for a new release this week, it’s your turn :wink: Translators have just been notified to get the translations ready” in two weeks`
-    * `/remind #translations “A new release will be prepared soon, it's a good time to review transifex ;-)” in two weeks`
+**Nudge the next person to release**. You can set reminders in Slack for the dev and the translators:
+
+```
+/remind @maikel “Probably time for a new release this week, it’s your turn :wink: Translators have just been notified to get the translations ready” in two weeks
+```
+
+```
+/remind #translations “A new release will be prepared soon, it's a good time to review transifex ;-)” in two weeks
+```
 
 ## Testing the release
 
