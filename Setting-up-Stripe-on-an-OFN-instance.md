@@ -65,6 +65,10 @@ STRIPE_INSTANCE_PUBLISHABLE_KEY: "pk_test_xxx" # This can be a test key or a liv
 STRIPE_ENDPOINT_SECRET: "whsec_xxx"
 ````
 
+Although changing the `config/application.yml` file directly on a staging server
+makes it easier to test the integration is set up correctly, make sure you **edit
+your instance's secret file with the appropriate values and provision the server.**
+
 ### Step 6. Restart your server
 How this is done may vary depending on the server, but it will be necessary to ensure your OFN instance is running with the new configuration you have just set up. Note this might mean restarting the unicorn after the provisioning.
 
