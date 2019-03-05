@@ -16,7 +16,8 @@ There is a more in-depth technical explanation of the process used to charge cus
 Before you do anything, you will need to create a Stripe account (at [stripe.com](https://stripe.com)) that you will use to administer your 'platform'. It is a good idea to create a brand new dedicated account for this purpose. 
 
 ### Step 2. Register your platform
-To add Connect functionality to your account, you will need to register your platform with Stripe. This entails providing details about your OFN instance, which Stripe requires in order to verify the authenticity of the platform, and to authorise you to create charges on behalf of other Stripe accounts. Follow the links to 'register your platform' [here](https://stripe.com/docs/connect/quickstart#register-platform).
+To add Connect functionality to your account, you will need to register your platform with Stripe. This entails providing details about your OFN instance, which Stripe requires in order to verify the authenticity of the platform, and to authorise you to create charges on behalf of other Stripe accounts. Follow the first step `Step 1: Register your platform
+` in Connect's [quickstart guide](https://stripe.com/docs/connect/quickstart#register-platform). That is, you register your Stripe account to use Stripe Connect. 
 
 ### Step 3. Set up your Connect callbacks
 When users of your OFN instance want to connect their Stripe accounts, they will be redirected from the OFN to Stripe and back again. You will need to tell Stripe where you would like users to be redirected to after they have finished creating and connecting their accounts. There are very specific URIs that should be used here.
