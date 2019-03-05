@@ -47,6 +47,8 @@ Then select `Select types to send` and check `account.application.deauthorized`,
 
 By clicking on the endpoint you just created you will see all its details. You should take note of the `Signing secret`. You will need to use it to configure your OFN instance (Step 5).
 
+![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_webhooks.gif)
+
 ### Step 5. Configure your OFN instance
 Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (from Step 3), a webhook Signing Secret (from step 4), a public API key, a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
 
