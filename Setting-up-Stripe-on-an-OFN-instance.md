@@ -37,7 +37,7 @@ https://[YOUR OFN DOMAIN]/stripe/callbacks
 ### Step 4. Set up your Connect webhooks
 Stripe can communicate important information about events that happen to connected accounts outside of the OFN via webhooks. At the moment, the OFN codebase has been configured to only listen for the most important webhook (deauthorisation of the platform by a connected account). This will allow the OFN to know about a disconnection request that is initiated from Stripe (rather than via the OFN).
 
-To set up this webhook, head to your Stripe Dashboard, click `API` from the side menu, and then click `Webhooks` from menu that appears near the top of the page. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
+To set up this webhook, head to your Stripe Dashboard, click `Developers` from the side menu, and then click `Webhooks` from menu that appears beneath it. In the section titled `Endpoints receiving events from Connect applications`, click the `+ Add Endpoint` button. In the dialog that appears, enter the following for `URL to be called`:
 
 ````
 https://[YOUR OFN DOMAIN]/stripe/webhooks
@@ -45,7 +45,7 @@ https://[YOUR OFN DOMAIN]/stripe/webhooks
 
 Then select `Select types to send` and check `account.application.deauthorized`, which should be second from the top. Then click `Add Endpoint` to save.
 
-By clicking on the endpoint you just created you will see all its details. You should take note of the `Signing secret`. You will need to use it to configure your OFN instance (Step 5).
+By clicking on the endpoint you just created you will see all its details. **Now, click on it take note of the `Signing secret`**. You will need to use it to configure your OFN instance (Step 5).
 
 ![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_webhooks.gif)
 
