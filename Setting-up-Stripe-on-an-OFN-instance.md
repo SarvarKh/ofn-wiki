@@ -50,7 +50,11 @@ By clicking on the endpoint you just created you will see all its details. **Now
 ![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_webhooks.gif)
 
 ### Step 5. Configure your OFN instance
-Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information. To use the OFN with Stripe, you will need a `client_id` (from Step 3), a webhook Signing Secret (from step 4), a public API key, a private API key. The API keys can be found by navigating to your Stripe Dashboard, and selecting API from side menu. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'View test data' switch in the side menu. 
+Most of the configuration of the OFN will be done through use of the `application.yml` file. This is the same file used to configure the language and currency information.
+
+To use the OFN with Stripe, you will need a `client_id` (from Step 3), a webhook `Signing Secret` (from step 4) the `Publishable key` and `Secret key`. The last tow can be found by going to your Stripe Dashboard, navigating to `Developers` from the side menu and clicking on `API keys`. API keys can be either `test` keys or `live` keys. You can make your `test` keys visible by clicking the 'Viewing test data' switch, the last item in the side menu. For staging you will need these, while in production you need the `live` ones.
+
+![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/stripe_keys.gif)
 
 You can then use the values you have just looked up to set the following values in the `config/application.yml` file on your OFN server. Please note that if you are using a development `client_id`, then you must use `test` API keys. If you are using a production `client_id` you must use `live` API keys.
 
