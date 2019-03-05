@@ -11,6 +11,7 @@ There is a fairly extensive discussion about the pros-and-cons of this approach 
 
 There is a more in-depth technical explanation of the process used to charge customers [here](SOME LINK) if you are interested
 
+## Instructions
 ### Step 1. Create a Stripe Account
 Before you do anything, you will need to create a Stripe account (at [stripe.com](https://stripe.com)) that you will use to administer your 'platform'. It is a good idea to create a brand new dedicated account for this purpose. 
 
