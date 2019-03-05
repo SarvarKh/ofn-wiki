@@ -1,7 +1,24 @@
-### Before you begin
+## Table of contents
+
+* [Before you begin](#before-you-begin)
+* [Intro to Stripe Connect](#intro-to-stripe-connect)
+* [Instructions](#instructions)
+  * [Step 1. Create a Stripe Account](#step-1.-create-a-stripe-account)
+  * [Step 2. Register your platform](#step-2.-register-your-platform)
+  * [Step 3. Set up your Connect callbacks](#step-3.-set-up-your-connect-callbacks)
+  * [Step 4. Set up your Connect webhooks](#step-4.-set-up-your-connect-webhooks)
+  * [Step 5. Configure your OFN instance](#step-5.-configure-your-ofn-instance)
+  * [Step 6. Restart your server](#step-6.-restart-your-server)
+  * [Step 7. Verify your Stripe configuration](#step-7.-verify-your-stripe-configuration)
+  * [Step 8. Enable Stripe Connect](#step-8.-enable-stripe-connect)
+  * [Step 9. Connect an enterprise](#step-9.-connect-an-enterprise)
+  * [Step 10. Add a Stripe payment method](#step-10.-add-a-stripe-payment-method)
+  * [Step 11. Place an order](#step-11.-place-an-order)
+
+## Before you begin
 This is a walkthrough for setting up Stripe on an OFN instance. At present, to complete this process you will need someone who is comfortable logging into the server via a secure shell, making changes to files and restarting the server. It is assumed that you already have a server running before starting this guide.
 
-### Intro to Stripe Connect
+## Intro to Stripe Connect
 The OFN has been set up to use Stripe Connect, which is an offering from Stripe designed for marketplaces with multiple vendors connecting with customers through a central platform (sounds like the OFN!). The basic concept is that a central 'platform' is registered with Stripe, and then other Stripe users can 'connect' their accounts to the platform, thereby authorising the 'platform' to charge customers on their behalf. From the customer's perspective, most of this detail is hidden, and they experience Stripe Connect as a fairly generic-looking credit card form in the checkout. They absolutely do not need to comprehend any of the complexity of the links between the platform and the vendors.
 
 There is a fairly extensive discussion about the pros-and-cons of this approach on the [community forum](https://community.openfoodnetwork.org/t/integrating-stripe-into-ofn/664). In short, Stripe Connect allows us to do three really useful things:
