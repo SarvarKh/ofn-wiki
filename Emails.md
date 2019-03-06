@@ -28,6 +28,6 @@ Additionally, there are 6 emails related to subscriptions (**BROKEN** not workin
 
 NOTE: currently #5.1 #5.2 and #8 will not work in multi-language for orders placed by a GUEST user or by a customer created in the backoffice because it's difficult to persist guest user locale and there's no way to know what's the customer locale
 
-NOTE: no email is sent when existing user is added as enterprise manager
+NOTE: no email is sent when an existing user is added as an manager of an enterprise
 
 [[Delayed job]] is used to send emails in OFN.
