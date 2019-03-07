@@ -79,6 +79,12 @@ It is not very advisable to check it in production since the amount of distribut
 
 Although we have never experienced any problem with Memcached and it is very unlikely to be the root cause of a problem, being the actual cache store, it needs to be taken into account.
 
+### Development
+
+Remember that to actually use the cache in development mode you need to have a worker running so that the [RefreshProductsCacheJob] jobs can be processed. If not, the job will be enqueued but never processed. However, after the first one belonging to a distributor, order cycle pair is enqueued no other will be afterward since we check for their unqiueness in [ProductsCacheRefreshment].
+
 [app/jobs/refresh_products_cache_job.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/jobs/refresh_products_cache_job.rb
 [lib/open_food_network/products_renderer.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/products_renderer.rb
 [ProductsCache]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/products_cache.rb
+[RefreshProductsCacheJob]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/jobs/refresh_products_cache_job.rb
+[ProductsCacheRefreshment]: https://github.com/openfoodfoundation/openfoodnetwork/blob/f12568601677c93b12be5b379616d2fc05763de7/lib/open_food_network/products_cache_refreshment.rb#L21
