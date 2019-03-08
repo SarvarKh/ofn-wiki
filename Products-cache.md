@@ -1,5 +1,14 @@
 As the list of products to display in a shopfront for a particular order cycle and distributor is rather slow to fetch OFN caches it. Then, subsequent requests are served from cache, which is stored in Memcached in production.
 
+## Table of contents
+
+* [Cache refreshing](#cache-refreshing)
+* [Cache invalidation](#cache-invalidation)
+* [Development](#development)
+* [Troubleshooting](#troubleshooting)
+  * [Delayed Job malfunctioning](#delayed-job-malfunctioning)
+  * [Memcached](#memcached)
+
 ## Cache refreshing
 
 Cache "refreshing" is a unique OFN concept. Instead of caching the product list when a cache miss occurs, we instead "refresh" it by means of a background job. The responsible job class is [app/jobs/refresh_products_cache_job.rb].
