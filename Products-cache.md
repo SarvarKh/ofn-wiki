@@ -36,6 +36,14 @@ The mechanism OFN uses to trigger this job is `after_save` callbacks from the mo
 
 All of them end up calling the [ProductsCache] class, whose methods are responsible for invalidating the appropriate JSON API responses. While updating some models like order cycle may invalidate a single one of these cached products responses, some others like variant will need to invalidate all the ones where the variant is involved.
 
+## Development
+
+Remember that to actually use the cache in development mode you need to have a worker running so that the [RefreshProductsCacheJob] jobs can be processed. If not, the job will be enqueued but never processed. However, after the first one belonging to a distributor and order cycle pair is enqueued no other will be afterward since we check for their uniqueness in [ProductsCacheRefreshment]. You can boot a worker running `bundle exec rake jobs:work`.
+
+Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which is called from [app/controllers/shop_controller.rb]. To enable them, replace `#use_cached_products?` implementation to return `true`.
+
+:warning: *Note*: as the cache store that we have configured in development is `memory_store` you will run into issues. Said implementation stores the data into the process' memory and therefore, the writes performed by the delayed job worker won't be seen by the rails server's process reads.
+
 ## Troubleshooting
 
 What follows is a description of the things to check when the cache is not working properly. You will notice that if the products listed in the shopfront do not match the ones in the order cycle page, for instance. Check [Cache invalidation](#cache-invalidation) to see the full list of models that might not be up to date in your shopfront.
@@ -79,12 +87,10 @@ It is not very advisable to check it in production since the amount of distribut
 
 Although we have never experienced any problem with Memcached and it is very unlikely to be the root cause of a problem, being the actual cache store, it needs to be taken into account.
 
-### Development
-
-Remember that to actually use the cache in development mode you need to have a worker running so that the [RefreshProductsCacheJob] jobs can be processed. If not, the job will be enqueued but never processed. However, after the first one belonging to a distributor, order cycle pair is enqueued no other will be afterward since we check for their unqiueness in [ProductsCacheRefreshment].
-
 [app/jobs/refresh_products_cache_job.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/jobs/refresh_products_cache_job.rb
 [lib/open_food_network/products_renderer.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/products_renderer.rb
 [ProductsCache]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/products_cache.rb
 [RefreshProductsCacheJob]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/jobs/refresh_products_cache_job.rb
 [ProductsCacheRefreshment]: https://github.com/openfoodfoundation/openfoodnetwork/blob/f12568601677c93b12be5b379616d2fc05763de7/lib/open_food_network/products_cache_refreshment.rb#L21
+[CachedProductsRenderer]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/cached_products_renderer.rb
+[app/controllers/shop_controller.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/controllers/shop_controller.rb
