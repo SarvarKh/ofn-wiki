@@ -2,14 +2,17 @@ As the list of products to display in a shopfront for a particular order cycle a
 
 ## Table of contents
 
-* [Cache refreshing](#cache-refreshing)
-* [Cache invalidation](#cache-invalidation)
+* [Current design](#current-design)
+  * [Cache refreshing](#cache-refreshing)
+  * [Cache invalidation](#cache-invalidation)
 * [Development](#development)
 * [Troubleshooting](#troubleshooting)
   * [Delayed Job malfunctioning](#delayed-job-malfunctioning)
   * [Memcached](#memcached)
 
-## Cache refreshing
+## Current design
+
+### Cache refreshing
 
 Cache "refreshing" is a unique OFN concept. Instead of caching the product list when a cache miss occurs, we instead "refresh" it by means of a background job. The responsible job class is [app/jobs/refresh_products_cache_job.rb].
 
@@ -19,7 +22,7 @@ This of course, comes at the expense of it depending on Delayed Job. If no worke
 
 If you want to dig deeper on how this JSON API response is generated, take a look at [lib/open_food_network/products_renderer.rb]. It's this class' output what the background job writes to the cache.
 
-## Cache invalidation
+### Cache invalidation
 
 The mechanism OFN uses to trigger this job is `after_save` callbacks from the models that invalidate the cache. These are:
 
