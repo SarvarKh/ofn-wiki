@@ -42,7 +42,7 @@ Remember that to actually use the cache in development mode you need to have a w
 
 Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which is called from [app/controllers/shop_controller.rb]. To enable them, replace `#use_cached_products?` implementation to return `true`.
 
-:warning: *Note*: as the cache store that we have configured in development is `memory_store` you will run into issues. Said implementation stores the data into the process' memory and therefore, the writes performed by the delayed job worker won't be seen by the rails server's process reads.
+:warning: **Note**: as the cache store that we have configured in development is `memory_store` you will run into issues. Said implementation stores the data into the process' memory and therefore, the writes performed by the delayed job worker won't be seen by the rails server's process reads.
 
 ## Troubleshooting
 
