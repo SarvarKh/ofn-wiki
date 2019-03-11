@@ -54,8 +54,6 @@ Remember that to actually use the cache in development mode you need to have a w
 
 Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which called from [app/controllers/shop_controller.rb], checks the `enable_products_cache?` flag. **To enable it, update the configuration from `/admin/cache_settings/edit`.**
 
-:warning: **Note**: as the cache store that we have configured in development is `memory_store` you will run into issues. Said implementation stores the data into the process' memory and therefore, the writes performed by the delayed job worker won't be seen by the rails server's process reads.
-
 ## Troubleshooting
 
 What follows is a description of the things to check when the cache is not working properly. You will notice that if the products listed in the shopfront do not match the ones in the order cycle page, for instance. Check [Cache invalidation](#cache-invalidation) to see the full list of models that might not be up to date in your shopfront.
