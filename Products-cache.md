@@ -52,7 +52,7 @@ All of them end up calling the [ProductsCache] class, whose methods are responsi
 
 Remember that to actually use the cache in development mode you need to have a worker running so that the [RefreshProductsCacheJob] jobs can be processed. If not, the job will be enqueued but never processed. However, after the first one belonging to a distributor and order cycle pair is enqueued no other will be afterward since we check for their uniqueness in [ProductsCacheRefreshment]. You can boot a worker running `bundle exec rake jobs:work`.
 
-Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which is called from [app/controllers/shop_controller.rb]. To enable them, replace `#use_cached_products?` implementation to return `true`.
+Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which is called from [app/controllers/shop_controller.rb]. To enable them, update the configuration from `/admin/cache_settings/edit`.
 
 :warning: **Note**: as the cache store that we have configured in development is `memory_store` you will run into issues. Said implementation stores the data into the process' memory and therefore, the writes performed by the delayed job worker won't be seen by the rails server's process reads.
 
