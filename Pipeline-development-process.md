@@ -83,6 +83,7 @@ As releases don’t have a set schedule as we do them when we feel there are eno
 * Luis
 * Maikel
 * Matt
+* Kristina
 * Pau
 
 So, Luis will make sure Maikel takes over as soon as the release is published. Note that not all instances will deploy the release at the same time or some might even wait for the next one. As long as someone has a problem with the release you published, you’re the go-to person.
