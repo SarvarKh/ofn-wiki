@@ -6,6 +6,7 @@ As the list of products to display in a shopfront for a particular order cycle a
   * [Cache refreshing](#cache-refreshing)
   * [Cache invalidation](#cache-invalidation)
 * [Development](#development)
+  * [Trigger jobs manually](#trigger-jobs-manually)
 * [Troubleshooting](#troubleshooting)
   * [Delayed Job malfunctioning](#delayed-job-malfunctioning)
   * [Memcached](#memcached)
@@ -53,6 +54,28 @@ All of them end up calling the [ProductsCache] class, whose methods are responsi
 Remember that to actually use the cache in development mode you need to have a worker running so that the [RefreshProductsCacheJob] jobs can be processed. If not, the job will be enqueued but never processed. However, after the first one belonging to a distributor and order cycle pair is enqueued no other will be afterward since we check for their uniqueness in [ProductsCacheRefreshment]. You can boot a worker running `bundle exec rake jobs:work`.
 
 Although doing so will enable cache writes reads also need to be enabled. The class responsible for that is [CachedProductsRenderer], which called from [app/controllers/shop_controller.rb], checks the `enable_products_cache?` flag. **To enable it, update the configuration from `/admin/cache_settings/edit`.**
+
+### Trigger jobs manually
+
+When debugging changes both on the cache or background jobs implementation triggering jobs from the console is really handy. This is exactly what we did to test [#3583]. You can do so from a `rails console` by running
+
+```
+job = RefreshProductsCacheJob.new(9, 8)
+=> #<struct RefreshProductsCacheJob distributor_id=9, order_cycle_id=8>
+irb(main):017:0> Delayed::Job.enqueue(job)
+   (0.6ms)  BEGIN
+  SQL (2.4ms)  INSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["attempts", 0], ["created_at", Thu, 14 Mar 2019 16:36:56 CET +01:00], ["failed_at", nil], ["handler", "--- !ruby/struct:RefreshProductsCacheJob\ndistributor_id: 9\norder_cycle_id: 8\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Thu, 14 Mar 2019 16:36:56 CET +01:00], ["updated_at", Thu, 14 Mar 2019 16:36:56 CET +01:00]]
+   (9.0ms)  COMMIT
+=> #<Delayed::Backend::ActiveRecord::Job id: 7984, priority: 0, attempts: 0, handler: "--- !ruby/struct:RefreshProductsCacheJob\ndistributo...", last_error: nil, run_at: "2019-03-14 15:36:56", locked_at: nil, failed_at: nil, locked_by: nil, queue: nil, created_at: "2019-03-14 15:36:56", updated_at: "2019-03-14 15:36:56">
+```
+
+you should then see an output in `log/delayed_job.log` similar to
+
+```
+2019-03-14T15:37:00+0000: [Worker(delayed_job host:staging.katuma.org pid:11718)] Job RefreshProductsCacheJob (id=7984) RUNNING
+2019-03-14T15:37:00+0000: [Worker(delayed_job host:staging.katuma.org pid:11718)] Job RefreshProductsCacheJob (id=7984) COMPLETED after 0.0126
+2019-03-14T15:37:00+0000: [Worker(delayed_job host:staging.katuma.org pid:11718)] 1 jobs processed at 36.5970 j/s, 0 failed
+```
 
 ## Troubleshooting
 
@@ -104,3 +127,4 @@ Although we have never experienced any problem with Memcached and it is very unl
 [ProductsCacheRefreshment]: https://github.com/openfoodfoundation/openfoodnetwork/blob/f12568601677c93b12be5b379616d2fc05763de7/lib/open_food_network/products_cache_refreshment.rb#L21
 [CachedProductsRenderer]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/cached_products_renderer.rb
 [app/controllers/shop_controller.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/controllers/shop_controller.rb
+[#3583]: https://github.com/openfoodfoundation/openfoodnetwork/pull/3583
