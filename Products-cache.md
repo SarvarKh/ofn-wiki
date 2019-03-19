@@ -7,6 +7,7 @@ As the list of products to display in a shopfront for a particular order cycle a
   * [Cache invalidation](#cache-invalidation)
 * [Development](#development)
   * [Trigger jobs manually](#trigger-jobs-manually)
+  * [Flush enqueued jobs](#flush-enqueued-jobs)
 * [Troubleshooting](#troubleshooting)
   * [Delayed Job malfunctioning](#delayed-job-malfunctioning)
   * [Memcached](#memcached)
