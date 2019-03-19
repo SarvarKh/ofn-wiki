@@ -77,6 +77,24 @@ you should then see an output in `log/delayed_job.log` similar to
 2019-03-14T15:37:00+0000: [Worker(delayed_job host:staging.katuma.org pid:11718)] 1 jobs processed at 36.5970 j/s, 0 failed
 ```
 
+### Flush enqueued jobs
+
+To avoid being flooded with tons of background jobs to be processed when booting a Delayed Job worker or you simply want to skip a failed one that is being retried you can simply flush them by deleting them from the database. You can do that as follows.
+
+from a server log into psql and run:
+
+```
+$ psql openfoodnetwork ofn_user
+psql (9.5.14)
+Type "help" for help.
+
+openfoodnetwork=> truncate delayed_jobs;
+TRUNCATE TABLE
+```
+
+Note that you can also log into psql by running `bundle exec rails dbconsole`.
+
+
 ## Troubleshooting
 
 What follows is a description of the things to check when the cache is not working properly. You will notice that if the products listed in the shopfront do not match the ones in the order cycle page, for instance. Check [Cache invalidation](#cache-invalidation) to see the full list of models that might not be up to date in your shopfront.
