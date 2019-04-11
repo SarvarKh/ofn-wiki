@@ -1,22 +1,11 @@
-The following lists are a summary of customisations to consider in the Spree Upgrade. It doesn't contain all customisation. Otherwise I could just paste the content of the decorator classes here.
+The Checkout workflow is a state machine that makes orders transition between states (address, payment, etc). This is not seen from the UI because in OFN we have a single step checkout process but the code does make the workflow progress and different data processes happen as this workflow is executed.
+
+What follows in this page is an analysis done to the checkout workflow in preparation for the upgrade to Spree 2-0. It may be useful in the future:
 
 ##### Order decorator
 
 What changed in Spree::Order:
 
-- The checkout flow state machine: we need to update our copy! :heavy_check_mark: https://github.com/openfoodfoundation/openfoodnetwork/pull/2431
-- `attr_accessible` changed: no `shipping_method_id`, but additional `shipments_attributes`.  Orders now have Shipments instead of ShippingMethods.https://github.com/openfoodfoundation/openfoodnetwork/issues/2009 https://github.com/openfoodfoundation/openfoodnetwork/issues/2432
-- `payment_required?` does not trigger `update_totals` any more. Only subscriptions are using this method, but they don't need to update totals.
-- Adding and removing line items is now handled by `Spree::OrderContents`. The API stays the same so that we don't have to change our code. Only in a later Spree upgrade to 2.1, `order.add_variant` and `order.remove_variant` will be depricated.
-
-What we customised in our decorator:
-
-- We associate an order with:
-  - `OrderCycle`
-  - `Enterprise` (distributor)
-  - `Cart`
-  - `Customer`
-  - `ProxyOrder`
 - We add some callbacks:
   - `update_distribution_charge!` whenever an order changes
   - `shipping_address_from_distributor` before validation. When delivered to a food host, the user doesn't enter a shipping address. So we fill in the address of the food host.
