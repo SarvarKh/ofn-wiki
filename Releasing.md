@@ -8,8 +8,8 @@
   * [Pull translations in](#pull-translations-in)
   * [Collect included changes](#collect-included-changes)
   * [Draft the release](#draft-the-release)
-  * [Publish the release](#publish-the-release)
 * [Testing the release](#testing-the-release)
+* [Publish the release](#publish-the-release)
 * [Who has the release power](#who-has-the-release-power)
 
 ## When do releases happen :steam_locomotive: :train: :train:
@@ -55,7 +55,13 @@ Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/rele
 
 Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
 
-### Publish the release
+## Testing the release
+
+Releases require some testing to ensure critical paths of the application keep working. Talk to one of the testers available to coordinate this. Once the release's draft is finished and she is aware, stage `master` to a server with PayPal and Stripe integrations set up. These need to be tested.
+
+Keep in mind that any merges done to `master` while the release is in draft won't get tested unless we stage again. We don't have a specific release branch; we just have `master` and tag release version in it.
+
+## Publish the release
 
 **Wait for testers to give the ok** to publish the release; that will create a git tag for you. Check the `Testing the relese` section below for details.
 
@@ -74,12 +80,6 @@ Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.co
 ```
 /remind #translations “A new release will be prepared soon, it's a good time to review transifex ;-)” in two weeks
 ```
-
-## Testing the release
-
-Releases require some testing to ensure critical paths of the application keep working. Talk to one of the testers available to coordinate this. Once the release's draft is finished and she is aware, stage `master` to a server with PayPal and Stripe integrations set up. These need to be tested.
-
-Keep in mind that any merges done to `master` while the release is in draft won't get tested unless we stage again. We don't have a specific release branch; we just have `master` and tag release version in it.
 
 ## Who has the release power :zap: :muscle: 
 
