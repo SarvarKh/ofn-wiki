@@ -146,7 +146,7 @@ There might be times when the cache gets stale for unknown reasons. The symptoms
 
 ![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/products_cache_integrity_checker_job_error.png)
 
-These jobs gets retried several times and chances are the situation won't be fixed thus causing yet more errors on Bugsnag. To fix it you can first remove any current delayed jobs by connection to the database console and executing:
+These jobs get retried several times and chances are the situation won't be fixed thus causing yet more errors on Bugsnag. To fix it you can first remove any current delayed jobs by connection to the database console and executing:
 
 ```
 openfoodnetwork=> truncate delayed_jobs;
