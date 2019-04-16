@@ -11,6 +11,7 @@ As the list of products to display in a shopfront for a particular order cycle a
 * [Troubleshooting](#troubleshooting)
   * [Delayed Job malfunctioning](#delayed-job-malfunctioning)
   * [Memcached](#memcached)
+  * [Refreshing the entire cache](#refreshing-the-entire-cache)
 
 ## Current design
 
@@ -138,6 +139,29 @@ It is not very advisable to check it in production since the amount of distribut
 ### Memcached
 
 Although we have never experienced any problem with Memcached and it is very unlikely to be the root cause of a problem, being the actual cache store, it needs to be taken into account.
+
+### Refreshing the entire cache
+
+There might be times when the cache gets stale for unknown reasons. The symptoms will be endless Bugsnag notifications such as the following, possibly exceeding the notifications quota.
+
+![](https://github.com/openfoodfoundation/openfoodnetwork/wiki/products_cache_integrity_checker_job_error.png)
+
+These jobs gets retried several times and chances are the situation won't be fixed thus causing yet more errors on Bugsnag. To fix it you can first remove any current delayed jobs by connection to the database console and executing:
+
+```
+openfoodnetwork=> truncate delayed_jobs;
+```
+
+This will fix the issue for now but the `ofn:cache:check_products_integrity` rake task will be executed in the next hour triggering these errors yet again, as specified in `config/scheduler.rb`. To prevent this you can execute `bundle exec rake ofn:cache:warm_products` which refreshes the cache of each distributor and order cycle pair.
+
+You will then see a bunch of lines in `log/delayed_job.log` like:
+
+```
+2019-04-16T13:31:57+0000: [Worker(delayed_job host:staging.katuma.org pid:14832)] Job RefreshProductsCacheJob (id=304240) RUNNING
+2019-04-16T13:32:03+0000: [Worker(delayed_job host:staging.katuma.org pid:14832)] Job RefreshProductsCacheJob (id=304240) COMPLETED after 6.2420
+```
+
+Next time `ofn:cache:check_products_integrity` is executed, there should be no failures as the cache is up to date.
 
 [app/jobs/refresh_products_cache_job.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/app/jobs/refresh_products_cache_job.rb
 [lib/open_food_network/products_renderer.rb]: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/lib/open_food_network/products_renderer.rb
