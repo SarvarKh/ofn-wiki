@@ -86,6 +86,8 @@ If you get `gpg: keyserver receive failed: No keyserver available`, try a differ
 
 If you still see an error like `gpg: keyserver receive failed: No data`, wait, it may be due to server unavailability, and try again a few minutes later.
 
+If instead you see a message like `gpg: keyserver receive failed: No route to host` then chances are that gpg decides to use IPv6 while it should use IPv4. You can check out https://github.com/rvm/rvm/issues/4215#issuecomment-435221616 for a solution.
+
 To install RVM without any rubies or gems (which is what I wanted to do) use the following command. NOTE: RVM can globally install the latest versions of ruby and rails for you here, see the [RVM install docs](https://rvm.io/rvm/install) for more information. NOTE: the leading backslash is used to directly call the curl binary and ignore any alias for 'curl' you may have set up.
 
     $ \curl -sSL https://get.rvm.io | bash -s stable --autolibs=enable
