@@ -183,7 +183,7 @@ You should now be able to install the required gems with:
 
 Once all gems have been installed, check that rails is ready to go:
 
-    $ rails -v
+    $ bundle exec rails -v
 
 ## Step 12: Configure your local OFN app
 
@@ -195,15 +195,15 @@ Make sure you have a valid application.yml file (you should edit locale, currenc
 
 Set up the database(s):
 
-    $ rake db:schema:load
+    $ bundle exec rake db:schema:load
 
 You will probably want to insert some seed data into the database so that the server has all the things it needs to start up:
 
-    $ rake db:seed
+    $ bundle exec rake db:seed
 
 Fire up your server:
 
-    $ rails s
+    $ bundle exec rails s
 
 Go to [http://localhost:3000](http://localhost:3000) to play around!
 
