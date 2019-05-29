@@ -16,7 +16,6 @@
 * [[Angular and OFN]]
 * [[Delayed job]]
 * [[The process of review, test, merge and deploy]]
-* [[Spree 2.0 upgrade]]
 * [[Products cache]]
 
 **Contributing**
