@@ -1,6 +1,6 @@
 ## master
 
-Since `2-0-stable` (the branch where we dealt with the Spree's v2 upgrade) merge into `master` done in [#3742](https://github.com/openfoodfoundation/openfoodnetwork/pull/3742), `master` runs on Spree v2. All new releases stem from it and since that moment new versions belong to the `v2.X.X` series.
+Since `2-0-stable` (the branch where we dealt with the Spree's v2 upgrade) merge into `master` done in [#3742](https://github.com/openfoodfoundation/openfoodnetwork/pull/3742), `master` runs on Spree v2. **All new releases stem from it** and since that moment new versions belong to the `v2.X.X` series.
 
 However, because of the [gradual roll-out](https://community.openfoodnetwork.org/t/ofn-v2-rollout-plan/1619/17) of v2, only instances that make it through get to deploy these releases.
 
