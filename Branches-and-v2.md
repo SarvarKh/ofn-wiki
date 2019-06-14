@@ -8,4 +8,4 @@ However, because of the [gradual roll-out](https://community.openfoodnetwork.org
 
 The moment we performed the merged mentioned above, we started the branch `1-31-stable` from which we got the release [v1.31.0 Bananas](https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/v1.31.0). The last one before moving instances to v2 and the one that fixed some things to have the servers ready for v2.
 
-It is only meant to be used to fix s1 bugs that v1-instance may experience. So only releases patching those may come out of it but there has been no need so far.
+**It is only meant to be used to fix s1 bugs that v1-instance may experience**. So only releases patching those may come out of it but there has been no need so far.
