@@ -4,6 +4,12 @@ This guide describes how to make sure your PR is GREAT, if you just starting out
 
 ## Making a great PR 
 
+### Use your own fork
+
+Create a fork when starting your work, even if you have write permissions to the central repository. Keep all your development branches there. When your code is ready, create a pull request against the central repository.
+
+Most pull requests are solving one issue. It's useful to include the issue number in the pull request's name, for example `3727-first-credit-card-default`.
+
 ### Provide a explanation of the problem you are solving
 When you create a PR, you have the opportunity to explain the changes you have made to the codebase. We provide a template in the PR description box to prompt you to include all of the most important information, but the more detail you are able to provide here the better. Mention the other issues in the repo that your PR is related to, and list any pertinent threads in our [community forum (AKA Discourse)](https://community.openfoodnetwork.org). Someone needs to review your contribution before is merged into the code base. Having lots of information about what they are looking at makes the job of a reviewer much easier, and means that feedback is likely to be faster. That means we can get your change merged as quickly as possible. :)
 
