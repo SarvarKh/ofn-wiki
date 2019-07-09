@@ -1,6 +1,4 @@
-Welcome to the Developer documentation for [Open Food Network](https://openfoodnetwork.org/)!
-
-Please read this for an overview of how the project works and dig into other pages on this wiki for more info.
+Welcome to the Developer documentation for [Open Food Network](https://openfoodnetwork.org/)! Please read this for an overview of how the project works and dig into other pages on this wiki for more info.
 
 ## Communication tools
 
@@ -15,6 +13,4 @@ A full set of tools used can be seen on [StackShare](http://stackshare.io/open-f
 
 ## Deployment and server admin wiki
 
-See the [ofn-install wiki](https://github.com/openfoodfoundation/ofn-install/wiki).
-
-There you find guides to install a new server, set up Bugsnag, Google Maps and much more.
+See the [ofn-install wiki](https://github.com/openfoodfoundation/ofn-install/wiki) where you find guides to install a new server, set up Bugsnag, Google Maps and much more.
