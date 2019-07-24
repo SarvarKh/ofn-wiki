@@ -1,5 +1,7 @@
 Welcome to the Developer documentation for [Open Food Network](https://openfoodnetwork.org/)! Please read this for an overview of how the project works and dig into other pages on this wiki for more info.
 
+If you want more generally to understand the OFN project, how the community works and the general processes we have implemented, please check the [OFN handbook](https://ofn-user-guide.gitbook.io/ofn-handbook/).
+
 ## Communication tools
 
 **Tool** | **Used for..**
