@@ -41,9 +41,9 @@
 * [[Testing process]]
 * [[Staging with Semaphore]]
 * [[Feature Testing Handbook]]
-* [[Karma]]
 * [[Continuous Integration]]
 * [[Parallelized test suite with knapsack]]
+* [[Karma]]
 
 **Releasing**
 * [[Releasing]]
