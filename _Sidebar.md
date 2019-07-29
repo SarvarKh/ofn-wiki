@@ -2,6 +2,7 @@
 
 **Development environment setup**
 
+* [[Using Docker]]
 * [[macOS (Sierra, HighSierra and Mojave)|Development-Environment-Setup:-macOS-(Sierra,-HighSierra-and-Mojave)]]
 * [[OS X (El Capitan)|Development Environment Setup: OS X (El Capitan)]]
 * [[OS X (Mavericks)|Development Environment Setup: OS X (Mavericks)]]
