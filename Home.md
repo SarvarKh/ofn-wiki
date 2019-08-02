@@ -7,7 +7,7 @@ If you want more generally to understand the OFN project, how the community work
 **Tool** | **Used for..**
 -----|---------
 [Discourse](http://community.openfoodnetwork.org/) | Forum for in-depth feature discussion, community updates, processes, international conversations.
-[Slack](https://openfoodnetwork.org/slack-invite) | Real-time conversations in the #dev channel on development, deployment, feature discussion, and other community issues needing synchronous conversations. 
+[Slack](https://openfoodnetwork.org/slack-invite) | Real-time conversations on development, deployment, features, and other community issues needing synchronous conversations. Use the #dev channel if you need help setting up.
 [GitHub](https://github.com/openfoodfoundation/openfoodnetwork) | Issues are used for bugs and features from the backlog that will be implemented.
 [ZenHub](https://www.zenhub.io/) | For agile kanban issue management.
 
