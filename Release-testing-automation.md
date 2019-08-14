@@ -88,6 +88,24 @@ Covered in: spec/features/admin/orders_spec.rb
 
 We don't check it's the outcome of a checkout but it's fine.
 
+## Subscriptions
+
+### Can enable from superadmin?
+
+### Can create schedule?
+
+Covered in: spec/features/admin/schedules_spec.rb:21
+
+### Can trigger subs?
+
+### Get emails?
+
+### Out of stock messaging works?
+
+### Editing sub, pausing sub?
+
+Covered in: spec/features/admin/subscriptions_spec.rb:28
+
 ## Other things
 
 ### Sitemap test
