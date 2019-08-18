@@ -1,11 +1,15 @@
-This page describes Open Food Network's API. It is based on Spree's API,
-which has [extensive documentation](https://guides.spreecommerce.com/api/)
-([source](https://github.com/spree/api.spreecommerce.com)). See also
-[spree-api's routes.rb](https://github.com/spree/spree/blob/master/api/config/routes.rb).
+This page is UNDER CONSTRUCTION until https://github.com/openfoodfoundation/openfoodnetwork/issues/3001 is considered completed/closed.
 
-The Open Food Network API is not finished. Entries that are ~~crossed out~~
-are candidates for addition.
 
+This page describes Open Food Network's API.
+
+OFN API is no longer based on Spree's API and only includes OFN specific endpoints.
+
+##### Some basic API implementation details for developers
+The OFN API is implemented in a specific namespace /api. There are quite a few endpoints that are not under /api that render json, particularly in /admin (Where they are mixed with html rendering endpoints). We do not consider these endpoints as part of the OFN API.
+
+AMS is the serialization solution used in the OFN API, that means we stopped using rabl files in OFN.
+In OFN codebase, there should be no API code under app/views because AMS serializers should all be under /app/serializers.
 
 ## Quick links
 
