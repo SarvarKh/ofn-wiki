@@ -43,7 +43,7 @@ Identify all pull requests that got merged since the last release.
     git fetch upstream
     git checkout upstream/master
     latest="$(git tag --sort="v:refname" | tail -1)"
-    git log "$latest.." --merges --oneline | cut -d ' ' -f 5 | tr -d '#' | while read n; do echo "https://github.com/openfoodfoundation/openfoodnetwork/pull/$n"; done | xargs firefox
+    git log "$latest.." --merges --oneline | grep -oP 'Merge pull request #\K[0-9]+(?= from)' | while read n; do echo "https://github.com/openfoodfoundation/openfoodnetwork/pull/$n"; done | xargs firefox
     ```
 **Get the release notes from each of these pull requests**. If no release notes are specified you can just copy the pull request title. We only include PRs that have been merged into `master`.
 
