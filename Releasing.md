@@ -84,3 +84,9 @@ Keep in mind that any merges done to `master` while the release is in draft won'
 ## Who has the release power :zap: :muscle: 
 
 All Ha-Ri certified/core devs will now do [releases](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Pipeline-development-process#release) on a rotating basis.
+
+## Deployment
+
+We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. After you deployed, let the instance managers know so that they can run some basic tests.
+
+> @kirstenl @lin-d-hop @rachel @Anna @tschumilas @LaurieWayne @Theo The new release has been deployed to all instances. It's time for your after-deploy checks.
