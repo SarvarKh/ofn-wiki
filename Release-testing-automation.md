@@ -101,6 +101,9 @@ We don't check it's the outcome of a checkout but it's fine.
 
 ### Customers : add a customer and edit its credentials afterwards
 
+Adding a customer covered in spec/features/admin/customers_spec.rb:286
+Editing a customer covered in spec/features/admin/customers_spec.rb:96. Excludes billing and shipping address.
+
 ## Bulk Order Management
 
 ### Make several order for an ongoing OC, but for the same product
