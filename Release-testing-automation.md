@@ -58,7 +58,14 @@ Covered in: spec/features/consumer/shopping/shopping_spec.rb:289
 
 ### Press continue
 
+Covered in: spec/support/request/shop_workflow.rb:4. Although that method is
+only used in spec/features/consumer/shopping/embedded_shopfronts_spec.rb and
+spec/features/consumer/shopping/variant_overrides_spec.rb
+
 ### See your cart, but go back “continue shopping” in order to add another product
+
+Not covered although various tests visit that URL like
+spec/features/consumer/shopping/shopping_spec.rb:269
 
 ### Delete one of the first product you’ve added on the cart and change the quantity on another one
 
