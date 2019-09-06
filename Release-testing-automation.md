@@ -109,7 +109,13 @@ Editing a customer covered in spec/features/admin/customers_spec.rb:96. Excludes
 Specs in spec/features/admin/bulk_order_management_spec.rb:33,85 are better as view or controller specs.
 
 ### Make several order for an ongoing OC, but for the same product
+
+These are done as part of the setup phase of the following tests.
+
 ### Login with super admin (and/or the producer / shop where you put the orders)
+
+Logged in as the admin in almost all the tests below.
+
 ### Go to /admin/orders/bulk_management
 
 Covered in: spec/features/admin/bulk_order_management_spec.rb:17
