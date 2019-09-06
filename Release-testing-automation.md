@@ -106,15 +106,33 @@ Editing a customer covered in spec/features/admin/customers_spec.rb:96. Excludes
 
 ## Bulk Order Management
 
+Specs in spec/features/admin/bulk_order_management_spec.rb:33,85 are better as view or controller specs.
+
 ### Make several order for an ongoing OC, but for the same product
 ### Login with super admin (and/or the producer / shop where you put the orders)
 ### Go to /admin/orders/bulk_management
+
+Covered in: spec/features/admin/bulk_order_management_spec.rb:17
+
 ### Are you able to change weight and was the order total recalculated accordingly?
+
+Covered in: spec/features/admin/bulk_order_management_spec.rb:190
+
 ### Are you able to change quantity and was the order total recalculated accordingly ?
+
+Covered in: spec/features/admin/bulk_order_management_spec.rb:208
+
 ### Are you able to cancel an order
 ### Are you able to add columns?
 ### Are you able to search for a product?
+
+Not a product but an email
+
+Covered in: spec/features/admin/bulk_order_management_spec.rb:434
+
 ### Are you able to change the dates and see results accordingly?
+
+Covered in: spec/features/admin/bulk_order_management_spec.rb:445
 
 ## Subscriptions
 
