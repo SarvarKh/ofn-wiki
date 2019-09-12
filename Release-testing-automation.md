@@ -186,10 +186,25 @@ Covered in: spec/features/admin/subscriptions_spec.rb:28
 ## Reports
 
 ### Orders and fulfillment reports
+
+Covered in: spec/features/admin/reports_spec.rb:239
+
 ### Packing reports
+
+Briefly covered in: spec/features/admin/reports/packing_report_spec.rb:19
+
 ### Customers
+
+Too briefly covered in: spec/features/admin/reports_spec.rb:34
+Pretty decent unit test coverage in spec/lib/open_food_network/customers_report_spec.rb.
+
 ### Xero
+
+Covered in: spec/features/admin/reports_spec.rb:390
+
 ### Sales tax
+
+Covered in: spec/features/admin/reports_spec.rb:178
 
 ## Other things
 
