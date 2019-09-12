@@ -152,15 +152,25 @@ Covered in: spec/features/admin/bulk_order_management_spec.rb:445
 
 ### Can enable from superadmin?
 
+Covered in: spec/features/admin/enterprises_spec.rb:178,207
+
 ### Can create schedule?
 
 Covered in: spec/features/admin/schedules_spec.rb:21
 
 ### Can trigger subs?
 
+Partically covered in: spec/jobs/subscription_placement_job_spec.rb:41
+
+To actually ensure the job is triggered when configured in config/schedule.rb we should have a Datadog monitoring alert to notifiy us when that doesn't happen.
+
 ### Get emails?
 
+Covered by spec/lib/open_food_network/subscription_summarizer_spec.rb:92,108 and spec/mailers/subscription_mailer_spec.rb
+
 ### Out of stock messaging works?
+
+Covered in: spec/mailers/subscription_mailer_spec.rb:26
 
 ### Editing sub, pausing sub?
 
