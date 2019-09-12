@@ -129,7 +129,15 @@ Covered in: spec/features/admin/bulk_order_management_spec.rb:190
 Covered in: spec/features/admin/bulk_order_management_spec.rb:208
 
 ### Are you able to cancel an order
+
+As a consumer of a shop, covered in: spec/features/consumer/shopping/orders_spec.rb:177
+
+No other scenarios seem to be covered.
+
 ### Are you able to add columns?
+
+Covered in almost all tests in spec/features/consumer/shopping/orders_spec.rb using `AdminHelper#toggle_columns`.
+
 ### Are you able to search for a product?
 
 Not a product but an email
