@@ -179,9 +179,20 @@ Covered in: spec/features/admin/subscriptions_spec.rb:28
 ## Inventory
 
 ### Override price
+
+Covered in: spec/features/admin/variant_overrides_spec.rb:136
+
 ### Override stock levels
+
+Covered in: spec/features/admin/variant_overrides_spec.rb:136
+
 ### Check that override don't have an effect on the producer stock level
+
+Does not seem to be covered. Not even in the controller tests, where it makes sense.
+
 ### Reset stock levels
+
+Covered in: spec/features/admin/variant_overrides_spec.rb:323
 
 ## Reports
 
