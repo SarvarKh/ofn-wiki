@@ -65,10 +65,10 @@ The pagination data in the payload should follow [this structure](https://github
 For filtered lists we use [ransack](https://github.com/activerecord-hackery/ransack).
 This search will be done on the index action typically.
 The filters will be sent through the query parameters and encoded under the q parameter, like this example:
-?q%5Bbill_address_firstname_start%5D=Luis&q%5Bbill_address_lastname_start%5D=Ramos&q%5Bcompleted_at_not_null%5D=true&q%5Bemail_cont%5D=luisramos@mail.com&q%5Bs%5D=completed_at+desc
+`?q%5Bbill_address_firstname_start%5D=Luis&q%5Bbill_address_lastname_start%5D=Ramos&q%5Bcompleted_at_not_null%5D=true&q%5Bemail_cont%5D=luisramos@mail.com&q%5Bs%5D=completed_at+desc`
 
 This will enable us to simply filter results using ransack and params[:q] like [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/services/search_orders.rb#L26).
 
-Regarding input data for POST and PUT endpoints where client will send data to create or update resources.
-This data is currently being sent via form_data. We should probably switch all our endpoints to take json data from clients instead.
+Regarding input data for POST and PUT endpoints where clients will send data to create or update resources.
+This data is currently being sent via form_data and read through params in the api controllers (we should probably switch all our endpoints to take json data from clients instead but for now we keep form data).
 
