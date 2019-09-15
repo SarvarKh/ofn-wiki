@@ -19,7 +19,7 @@ The OFN API is implemented in a specific namespace /api. There are quite a few e
 AMS is the serialization solution used in the OFN API, that means we stopped using rabl files in OFN.
 In OFN codebase, there should be no API code under app/views because AMS serializers should all be under /app/serializers.
 
-### How to build a new API endpoint (with exemplar)
+### How to build a new API endpoint (with examples)
 
 #### Routes
 To build a new API endpoint first you need to check what endpoint or action you what to add.
