@@ -22,13 +22,13 @@ In OFN codebase, there should be no API code under app/views because AMS seriali
 ### How to build a new API endpoint (with examples)
 
 #### Routes
-To build a new API endpoint first you need to check what endpoint or action you what to add.
+To build a new API endpoint, first, you need to check what endpoint or action you what to add.
 There's a API specific routes file for API routes [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/config/routes/api.rb).
 
 We will use api/products/bulk_products as our "good" example, you can see this endpoint is a specific GET endpoint in the api routes file [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/config/routes/api.rb#L5).
 
 Some comments about this example api/products/bulk_products endpoint:
-- this could be the default index endpoint in the main /products route but because it's returning "products the user can edit" and not "all products the user can see", it's acceptable to have it in a different url, in this case api/products/bulk_products. The name bulk refers to the client page that uses this endpoint, ideally this should not be the case the the endpoint should only refer to the data it returns, not its clients. In this case a better name would be for example api/products/editable.
+- this could be the default index endpoint in the main /products route but because it's returning "products the user can edit" and not "all products the user can see", it's acceptable to have it in a different url, in this case api/products/bulk_products. The name bulk refers to the client page (bulk products edit page) that uses this endpoint, ideally this should not be the case, the endpoint should only refer to the data it returns, not its clients. In this case a better name would be for example api/products/editable.
 
 #### Controllers
 All API controllers are now under app/controllers/api [here](https://github.com/openfoodfoundation/openfoodnetwork/tree/master/app/controllers/api).
@@ -44,9 +44,9 @@ In this products controller you will also find typical actions implemented:
 - index (not present in this case) - GET /api/products - lists products
 
 #### Serializers - Output Payloads
-In order to create the results for your endpoint, you should use AMS Serializers, you can re-use existing ones, they are all under app/api/serializers [here](https://github.com/openfoodfoundation/openfoodnetwork/tree/master/app/serializers/api), or you can create new ones in the same folder.
+In order to create the results for your endpoint, you should use AMS Serializers, you can re-use existing ones, they are all under app/serializers/api [here](https://github.com/openfoodfoundation/openfoodnetwork/tree/master/app/serializers/api), or you can create new ones in the same folder.
 
-Note about serializers usage: a lot of these serializers are used outside the API: they are used to render json data that is injected in the DOM of the pages rendered.
+Note about serializers usage: a lot of these serializers are used outside the API: they are used to render json data that is injected in the DOM of the pages rendered. For example, a list of enterprises is injected in the DOM [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/views/checkout/edit.html.haml#L5) using the Api::EnterpriseSerializer.
 
 Note about the admin namespace: currently we have two namespaces app/serializers/api and app/serializers/api/admin. The api/admin folder contains serarializers for the admin side of the OFN app but I dont think this is consistent... there's no admin namespace in the API itself and the API uses both serializers from serializers/api/ and serializers/api/admin...
 
