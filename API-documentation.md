@@ -49,9 +49,9 @@ In order to create the results for your endpoint, you should use AMS Serializers
 
 Note about serializers usage: a lot of these serializers are used outside the API: they are used to render json data that is injected in the DOM of the pages rendered. For example, a list of enterprises is injected in the checkout page's DOM [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/views/checkout/edit.html.haml#L5) using the Api::EnterpriseSerializer.
 
-Note about the admin namespace: currently we have two namespaces app/serializers/api and app/serializers/api/admin. The api/admin folder contains serarializers for the admin side of the OFN app but I dont think this is consistent... there's no admin namespace in the API itself and the API uses both serializers from serializers/api/ and serializers/api/admin...
+Note about the admin namespace: currently we have two namespaces app/serializers/api and app/serializers/api/admin. The api/admin folder contains serarializers for the admin side of the OFN app but it's not consistent... there's no admin namespace in the API itself and the API uses both serializers from serializers/api/ and serializers/api/admin...
 
-A note about managing Serializers: we should keep the number of serializers to a minimum, make sure you really need a new serializer when you create one. In some cases, you will need a specific serializer for the same entity, we dont have conventions for this yet but try to make these generic if possible, see for example enterprise_thin_serializer, the enterprise_serializer and the basic_enterprise_serializer. This is not simple but necessary for enterprises.
+A note about managing Serializers: we should keep the number of serializers to a minimum, make sure you really need a new serializer when you create one and that you cannot adapt an existing one to your needs. In some cases, you will need a specific serializer for the same entity, we dont have conventions for this yet but try to make these generic if possible, see for example enterprise_thin_serializer, the enterprise_serializer and the basic_enterprise_serializer. This is not simple but necessary for enterprises.
 
 #### Pagination
 In OFN we use [kaminari](https://github.com/kaminari/kaminari) for pagination.
