@@ -47,7 +47,7 @@ In this products controller you will also find typical actions implemented:
 #### Serializers - Output Payloads
 In order to create the results for your endpoint, you should use AMS Serializers, you can re-use existing ones, they are all under app/serializers/api [here](https://github.com/openfoodfoundation/openfoodnetwork/tree/master/app/serializers/api), or you can create new ones in the same folder.
 
-Note about serializers usage: a lot of these serializers are used outside the API: they are used to render json data that is injected in the DOM of the pages rendered. For example, a list of enterprises is injected in the DOM [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/views/checkout/edit.html.haml#L5) using the Api::EnterpriseSerializer.
+Note about serializers usage: a lot of these serializers are used outside the API: they are used to render json data that is injected in the DOM of the pages rendered. For example, a list of enterprises is injected in the checkout page's DOM [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/views/checkout/edit.html.haml#L5) using the Api::EnterpriseSerializer.
 
 Note about the admin namespace: currently we have two namespaces app/serializers/api and app/serializers/api/admin. The api/admin folder contains serarializers for the admin side of the OFN app but I dont think this is consistent... there's no admin namespace in the API itself and the API uses both serializers from serializers/api/ and serializers/api/admin...
 
