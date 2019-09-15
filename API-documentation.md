@@ -28,7 +28,8 @@ There's a API specific routes file for API routes [here](https://github.com/open
 We will use api/products/bulk_products as our "good" example, you can see this endpoint is a specific GET endpoint in the api routes file [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/config/routes/api.rb#L5).
 
 Some comments about this example api/products/bulk_products endpoint:
-- this could be the default index endpoint in the main /products route but because it's returning "products the user can edit" and not "all products the user can see", it's acceptable to have it in a different url, in this case api/products/bulk_products. The name bulk refers to the client page (bulk products edit page) that uses this endpoint, ideally this should not be the case, the endpoint should only refer to the data it returns, not its clients. In this case a better name would be for example api/products/editable.
+- this could be the default index endpoint in the main /products route but because it's returning "products the user can edit" and not "all products the user can see", it's acceptable to have it in a different url, in this case api/products/bulk_products
+- the name bulk refers to the client page (bulk products edit page) that uses this endpoint, ideally this should not be the case, the endpoint should only refer to the data it returns, not its clients. In this case a better name would be for example api/products/editable.
 
 #### Controllers
 All API controllers are now under app/controllers/api [here](https://github.com/openfoodfoundation/openfoodnetwork/tree/master/app/controllers/api).
