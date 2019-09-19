@@ -50,3 +50,23 @@ Bad
 
 Good
 `expect(json_response['errors']).to eq I18n.t('admin.order_cycles.bulk_update.no_data')`
+
+# Performance
+
+### Avoid N+1 queries
+#### Eager loading attributes
+##### Example 1
+In app/serializers/api/address_serializer.rb we want to add the country to the address so we do:
+```
+def country_name
+    object.country.andand.name
+end
+```
+If address.country is not eager loaded, this code will trigger a N+1 query.
+
+TODO: how to avoid this
+
+##### Example 1
+Using has_many declarations in serializers is one of the most common causes of N+1 queries in code.
+
+TODO: how to avoid this
