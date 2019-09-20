@@ -11,12 +11,12 @@ sudo apt install libssl1.0-dev
 
 # Install Ruby.
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv --depth=1
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build --depth 1
 (cd ~/.rbenv && src/configure && make -C src)
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 . ~/.bashrc
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build --depth 1
-rbenv install 2.2.10
+rbenv install 2.1.9
 
 # Install gems.
 cd openfoodnetwork
