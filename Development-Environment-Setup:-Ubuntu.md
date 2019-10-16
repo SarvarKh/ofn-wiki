@@ -76,3 +76,24 @@ Next we create a development user (with superuser privileges) for postgres. The 
 ```bash
 sudo -u postgres createuser --superuser --pwprompt ofn
 ```
+
+## Step 7. Install Chrome (for Capybara/Selenium testing) if required
+**Oct 2019**: Newer installations of Ubuntu might come with Chromium installed via snap. As a result you may need to install Google Chrome and the Chrome Driver. *If your tests run correctly without these steps, you may ignore them*.
+
+If you encounter an error such as `Failure/Error: Capybara::Selenium::Driver .new(app, browser: :chrome, options: options) .tap { |driver| driver.browser.download_path = DownloadsHelper.path.to_s } NoMethodError: undefined method `strip' for nil:NilClass`, the following installation instructions should solve your issue:
+
+### Install Google Chrome
+
+```bash
+sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get -y update
+sudo apt-get -y install google-chrome-stable
+```
+
+### Install Chrome Driver
+
+```bash
+wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+```
