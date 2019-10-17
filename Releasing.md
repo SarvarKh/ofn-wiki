@@ -18,7 +18,7 @@ Releases follow a set weekly schedule. They get drafted by the release manager i
 
 See the reasoning behind this process in [Release testing next steps](https://community.openfoodnetwork.org/t/release-testing-next-steps/1741/10) and the conversations raised by [Maikel](https://openfoodnetwork.slack.com/archives/C02TZ6X00/p1571294180029100) and [Luis](https://openfoodnetwork.slack.com/archives/CAVTM01QB/p1571145642017500).
 
-I feel obliged to share the gif @lin-d-hop and @RachL found. Remember, Tuesday is the day our users we'll receive our :heart:
+I feel obliged to share the gif [@lin-d-hop](https://github.com/lin-d-hop) and [@RachL](https://github.com/RachL) found. Remember, Tuesday is the day our users we'll receive our :heart:
 
 ![](https://media.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif)
 
