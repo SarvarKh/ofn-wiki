@@ -14,7 +14,7 @@
 
 ## When do releases happen :steam_locomotive: :train: :train:
 
-Releases follow a set weekly scheudle. They get drafted by the release manager in charge every Thursday ready for testers to do their job and give their approval on Monday when the release manager will publish it. Then, we deploy on Tuesday.
+Releases follow a set weekly schedule. They get drafted by the release manager in charge every Thursday, then it will be ready for testers to do their magic and give their approval until Monday when the release manager will publish it. Then, we deploy on Tuesday.
 
 See the reasoning behind this process in [Release testing next steps](https://community.openfoodnetwork.org/t/release-testing-next-steps/1741/10) and the conversations raised by [Maikel](https://openfoodnetwork.slack.com/archives/C02TZ6X00/p1571294180029100) and [Luis](https://openfoodnetwork.slack.com/archives/CAVTM01QB/p1571145642017500).
 
