@@ -14,12 +14,18 @@
 
 ## When do releases happen :steam_locomotive: :train: :train:
 
-There's no set schedule for releasing. We just create them on demand when we
-decide so in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel, but once every 2 weeks is a good guideline.
+Releases follow a set weekly scheudle. They get drafted by the release manager in charge every Thursday ready for testers to do their job and give their approval on Monday when the release manager will publish it. Then, we deploy on Tuesday.
+
+See the reasoning behind this process in [Release testing next steps](https://community.openfoodnetwork.org/t/release-testing-next-steps/1741/10) and the conversations raised by [Maikel](https://openfoodnetwork.slack.com/archives/C02TZ6X00/p1571294180029100) and [Luis](https://openfoodnetwork.slack.com/archives/CAVTM01QB/p1571145642017500).
+
+I feel obliged to share the gif @lin-d-hop and @RachL found. Remember, Tuesday is the day our users we'll receive our :heart:
+
+![](https://media.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif)
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
 ### Notify translators
+
 It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please **notify translators in [#translations](https://openfoodnetwork.slack.com/messages/CFU9N7TGB/) that a new release will be prepared**. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
 
 ### Pull translations in
