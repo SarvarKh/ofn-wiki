@@ -162,7 +162,7 @@ Covered in: spec/features/admin/schedules_spec.rb:21
 
 Partically covered in: spec/jobs/subscription_placement_job_spec.rb:41
 
-To actually ensure the job is triggered when configured in config/schedule.rb we should have a Datadog monitoring alert to notifiy us when that doesn't happen.
+To actually ensure the job is triggered when configured in config/schedule.rb we enabled two Datadog monitors to alert us: https://app.datadoghq.com/monitors/13031025, https://app.datadoghq.com/monitors/13031012
 
 ### Get emails?
 
