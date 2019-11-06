@@ -89,7 +89,7 @@ Check above for Stripe and PayPal integration tests.
 
 Covered in: spec/features/consumer/shopping/checkout_spec.rb:148,317
 
-We don't check we actually get the email I believe.
+To actually ensure we get the email two Datadog monitors have been enabled: https://app.datadoghq.com/monitors#13031099, https://app.datadoghq.com/monitors#13031106.
 
 ### Check your order is appearing correctly in /admin/orders
 
