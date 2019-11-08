@@ -88,6 +88,12 @@ As releases don’t have a set schedule as we do them when we feel there are eno
 
 So, Luis will make sure Maikel takes over as soon as the release is published. Note that not all instances will deploy the release at the same time or some might even wait for the next one. As long as someone has a problem with the release you published, you’re the go-to person.
 
+In the same manner, the release is sanity tested on a scheduled basis by the following testers:
+
+* Lynne
+* Filipe
+* Rachel
+
 ### Meetings
 
 Is a responsibility of all Core team members, including developers, to attend to the Delivery Train catchup, which is held every 4 weeks. This is the way we have to review the process, get the status of the current roadmap priorities, receive updates on how major things are going and everything else related to the pipe.
