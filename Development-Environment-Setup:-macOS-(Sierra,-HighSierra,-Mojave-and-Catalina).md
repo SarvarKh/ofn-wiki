@@ -103,9 +103,9 @@ Then run:
 Which should give you `rvm is a function` if everything went well.
 
 ## Step 6. Installing the required version of ruby
-The OFN will require a specific version of Ruby. At the time of writing, the the ruby version required was stored in a file in the root folder of the Open Food Network project repository called [.ruby-version](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.ruby-version). The version I needed was `2.1.5`, so I installed it into RVM with:
+The OFN will require a specific version of Ruby. At the time of writing, the the ruby version required was stored in a file in the root folder of the Open Food Network project repository called [.ruby-version](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.ruby-version). The version I needed was `2.2.10`, so I installed it into RVM with:
 
-    $ rvm install 2.1.5
+    $ rvm install 2.2.10
 
 ## Step 7. Verify environment
 
@@ -175,7 +175,7 @@ The version of bundler that rvm installed for me was quite old, so when I ran `b
 
     $ gem update bundler
 
-And now, `bundle -v` gives me: `Bundler version 1.15.1`. 👍 
+And now, `bundle -v` gives me: `Bundler version 1.17.2`. 👍 
 
 You may need to run `gem install bundler` to install the bundler in the first place.
 
@@ -211,10 +211,7 @@ Go to [http://localhost:3000](http://localhost:3000) to play around!
 
 ## Step 14. Other things you should install
 
-PhantomJS: to support JS testing (unit tests and rails feature specs). The following should perform a install version `2.1.1` into your path:
-
-    $ brew update
-    $ brew install phantomjs
+Headless Chrome: make sure Google Chrome is installed so that you can run feature tests.
 
 ImageMagick: used by Spree to create and manipulate images
 
@@ -243,3 +240,8 @@ If this doesn't solve the error, you can try these commands (with libv8 3.16.14.
     $ gem install therubyracer -v YOUR_RUBY_RACER_VERSION
     $ gem install libv8 -v YOUR_VERSION -- --with-system-v8
 
+The previous commands were useful in OFN v1 with therubyracer and OSX HighSierra.
+In OFN v2 we use mini_racer and problems with mini_racer installation (usually on ruby upgrade or osx update) can be solved by following this guide:
+https://blog.driftingruby.com/updated-to-mojave/
+or this stack overflow post:
+https://stackoverflow.com/questions/34617452/how-to-update-xcode-from-command-line
