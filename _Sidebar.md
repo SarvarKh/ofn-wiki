@@ -3,7 +3,7 @@
 **Development environment setup**
 
 * [[Using Docker|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/DOCKER.md]]
-* [[macOS (Sierra, HighSierra and Mojave)|Development-Environment-Setup:-macOS-(Sierra,-HighSierra-and-Mojave)]]
+* [[macOS (Sierra, HighSierra and Mojave)|Development-Environment-Setup:-macOS-(Sierra,-HighSierra,Mojave-and-Catalina)]]
 * [[OS X (El Capitan)|Development Environment Setup: OS X (El Capitan)]]
 * [[OS X (Mavericks)|Development Environment Setup: OS X (Mavericks)]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
