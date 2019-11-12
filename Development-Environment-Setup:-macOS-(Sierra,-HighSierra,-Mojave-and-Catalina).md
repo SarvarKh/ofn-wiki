@@ -245,3 +245,6 @@ In OFN v2 we use mini_racer and problems with mini_racer installation (usually o
 https://blog.driftingruby.com/updated-to-mojave/
 or this stack overflow post:
 https://stackoverflow.com/questions/34617452/how-to-update-xcode-from-command-line
+If this doesnt work you can try to download Command Line Tools from
+https://developer.apple.com/download/more/ (search for "Command Line Tools")
+and install them manually.
