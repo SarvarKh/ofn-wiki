@@ -69,7 +69,7 @@ Keep in mind that any merges done to `master` while the release is in draft won'
 
 ## Publish the release
 
-**Wait for testers to give the ok** to publish the release; that will create a git tag for you. Check the `Testing the relese` section below for details.
+**Wait for testers to give the ok** to publish the release; that will create a git tag for you. Check the [Testing the release](#testing-the-release) section above for details.
 
 **Announce** in [#global-community](https://openfoodnetwork.slack.com/archives/C59ADD8F2) you just published a new release. Use the template below :point_down: :
 
