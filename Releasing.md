@@ -93,6 +93,6 @@ All Ha-Ri certified/core devs will now do [releases](https://github.com/openfood
 
 ## Deployment
 
-We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed.
+We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers
 
 > @channel The new release has been deployed to all instances. It's time for your after-deploy checks. You can see what was in the release here: < add the link to the release notes >
