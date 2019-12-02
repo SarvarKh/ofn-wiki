@@ -73,19 +73,12 @@ Keep in mind that any merges done to `master` while the release is in draft won'
 
 **Announce** in [#global-community](https://openfoodnetwork.slack.com/archives/C59ADD8F2) you just published a new release. Use the template below :point_down: :
 
-    ```
-    Hi all, just letting you know that we just released [version number] :tada:.
-    You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
-    ```
-**Nudge the next person to release**. You can set reminders in Slack for the dev and the translators:
-
 ```
-/remind @maikel “Probably time for a new release this week, it’s your turn :wink: Translators have just been notified to get the translations ready” in two weeks
+Hi all, just letting you know that we just released [version number] :tada:.
+You can read more about it here: https://github.com/openfoodfoundation/openfoodnetwork/releases/tag/[version number]
 ```
 
-```
-/remind #translations “A new release will be prepared soon, it's a good time to review transifex ;-)” in two weeks
-```
+**Nudge the next person to release**.
 
 ## Who has the release power :zap: :muscle: 
 
@@ -95,4 +88,8 @@ All Ha-Ri certified/core devs will now do [releases](https://github.com/openfood
 
 We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
 
-> @channel The new release has been deployed to all instances. It's time for your after-deploy checks. You can see what was in the release here: < add the link to the release notes >
+```
+@channel The new release has been deployed to all instances.
+It's time for your after-deploy checks. You can see what was in the release here:
+< add the link to the release notes >
+```
