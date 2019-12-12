@@ -32,8 +32,8 @@ exec $SHELL
 
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
-rbenv install 2.1.5
-rbenv global 2.1.5
+rbenv install 2.3.7
+rbenv global 2.3.7
 ruby -v
 ```
 New linux package versions for OpenSSL can cause conflicts with the build process for older ruby versions. If the build fails whilst attempting to install ruby 2.1.5, try the following:
