@@ -96,5 +96,5 @@ In the same manner, the release is sanity tested on a scheduled basis by the fol
 
 ### Meetings
 
-Is a responsibility of all Core team members, including developers, to attend to the Delivery Train catchup, which is held every 4 weeks. This is the way we have to review the process, get the status of the current roadmap priorities, receive updates on how major things are going and everything else related to the pipe.
+It is a responsibility of all Core team members, including developers, to attend to the Delivery Train catchup, which is held every 4 weeks. This is the way we have to review the process, get the status of the current roadmap priorities, receive updates on how major things are going and everything else related to the pipe.
 
