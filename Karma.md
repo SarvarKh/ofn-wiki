@@ -21,6 +21,14 @@ Check that NodeJS is installed. If you install from a package manager your bin m
 
 And then you should be ready to go (see 'Usage of Karma')....
 
+### On Debian 10
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+. .bashrc # or open new terminal
+nvm install 12
+npm install
+```
 
 ### On Ubuntu 12.04
 The npm shipped with 12.04 is broken, giving errors like:
