@@ -67,7 +67,7 @@ Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.co
 
 ### Update the Github issue
 
-Add a link to the **target commit** the new release is pinned to, a link to the **Semaphore build** for that commit, and a link to the **release draft** itself into the Github issue for the release so the release tester has a nice time :heart:.
+Add a link to the **Semaphore build** for the **target commit** of the new release, and a link to the **release draft** itself into the release's Github issue so the release tester has a nice time :heart:.
 
 ## Testing the release
 
