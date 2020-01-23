@@ -73,7 +73,7 @@ Add a link to the **target commit** the new release is pinned to, a link to the 
 
 Releases require some testing to ensure critical paths of the application keep working. Talk to one of the testers available to coordinate this (message in the #testing channel). Once the release's draft is finished and she is aware, you can **stage the target commit via the Semaphore build page** to a server with PayPal and Stripe integrations set up. These need to be tested.
 
-Keep in mind that any merges done to `master` while the release is in draft won't get tested unless we stage again. We don't have a specific release branch; we just have `master` and tag release versions to pinned commits in it.
+Keep in mind that any merges done to `master` while the release is in draft won't get tested (unless the release is redrafted with a new target commit and the new build is staged).
 
 ## Publish the release
 
