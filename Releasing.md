@@ -26,7 +26,7 @@ I feel obliged to share the gif [@lin-d-hop](https://github.com/lin-d-hop) and [
 
 ### Create an issue for tracking the release
 
-[New Release Issue](https://github.com/openfoodfoundation/openfoodnetwork/issues/new?assignees=&labels=&template=release.md&title=)
+Create a [New Release Issue](https://github.com/openfoodfoundation/openfoodnetwork/issues/new?assignees=&labels=&template=release.md&title=).
 
 ### Notify translators
 
@@ -65,7 +65,7 @@ Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/rele
 
 Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
 
-## Update the Github issue
+### Update the Github issue
 
 Add a link to the **target commit** for the new release, a link to the newly deafted release, and a link to the **Semaphore build** for that commit into the Github issue for the release so the release tester has a nice time :heart:.
 
