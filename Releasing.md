@@ -26,7 +26,7 @@ I feel obliged to share the gif [@lin-d-hop](https://github.com/lin-d-hop) and [
 
 ### Notify translators
 
-It's useful for translators to know when a release will happen so they can translate the latest entries for the new release. So, please **notify translators in [#translations](https://openfoodnetwork.slack.com/messages/CFU9N7TGB/) that a new release will be prepared**. If you can, do this a couple of days before preparing the release so that when you prepare the release the translations are all ready to go. Below you will find how to set a slack auto reminder to do this automatically for next time.
+*This is now automated with Slackbot* :+1:
 
 ### Pull translations in
 Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it. After merging the pull request, delete the `transifex` branch.
