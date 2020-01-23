@@ -24,6 +24,10 @@ I feel obliged to share the gif [@lin-d-hop](https://github.com/lin-d-hop) and [
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
+### Create an issue for tracking the release
+
+[New Release Issue](https://github.com/openfoodfoundation/openfoodnetwork/issues/new?assignees=&labels=&template=release.md&title=)
+
 ### Notify translators
 
 *This is now automated with Slackbot* :+1:
@@ -55,7 +59,7 @@ Identify all pull requests that got merged since the last release.
 
 ### Draft the release
 
-Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent.
+Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent. If you take a look at the master branch in [Semaphore](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/branches/master), you should see the Transifex commit you made in the steps above ("Update all locales with the latest Transifex translations").
 
 **Make sure the notes can be understood by humans** using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
 
