@@ -107,5 +107,5 @@ After you deployed, let the instance managers know so that they can run some bas
 ```
 @channel The new release has been deployed to all instances.
 It's time for your after-deploy checks. You can see what was in the release here:
-< add the link to the release notes >
+https://github.com/openfoodfoundation/openfoodnetwork/releases/latest
 ```
