@@ -94,7 +94,15 @@ All Ha-Ri certified/core devs will now do [releases](https://github.com/openfood
 
 ## Deployment
 
-We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
+We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. 
+
+You can deploy to all production servers with:
+
+```
+ansible-playbook playbooks/deploy.yml --limit all-prod -e "git_version=[release tag]"
+```
+
+After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
 
 ```
 @channel The new release has been deployed to all instances.
