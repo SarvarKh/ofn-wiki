@@ -16,23 +16,15 @@
 
 Releases follow a set weekly schedule. They get drafted by the release manager in charge every Thursday, then it will be ready for testers to do their magic and give their approval until Monday when the release manager will publish it. Then, we deploy on Tuesday.
 
-See the reasoning behind this process in [Release testing next steps](https://community.openfoodnetwork.org/t/release-testing-next-steps/1741/10) and the conversations raised by [Maikel](https://openfoodnetwork.slack.com/archives/C02TZ6X00/p1571294180029100) and [Luis](https://openfoodnetwork.slack.com/archives/CAVTM01QB/p1571145642017500).
-
-I feel obliged to share the gif [@lin-d-hop](https://github.com/lin-d-hop) and [@RachL](https://github.com/RachL) found. Remember, Tuesday is the day our users we'll receive our :heart:
-
-![](https://media.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif)
+![Release Tuesday!](https://media.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif)
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
-### Create an issue for tracking the release
 
-Create a [New Release Issue](https://github.com/openfoodfoundation/openfoodnetwork/issues/new?assignees=&labels=&template=release.md&title=).
-
-### Notify translators
-
-*This is now automated with Slackbot* :+1:
+* Create a [New Release Issue](https://github.com/openfoodfoundation/openfoodnetwork/issues/new?template=release.md).
 
 ### Pull translations in
+
 Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it.
 
 Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
@@ -61,9 +53,9 @@ Identify all pull requests that got merged since the last release.
 
 Draft a [new release](https://github.com/openfoodfoundation/openfoodnetwork/releases/new) in the Github UI. **Base the release on the commit with the last merged PR you want to include** ('Target->Recent Commits') and not `master`. There's always a chance new PR's are merged between the draft is created and the actual release is published, so this makes the release consistent. If you take a look at the master branch in [Semaphore](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/branches/master), you should see the Transifex commit you just made in the steps above (named "Update all locales with the latest Transifex translations").
 
-**Make sure the notes can be understood by humans** using the types of changes specified by [Keep a changelog](https://keepachangelog.com) and use only the sections that have at least one PR in it. Keep in mind these notes are the source of truth for everyone: devs, product people and users. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well.
+**Make sure the notes can be understood by humans.** List all user-facing changes first under their own headline. Then list the rest of the changes. Mention any dependencies on [ofn-install](https://github.com/openfoodfoundation/ofn-install) as well. Copy the user-facing changes to the #instance-managers Slack channel so that they can let people know.
 
-Unless agreement has been reached in the [#dev](https://openfoodnetwork.slack.com/messages/C2GQ45KNU) Slack channel that a major release is appropriate, releases only bump up the minor version (eg: from 1.16.0 to 1.17.0).
+A lot of releases contain only minor bug fixes and tech updates. We then increase the patch version number (1.0.x). If there are significant user-facing changes, we bump the minor version number (1.x.0). The major number is only updated for very big changes like the Spree upgrade from v1 to v2.
 
 ### Update the Github issue
 
