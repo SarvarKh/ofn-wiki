@@ -34,4 +34,4 @@ Type these commands to confirm subs orders (end of the OC):
 
 - Confirm Job
 
-`SubscriptionConfirmJob.new.perform (edited) `
+`SubscriptionConfirmJob.new.perform`
