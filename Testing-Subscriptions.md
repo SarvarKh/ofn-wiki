@@ -15,18 +15,18 @@ Edit the subscription and take the subscription ID from the URL.
 
 
 Type these commands to place subs orders (beginning of the OC):
-# open the Order Cycle (replace 2 with the OC ID below)
+- open the Order Cycle (replace 2 with the OC ID below)
 `OrderCycle.find_by_id(2).update_attribute(:orders_close_at, Time.now + 1000)`
 
-# reset proxy order (remove existing order) - (replace 3 with the subscription ID below)
+- reset proxy order (remove existing order) - (replace 3 with the subscription ID below)
 `ProxyOrder.find_by_subscription_id(3).update_attributes(order_id: nil, confirmed_at: nil, placed_at: nil)`
 `SubscriptionPlacementJob.new.perform`
 
 Check emails for the placement of the order....
 
 Type these commands to confirm subs orders (end of the OC):
-`# close orde cycle`
+- close orde cycle
 `OrderCycle.find_by_id(2).update_attribute :orders_close_at, Time.now - 1000`
 
-`# Confirm Job`
+- Confirm Job
 `SubscriptionConfirmJob.new.perform (edited) `
