@@ -14,9 +14,7 @@
 
 ## When do releases happen :steam_locomotive: :train: :train:
 
-Releases follow a set weekly schedule. They get drafted by the release manager in charge every Thursday, then it will be ready for testers to do their magic and give their approval until Monday when the release manager will publish it. Then, we deploy on Tuesday.
-
-![Release Tuesday!](https://media.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif)
+Releases follow a set weekly schedule. The release manager in charge will **draft the release on Thursday**, then it will be ready for testers to do their magic and give their approval until the release manager will **publish it on Monday**. Then, we **deploy on Tuesday**.
 
 ## How to make a release :spiral_notepad: :white_check_mark: 
 
