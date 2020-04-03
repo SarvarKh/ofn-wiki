@@ -26,6 +26,8 @@ Releases follow a set weekly schedule. The release manager in charge will **draf
 Check for a [Transifex pull request](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+head%3Atransifex) and merge it.
 
 Download all current translations from Transifex with the [Transifex client](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Internationalisation-(i18n)#transifex-client) and add them to the master branch.
+
+:warning: Make sure you don't have local uncommitted changes! You can run `git checkout .` to discard changes.
   ```sh
   git checkout master
   git pull upstream master
