@@ -39,5 +39,5 @@ Type these commands to confirm subs orders (end of the OC):
 
 
 With these commands you should be able to:
-- open the OC, run the placement job and receive the order placement email
-- close the OC, run the confirm job and receive the order confirmation email
+- open the OC, run the placement job and receive the order placement email immediately
+- close the OC, run the confirm job and receive the order confirmation email immediately
