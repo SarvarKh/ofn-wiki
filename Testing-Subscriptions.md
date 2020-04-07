@@ -10,6 +10,7 @@ Open console:
 - Open rails console with "bundle exec rails c"
 
 Setup Order Cycle, Schedule and Subscription for an Order Cycle that starts in the future.
+The subscription start date should be in the past so that orders are generated.
 Edit the Order Cycle and take the Order Cycle ID from the URL.
 Edit the subscription and take the subscription ID from the URL.
 
