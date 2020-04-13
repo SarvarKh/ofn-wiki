@@ -1,18 +1,14 @@
 ## Intro
-This guide will help you set up a development environment for OFN on Ubuntu (tested with 14.04 Trusty Tahr).
+This guide will help you set up a development environment for OFN on Ubuntu (tested with 16.04).
 
 ## Step 1. Install supporting packages
 
 ```bash
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-sudo apt-get install git postgresql-9.3 postgresql-common libpq-dev phantomjs
+sudo apt-get install git postgresql-9.5 postgresql-common libpq-dev
 ```
 
-In Ubuntu 18, you will need to replace python-software-properties software-properties-common.
-
-You can use postgresql-9.5 instead of postgresql-9.3 above.
-
-**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/script/setup) requires postgres-9.5.  See [Postgres Linux download](https://www.postgresql.org/download/linux/ubuntu/) for details of how to install that version.
+In Ubuntu 18, you will need to replace `python-software-properties` with `software-properties-common`.
 
 ## Step 2. Configure git
 ```bash
@@ -22,6 +18,12 @@ git config --global user.email "YOUR@EMAIL.com"
 ```
 
 ## Step 3. Install Ruby (using rbenv)
+
+Note: if installing on Ubuntu 18, you'll need to install the `libssl1.0-dev` package first with:
+```
+sudo apt install libssl1.0-dev
+```
+
 From https://gorails.com/setup/ubuntu/14.04
 
 ```bash
@@ -41,11 +43,7 @@ rbenv install 2.3.7
 rbenv global 2.3.7
 ruby -v
 ```
-New linux package versions for OpenSSL can cause conflicts with the build process for older ruby versions. If the build fails whilst attempting to install ruby 2.1.5, try the following:
 
-```bash
-curl -fsSL https://gist.github.com/mislav/055441129184a1512bb5.txt | rbenv install --patch 2.1.5
-```
 ## Step 4. Install node (using nodenv)
 
 ```sh
