@@ -47,7 +47,7 @@ ruby -v
 ## Step 4. Install node (using nodenv)
 
 ```sh
-git clone https://github.com/nodenv/nodenv.git ~/.nodenv --depth 1
+git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
 (cd ~/.nodenv && src/configure && make -C src)
 echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> .bashrc
 echo 'eval "$(nodenv init -)"' >> .bashrc
