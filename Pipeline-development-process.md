@@ -15,11 +15,10 @@ While occasional contributors just pick Github issues and contribute sporadicall
 This team is currently composed by:
 
 * Matt (Ri)
-* Luis (Ha)
-* Hugo (Shu)
+* Luis (Ri)
 * Maikel (Ri)
 * Pau (Ri)
-* Kristina (Ha)
+* Kristina (Ri)
 
 In its turn, the Core team has three levels depending on the experience of the developer.
 
