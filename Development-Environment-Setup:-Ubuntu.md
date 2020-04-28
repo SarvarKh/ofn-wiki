@@ -24,6 +24,10 @@ Note: if installing on Ubuntu 18, you'll need to install the `libssl1.0-dev` pac
 sudo apt install libssl1.0-dev
 ```
 
+Note: if you are on Ubuntu 19, you will see an ssl error about libssl1.0-dev not being available.
+You can probably fix this problem following [these instructions](https://github.com/rvm/rvm/issues/4680#issuecomment-515951866).
+
+
 From https://gorails.com/setup/ubuntu/14.04
 
 ```bash
@@ -43,9 +47,6 @@ rbenv install 2.3.7
 rbenv global 2.3.7
 ruby -v
 ```
-
-If you are on Ubuntu 19, you will see an ssl error about libssl1.0-dev being required but not being available.
-I fixed this problem following [these instructions](https://github.com/rvm/rvm/issues/4680#issuecomment-515951866).
 
 ## Step 4. Install node (using nodenv)
 
