@@ -28,7 +28,7 @@ Note: if you are on Ubuntu 19, you will see an ssl error about libssl1.0-dev not
 You can probably fix this problem following [these instructions](https://github.com/rvm/rvm/issues/4680#issuecomment-515951866).
 
 
-From https://gorails.com/setup/ubuntu/14.04
+Then you can follow the instructions from https://gorails.com/setup/ubuntu/14.04
 
 ```bash
 cd
