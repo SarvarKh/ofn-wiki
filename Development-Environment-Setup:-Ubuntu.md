@@ -23,9 +23,11 @@ Note: if installing on Ubuntu 18, you'll need to install the `libssl1.0-dev` pac
 ```
 sudo apt install libssl1.0-dev
 ```
-
-Note: if you are on Ubuntu 19, you will see an ssl error about libssl1.0-dev not being available.
-You can probably fix this problem following [these instructions](https://github.com/rvm/rvm/issues/4680#issuecomment-515951866).
+**If you are on Ubuntu 19+**, you'll need to update your apt sources in order to install `libssl1.0-dev`.
+1. Open `/etc/apt/sources.list` in a text editor of your choice.
+2. Append `deb http://security.ubuntu.com/ubuntu bionic-security main` to the end of the file
+3. Run `sudo apt update && apt-cache policy libssl1.0-dev`
+4. Run `sudo apt-get install libssl1.0-dev`
 
 
 Then you can follow the instructions from https://gorails.com/setup/ubuntu/14.04
