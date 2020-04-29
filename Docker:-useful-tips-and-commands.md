@@ -10,3 +10,4 @@ After [settings up your docker environment](https://github.com/openfoodfoundatio
 `sudo docker-compose run web bash -c 'bundle exec rake karma:start'`
 
 - How to access the database that the web container is using?
+`sudo docker-compose run web bash -c 'psql -h db -d open_food_network_dev -U ofn'`
