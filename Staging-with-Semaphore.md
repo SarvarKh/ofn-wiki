@@ -2,7 +2,13 @@
 
 ### Setup
 
-You can stage pull requests to https://staging.openfoodnetwork.org.au/ yourself. You need to
+You can stage pull requests to one of our staging servers:
+- `au-staging` accessible on https://staging.openfoodnetwork.org.au/
+- `fr-staging` accessible on https://staging.openfoodfrance.org/
+- `katuma-staging` accessible on https://staging.katuma.org/
+- `uk-staging` accessible on https://staging.openfoodnetwork.org.uk/
+
+To be able to do this, you need to:
 - [sign up with Semaphore](https://semaphoreci.com/users/sign_up) and
 - give your username to an OFN developer.
 
@@ -12,7 +18,7 @@ The developer gives you access to Semaphore by adding you to the [testers team](
 
 You can navigate to the staging process from any pull request. But before you stage, follow the checklist to prevent conflicts:
 
-- Check that nobody else is using the staging server. For example, make sure that no other [pull request is staged](https://github.com/openfoodfoundation/openfoodnetwork/pulls?q=is%3Aopen+is%3Apr+label%3Apr-staged-au).
+- Check that nobody else is using the staging server you want to use. For example for Australian staging server, make sure that no other people is using it by checking the `pr-staged-au` label [pull request is staged](https://github.com/openfoodfoundation/openfoodnetwork/pulls?q=is%3Aopen+is%3Apr+label%3Apr-staged-au).
 - Check that the pull request is approved, in the *Test Ready* column and has no test failures or merge conflicts. It needs Three big green ticks at the bottom of the pull request (nothing red).
 - Let others know that you are staging it by commenting on the pull request and putting a label on.
 
