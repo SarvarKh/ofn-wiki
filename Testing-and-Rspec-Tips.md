@@ -47,11 +47,16 @@ This is a good start, but we don't know whether our test is actually telling us 
 <h2>Convert specs to Rspec3</h2>
 As you make changes to the test code base, you are encouraged to convert the syntax to the rspec 3 syntax. You can do that by using the transpec tool: https://github.com/yujinakayama/transpec
 
-<h1>Debug tests</h1>
-It may be useful to see a real browser running the specs. You can also Debug things directly on the browser with this. This is how you can do it:
+<h1>Debugging  tests</h1>
+
+<h3>Running the browser</h3>
+
+It may be useful to see a real browser running the whole spec. You can also Debug things directly on the browser with this. This is how you can do it:
 
 - open spec/spec_helper.rb
-
-- remove the word headless
-
+- remove the word `headless`
 - done! you can add a "byebug" entry in your spec to get the test execution to stop at some point
+
+<h3>Viewing a screenshot</h3>
+
+You can also view a screenshot for a specific moment in the test using Capybara's helper method `save_and_open_screenshot`. Add that line in any point, run the test, and you'll see a nice screenshot of exactly what Capybara is seeing at that point in the test execution.
