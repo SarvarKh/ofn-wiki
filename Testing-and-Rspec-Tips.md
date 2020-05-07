@@ -59,4 +59,12 @@ It may be useful to see a real browser running the whole spec. You can also Debu
 
 <h3>Viewing a screenshot</h3>
 
-You can also view a screenshot for a specific moment in the test using Capybara's helper method `save_and_open_screenshot`. Add that line in any point, run the test, and you'll see a nice screenshot of exactly what Capybara is seeing at that point in the test execution.
+You can also view a screenshot for a specific moment in the test using Capybara's helper method `save_and_open_screenshot`. Add that line in any point, run the test, and you'll see a nice screenshot of exactly what Capybara is seeing at that point in the test execution, eg:
+
+```
+visit shops_path
+save_and_open_screenshot
+click_link "Entperprise 1"
+```
+
+Remember to delete the line before commiting!
