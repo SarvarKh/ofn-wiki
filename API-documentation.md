@@ -73,3 +73,9 @@ This will enable us to simply filter results using ransack and params[:q] like [
 Regarding input data for POST and PUT endpoints where clients will send data to create or update resources.
 This data is currently being sent via form_data and read through params in the api controllers (we should probably switch all our endpoints to take json data from clients instead but for now we keep form data).
 
+### API development tips
+All PRs that make a change to the API should also make a change to the swagger doc so that the documentation evolves with the code. To do this you can:
+- use [swagger](https://app.swaggerhub.com/) to open the swagger doc: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/swagger.yaml
+- update the docs according to the changes in your PR
+- export the changes to a file and include that new swagger.yml file with your changes in the PR    
+
