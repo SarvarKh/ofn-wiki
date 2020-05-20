@@ -1,6 +1,4 @@
-This page describes Open Food Network's API (this page has been rebuilt in Sept 2019 as part of the issue #3001).
-
-OFN API is no longer based on Spree's API and only includes OFN specific endpoints.
+This page describes Open Food Network's API.
 
 ### API DOCUMENTATION
 We use swagger and json-api to document the OFN API. You can see the documentation here:
