@@ -1,4 +1,5 @@
-#### Some basic API implementation details for developers
+This page contains important information if you are a dev planning to improve the OFN API in some way.
+
 The OFN API is implemented in a specific namespace /api. There are quite a few endpoints that are not under /api that render json, particularly in /admin (where they are mixed with html rendering endpoints). We do not consider these endpoints as part of the OFN API.
 
 AMS is the serialization solution used in the OFN API, that means we stopped using rabl files in OFN.
