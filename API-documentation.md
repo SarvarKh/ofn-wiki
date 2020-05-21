@@ -12,6 +12,11 @@ backend at the right of the edit user page. That can be passed with the
 The user api key can be found in the OFN backoffice: click on the menu Users, select the user that will use the API, see "API KEY".
 If you are not an admin of the instance you are trying to access, you will need to request your API token to an admin of that instance.
 
+You can also fetch your API key in the html content of some pages in the BackOffice.
+- Login, go to the BackOffice and load the Products page
+- Open dev tools
+- Search for "SpreeApiKey" in the html content: that will be your API key
+ 
 #### Basic Access Example
 Using the command line, you can use curl to get some data from the OFN API.
 
