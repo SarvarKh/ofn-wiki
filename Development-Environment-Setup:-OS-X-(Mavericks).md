@@ -1,6 +1,7 @@
 You can follow the generic OSX setup guide [here](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup%3A-OS-X). This page contains version specific setup details.
 
-## Installing RVM
+## Installing RVM in OSX v10.9 Mavericks
+
 To install RVM and the latest version of ruby and rails, which is probably a good idea, use the following command. NOTE: if you REALLY don't want RVM to install anything expect RVM, remove the --rails flag.
 
     $ curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enable
@@ -11,19 +12,9 @@ When that is done you should be able to restart your terminal and run:
 
 Which should give you `rvm is a function` if everything went well.
 
+## Manage postgres with Lunchy
 
-
-
-
-## Step 8: Installing Dependencies
-We now have ruby and rails installed, but we still require a couple of extra packages before anything will work. The main two are the Postgres database, and PhantomJS to support JS testing. Both can be installed with Homebrew:
-
-    $ brew update
-    $ brew install phantomjs
-    $ brew install postgres
-
-## Step 9: Setting up postgres
-PhantomJS should be fine to just be left alone after installing, but postgres needs a bit of love to get up and running. The internet recommended that I use [Lunchy](https://github.com/eddiezane/lunchy), to help manage postgres:
+You can manage postgres with [Lunchy](https://github.com/eddiezane/lunchy):
 
     $ gem install lunchy
 
@@ -40,6 +31,11 @@ You should now be able to start the postgres server with:
     $ lunchy start postgres
 
 Postgres can be stopped with: `$ lunchy stop postgres` but don't do this now.
+
+
+
+
+
 
 ## Step 10. Adding OFN users (roles) to postgres
 Postgres should have been set up with your current user as the default postgres admin user, meaning that you should be able to set up new postgres users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. You are good to go if: 
