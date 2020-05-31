@@ -76,17 +76,7 @@ Now we can install some supporting gems:
 gem install bundler
 gem install zeus
 ```
-
-## Step 6. Set up Postgresql
-**Jan 2018**: The new [set-up script](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/script/setup) now performs this step for you.
-
-Next we create a development user (with superuser privileges) for postgres. The password should be `f00d`, as referenced in `config/database.yml`.
-
-```bash
-sudo -u postgres createuser --superuser --pwprompt ofn
-```
-
-## Step 7. Install Chrome (for Capybara/Selenium testing) if required
+## Step 6. Install Chrome (for Capybara/Selenium testing) if required
 **Oct 2019**: Newer installations of Ubuntu might come with Chromium installed via snap. As a result you may need to install Google Chrome and the Chrome Driver. *If your tests run correctly without these steps, you may ignore them*.
 
 If you encounter an error such as `Failure/Error: Capybara::Selenium::Driver .new(app, browser: :chrome, options: options) .tap { |driver| driver.browser.download_path = DownloadsHelper.path.to_s } NoMethodError: undefined method `strip' for nil:NilClass`, the following installation instructions should solve your issue:
