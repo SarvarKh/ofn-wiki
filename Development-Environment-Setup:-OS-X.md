@@ -77,8 +77,6 @@ If you don't ever use docs for gems (I don't), you can disable installation of d
 ## Step 5. RVM
 Ruby Version Manager is a very useful tool which facilitates the management of ruby configuration on a per-project basis, allowing any number of setups using different versions of ruby, rails or gems to be used on the same machine relatively seamlessly.
 
-To install RVM on Mavericks v10.9 see the [OSX v10.9 specific setup page](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup%3A-OS-X-(Mavericks)).
-
 For any other OSX version, the process to download and install RVM uses [gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) to verify the integrity of the RVM installer. It might be worth checking the [RVM homepage](https://rvm.io/) to ensure this is still the correct process to follow. You can install gpg using Homebrew:
 
     $ brew install gpg
@@ -120,13 +118,60 @@ Run each of the following just to check that you get sensible numbers out of eac
     $ rvm -v
     $ ruby -v
 
+## Step 8: Installing And Setting up Postgres
+We now have ruby and rails installed, but we still require postgres, which can be installed with Homebrew:
 
-To continue you can follow one of the version specific pages:- [Mavericks](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup%3A-OS-X-%28Mavericks%29)
-- [El Capitan](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup%3A-OS-X-%28El-Capitan%29)
-- [Mojave and later](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Development-Environment-Setup%3A-macOS-%28Sierra%2C-HighSierra%2C-Mojave-and-Catalina%29)
+    $ brew update
+    $ brew install postgres
+
+You should now be able to get launchd to start the postgres server (and restart as login) with:
+
+    $ brew services start postgresql
+
+Postgres can be stopped with: `$ brew services stop postgresql` but don't do this now.
+
+If, for some reason, this doesn't work for you, see how to manage postgres with lunchy at the troubleshooting section at the bottom of this page.
+
+## Step 9. Adding OFN users (roles) to postgres
+Postgres should have been set up with your current user as the default postgres admin user, meaning that you should be able to set up new postgres users directly in the command prompt. YOU MAY NEED TO RESTART TERMINAL HERE. You are good to go if: 
+
+    $ which createuser
+
+gives you something like: `/usr/local/bin/createuser`
+
+We need to add the database user(s) defined in the config/database.yml file in the OFN project repository. At the time of writing the user was `ofn` and the password was `f00d`. You can add a postgres user using:
+
+    $ createuser --superuser --pwprompt ofn
 
 
-### Troubleshooting
+Which will create a user named `ofn` and then prompt the user for the password when run. Make sure you enter the password exactly as it appears in the database.yml file. The reason that the --superuser is required is that we are using foreign keys which are registered in postgres as triggers, which in turn can only be added and removed by superusers.
+
+Next add the development and test databases (open_food_network_dev and open_food_network_test at the time of writing):
+
+    $ createdb open_food_network_dev --owner=ofn
+    $ createdb open_food_network_test --owner=ofn
+
+## Step 10. Other things you should install
+
+Headless Chrome: make sure Google Chrome is installed so that you can run feature tests.
+
+ImageMagick: used to create and manipulate images
+
+    $ brew update
+    $ brew install imagemagick
+
+[Zeus](https://github.com/burke/zeus): Rails preloader, so you don't have to reload the entire Rails stack all the time
+
+    $ gem install zeus
+
+Karma: a test runner for pure javascript (which we use to test our AngularJS)
+
+[Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
+
+## Step 11. Done
+Now you are ready to follow the [GETTING STARTED guide](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md)
+
+## Troubleshooting
 #### Git
 If you get an error (as I did) that says: `Warning: /usr/bin occurs before /usr/local/bin`, it means that you probably have installed the full XCode suite and the default version of Git that ships with XCode is stilling in /usr/bin, meaning our new version of Git that we are installing with Homebrew will not be used because as the error tells us: /usr/bin occurs before /usr/local/bin in the PATH. The following command will fix that by adding a line to ~/.bash_profile.
 
@@ -144,3 +189,92 @@ If you get `gpg: keyserver receive failed: No keyserver available`, try a differ
 If you still see an error like `gpg: keyserver receive failed: No data`, wait, it may be due to server unavailability, and try again a few minutes later.
 
 If instead you see a message like `gpg: keyserver receive failed: No route to host` then chances are that gpg decides to use IPv6 while it should use IPv4. You can check out https://github.com/rvm/rvm/issues/4215#issuecomment-435221616 for a solution.
+
+
+#### Update bundler version
+
+The version of bundler that rvm installed for me was quite old, so when I ran `bundle -v`, I got: `1.7.6`. I updated the version of bundler using:
+
+    $ gem update bundler
+
+And now, `bundle -v` gives me: `Bundler version 1.17.2`. 👍 
+
+You may need to run `gem install bundler` to install the bundler in the first place.
+
+You should now be able to install the required gems with: 
+
+    $ bundle install
+
+Once all gems have been installed, check that rails is ready to go:
+
+    $ bundle exec rails -v
+
+#### ./script/setup doesn't work
+
+If script/setup doesn't work for you, you can run the commands manually.
+
+Make sure you have a valid application.yml file (you should edit locale, currency, etc this as required):
+
+    $ cp config/application.yml.example config/application.yml
+
+Install the required gems using:
+
+    $ bundle install
+
+Set up the database(s):
+
+    $ bundle exec rake db:setup db:test:prepare
+
+You will probably want to insert some seed data into the database so that the server has all the things it needs to start up:
+
+    $ bundle exec rake db:seed
+
+And load some sample data for your environment:
+
+    $ bundle exec rake ofn:sample_data
+
+#### OpenSSL issues
+
+Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be installed with Homebrew, seeing as we have a bunch of gems that need up-to-date openssl headers. Homebrew had already installed OpenSSL as a [keg-only dependency](http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies) on my system, and so all I needed to do was to add appropriate symlinks using:
+
+    $ brew link --force openssl
+
+Homebrew complains very forcefully about this, so an alternative way is to configure bundler with the appropriate compiler flags (shown in the output of the brew link command above) for the gems that need it - for me this was only eventmachine (Steve, November 2016):
+
+    $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
+
+## libv8 and mini_racer issues
+
+If you run into an issue with the libv8 gem try:
+
+```
+$ gem install libv8 -v 3.16.14.11 -- --with-system-v8
+```
+
+Problems with mini_racer installation (usually on ruby upgrade or osx update) can be solved by following this guide:
+https://blog.driftingruby.com/updated-to-mojave/
+or this stack overflow post:
+https://stackoverflow.com/questions/34617452/how-to-update-xcode-from-command-line
+If this doesnt work you can try to download Command Line Tools from
+https://developer.apple.com/download/more/ (search for "Command Line Tools")
+and install them manually.
+
+#### Manage postgres with Lunchy
+
+You can manage postgres with [Lunchy](https://github.com/eddiezane/lunchy):
+
+    $ gem install lunchy
+
+When that is done, make sure you have a LaunchAgents folder:
+
+    $ mkdir -p ~/Library/LaunchAgents
+
+And then populate it with symbolic links back to the postgres config file(s) installed by homebrew:
+
+    $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+You should now be able to start the postgres server with:
+
+    $ lunchy start postgres
+
+Postgres can be stopped with: `$ lunchy stop postgres` but don't do this now.
