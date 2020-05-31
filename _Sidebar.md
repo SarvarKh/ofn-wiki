@@ -2,7 +2,7 @@
 
 **Development environment setup**
 
-* [[Using Docker|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/DOCKER.md]]
+* [[Docker|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/DOCKER.md]]
 * [[OS X|Development Environment Setup: OS X]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
 * [[Debian|Development Environment Setup: Debian]]
