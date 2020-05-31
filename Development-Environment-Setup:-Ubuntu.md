@@ -1,5 +1,5 @@
 ## Intro
-This guide will help you set up a development environment for OFN on Ubuntu (tested with 16.04).
+This guide will help you set up a development environment for OFN on Ubuntu (tested with 19).
 
 ## Step 1. Install supporting packages
 
