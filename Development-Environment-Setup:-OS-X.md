@@ -172,7 +172,7 @@ Karma: a test runner for pure javascript (which we use to test our AngularJS)
 Now you are ready to follow the [GETTING STARTED guide](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md)
 
 ## Troubleshooting
-#### Git
+### Git
 If you get an error (as I did) that says: `Warning: /usr/bin occurs before /usr/local/bin`, it means that you probably have installed the full XCode suite and the default version of Git that ships with XCode is stilling in /usr/bin, meaning our new version of Git that we are installing with Homebrew will not be used because as the error tells us: /usr/bin occurs before /usr/local/bin in the PATH. The following command will fix that by adding a line to ~/.bash_profile.
 
     $ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
@@ -181,7 +181,7 @@ Refresh your .bash_profile by entering:
 
     $ . ~/.bash_profile
 
-#### gpg setup
+### gpg setup
 If you get `gpg: keyserver receive failed: No keyserver available`, try a different server. eg:
 
     $ gpg --keyserver hkp://pgp.mit.edu --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -191,7 +191,7 @@ If you still see an error like `gpg: keyserver receive failed: No data`, wait, i
 If instead you see a message like `gpg: keyserver receive failed: No route to host` then chances are that gpg decides to use IPv6 while it should use IPv4. You can check out https://github.com/rvm/rvm/issues/4215#issuecomment-435221616 for a solution.
 
 
-#### Update bundler version
+### Update bundler version
 
 The version of bundler that rvm installed for me was quite old, so when I ran `bundle -v`, I got: `1.7.6`. I updated the version of bundler using:
 
@@ -209,7 +209,7 @@ Once all gems have been installed, check that rails is ready to go:
 
     $ bundle exec rails -v
 
-#### ./script/setup doesn't work
+### ./script/setup doesn't work
 
 If script/setup doesn't work for you, you can run the commands manually.
 
@@ -233,7 +233,7 @@ And load some sample data for your environment:
 
     $ bundle exec rake ofn:sample_data
 
-#### OpenSSL issues
+### OpenSSL issues
 
 Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be installed with Homebrew, seeing as we have a bunch of gems that need up-to-date openssl headers. Homebrew had already installed OpenSSL as a [keg-only dependency](http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies) on my system, and so all I needed to do was to add appropriate symlinks using:
 
@@ -243,7 +243,7 @@ Homebrew complains very forcefully about this, so an alternative way is to confi
 
     $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
 
-## libv8 and mini_racer issues
+### libv8 and mini_racer issues
 
 If you run into an issue with the libv8 gem try:
 
@@ -259,7 +259,7 @@ If this doesnt work you can try to download Command Line Tools from
 https://developer.apple.com/download/more/ (search for "Command Line Tools")
 and install them manually.
 
-#### Manage postgres with Lunchy
+### Manage postgres with Lunchy
 
 You can manage postgres with [Lunchy](https://github.com/eddiezane/lunchy):
 
