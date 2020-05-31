@@ -3,13 +3,9 @@
 **Development environment setup**
 
 * [[Using Docker|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/DOCKER.md]]
-* [[macOS (Sierra, HighSierra, Mojave and Catalina)|Development-Environment-Setup:-macOS-(Sierra,-HighSierra,-Mojave-and-Catalina)]]
-* [[OS X (El Capitan)|Development Environment Setup: OS X (El Capitan)]]
-* [[OS X (Mavericks)|Development Environment Setup: OS X (Mavericks)]]
+* [[OS X|Development Environment Setup: OS X]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
 * [[Debian|Development Environment Setup: Debian]]
-* [[On Heroku | Set and Deploy on Heroku]]
-* [[Rubocop]]
 
 
 **General guidelines**
@@ -37,6 +33,7 @@
 * [[Database migrations]]
 * [[Testing and Rspec Tips]]
 * [[Automated Testing Gotchas]]
+* [[Rubocop]]
 
 **Testing**
 
