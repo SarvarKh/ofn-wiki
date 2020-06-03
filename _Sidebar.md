@@ -16,7 +16,7 @@
 * [[The process of review, test, merge and deploy]]
 * [[Products cache]]
 
-**Contributing** ([[md | https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md]])
+[[Contributing | https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md]]
 
 * [[Pipeline development process]]
 * [[Bug severity]]
