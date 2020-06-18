@@ -1,3 +1,5 @@
+THIS PAGE IS OUTDATED, we dont have a product cache anymore, but we do have a cache for some properties and taxons.
+
 As the list of products to display in a shopfront for a particular order cycle and distributor is rather slow to fetch OFN caches it. Then, subsequent requests are served from cache, which is stored in Memcached in production.
 
 ## Table of contents
