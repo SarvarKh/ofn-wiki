@@ -7,15 +7,6 @@
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
 * [[Debian|Development Environment Setup: Debian]]
 
-
-**General guidelines**
-
-* [[Spree Commerce customisation]]
-* [[Angular and OFN]]
-* [[Delayed job]]
-* [[The process of review, test, merge and deploy]]
-* [[Products cache]]
-
 [[Contributing | https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md]]
 
 * [[Pipeline development process]]
@@ -27,6 +18,8 @@
 
 **Development**
 
+* [[Developer Guidelines]]
+* [[The process of review, test, merge and deploy]]
 * [[Making a great commit]]
 * [[Making a great pull request]]
 * [[Code Conventions]]
@@ -34,6 +27,8 @@
 * [[Testing and Rspec Tips]]
 * [[Automated Testing Gotchas]]
 * [[Rubocop]]
+* [[Angular and OFN]]
+* [[Delayed job]]
 
 **Testing**
 
