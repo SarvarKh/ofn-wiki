@@ -3,7 +3,7 @@
 ***
 
 
-- For information on testing processes, feature- and release-testing please check the **[OFN Testing Documentation](__https://app.gitbook.com/@ofn-user-guide/s/ofn-testing-handbook/__)** gitbook.
+For information on testing processes, feature- and release-testing please check the **[OFN Testing Documentation](https://app.gitbook.com/@ofn-user-guide/s/ofn-testing-handbook/)**.
 
 
 ***
