@@ -1,3 +1,14 @@
+
+
+***
+
+
+- For information on testing processes, feature- and release-testing please check the **[OFN Testing Documentation](__https://app.gitbook.com/@ofn-user-guide/s/ofn-testing-handbook/__)** gitbook.
+
+
+***
+
+
 Once you have submitted a PR and it has been reviewed and approved, it is ready for testing! It will be moved to the "Test ready" column in our [Zenhub delivery pipeline board](https://github.com/openfoodfoundation/openfoodnetwork/#boards?repos=6257856).
 <br/>PRs are ordered by priority, the upper one will be the first one to test.
 
