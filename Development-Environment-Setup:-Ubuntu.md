@@ -9,6 +9,7 @@ sudo apt-get install git postgresql-9.5 postgresql-common libpq-dev
 ```
 
 In Ubuntu 18, you will need to replace `python-software-properties` with `software-properties-common`.
+Also in Ubunut 18 and above, you can use psql 10 with `sudo apt-get install git postgresql-10`
 
 ## Step 2. Configure git
 ```bash
