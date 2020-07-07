@@ -57,7 +57,7 @@ with every change we do.
   Use the nested structure. If you add a translation for a view or mailer, please make use of the nested
   structure.
 
-  Use ["lazy" lookup](http://guides.rubyonrails.org/i18n.html#looking-up-translations).
+  Use ["lazy" lookup](https://www.rubydoc.info/gems/i18n_lazy_scope).
   In order to use the lazy lookup you need to know where you are (for example if you are using deface in a spree view). To do this, you can use lazy lookup '.your_translation_key' and go to the page where the translation is used, you will have an error on the page (or you can look in the DOM for an element with class "translation_missing"): the error message will tell you where in the nested structure of the en.yml file you will have to put your key in order to use lazy lookup. For example (en.spree.admin.general_settings.edit.legal_settings):
     - `<span class="translation_missing" title="translation missing: en.spree.admin.general_settings.edit.legal_settings">Legal Settings</span>.`
   
