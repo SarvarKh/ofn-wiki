@@ -60,18 +60,18 @@ with every change we do.
   Use ["lazy" lookup](https://www.rubydoc.info/gems/i18n_lazy_scope).
   In order to use the lazy lookup you need to know where you are (for example if you are using deface in a spree view). To do this, you can use lazy lookup '.your_translation_key' and go to the page where the translation is used, you will have an error on the page (or you can look in the DOM for an element with class "translation_missing"): the error message will tell you where in the nested structure of the en.yml file you will have to put your key in order to use lazy lookup. 
 
-For example to use `t('legal_settings') in the view `/app/views/spree/admin/general_settings/edit.html.haml`, your translation key needs to be at `en.spree.admin.general_settings.edit.legal_settings` in the `en.yml` file, otherwise you will see this DOM element rendered in your template:
-```html
-<span class="translation_missing" title="translation missing: en.spree.admin.general_settings.edit.legal_settings">Legal Settings</span>
-```
+  For example to use `t('legal_settings')` in the view `/app/views/spree/admin/general_settings/edit.html.haml`, your translation key needs to be at `en.spree.admin.general_settings.edit.legal_settings` in the `en.yml` file, otherwise you will see this DOM element rendered in your template:
+  ```html
+  <span class="translation_missing" title="translation missing: en.spree.admin.general_settings.edit.legal_settings">Legal Settings</span>
+  ```
   
-  NOTE: If you are on an Angular template, you cannot use lazy lookup. Instead you should use the nested structure so that translation keys are well organised.
+  If you are on an Angular template, you cannot use lazy lookup. Instead you should use the nested structure so that translation keys are well organised.
 
-  Avoid global keys. There are a lot already. And some are okay, for example
+* Avoid global keys. There are a lot already. And some are okay, for example
   "enterprises" should be the same everywhere on the page. But in doubt,
   create a new translation and give it a meaningful scope.
 
-  Don't worry about duplication. We may use the same word in different contexts,
+* Don't worry about duplication. We may use the same word in different contexts,
   but another language could use different words. So don't try to re-use
   translations between files.
 
