@@ -7,5 +7,4 @@ There are more details in the following pages:
 - [Single shipment per Order](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Tech-Doc:-OFN-Data-Model---Single-shipment-per-Order)
 - [Stock locations](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Tech-Doc:-OFN-Data-Model---Stock-locations)
 
-And here's a full ERD extract of the database using rails-erd as of v3.2.0:
-![_](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/erd.pdf)
+And here's a full ERD extract of the database using rails-erd as of v3.2.0: [ERD diagram](https://github.com/openfoodfoundation/openfoodnetwork/wiki/tech_docs/erd.pdf).
