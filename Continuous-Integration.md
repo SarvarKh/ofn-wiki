@@ -1,4 +1,4 @@
-Continuous Integration testing (CI) ensures that all automated tests are run each time somebody pushes code to the GitHub repository. We are currently using [Semaphore CI](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/), because it seems to be faster and more reliable than its competitors.
+Continuous Integration testing (CI) ensures that all automated tests are run each time somebody pushes code to the GitHub repository. We are currently using [Semaphore CI](https://semaphoreci.com/openfoodfoundation/openfoodnetwork-2/) (Semaphore Classic), because it seems to be faster and more reliable than its competitors.
 
 We used to run tests with [Travis](https://travis-ci.org/openfoodfoundation/openfoodnetwork/) and you can still use it on your own forks. It needs less manual configuration than Semaphore.
 
