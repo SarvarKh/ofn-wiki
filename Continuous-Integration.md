@@ -6,7 +6,7 @@ We used to run tests with [Travis](https://travis-ci.org/openfoodfoundation/open
 
 Semaphore is configured within the project settings on the Semaphore website. Here is how we set it up and you can do the same for your fork.
 
-Ruby 2.1.5 with database pg on the standard platform "Standard v1805.1".
+Ruby 2.3.7 with database pg on the standard platform "Standard v1805.1".
 
 Environment variables:
 ```sh
