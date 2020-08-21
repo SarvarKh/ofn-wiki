@@ -1,5 +1,5 @@
 ## Intro
-This guide will help you set up a development environment for OFN on Ubuntu (tested with Ubuntu 19).
+This guide will help you set up a development environment for OFN on Ubuntu (tested with Ubuntu 18, 19 and 20).
 
 ## Step 1. Install supporting packages
 
@@ -10,6 +10,14 @@ sudo apt-get install git postgresql-9.5 postgresql-common libpq-dev
 
 In Ubuntu 18, you will need to replace `python-software-properties` with `software-properties-common`.
 Also in Ubunut 18 and above, you can use psql 10 with `sudo apt-get install git postgresql-10`
+
+In Ubuntu 20.04, to install postgreSQL-10 you need to add the repository/key before installing postgresql-10:
+```bash
+sudo add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main'
+sudo apt-get update
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get install postgresql-10
+```
 
 ## Step 2. Configure git
 ```bash
@@ -89,6 +97,11 @@ curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-k
 sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get -y update
 sudo apt-get -y install google-chrome-stable
+```
+
+In Ubuntu 20.04, you may need to run the 2nd command above like this instead:
+```bash
+sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/google-chrome.list
 ```
 
 ### Install Chrome Driver
