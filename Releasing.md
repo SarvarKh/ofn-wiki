@@ -97,7 +97,9 @@ ansible-playbook playbooks/deploy.yml --limit all-prod -e "git_version=[release 
 After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
 
 ```
-@channel The new release has been deployed to all instances.
+@channel The new release has been deployed to all instances managed by the global team.
 It's time for your after-deploy checks. You can see what was in the release here:
 https://github.com/openfoodfoundation/openfoodnetwork/releases/latest
+
+ 
 ```
