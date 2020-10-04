@@ -32,11 +32,11 @@ git config --global user.email "YOUR@EMAIL.com"
 ```
 sudo apt install libssl1.0-dev
 ```
-**If you are on Ubuntu 19 or 20**, you'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing libssl1.0-dev.
+**If you are on Ubuntu 19 or 20**, you'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing `libssl1.0-dev`.
 1. Open `/etc/apt/sources.list` in a text editor of your choice.
 2. Append `deb http://security.ubuntu.com/ubuntu bionic-security main` to the end of the file
 3. Run `sudo apt update && apt-cache policy libssl1.0-dev`
-4. Run `sudo apt-get install libssl1.0-dev`
+4. Run `sudo apt install libssl1.0-dev`
 
 
 Then you can follow the instructions from https://gorails.com/setup/ubuntu/14.04
