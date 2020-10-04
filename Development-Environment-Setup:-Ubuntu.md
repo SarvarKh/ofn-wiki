@@ -28,11 +28,11 @@ git config --global user.email "YOUR@EMAIL.com"
 
 ## Step 3. Install Ruby (using rbenv)
 
-Note: if installing on Ubuntu 18, you'll need to install the `libssl1.0-dev` package first with:
+**If you are on Ubuntu 18**, you'll need to install the `libssl1.0-dev` package first with:
 ```
 sudo apt install libssl1.0-dev
 ```
-**If you are on Ubuntu 19+**, you'll need to update your apt sources in order to install `libssl1.0-dev`.
+**If you are on Ubuntu 19 or 20**, you'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing libssl1.0-dev.
 1. Open `/etc/apt/sources.list` in a text editor of your choice.
 2. Append `deb http://security.ubuntu.com/ubuntu bionic-security main` to the end of the file
 3. Run `sudo apt update && apt-cache policy libssl1.0-dev`
