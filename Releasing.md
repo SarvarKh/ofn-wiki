@@ -39,7 +39,7 @@ Download all current translations from Transifex with the [Transifex client](htt
 ### Collect included changes
 
 Identify all pull requests that got merged since the last release.
-  - Option 1: You can look at the [last release](https://github.com/openfoodfoundation/openfoodnetwork/releases/latest) and **use the date of the pinned commit** to [filter pull requests](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+merged%3A%3E2020-01-16T20%3A00%3A00%2B02%3A00+sort%3Aupdated-desc+base%3Amaster) putting the date and time into the filter box like this: `is:pr merged:>2020-01-16T21:37:00+01:00 sort:updated-desc base:master`
+  - Option 1: You can look at the [last release](https://github.com/openfoodfoundation/openfoodnetwork/releases/latest) and **use the date of the pinned commit** to [filter pull requests](https://github.com/openfoodfoundation/openfoodnetwork/pulls?utf8=%E2%9C%93&q=is%3Apr+merged%3A%3E2020-10-12T00%3A00%3A00%2B02%3A00+sort%3Aupdated-desc+base%3Amaster) putting the date and time into the filter box like this: `is:pr merged:>2020-01-16T21:37:00+01:00 sort:updated-desc base:master`
   - Option 2: You can list all pull requests with git and open them in your browser:
     ```
     git fetch upstream
