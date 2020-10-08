@@ -110,6 +110,8 @@ OFN will require a specific version of Ruby. The ruby version required is stored
 
     $ rvm install 2.3.7
 
+If you are still getting openssl issues here despite installing rvm with autolibs enabled, see the troubleshooting section below.
+
 ## Step 7. Verify environment
 
 Run each of the following just to check that you get sensible numbers out of each of them:
@@ -242,6 +244,8 @@ Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be 
 Homebrew complains very forcefully about this, so an alternative way is to configure bundler with the appropriate compiler flags (shown in the output of the brew link command above) for the gems that need it - for me this was only eventmachine (Steve, November 2016):
 
     $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
+
+On new-ish Macs (2019+) running Catalina, Open SSL 1.0 is not installed. Ruby version 2.3.7 relies on Open SSL 1.0. To fix this, I followed [these instructions](https://github.com/rvm/rvm/issues/4889#issuecomment-698414701) to install 1.0 and have rvm look at that installation when it installs ruby 2.3.7.
 
 ### libv8 and mini_racer issues
 
