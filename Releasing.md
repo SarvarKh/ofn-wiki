@@ -86,7 +86,7 @@ All Ha-Ri certified/core devs will now do [releases](https://github.com/openfood
 
 ## Deployment
 
-We usually deploy a release for all instances straight away. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. 
+We usually deploy a release for all instances on Tuesdays after publishing the release on Monday. Check the current [Deployment status](https://github.com/openfoodfoundation/ofn-install/wiki/Current-deployment-status) page for details. 
 
 You can deploy to all production servers with:
 
