@@ -94,6 +94,8 @@ You can deploy to all production servers with:
 ansible-playbook playbooks/deploy.yml --limit all-prod -e "git_version=[release tag]"
 ```
 
+The first time you do this, you'll need to make sure that you can ssh into all the production servers without being prompted to confirm the authenticity of the host. I (Andy) did this by ssh'ing to each one and manually typing 'yes' at the prompt. 
+
 After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
 
 ```
