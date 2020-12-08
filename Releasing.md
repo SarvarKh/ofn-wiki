@@ -96,6 +96,8 @@ ansible-playbook playbooks/deploy.yml --limit all-prod -e "git_version=[release 
 
 The first time you do this, you'll need to make sure that you can ssh into all the production servers without being prompted to confirm the authenticity of the host. I (Andy) did this by ssh'ing to each one and manually typing 'yes' at the prompt. 
 
+:warning: Make sure you don't have local uncommitted changes! Including any `secrets.yml` files that are ignored by git. 
+
 After you deployed, let the instance managers know so that they can run some basic tests. Include a link to the release notes page so that they can easily see what has changed. Post on #instance-managers slack channel:
 
 ```
