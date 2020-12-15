@@ -56,9 +56,6 @@ The filters will be sent through the query parameters and encoded under the q pa
 
 This will enable us to simply filter results using ransack and params[:q] like [here](https://github.com/openfoodfoundation/openfoodnetwork/blob/46353be9a37f7054485a2d83712c50d8066f995d/app/services/search_orders.rb#L26).
 
-Regarding input data for POST and PUT endpoints where clients will send data to create or update resources.
-This data is currently being sent via form_data and read through params in the api controllers (we should probably switch all our endpoints to take json data from clients instead but for now we keep form data).
-
 ### API development tips
 All PRs that make a change to the API should also make a change to the swagger doc so that the documentation evolves with the code. To do this you can:
 - use [swagger](https://app.swaggerhub.com/) to open the swagger doc: https://github.com/openfoodfoundation/openfoodnetwork/blob/master/swagger.yaml
