@@ -57,11 +57,9 @@ See the following for more information:
 
 ### Stage
 
-**All Core Dev team members, regardless of their level, are expected to stage a PR's branch to any of the staging servers of all OFN instances.**
+Testers deploy PRs to staging servers themselves from Semaphore CI deployment button.
 
-This is important to let testers, who tend to have rather limited time for testing, focus on their task. We want them to take the most out of their testing sessions.
-
-**Once a PR is successfully staged, the proper `pr-staged-*` label has to be added to it and the URL of the staging server shared as a comment.** We encourage as a good practice all Core Dev team members to check when they start/finish their day if the staging servers already have something staged on them ready for testing. If not, they should stage the next test ready item.
+In any case, **once a PR is successfully staged, the proper `pr-staged-*` label has to be added to it**. The URL of the server is present in the label's description. 
 
 ### Merge
 
@@ -69,18 +67,16 @@ This is important to let testers, who tend to have rather limited time for testi
 
 ### Release
 
-Likewise, is also a **duty of Ha and Ri Core Dev team members to prepare releases**. The responsibility rotates among them so that workload gets distributed and we don't create knowledge silos. The person in charge of the release is called Release manager.
+Likewise, is also a **duty of Ha and Ri Core Dev team members to prepare releases**. The responsibility rotates among them so that workload gets distributed and we don't create knowledge silos. The person in charge of the release is called the Release manager.
 
 **The release manager is responsible for all the steps described in [Releasing](releasing), helping with the deploys to the OFN instances, if needed, as well as to deal with any incidents related to it.**
 
 **It's also the release manager's duty to hand over the responsibility to the next ****dev**** in charge.**
 
-As releases don’t have a set schedule as we do them when we feel there are enough merged PRs, the release manager will follow the list below:
+Releases have a set schedule and release management is a rotating role. See [Releasing](releasing).
 
-* Luis
 * Maikel
 * Matt
-* Kristina
 * Pau
 
 So, Luis will make sure Maikel takes over as soon as the release is published. Note that not all instances will deploy the release at the same time or some might even wait for the next one. As long as someone has a problem with the release you published, you’re the go-to person.
