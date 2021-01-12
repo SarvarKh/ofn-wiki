@@ -2,7 +2,7 @@ This page describes Open Food Network's API.
 
 ### API DOCUMENTATION
 We use swagger and json-api to document the OFN API. You can see the documentation here:
-https://app.swaggerhub.com/apis/luisramos0/the-open_food_network/0.1
+https://app.swaggerhub.com/apis/Open-Food-Network/Open-Food-Network-API/0.2
 
 #### Authorization
 
