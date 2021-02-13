@@ -47,6 +47,7 @@
 
 * [[Sales Tax]]
 * [[Product amounts units]]
+* [[Stripe]]
 
 **Data and APIs**
 
