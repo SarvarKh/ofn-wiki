@@ -64,8 +64,8 @@ ruby -v
 ```sh
 git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
 (cd ~/.nodenv && src/configure && make -C src)
-echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> .bashrc
-echo 'eval "$(nodenv init -)"' >> .bashrc
+echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(nodenv init -)"' >> ~/.bashrc
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-build" --depth 1
