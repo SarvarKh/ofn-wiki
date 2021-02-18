@@ -10,24 +10,25 @@ This page lists all emails sent by the platform:
    2. order confirmation - triggered as resend in the backoffice
 6. order confirmation for shop
 7. order shipped (**BROKEN** not working in multi-language)
-8. order cancelation email
-9. order invoice email
-10. 1. enterprise manager invite - new account - invitation email (**BROKEN** not working in multi-language)
+8. order cancellation email
+9. order cancellation email for shop
+10. order invoice email
+11. 1. enterprise manager invite - new account - invitation email (**BROKEN** not working in multi-language)
     2. enterprise manager invite - new account - user signup with confirmation link (**BROKEN** not working in multi-language)
-11. order cycle producers notification
+12. order cycle producers notification
 
 Additionally, there are 6 emails related to subscriptions (**BROKEN** not working in multi-language):
 
-12. subscription confirmation email
-13. order placement email
-14. empty order placement email
-15. failed payment email
-16. order placement summary email (to the shop owner)
-17. confirmation summary email (to the shop owner)
+13. subscription confirmation email
+14. order placement email
+15. empty order placement email
+16. failed payment email
+17. order placement summary email (to the shop owner)
+18. confirmation summary email (to the shop owner)
 
 
 NOTE: currently #5.1 #5.2 and #8 will not work in multi-language for orders placed by a GUEST user or by a customer created in the backoffice because it's difficult to persist guest user locale and there's no way to know what's the customer locale
 
-NOTE: related to case 10 above, no email is sent when an existing user is added as an manager of an enterprise
+NOTE: related to case 11 above, no email is sent when an existing user is added as an manager of an enterprise
 
 [[Delayed job]] is used to send emails in OFN.
