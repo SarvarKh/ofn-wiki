@@ -2,8 +2,7 @@
 
 **Development environment setup**
 
-[[Getting started|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md]]
-
+* [[Getting started|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md]]
 * [[Docker|https://github.com/openfoodfoundation/openfoodnetwork/tree/master/docker/README.md]]
 * [[OS X|Development Environment Setup: OS X]]
 * [[Ubuntu|Development Environment Setup: Ubuntu]]
