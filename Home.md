@@ -13,12 +13,12 @@ If you want more generally to understand the OFN project, how the community work
 
 A full set of tools used can be seen on [StackShare](http://stackshare.io/open-food-network-uk/open-food-network-uk) (setup for UK but similar for most instances).
 
-## Deployment and server admin wiki
-
-See the [ofn-install wiki](https://github.com/openfoodfoundation/ofn-install/wiki) where you find guides to install a new server, set up Bugsnag, Google Maps and much more.
-
-## Development environment wiki
+## Development environment setup
 
 If you are interested in contributing to the OFN in any capacity, please introduce yourself [on Slack](https://openfoodnetwork.org/slack-invite), and have a look through the [OFN Handbook](https://ofn-user-guide.gitbook.io/ofn-handbook/).
 
 Our [GETTING_STARTED](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md) and [CONTRIBUTING](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md) guides are the best place to start for developers looking to set up a development environment and make contributions to the code base.
+
+## Deployment and server admin wiki
+
+See the [ofn-install wiki](https://github.com/openfoodfoundation/ofn-install/wiki) where you find guides to install a new server, set up Bugsnag, Google Maps and much more.
