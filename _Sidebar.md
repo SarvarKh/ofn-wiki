@@ -30,6 +30,7 @@
 * [[Rubocop]]
 * [[Angular and OFN]]
 * [[Delayed job]]
+* [[Feature toggles]]
 
 **Testing**
 
