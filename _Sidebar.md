@@ -44,7 +44,6 @@
 
 **Releasing**
 * [[Releasing]]
-* [[Branches and v2]]
 
 **Specific features**
 
