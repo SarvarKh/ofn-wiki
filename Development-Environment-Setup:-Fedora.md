@@ -11,7 +11,10 @@ sudo systemctl start postgresql # launch PostgreSQL right now
 
 # Create database user "ofn". The default password in the codebase is "f00d".
 # If you set something different, update the file `config/database.yml` accordingly
-sudo -u postgres createuser --superuser --pwprompt ofn
+# sudo -u postgres psql -c "CREATE USER ofn WITH SUPERUSER CREATEDB PASSWORD 'f00d'"
+sudo -u postgres createuser --superuser --pwprompt ofn # as an alternative
+
+script/setup
 
 # sudo postgresql-setup --upgrade # make sure that postgres schema are still compatible with the last version installed
 sudo systemctl enable postgresql # always launch postgres at boot
