@@ -55,11 +55,15 @@ ruby -v
 ```sh
 git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
 (cd ~/.nodenv && src/configure && make -C src)
+# For Bash urers:
 echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(nodenv init -)"' >> ~/.bashrc
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-build" --depth 1
+# for Fish users:
+echo 'set PATH "$HOME/.nodenv/bin" $PATH' >> ~/.config/fish/config.fish
+echo 'nodenv init - | eval' >> ~/.config/fish/config.fish
+
+exec $SHELL -l # reload the shell
+git clone https://github.com/nodenv/node-build.git "$HOME/.nodenv/plugins/node-build" --depth 1
 nodenv install 5.12.0
 ```
 
@@ -110,3 +114,4 @@ unzip chromedriver_linux64.zip
 - [Ruby on Rails — Fedora Developer Portal](https://developer.fedoraproject.org/start/sw/web-app/rails.html)
 - [linux - Completely reset PostgreSQL to default? - Server Fault](https://serverfault.com/questions/574474/completely-reset-postgresql-to-default)
 - [postgresql - pg_upgrade: "lc_collate values for database "postgres" do not match" - Stack Overflow](https://stackoverflow.com/questions/48612313/pg-upgrade-lc-collate-values-for-database-postgres-do-not-match)
+- [Managing Node.js versions with anyenv & nodenv on macOS (for fish shell) | by Koji Mochizuki | TechNest | Medium](https://medium.com/technest/managing-node-js-versions-with-anyenv-nodenv-on-macos-for-fish-shell-df28b3b15539)
