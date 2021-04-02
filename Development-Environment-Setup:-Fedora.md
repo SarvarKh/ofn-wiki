@@ -1,5 +1,7 @@
+:warning:  Warning: This page is under active development.
+
 ## Intro
-This guide will help you set up a development environment for OFN on Ubuntu (tested with Ubuntu 18, 19 and 20).
+This guide will help you set up a development environment for OFN on Fedora. 
 
 ## Install supporting packages
 
