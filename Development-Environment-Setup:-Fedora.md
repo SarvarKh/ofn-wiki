@@ -1,21 +1,31 @@
 ## Intro
 This guide will help you set up a development environment for OFN on Ubuntu (tested with Ubuntu 18, 19 and 20).
 
-## Step 1. Install supporting packages
+## Install supporting packages
 
 ```bash
-sudo dnf install -y git-core git curl zlib-devel openssl-libs openssl-devel readline-devel libyaml-devel sqlite-devel sqlite libxml2-devel  postgresql libpq-devel epel-release nodejs
+sudo dnf install -y git-core git curl zlib-devel openssl-libs openssl-devel readline-devel libyaml-devel sqlite-devel sqlite libxml2-devel  postgresql postgresql-server postgresql-contrib libpq-devel epel-release nodejs apg
+
+sudo postgresql-setup --initdb --unit postgresql # if not already initialized
+sudo systemctl start postgresql # launch PostgreSQL right now
+
+# Create database user "ofn". The default password in the codebase is "f00d".
+# If you set something different, update the file `config/database.yml` accordingly
+sudo -u postgres createuser --superuser --pwprompt ofn
+
+# sudo postgresql-setup --upgrade # make sure that postgres schema are still compatible with the last version installed
+sudo systemctl enable postgresql # always launch postgres at boot
 ```
 
 
-## Step 2. Configure git
+## Configure git
 ```bash
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
 ```
 
-## Step 3. Install Ruby (using rbenv)
+## Install Ruby (using rbenv)
 
 Then you can follow the instructions from [Ruby on Rails — Fedora Developer Portal](https://developer.fedoraproject.org/start/sw/web-app/rails.html)
 
@@ -37,7 +47,7 @@ rbenv global 2.3.7
 ruby -v
 ```
 
-## Step 4. Install node (using nodenv)
+## Install node (using nodenv)
 
 ```sh
 git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
@@ -50,7 +60,7 @@ git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-
 nodenv install 5.12.0
 ```
 
-## Step 5. Install gems
+## Install gems
 If you don't ever use docs for gems, you can disable installation of documentation with:
 
 ```bash
@@ -63,7 +73,15 @@ Now we can install some supporting gems:
 gem install bundler
 gem install zeus
 ```
-## Step 6. Install Chrome (for Capybara/Selenium testing) if required
+
+## Setup database 
+```bash
+# cd $SOME_PATH/openfoodnetwork
+rake db:create
+rake db:setup
+```
+
+## Install Chrome (for Capybara/Selenium testing) if required
 **Oct 2019**: Newer installations of Ubuntu might come with Chromium installed via snap. As a result you may need to install Google Chrome and the Chrome Driver. *If your tests run correctly without these steps, you may ignore them*.
 
 If you encounter an error such as `Failure/Error: Capybara::Selenium::Driver .new(app, browser: :chrome, options: options) .tap { |driver| driver.browser.download_path = DownloadsHelper.path.to_s } NoMethodError: undefined method `strip' for nil:NilClass`, the following installation instructions should solve your issue:
@@ -87,3 +105,5 @@ unzip chromedriver_linux64.zip
 ## Related resources
 
 - [Ruby on Rails — Fedora Developer Portal](https://developer.fedoraproject.org/start/sw/web-app/rails.html)
+- [linux - Completely reset PostgreSQL to default? - Server Fault](https://serverfault.com/questions/574474/completely-reset-postgresql-to-default)
+- [postgresql - pg_upgrade: "lc_collate values for database "postgres" do not match" - Stack Overflow](https://stackoverflow.com/questions/48612313/pg-upgrade-lc-collate-values-for-database-postgres-do-not-match)
