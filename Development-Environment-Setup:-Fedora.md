@@ -118,3 +118,4 @@ unzip chromedriver_linux64.zip
 - [postgresql - pg_upgrade: "lc_collate values for database "postgres" do not match" - Stack Overflow](https://stackoverflow.com/questions/48612313/pg-upgrade-lc-collate-values-for-database-postgres-do-not-match)
 - [Managing Node.js versions with anyenv & nodenv on macOS (for fish shell) | by Koji Mochizuki | TechNest | Medium](https://medium.com/technest/managing-node-js-versions-with-anyenv-nodenv-on-macos-for-fish-shell-df28b3b15539)
 - [Colombia configs by Matt-Yorkley · Pull Request #670 · openfoodfoundation/ofn-install](https://github.com/openfoodfoundation/ofn-install/pull/670#discussion_r523120101)
+- [Managing Node.js versions with anyenv & nodenv on macOS (for fish shell) | by Koji Mochizuki | TechNest | Medium](https://medium.com/technest/managing-node-js-versions-with-anyenv-nodenv-on-macos-for-fish-shell-df28b3b15539)
