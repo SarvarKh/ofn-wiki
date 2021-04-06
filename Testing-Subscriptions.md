@@ -1,8 +1,39 @@
 The Subscriptions module is particularly hard to test manually because there are time-based processes: when the Order Cycle opens the orders in a subscription are _placed_ and when the Order Cycle closes the orders in a subscription are _confirmed_.
 
-To make this easier for devs and testers with access to the server where they are testing, here are some commands to be executed in the rails console that will make repeat testing in different conditions much faster:
+To make this easier for devs and testers with access to the server where they are testing, here are some commands to be executed in server terminal or in the rails console that will make repeat testing in different conditions much faster.
+
+You'll need to set up a subscription in forehand - see [the dedicated section](https://guide.openfoodnetwork.org/basic-features/subscriptions#set-up-subscriptions-step-by-step-guide) on our user guide.
 
 DO NOT DO THIS IN PRODUCTION
+
+**Procedure 1** (recommended)
+- Login to the server
+- Go to the app folder for example "cd app/openfoodnetwork/current"
+
+Edit the Order Cycle and take the Order Cycle ID from the URL.
+
+- on the console, run:
+
+`bundle exec rake ofn:subs:test:repeat_placement_job`
+
+We should be prompt to insert the Order Cycle ID from the corresponding Schedule/Subscription. This command opens the OC (if closed) and runs the subscription placement job.
+
+After this:
+- run the command below and insert the same Order Cycle ID:
+
+`bundle exec rake ofn:subs:test:force_confirmation_job`
+
+This should confirm the subscription job.
+
+These commands should create and confirm the associated orders, and trigger the respective emails.
+
+Further reading:
+- [Subscription related Emails](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Emails)
+- [This pull-request](https://github.com/openfoodfoundation/openfoodnetwork/pull/6291)
+
+
+
+**Procedure 2** (deprecated):
 
 Open console:
 - Login to the server
