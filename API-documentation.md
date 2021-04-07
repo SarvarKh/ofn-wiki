@@ -6,6 +6,7 @@ https://app.swaggerhub.com/apis/Open-Food-Network/Open-Food-Network-API/0.2
 
 #### Authorization
 
+See also (Authorization)[Authorization]
 To access the API, you need an API key. This can be found in the admin
 backend at the right of the edit user page. That can be passed with the
 `X-Spree-Token` request header, or the `token` query parameter.
