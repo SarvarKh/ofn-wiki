@@ -4,9 +4,9 @@ This page describes Open Food Network's API.
 We use swagger and json-api to document the OFN API. You can see the documentation here:
 https://app.swaggerhub.com/apis/Open-Food-Network/Open-Food-Network-API/0.2
 
-#### Authorization
+#### Authentication/Authorization
 
-See also [Authorization](Authorization)
+See also [Authentication](Authentication)
 
 To access the API, you need an API key. This can be found in the admin
 backend at the right of the edit user page. That can be passed with the
