@@ -54,6 +54,7 @@
 **Data and APIs**
 
 * [[API documentation]]
+* [[Authentication]]
 * [[Integration & API|https://github.com/openfoodfoundation/openfoodnetwork/wiki/Integration-&-API]]
 * [[Data migration]]
 
