@@ -54,8 +54,8 @@ exec $SHELL
 
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
-rbenv install 2.3.7
-rbenv global 2.3.7
+rbenv install 2.5.8
+rbenv global 2.5.8
 ruby -v
 ```
 
