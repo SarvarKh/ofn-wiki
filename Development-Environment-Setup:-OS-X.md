@@ -108,7 +108,7 @@ Which should give you `rvm is a function` if everything went well.
 ## Step 6. Installing the required version of ruby
 OFN will require a specific version of Ruby. The ruby version required is stored in a file in the root folder of the project repository called [.ruby-version](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.ruby-version). You can check the version and install it into RVM like this:
 
-    $ rvm install 2.3.7
+    $ rvm install 2.5.8
 
 If you are still getting openssl issues here despite installing rvm with autolibs enabled, see the troubleshooting section below.
 
@@ -245,7 +245,7 @@ Homebrew complains very forcefully about this, so an alternative way is to confi
 
     $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
 
-On new-ish Macs (2019+) running Catalina, Open SSL 1.0 is not installed. Ruby version 2.3.7 relies on Open SSL 1.0. To fix this, I followed [these instructions](https://github.com/rvm/rvm/issues/4889#issuecomment-698414701) to install 1.0 and have rvm look at that installation when it installs ruby 2.3.7.
+**This is now outdated as OFN uses Ruby 2.5.8**: On new-ish Macs (2019+) running Catalina, Open SSL 1.0 is not installed. Ruby version 2.3.7 relies on Open SSL 1.0. To fix this, I followed [these instructions](https://github.com/rvm/rvm/issues/4889#issuecomment-698414701) to install 1.0 and have rvm look at that installation when it installs ruby 2.3.7.
 
 ### libv8 and mini_racer issues
 
