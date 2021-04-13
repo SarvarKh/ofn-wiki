@@ -44,6 +44,7 @@
 
 **Releasing**
 * [[Releasing]]
+* [[Patch Releases]]
 
 **Specific features**
 
