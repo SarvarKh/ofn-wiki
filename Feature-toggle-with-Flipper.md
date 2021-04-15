@@ -12,7 +12,7 @@ The purpose of this document is to present the tool, its functionalities and how
 
 * **Actor**: An actor is a User from a Flipper point of view. Activate a feature to an actor inside FlipperUI does activate this feature to the corresponding user inside the OFN application. 
 
-### How to configure Flipper at an instance level?
+### How to configure Flipper?
 
 #### Create a feature inside Flipper UI
 The UI is enabled for the admin users, and can be seen at this url: `/admin/feature-toggle/features`.
