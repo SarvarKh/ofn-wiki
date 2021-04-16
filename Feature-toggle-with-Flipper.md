@@ -15,7 +15,7 @@ The purpose of this document is to present the tool, its functionalities and how
 ### How to configure Flipper?
 
 #### Create a feature inside Flipper UI
-The UI is enabled for the admin users, and can be seen at this url: `/admin/feature-toggle/features`.
+The UI is enabled for the admin users, and can be seen at this url: `/admin/feature-toggle`.
 If this is the first time you access to this UI, no feature is present. You can then add a feature (see [List of Features](#list-of-features-that-can-be-configured-within-the-flipper-user-interface) in this document to know which features you can add) by clicking the 'Add Feature' blue button. Enter its name (NB: name must be strictly the same, case sensitive).
 
 <div >
