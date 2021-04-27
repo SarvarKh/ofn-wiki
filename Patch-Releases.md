@@ -6,6 +6,6 @@ You can check out and branch a tagged release like this:
 
 ```
 git fetch upstream --tags
-git checkout -b tags/v3.6.5 3-6-5-plus-hotfix
+git checkout tags/v3.6.5 -b 3-6-5-plus-hotfix
 ```
 Then cherry-pick the necessary commit(s), push the new branch to upstream, and draft a new release based on the branch.
