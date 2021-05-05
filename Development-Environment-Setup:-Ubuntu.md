@@ -4,19 +4,40 @@ This guide will help you set up a development environment for OFN on Ubuntu (tes
 ## Step 1. Install supporting packages
 
 ```bash
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-sudo apt-get install git postgresql-9.5 postgresql-common libpq-dev
-```
+# In all supported versions
+sudo apt-get install 
+  build-essential \
+  curl \
+  git \
+  git-core \
+  libcurl4-openssl-dev \
+  libffi-dev \
+  libpq-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  libssl-dev \
+  libxml2-dev \
+  libxslt1-dev \
+  libyaml-dev \
+  postgresql-common \
+  sqlite3 \
+  zlib1g-dev
 
-In Ubuntu 18, you will need to replace `python-software-properties` with `software-properties-common`.
-Also in Ubunut 18 and above, you can use psql 10 with `sudo apt-get install git postgresql-10`
+ubuntu_version=$(lsb_release -a 2> /dev/null | grep Release | cut -f2 | cut -d. -f1)
 
-In Ubuntu 20.04, to install postgreSQL-10 you need to add the repository/key before installing postgresql-10:
-```bash
-sudo add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main'
-sudo apt-get update
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get install postgresql-10
+if [ $ubuntu_version -ge 20 ] ; then
+  sudo sh -c "
+  add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main'
+  apt-get update
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+  "
+fi
+
+if [ $ubuntu_version -ge 18 ] ; then
+  sudo apt install postgresql-10 software-properties-common
+else 
+  sudo apt install postgresql-9.5 python-software-properties 
+fi
 ```
 
 ## Step 2. Configure git
