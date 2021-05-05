@@ -38,6 +38,9 @@ if [ $ubuntu_version -ge 18 ] ; then
 else 
   sudo apt install postgresql-9.5 postgresql-client-9.5 python-software-properties 
 fi
+
+sudo systemctl start postgresql.service # start right now
+sudo systemctl enable postgresql.service # start at every boot
 ```
 
 ## Step 2. Configure git
