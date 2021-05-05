@@ -34,9 +34,9 @@ if [ $ubuntu_version -ge 20 ] ; then
 fi
 
 if [ $ubuntu_version -ge 18 ] ; then
-  sudo apt install postgresql-10 software-properties-common
+  sudo apt install postgresql-10 postgresql-client-10 software-properties-common
 else 
-  sudo apt install postgresql-9.5 python-software-properties 
+  sudo apt install postgresql-9.5 postgresql-client-9.5 python-software-properties 
 fi
 ```
 
