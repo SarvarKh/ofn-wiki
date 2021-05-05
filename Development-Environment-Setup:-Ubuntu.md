@@ -49,17 +49,34 @@ git config --global user.email "YOUR@EMAIL.com"
 
 ## Step 3. Install Ruby (using rbenv)
 
+### Install libssl1.0-dev
+
+> This step might no longer be required, as last version of the OFN platform use Ruby 2.5.8, and this specific dependency was pertaining to   Ruby 2.4. Related discussions:
+> - https://openfoodnetwork.slack.com/archives/C2GQ45KNU/p1620201776106200
+> - https://github.com/rvm/rvm/issues/3862
+>
+> Still if during the install process some compilation step complains about SSL library, that might be the relevant step to follow.
+
+#### Ubuntu 18
 **If you are on Ubuntu 18**, you'll need to install the `libssl1.0-dev` package first with:
 ```
 sudo apt install libssl1.0-dev
 ```
-**If you are on Ubuntu 19 or 20**, you'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing `libssl1.0-dev`.
-1. Open `/etc/apt/sources.list` in a text editor of your choice.
-2. Append `deb http://security.ubuntu.com/ubuntu bionic-security main` to the end of the file
-3. Run `sudo apt update && apt-cache policy libssl1.0-dev`
-4. Run `sudo apt install libssl1.0-dev`
+#### Ubuntu 19 or 20
 
+You'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing `libssl1.0-dev`.
 
+```bash
+sudo sh -c "
+  add-apt-repository 'http://security.ubuntu.com/ubuntu bionic-security main'
+  apt update
+  # some additional action might be required here regarding missing repository certificate key…
+  apt-cache policy libssl1.0-dev
+  apt install libssl1.0-dev
+"
+```
+
+### Installing Ruby itself
 Then you can follow the instructions from https://gorails.com/setup/ubuntu/14.04
 
 ```bash
