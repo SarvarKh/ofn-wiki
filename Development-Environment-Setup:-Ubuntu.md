@@ -119,7 +119,7 @@ which node >/dev/null || sudo apt install nodejs
 
 [Nodenv](https://github.com/nodenv/nodenv) allows to install miscellaneous versions of Node on the same system and easily switch between version to match dependencies of different projects on the same system. Note that it is optional to use it, as long as the system provides a compatible Node version.
 
-> Beware that Ubuntu also allows you to `apt install nod**ee**nv` (**with two *e***), which is yet an other environment versioning tool.
+> Beware that Ubuntu also allows you to `apt install nodeenv` (*nod**ee**nv* with two *e*), which is yet an other environment versioning tool.
 ```sh
 git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
 (cd ~/.nodenv && src/configure && make -C src)
