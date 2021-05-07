@@ -141,8 +141,9 @@ echo "gem: --no-document" >> ~/.gemrc
 Now we can install some supporting gems:
 
 ```bash
-gem install bundler
+gem install bundler:1.17.3
 ```
+
 ## Step 6. Install Chrome (for Capybara/Selenium testing) if required
 **Oct 2019**: Newer installations of Ubuntu might come with Chromium installed via snap. As a result you may need to install Google Chrome and the Chrome Driver. *If your tests run correctly without these steps, you may ignore them*.
 
