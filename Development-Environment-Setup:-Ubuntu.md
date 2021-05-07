@@ -19,8 +19,10 @@ sudo apt-get install
   libxml2-dev \
   libxslt1-dev \
   libyaml-dev \
+  nodejs \
   postgresql-common \
   sqlite3 \
+  yarn \
   zlib1g-dev
 
 ubuntu_version=$(lsb_release -a 2> /dev/null | grep Release | cut -f2 | cut -d. -f1)
@@ -48,6 +50,9 @@ sudo systemctl enable postgresql.service # start at every boot
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
+# That might be set that later at a repository level, without the --global flag, after entering its cloned directory
+# or take that as option for all projects by running the following command as is.
+# git config --global pull.rebase false
 ```
 
 ## Step 3. Install Ruby (using rbenv)
@@ -100,8 +105,21 @@ rbenv global 2.5.8
 ruby -v
 ```
 
-## Step 4. Install node (using nodenv)
+## Step 4. Installing node 
 
+### Ubuntu Package
+
+Previous steps already took care of that if needed, but this can be specifically treated though 
+```sh
+# make sure that there is some node available or install it through apt
+which node >/dev/null || sudo apt install nodejs
+```
+
+### Using Nodenv
+
+[Nodenv](https://github.com/nodenv/nodenv) allows to install miscellaneous versions of Node on the same system and easily switch between version to match dependencies of different projects on the same system. Note that it is optional to use it, as long as the system provides a compatible Node version.
+
+> Beware that Ubuntu also allows you to `apt install nod**ee**nv` (**with two *e***), which is yet an other environment versioning tool.
 ```sh
 git clone https://github.com/nodenv/nodenv ~/.nodenv --depth 1
 (cd ~/.nodenv && src/configure && make -C src)
@@ -124,12 +142,22 @@ Now we can install some supporting gems:
 
 ```bash
 gem install bundler
-gem install zeus
 ```
 ## Step 6. Install Chrome (for Capybara/Selenium testing) if required
 **Oct 2019**: Newer installations of Ubuntu might come with Chromium installed via snap. As a result you may need to install Google Chrome and the Chrome Driver. *If your tests run correctly without these steps, you may ignore them*.
 
-If you encounter an error such as `Failure/Error: Capybara::Selenium::Driver .new(app, browser: :chrome, options: options) .tap { |driver| driver.browser.download_path = DownloadsHelper.path.to_s } NoMethodError: undefined method `strip' for nil:NilClass`, the following installation instructions should solve your issue:
+If you encounter an error such as `Failure/Error: Capybara::Selenium::Driver .new(app, browser: :chrome, options: options) .tap { |driver| driver.browser.download_path = DownloadsHelper.path.to_s } NoMethodError: undefined method `strip' for nil:NilClass`, follow the next section.
+
+Note that once bundler installed, it should now be possible to run `bundle install && yarn install` to install all gems and Javascipt dependencies in the directory of cloned repository.
+
+## Install a compatible browser to run tests
+
+### Install Chromium
+
+Chromium is the FLOSS alternative of the non-FLOSS Chrome browser.
+```sh
+sudo apt install -y chromium-chromedriver 
+```
 
 ### Install Google Chrome
 
@@ -151,3 +179,7 @@ sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" 
 wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 ```
+
+# Related resources
+
+- https://github.com/openfoodfoundation/openfoodnetwork/issues/7521
