@@ -1,4 +1,4 @@
-:warning:  Warning: This page is under active development.
+:warning:  Warning: This page provides some guidance, but might not be enough to lead to a fully functional set up. Contributions are welcome.
 
 ## Intro
 This guide will help you set up a development environment for OFN on Fedora. 
