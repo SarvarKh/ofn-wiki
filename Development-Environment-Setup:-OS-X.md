@@ -162,10 +162,6 @@ ImageMagick: used to create and manipulate images
     $ brew update
     $ brew install imagemagick
 
-[Zeus](https://github.com/burke/zeus): Rails preloader, so you don't have to reload the entire Rails stack all the time
-
-    $ gem install zeus
-
 Karma: a test runner for pure javascript (which we use to test our AngularJS)
 
 [Karma Guide](https://github.com/openfoodfoundation/openfoodnetwork/wiki/Karma)
