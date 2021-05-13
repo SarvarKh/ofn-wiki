@@ -3,11 +3,11 @@
 **Development environment setup**
 
 * [[Getting started|https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md]]
+* [[Ubuntu|Development Environment Setup: Ubuntu]]
 * [[Debian|Development Environment Setup: Debian]]
-* [[Docker|https://github.com/openfoodfoundation/openfoodnetwork/tree/master/docker/README.md]]
 * [[Fedora|Development-Environment-Setup: Fedora]]
 * [[OS X|Development Environment Setup: OS X]]
-* [[Ubuntu|Development Environment Setup: Ubuntu]]
+* [[Docker|https://github.com/openfoodfoundation/openfoodnetwork/tree/master/docker/README.md]]
 
 [[Contributing | https://github.com/openfoodfoundation/openfoodnetwork/blob/master/CONTRIBUTING.md]]
 
