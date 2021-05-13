@@ -80,7 +80,6 @@ Now we can install some supporting gems:
 
 ```bash
 gem install bundler
-gem install zeus
 ```
 
 ## Setup database 
