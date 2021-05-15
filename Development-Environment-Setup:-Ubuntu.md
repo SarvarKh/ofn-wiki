@@ -163,15 +163,12 @@ sudo apt install -y chromium-chromedriver
 ### Install Google Chrome
 
 ```bash
-curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add
-sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get -y update
-sudo apt-get -y install google-chrome-stable
-```
-
-In Ubuntu 20.04, you may need to run the 2nd command above like this instead:
-```bash
-sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/google-chrome.list
+sudo sh -c"
+  curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+  apt update -y
+  apt install -y google-chrome-stable
+"
 ```
 
 ### Install Chrome Driver
