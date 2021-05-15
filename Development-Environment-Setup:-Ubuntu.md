@@ -174,8 +174,10 @@ sudo sh -c"
 ### Install Chrome Driver
 
 ```bash
-wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
+# Consider running these command in $XDG_DATA_HOME/bin which by default is ~/.local/bin
+wget https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip
+ && unzip chromedriver_linux64.zip
+ && rm chromedriver_linux64.zip
 ```
 
 # Related resources
