@@ -31,4 +31,4 @@ NOTE: currently #5.1 #5.2 and #8 will not work in multi-language for orders plac
 
 NOTE: related to case 11 above, no email is sent when an existing user is added as an manager of an enterprise
 
-[[Delayed job]] is used to send emails in OFN.
+Sidekiq is used to send emails in OFN.
