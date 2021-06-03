@@ -23,7 +23,8 @@ sudo apt-get install
   postgresql-common \
   sqlite3 \
   yarn \
-  zlib1g-dev
+  zlib1g-dev \
+  redis-server
 
 ubuntu_version=$(lsb_release -a 2> /dev/null | grep Release | cut -f2 | cut -d. -f1)
 

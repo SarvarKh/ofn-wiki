@@ -153,6 +153,19 @@ Next add the development and test databases (open_food_network_dev and open_food
     $ createdb open_food_network_dev --owner=ofn
     $ createdb open_food_network_test --owner=ofn
 
+## Step 10. Redis
+
+Now, we need to install Redis for Sidekiq to store background jobs. You can do so with:
+
+
+    $ brew install redis
+
+
+Like we did with postgres, you should be able to start the redis server with launchd:
+
+    $ brew services start redis
+
+
 ## Step 10. Other things you should install
 
 Headless Chrome: make sure Google Chrome is installed so that you can run feature tests.

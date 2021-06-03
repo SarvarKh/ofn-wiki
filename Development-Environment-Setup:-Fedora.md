@@ -6,10 +6,11 @@ This guide will help you set up a development environment for OFN on Fedora.
 ## Install supporting packages
 
 ```bash
-sudo dnf install -y git-core git curl zlib-devel openssl-libs openssl-devel readline-devel libyaml-devel sqlite-devel sqlite libxml2-devel  postgresql postgresql-server postgresql-contrib libpq-devel epel-release nodejs apg
+sudo dnf install -y git-core git curl zlib-devel openssl-libs openssl-devel readline-devel libyaml-devel sqlite-devel sqlite libxml2-devel  postgresql postgresql-server postgresql-contrib libpq-devel epel-release nodejs apg redis
 
 sudo postgresql-setup --initdb --unit postgresql # if not already initialized
 sudo systemctl start postgresql # launch PostgreSQL right now
+sudo systemctl start redis # launch Redis right now
 
 # Create database user "ofn". The default password in the codebase is "f00d".
 # If you set something different, update the file `config/database.yml` accordingly
@@ -20,6 +21,7 @@ script/setup
 
 # sudo postgresql-setup --upgrade # make sure that postgres schema are still compatible with the last version installed
 sudo systemctl enable postgresql # always launch postgres at boot
+sudo systemctl enable redis # always launch redis at boot
 ```
 
 
