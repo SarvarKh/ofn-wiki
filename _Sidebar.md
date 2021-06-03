@@ -30,7 +30,6 @@
 * [[Automated Testing Gotchas]]
 * [[Rubocop]]
 * [[Angular and OFN]]
-* [[Delayed job]]
 * [[Feature toggles]]
 
 **Testing**
