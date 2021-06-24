@@ -56,7 +56,10 @@ You can fully disable a feature by simply clicking the "Disable" green button. I
 ### List of features that can be configured within the Flipper user interface
 As a feature is strongly linked to a concept that exists inside the codebase, notice that you must create/configure it inside the Flipper UI only feature that is actually existing inside the OFN application. 
 
-At the moment, there is only on feature, which is: `unit_price`
+At the moment, there is no feature to enable.
+
+##### Past feature
+ - `unit_price`: roll out
 
 ### List of groups that can be assigned to a feature
 * `admins`: all the users that are admin (ie. have access to the admin backoffice)
