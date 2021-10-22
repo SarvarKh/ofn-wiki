@@ -14,14 +14,12 @@ sudo apt-get install
   libffi-dev \
   libpq-dev \
   libreadline-dev \
-  libsqlite3-dev \
   libssl-dev \
   libxml2-dev \
   libxslt1-dev \
   libyaml-dev \
   nodejs \
   postgresql-common \
-  sqlite3 \
   yarn \
   zlib1g-dev \
   redis-server
@@ -58,34 +56,6 @@ git config --global user.email "YOUR@EMAIL.com"
 
 ## Step 3. Install Ruby (using rbenv)
 
-### Install libssl1.0-dev
-
-> This step might no longer be required, as last version of the OFN platform use Ruby 2.5.8, and this specific dependency was pertaining to   Ruby 2.4. Related discussions:
-> - https://openfoodnetwork.slack.com/archives/C2GQ45KNU/p1620201776106200
-> - https://github.com/rvm/rvm/issues/3862
->
-> Still if during the install process some compilation step complains about SSL library, that might be the relevant step to follow.
-
-#### Ubuntu 18
-**If you are on Ubuntu 18**, you'll need to install the `libssl1.0-dev` package first with:
-```
-sudo apt install libssl1.0-dev
-```
-#### Ubuntu 19 or 20
-
-You'll need to update your apt sources in order to install `libssl1.0-dev` and add the **bionic-security** source below. You can remove it from your sources again after installing `libssl1.0-dev`.
-
-```bash
-sudo sh -c "
-  add-apt-repository 'http://security.ubuntu.com/ubuntu bionic-security main'
-  apt update
-  # some additional action might be required here regarding missing repository certificate key…
-  apt-cache policy libssl1.0-dev
-  apt install libssl1.0-dev
-"
-```
-
-### Installing Ruby itself
 Then you can follow the instructions from https://gorails.com/setup/ubuntu/14.04
 
 ```bash
@@ -142,7 +112,7 @@ echo "gem: --no-document" >> ~/.gemrc
 Now we can install some supporting gems:
 
 ```bash
-gem install bundler:1.17.3
+gem install bundler:2.1.4
 ```
 
 ## Step 6. Install Chrome (for Capybara/Selenium testing) if required
