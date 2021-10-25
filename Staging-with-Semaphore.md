@@ -5,7 +5,6 @@
 You can stage pull requests to one of our staging servers:
 - `au-staging` accessible on https://staging.openfoodnetwork.org.au/
 - `fr-staging` accessible on https://staging.coopcircuits.fr/
-- `katuma-staging` accessible on https://staging.katuma.org/
 - `uk-staging` accessible on https://staging.openfoodnetwork.org.uk/
 
 To be able to do this, you need to:
