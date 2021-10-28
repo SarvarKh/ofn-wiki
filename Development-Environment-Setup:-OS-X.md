@@ -182,7 +182,7 @@ Karma: a test runner for pure javascript (which we use to test our AngularJS)
 ## Step 11. Done
 Now you are ready to follow the [GETTING STARTED guide](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md)
 
-## Troubleshooting
+# Troubleshooting
 ### Git
 If you get an error (as I did) that says: `Warning: /usr/bin occurs before /usr/local/bin`, it means that you probably have installed the full XCode suite and the default version of Git that ships with XCode is stilling in /usr/bin, meaning our new version of Git that we are installing with Homebrew will not be used because as the error tells us: /usr/bin occurs before /usr/local/bin in the PATH. The following command will fix that by adding a line to ~/.bash_profile.
 
@@ -243,18 +243,6 @@ You will probably want to insert some seed data into the database so that the se
 And load some sample data for your environment:
 
     $ bundle exec rake ofn:sample_data
-
-### OpenSSL issues
-
-Apple has stopped maintaining the OpenSSL headers in OS X, and so these must be installed with Homebrew, seeing as we have a bunch of gems that need up-to-date openssl headers. Homebrew had already installed OpenSSL as a [keg-only dependency](http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies) on my system, and so all I needed to do was to add appropriate symlinks using:
-
-    $ brew link --force openssl
-
-Homebrew complains very forcefully about this, so an alternative way is to configure bundler with the appropriate compiler flags (shown in the output of the brew link command above) for the gems that need it - for me this was only eventmachine (Steve, November 2016):
-
-    $ bundle config build.eventmachine --with-cppflags="-I$(brew --prefix openssl)/include" --with-ldflags="-L$(brew --prefix openssl)/lib"
-
-**This is now outdated as OFN uses Ruby 2.5.8**: On new-ish Macs (2019+) running Catalina, Open SSL 1.0 is not installed. Ruby version 2.3.7 relies on Open SSL 1.0. To fix this, I followed [these instructions](https://github.com/rvm/rvm/issues/4889#issuecomment-698414701) to install 1.0 and have rvm look at that installation when it installs ruby 2.3.7.
 
 ### libv8 and mini_racer issues
 
