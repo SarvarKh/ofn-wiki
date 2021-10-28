@@ -108,7 +108,7 @@ Which should give you `rvm is a function` if everything went well.
 ## Step 6. Installing the required version of ruby
 OFN will require a specific version of Ruby. The ruby version required is stored in a file in the root folder of the project repository called [.ruby-version](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/.ruby-version). You can check the version and install it into RVM like this:
 
-    $ rvm install 2.5.8
+    $ rvm install 2.7.3
 
 If you are still getting openssl issues here despite installing rvm with autolibs enabled, see the troubleshooting section below.
 
