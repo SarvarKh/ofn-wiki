@@ -61,7 +61,7 @@ When you check which version of git you are using:
 
     $ which git
 
-You should see: `/usr/local/bin/git`
+You should see: `/usr/local/bin/git` for macOS Intel OR `/opt/homebrew` for Apple Silicon
 
 If that has all worked, you can now set up your git credentials with:
 
